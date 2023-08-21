@@ -1,0 +1,156 @@
+.service-const {
+    &__img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        color: $main-black;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 45px;
+        & span {
+            color: $main-blue;
+        }
+    }
+
+    &__benefit-container {
+        gap: 50px;
+        display: flex;
+    }
+
+    &__form {
+        color: $white;
+        padding: 40px;
+        border-radius: 8px;
+        background: var(--gradient, linear-gradient(48deg, #2775B8 0%, #44A8FF 100%));
+        &__title {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 40px;
+            margin-bottom: 5px;
+        }
+        &__subtitle {
+            width: 52%;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 25px;
+        }
+        &__content {
+            gap: 20px 0;
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        &__select, 
+        &__input {
+            width: 48.5%!important;
+        }
+        &__btn {
+            width: 25%;
+            padding: 18px 0;
+            color: $main-black;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 24px;
+            border-radius: 4px;
+            background-color: $yellow;
+            transition: background-color 0.5s ease, box-shadow 0.5s ease;
+            &:hover {
+                background-color: #FFF27E;
+                box-shadow: 0px 4px 45px 0px rgba(78, 78, 78, 0.45);
+            } 
+        }
+        &__btn-more {
+            gap: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            color: $white;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            
+            width: 274px;
+            padding: 15px 0;
+            margin: 5px 0 25px;
+            background: transparent;
+            border: 1px solid $white;
+        }
+        &__checkbox {
+            width: 55%;
+            gap: 8px;
+            display: flex;
+            align-items: flex-start;
+            &__text {
+                color: $white;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+            }
+        }
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .service-const {
+        &__img {
+            margin-bottom: 20px;
+        }
+
+        &__title {
+            font-size: 26px;
+            line-height: 36px;
+        }
+
+        &__benefit-container {
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        &__form {
+            padding: 25px 25px 30px 25px;
+            &__title {
+                font-size: 26px;
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+
+            &__subtitle {
+                width: 100%;
+                line-height: 22px;
+            }
+            
+            &__checkbox {
+                width: 100%;
+                gap: 8px;
+                display: flex;
+                align-items: flex-start;
+            }
+            &__bottom {
+                gap: 30px;
+                flex-direction: column;
+            }
+            &__btn {
+                width: 50%;
+                margin: 0 auto;
+            }
+            &__btn-more {
+                width: 100%;
+            }
+            &__input, &__select {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,603 @@
+html,
+body {
+    font-family: 'Inter';
+    font-style: normal;
+    overflow-x: hidden;
+    height: 100%;
+    color: #051B1F;
+}
+
+.wrapper {
+    width: 87%;
+    margin: 0 auto;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        width: 67%;
+    }
+    &__right {
+        width: 30%;
+    }
+}
+
+.input-default {
+    color: #969696;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 17px 20px;
+    background: $white;
+    border: 1px solid #DFDFDF;
+    &::placeholder {
+        color: #969696;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+    }
+}
+
+.select-default {
+    position: relative;
+    & select {
+        width: 100%;
+        outline: none;
+        cursor: pointer;
+        color: #969696;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        appearance: none;
+        padding: 17px 20px;
+        border: 1px solid #DFDFDF;
+        background: $white;
+        background-image: url(../../images/icons/default/arrowSelectBlue.svg);
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        &::-ms-expand {
+            display: none;
+        }
+    }
+}  
+
+.block-title {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    &__text-white, &__text-black {
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 55px;
+    }
+    &__text-white {
+        color: $white;
+    }
+    &__text-black {
+        color: $main-black;
+    }
+    &__link-light, &__link-dark, &__link-more {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 14px;
+        text-align: center;
+        border-radius: 4px;
+        background-color: $main-yellow;
+        transition: color 0.5s ease, background-color 0.5s ease;
+    }
+    &__link-light, &__link-dark {
+        padding: 14px 24px;
+        color: $main-black;
+    }
+    &__link-more {
+        width: 100%;
+        display: none;
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+    &__link-more:hover, &__link-dark:hover {
+        color: $white;
+        background-color: $main-blue;
+    }
+    &__link-light {
+        transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    }
+    &__link-light:hover {
+        background-color: $yellow;
+        box-shadow: 0px 4px 45px 0px rgba(78, 78, 78, 0.45);
+    }
+}
+
+.big-title, .medium-title {
+    color: $main-black;
+    font-weight: 700;
+    & span {
+        color: $main-blue;
+    }
+}
+
+.big-title {
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.medium-title {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $main-black;
+}
+
+.link-see-more {
+    width: 240px;
+    color: $white;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: $main-blue;
+    transition: all .5s;
+    &:hover {
+        color: $main-black;
+        background-color: $main-yellow;
+    }
+}
+
+.tabs {
+    gap: 8px;
+    display: flex;
+    &__item {
+        white-space: nowrap;
+        font-size: 15px;
+        font-weight: 400;
+        color: $sub-black;
+        line-height: normal;
+        padding: 14px 30px;
+        border-radius: 4px;
+        background-color: #FAFAFA;
+        transition: all .5s;
+        &:hover {
+            color: $white;
+            background-color: $main-blue;
+        }
+    }
+    .active {
+        color: $white;
+        background: $main-blue;
+    }
+}
+
+.cars-card {
+    &__top {
+        position: relative;
+        &-info {
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            z-index: 1;
+            display: flex;
+            position: absolute;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &-slider {
+            border-radius: 4px;
+            .itc-slider {
+                width: 100%;
+                &-item {
+                    width: 100%;
+                }
+            }
+
+            .itc-slider-indicators {
+                color: transparent;
+                bottom: 15px;
+                left: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .itc-slider-indicator {
+                border-top: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+    &__labels {
+        gap: 6px;
+        display: flex;
+        &__item {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 12px;
+            padding: 3px 8px;
+            border-radius: 2px;
+        }
+        & .blue {
+            color: $white;
+            background: $main-blue;
+            box-shadow: 0px 4px 24px 0px rgba(36, 143, 236, 0.35);
+        }
+        & .yellow {
+            color: $main-black;
+            background: $main-yellow;
+            box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.35);
+        }
+    }
+    &__btns {
+        gap: 5px;
+        display: flex;
+    }
+    &__btn {
+        padding: 8px;
+        border-radius: 50%;
+        background-color: $white;
+        width: 32px;
+        height: 32px;
+        transition: all .3s;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    &__title {
+        color: $main-black;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+    &__subtitle {
+        color: #797979;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    &__prices {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+    }
+    &__old-price, &__new-price {
+        gap: 5px;
+        display: flex;
+        align-items: center;
+        & .currency {
+            color: $main-black;
+        }
+    }
+    &__old-price {
+        & .digit {
+            color: #DC0000;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+            text-decoration-line: strikethrough;
+        }
+        & .currency {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 13px;
+        }
+    }
+    &__new-price {
+        & .digit {
+            color: $main-black;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 28px;
+        }
+        & .currency {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 15px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .cars-card {
+        &__top {
+            position: relative;
+            &-info {
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                z-index: 1;
+                display: flex;
+                position: absolute;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+            &-slider {
+                border-radius: 4px;
+                .itc-slider {
+                    width: 100%;
+                }
+    
+                .itc-slider-indicators {
+                    color: transparent;
+                    bottom: 15px;
+                    left: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+    
+                .itc-slider-indicator {
+                    border-top: 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+        &__title {
+            font-size: 15px;
+            line-height: 24px;
+        }
+        &__subtitle {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &__old-price {
+            & .digit {
+                font-size: 13px;
+                line-height: 13px;
+            }
+        }
+        &__new-price {
+            & .digit {
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+    }
+}
+
+.block-contact {
+    gap: 8px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    transition: color 0.5s ease;
+
+    &:hover {
+        color: $main-blue;
+    }
+
+    &__icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    &__icon-big {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__text-default {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        color: $sub-black;
+    }
+
+    &__text-dark,
+    &__text-light {
+        font-size: 15px;
+        font-weight: 600;
+        color: $main-black;
+    }
+
+    &__text-light {
+        color: $white;
+    }
+}
+
+.list-social {
+    gap: 5px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+
+    &__item {
+        width: 30px;
+        height: 30px;
+
+        &-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.btn-collapse,
+.btn-read-more {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    background: transparent;
+
+    span {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 11px;
+        margin-right: 5px;
+        color: var(--deep-blue, #1E4D79);
+    }
+}
+
+.btn-read-more-color{
+    span{
+        color: var(--main-blue, #248FEC);
+    }
+}
+
+.btn-collapse {
+    display: none;
+
+    &__img {
+        transform: rotate(180deg);
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+    .wrapper {
+        &__left {
+            width: 57%;
+        }
+        &__right {
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .wrapper {
+        &__container {
+            gap: 40px;
+            flex-direction: column;
+        }
+        &__left, &__right {
+            width: 100%;
+        }
+    }
+    .big-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .medium-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .block-title {
+        margin-bottom: 25px;
+        &__text-white, &__text-black {
+            font-size: 26px;
+            line-height: 36px;
+        }
+        &__link-dark, &__link-light {
+            display: none;
+        }
+        &__link-more {
+            display: block;
+        }
+    }
+    .tabs {
+        overflow-y: hidden;
+        &__item {
+            font-size: 14px;
+        }
+    }
+}
+
+.container{
+    width: 86.5%;
+    margin: auto;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.logo {
+    width: 165px;
+    height: 34px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.block-contact {
+    gap: 8px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    transition: color 0.5s ease;
+
+    &:hover {
+        color: $blue;
+    }
+
+    &__icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    &__icon-big {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__text-default {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        color: $sub-black;
+    }
+
+    &__text-dark,
+    &__text-light {
+        font-size: 15px;
+        font-weight: 600;
+        color: $black;
+    }
+
+    &__text-light {
+        color: $white;
+    }
+}
+
+.taxiRentPage{
+    .wrapper__left-block{
+        width: auto;
+    }
+
+    .selectionByParameters .carsGrid__list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .selectionByParameters__form .filter-form__container__select{
+        width: 415px;
+    }
+
+    .selectionByParameters__form .filter-form__container__input{
+        width: 208px;
+    }
+
+    .selectionByParameters__form .filter-form__buttons{
+        justify-content: flex-start;
+    }
+
+    .service__list-benefit{
+        max-height: 138px;
+        overflow: hidden;
+        transition: all .3s;
+    }
+}
+
+.rentPage{
+    .service__list-benefit{
+        max-height: 138px;
+        overflow: hidden;
+        transition: all .3s;
+    }
+}

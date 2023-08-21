@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" href="images/logoBlue.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <title>MARCAR</title>
+</head>
+
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    <main class="main">
+
+        @@include('../blocks/pages/homePage/advertisement/advertisement.html')
+        <!-- /.advertisement -->
+
+        <section class="home__tabs">
+            <div class="tabs wrapper">
+                <button class="tabs__item active">Новые авто</button>
+                <button class="tabs__item">Авто с пробегом</button>
+                <button class="tabs__item">Семейные авто</button>
+                <button class="tabs__item">Кроссоверы</button>
+                <button class="tabs__item">Внедорожники</button>
+            </div>
+        </section>
+
+        <section class="home__filter">
+            @@include('../blocks/common/main-filter/main-filter.html')
+            <!-- /.main-filter -->
+        </section>
+
+        <section class="home__models">
+            @@include('../blocks/common/models/models.html')
+            <!-- /.models -->
+        </section>
+
+        <section class="home__new-cars">
+            @@include('../blocks/common/new-cars/new-cars.html')
+            <!-- /.new-cars -->
+        </section>
+        
+        <section class="home__mileage-cars">
+            @@include('../blocks/common/mileage-cars/mileage-cars.html')
+            <!-- /.mileage-cars -->
+        </section>
+        
+        <section class="home__taxi-cars">
+            @@include('../blocks/common/taxi-cars/taxi-cars.html')
+            <!-- /.taxi-cars -->
+        </section>
+
+
+        <section class="home__recomendated wrapper">
+            <p class="block-title__text-black">Рекомендованные подборки</p>
+            <ul class="recomendated-list">
+                <li class="recomendated-list__item">
+                    <a href="#">
+                        <div class="recomendated-card">
+                            <img src="../images/auto/recomendated/auto1.png" alt="" class="recomendated-card__img">
+                            <p class="recomendated-card__title">Внедорожники</p>
+                            <p class="recomendated-card__subtitle">2 148 авто</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="recomendated-list__item">
+                    <a href="#">
+                        <div class="recomendated-card">
+                            <img src="../images/auto/recomendated/auto2.png" alt="" class="recomendated-card__img">
+                            <p class="recomendated-card__title">Кроссоверы</p>
+                            <p class="recomendated-card__subtitle">2 148 авто</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="recomendated-list__item">
+                    <a href="#">
+                        <div class="recomendated-card">
+                            <img src="../images/auto/recomendated/auto3.png" alt="" class="recomendated-card__img">
+                            <p class="recomendated-card__title">Семейные авто</p>
+                            <p class="recomendated-card__subtitle">2 148 авто</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="recomendated-list__item">
+                    <a href="#">
+                        <div class="recomendated-card">
+                            <img src="../images/auto/recomendated/auto4.png" alt="" class="recomendated-card__img">
+                            <p class="recomendated-card__title">Премиум авто</p>
+                            <p class="recomendated-card__subtitle">2 148 авто</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="recomendated-list__item">
+                    <a href="#">
+                        <div class="recomendated-card">
+                            <img src="../images/auto/recomendated/auto5.png" alt="" class="recomendated-card__img">
+                            <p class="recomendated-card__title">Недорогие авто</p>
+                            <p class="recomendated-card__subtitle">2 148 авто</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="recomendated-list__item">
+                    <a href="#">
+                        <div class="recomendated-card">
+                            <img src="../images/auto/recomendated/auto6.png" alt="" class="recomendated-card__img">
+                            <p class="recomendated-card__title">Седаны</p>
+                            <p class="recomendated-card__subtitle">2 148 авто</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="home__services">
+            <div class="wrapper">
+                <p class="block-title__text-black">Предоставляемые услуги</p>
+                <ul class="services-sublist">
+                    <li class="services-sublist__item">
+                        <div class="services-card">
+                            <img src="../images/icons/services/search.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Автоподбор</p>
+                                <p class="services-card__subtitle">Мы подберем для Вас самые лучшие и выгодные варианты</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services-sublist__item">
+                        <div class="services-card">
+                            <img src="../images/icons/services/money.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Выкуп автомобиля</p>
+                                <p class="services-card__subtitle">Более 100 000 довольных клиентов</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services-sublist__item">
+                        <div class="services-card">
+                            <img src="../images/icons/services/key.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Аренда автомобиля</p>
+                                <p class="services-card__subtitle">Услуга аренды автомобилей различных классов</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services-sublist__item">
+                        <div class="services-card">
+                            <img src="../images/icons/services/service.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Сервис</p>
+                                <p class="services-card__subtitle">Сертифицированные дилерские центры</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services-sublist__item">
+                        <div class="services-card">
+                            <img src="../images/icons/services/sparePart.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Запчасти</p>
+                                <p class="services-card__subtitle">Крупнейший склад оригинальных запчастей</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services-sublist__item">
+                        <div class="services-card">
+                            <img src="../images/icons/services/testDrive.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Тест-драйв</p>
+                                <p class="services-card__subtitle">Протестируйте автомобиль перед покупкой или арендой</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services-sublist__item">
+                        <div class="services-card">
+                            <img src="../images/icons/services/checklist.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Финансовые услуги</p>
+                                <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг физических лиц</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="home__new-products">
+            @@include('../blocks/common/new-products/new-products.html')
+            <!-- /.new-products -->
+        </section>
+
+        <section class="home__promotions">
+            @@include('../blocks/common/promotions/promotions.html')
+            <!-- /.promotions --> 
+        </section>
+
+        @@include('../blocks/common/feedback/feedback.html')
+        <!-- /.feedback -->
+
+        <section class="home__videos wrapper">
+            <div class="block-title">
+                <p class="block-title__text-black">Видеообзоры</p>
+                <a href="#" class="block-title__link-dark">Показать все</a>
+            </div>
+            <ul class="video__list" data-limit="8">
+                <li class="video__list__item">
+                    <div class="video__content">
+                        <div class="video__container">
+                            <div class="plyr__video-wrapper">
+                                <video class="plyr video">
+                                    <source src="../videos/video2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="video__description">
+                            <h6 class="video__date">10.09.2023</h6>
+                            <p class="video__title">Видеообзор обновленого Geely Atlas Pro</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="video__list__item">
+                    <div class="video__content">
+                        <div class="video__container">
+                            <div class="plyr__video-wrapper">
+                                <video class="plyr video">
+                                    <source src="../videos/video2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="video__description">
+                            <h6 class="video__date">10.09.2023</h6>
+                            <p class="video__title">Видеообзор обновленого Geely Atlas Pro</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="/pages/newsPages/newsVideosPage.html" class="block-title__link-more">
+                Показать больше
+            </a>
+        </section>
+
+    </main>
+    <!-- /.main -->
+
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+    <script src="/js/sliders/itc-slider.js"></script>
+    <script src="/js/pagination.js"></script>
+    <script src="/js/accordion.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>

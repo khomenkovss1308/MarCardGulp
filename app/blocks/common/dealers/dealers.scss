@@ -1,0 +1,7 @@
+.dealers {
+    gap: 50px;
+    display: flex;
+    &__item {
+        width: 525px;
+    }
+}

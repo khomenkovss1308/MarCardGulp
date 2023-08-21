@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/logoBlue.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MARCAR</title>
+</head>
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+    
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+    
+    <main class="main">
+        <section class="services-main__first-block wrapper">
+            <p class="big-title">Услуги Marcar</p>
+            <ul class="services-main__list">
+                <li class="services-main__list__item">
+                    <a href="#">
+                        <div class="services-main__card">
+                            <img src="../images/services/image1.png" alt="" class="services-main__card-img">
+                            <p class="services-main__card-text">Автоподбор</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="services-main__list__item">
+                    <a href="/pages/services-mainPages/serviceBuyPage.html">
+                        <div class="services-main__card">
+                            <img src="../images/services/image2.png" alt="" class="services-main__card-img">
+                            <p class="services-main__card-text">Выкуп авто</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="services-main__list__item">
+                    <a href="/pages/services-mainPages/serviceRentPage.html">
+                        <div class="services-main__card">
+                            <img src="../images/services/image3.png" alt="" class="services-main__card-img" >
+                            <p class="services-main__card-text">Аренда автомобиля</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="services-main__list__item">
+                    <a href="serviceRegistrationPage.html">
+                        <div class="services-main__card">
+                            <img src="../images/services/image4.png" alt=""class=" services-main__card-img">
+                            <p class="services-main__card-text">Сервис</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="services-main__list__item">
+                    <a href="#">
+                        <div class="services-main__card">
+                            <img src="../images/services/image5.png" alt="" class="services-main__card-img">
+                            <p class="services-main__card-text">Запчасти</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="services-main__list__item">
+                    <a href="serviceFinancialPage.html">
+                        <div class="services-main__card">
+                            <img src="../images/services/image6.png" alt="" class="services-main__card-img">
+                            <p class="services-main__card-text">Финансовые услуги</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="services-main__list__item">
+                    <a href="#">
+                        <div class="services-main__card">
+                            <img src="../images/services/image7.png" alt="" class="services-main__card-img">
+                            <p class="services-main__card-text">Тест-драйв</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        @@include('../blocks/common/promotions/promotions.html')
+        <!-- /.promotions -->
+
+        @@include('../blocks/common/feedback/feedback.html')
+        <!-- /.feedback -->
+
+        <section class="services-main__last-block">
+            @@include('../blocks/common/seo-block/seo-block.html')
+            <!-- /.seo-block -->
+        </section>
+
+    </main>
+    <!-- /.services-main -->
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+    <script src="/js/main.js"></script>
+    <script src="../js/toogle-text-block.js"></script>
+</body>
+</html>

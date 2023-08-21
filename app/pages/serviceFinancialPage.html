@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/logoBlue.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MARCAR</title>
+</head>
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+    <main class="main">
+        <section class="wrapper wrapper__container">
+            <div class="wrapper__left">
+                <img src="../images/promo/about.png" alt="" class="service-const__img">
+
+                <div class="services-financial__first-block">
+                    <p class="big-title">Автомобили в кредит</p>
+                    <p class="subtitle">
+                        Компания Major совместно с рядом ведущих отечественных и западных банков предлагает 
+                        Вам приобрести любой автомобиль, представленный в нашем дилерстве, в кредит. 
+                        Это только некоторые преимущества нашей кредитной программы, которыми мы Вам 
+                        любезно предлагаем воспользоваться:
+                    </p>
+                </div>
+
+                <div class="services-financial__second-block">
+                    <ul class="list-benefit">
+                        <li class="list-benefit__item">
+                            <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                            <p class="list-benefit__item-text">маркетинговая ставка по кредиту от 0 % годовых; *</p>
+                        </li>
+                        <li class="list-benefit__item">
+                            <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                            <p class="list-benefit__item-text">возможность включения услуг страхования в кредит**</p>
+                        </li>
+                        <li class="list-benefit__item">
+                            <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                            <p class="list-benefit__item-text">минимальный список документов для подачи заявки в банк</p>
+                        </li>
+                        <li class="list-benefit__item">
+                            <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                            <p class="list-benefit__item-text">возможность получения решения Банка</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="services-financial__third-block">
+                    <p class="service-const__title">Стандартная схема покупки нового автомобиля в кредит:</p>
+                    <ol class="number-list">
+                        <li class="number-list__item">
+                            Вы выбираете автомобиль в одном из наших автосалонов.
+                        </li>
+                        <li class="number-list__item">
+                            Вы выбираете банк, условия предоставления кредита которого максимально удовлетворяют Вашим требованиям.
+                        </li>
+                        <li class="number-list__item">
+                            Заполняете бланк-заявку (анкету) и прилагаете необходимый пакет документов.
+                        </li>
+                        <li class="number-list__item">
+                            Решение о предоставлении Вам кредита принимается в течение 1-4 дней с момента подачи документов в банк.
+                        </li>
+                        <li class="number-list__item">
+                            После получения положительного решения заключается договор купли-продажи автомобиля, по которому Вы осуществляете первый платеж (согласно условиям банка).
+                        </li>
+                        <li class="number-list__item">
+                            Затем Вы страхуете автомобиль (Автокаско и гражданскую ответственность) в одной из компаний, одобренных банком. Вы также можете сделать это у нас.
+                        </li>
+                        <li class="number-list__item">
+                            Вы заключаете с банком кредитный договор и договор залога автомобиля.
+                        </li>
+                        <li class="number-list__item">
+                            Вы забираете автомобиль из автосалона.
+                        </li>
+                        <li class="number-list__item">
+                            До окончания срока действия кредитного договора осуществляете ежемесячные платежи.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="services-financial__fourth-block">
+                    <p class="service-const__title">Стандартная схема покупки нового автомобиля в кредит:</p>
+                    <p class="subtitle">
+                        В нашей компании Вы можете воспользоваться специальными программами по кредитованию автомобилей следующих марок:
+                    </p>
+                </div>
+
+                <div class="services-financial__fourth-block">
+                    @@include('../blocks/pages/services/components/company/company.html')
+                    <!-- /.company -->
+                </div>
+
+                <div class="services-financial__fifth-block">
+                    <p class="services-financial__desc">
+                        * Данная ставка распространяется на определенные марки и модели. Более подробную информацию, можно уточнить менеджеров отделов продаж заинтересовавшей Вас марки/модели.
+                    </p>
+                    <p class="services-financial__desc">
+                        ** Условия и Банки-партнеров предлагающие данную услугу, можно уточнить у менеджеров отдел продаж.
+                    </p>
+                </div>
+            </div>
+
+            <div class="wrapper__right">
+                @@include('../blocks/pages/services/components/callback/callback.html')
+                <!-- /.callback -->
+
+                @@include('../blocks/pages/services/components/services-nav/services-nav.html')
+                <!-- /.services-nav -->
+            </div>
+        </section>
+
+        <section class="services-financial__promotion">
+            @@include('../blocks/common/promotions/promotions.html')
+            <!-- /.promotions -->
+        </section>
+            
+        @@include('../blocks/common/seo-block/seo-block.html')
+        <!-- /.seo-block -->
+
+    </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="/js/accordion.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

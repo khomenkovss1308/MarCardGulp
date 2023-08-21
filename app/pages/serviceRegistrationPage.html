@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/logoBlue.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>MARCAR</title>
+</head>
+
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    <main class="main">
+        <section class="wrapper wrapper__container">
+            <div class="wrapper__left">
+                <img src="../images/promo/about.png" alt="" class="service-const__img">
+
+                <div class="services-registration__first-block">
+                    <p class="big-title">Запись на сервис</p>
+                    <p class="subtitle">
+                        Лидер автомобильного рынка Marcar осуществляет техническое обслуживание 39 автомобильных марок в официальных специализированных сервисных центрах Москвы и Санкт-Петербурга. Низкая стоимость и высокое качество техобслуживания автомобилей без очереди в сезон (весной и осенью) по предварительной записи.
+                    </p>
+                </div>
+
+                <form action="" class="service-const__form">
+                    <p class="service-const__form__title">Запишитесь на сервис online</p>
+                    <p class="service-const__form__subtitle">
+                        Вы можете записаться на сервисное обслуживание, плановое ТО,
+                        шиномонтаж и другие услуги сервиса выбрав интересующую вас
+                        марку или услугу:
+                    </p>
+                    <div class="select-default service-const__form__content">
+                        <select class="service-const__form__select" name="carBrand" id="carBrand">
+                            <option value="" disabled selected hidden>Марка автомобиля</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <select class="select-default service-const__form__select " name="work" id="work">
+                            <option value="" disabled selected hidden>Необходимые работы</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <input class="service-const__form__input input-default" type="text" placeholder="Ваше имя">
+                        <input class="service-const__form__input input-default" type="text" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+                    </div>
+                    <div class="service-const__form__bottom">
+                        <div class="service-const__form__checkbox">
+                            <input type="checkbox">
+                            <label class="service-const__form__checkbox__text">
+                                Указывая свои данные в настоящей электронной анкете я соглашаюсь
+                                на обработку моих персональных данных в соответствии с федеральным
+                                законом российской Федерации от 27 июля 2006 г. № 152-ФЗ
+                            </label>
+                        </div>
+                        <button class="service-const__form__btn">Отправить</button>
+                    </div>
+                </form>
+
+                <div class="services-registration__second-block">
+                    <p class="service-const__title"><span>Преимущества</span> нашего сервиса</p>
+                    <div class="service-const__benefit-container">
+                        <ul class="list-benefit">
+                            <li class="list-benefit__item">
+                                <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                                <p class="list-benefit__item-text">Весь персонал прошел сертификацию.</p>
+                            </li>
+                            <li class="list-benefit__item">
+                                <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                                <p class="list-benefit__item-text">Есть все спецоборудование по марке.</p>
+                            </li>
+                            <li class="list-benefit__item">
+                                <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                                <p class="list-benefit__item-text">Контроль технологии проведения ремонта.</p>
+                            </li>
+                            <li class="list-benefit__item">
+                                <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                                <p class="list-benefit__item-text">Гарантия на проведенные работы.</p>
+                            </li>
+                        </ul>
+                        <ul class="list-benefit">
+                            <li class="list-benefit__item">
+                                <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                                <p class="list-benefit__item-text">Контроль соблюдения сроков ремонта.</p>
+                            </li>
+                            <li class="list-benefit__item">
+                                <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                                <p class="list-benefit__item-text">Предварительное согласование всех работ.</p>
+                            </li>
+                            <li class="list-benefit__item">
+                                <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                                <p class="list-benefit__item-text">Лучшие технические специалисты.</p>
+                            </li>
+                            <li class="list-benefit__item">
+                                <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                                <p class="list-benefit__item-text">Большой склад запчастей в наличии.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="services-registration__third-block">
+                    <p class="service-const__title">Запишитесь через личный кабинет</p>
+                    <p class="subtitle">
+                        Вы можете ознакомиться с небольшим видео, чтобы понять преимущества
+                        использования нашего личного кабинета для записи на сервис в режиме
+                        онлайн и контроле проводимых работ.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="video__container">
+                        <div class="plyr__video-wrapper">
+                            <video class="plyr video">
+                                <source src="/videos/video2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-const__benefit-container services-registration__fifth-block">
+                    <ul class="list-benefit">
+                        <li class="list-benefit__item">
+                            <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                            <p class="list-benefit__item-text">Записываться на сервис online в любое удобное
+                                Вам время;</p>
+                        </li>
+                        <li class="list-benefit__item">
+                            <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                            <p class="list-benefit__item-text">Вести гараж купленных и проданных автомобилей;
+                            </p>
+                        </li>
+                        <li class="list-benefit__item">
+                            <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                            <p class="list-benefit__item-text">Видеть купленные страховые полисы и их сроки
+                                действия;</p>
+                        </li>
+                    </ul>
+                    <ul class="list-benefit">
+                        <li class="list-benefit__item">
+                            <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                            <p class="list-benefit__item-text">Видеть стоимость и продолжительность
+                                обслуживания;</p>
+                        </li>
+                        <li class="list-benefit__item">
+                            <img class="list-benefit__item-img" src="../images/icons/default/checkmark.svg" alt="">
+                            <p class="list-benefit__item-text">Смотреть историю их покупки и обслуживания во
+                                всех сервисных центрах Marcar;</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="wrapper__right">
+                @@include('../blocks/pages/services/components/callback/callback.html')
+                <!-- /.callback -->
+                
+                @@include('../blocks/pages/services/components/centers/centers.html')
+                <!-- /.centers -->
+
+                @@include('../blocks/pages/services/components/services-nav/services-nav.html')
+                <!-- /.services-nav -->
+            </div>
+        </section>
+
+        @@include('../blocks/common/seo-block/seo-block.html')
+        <!-- /.seo-block -->
+    </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+    <script src="/js/accordion.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

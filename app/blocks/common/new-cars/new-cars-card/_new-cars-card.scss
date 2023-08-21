@@ -1,0 +1,19 @@
+.new-cars-card {
+    & .cars-card__prices {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    .new-cars-card {
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-prices {
+                gap: 5px;
+                flex-direction: column;
+            }
+        }
+    }
+}

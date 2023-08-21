@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/logoBlue.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MARCAR</title>
+</head>
+
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    <main class="main">
+        <section class="new-auto-brand__first">
+            <img src="../images/auto/new-auto/main.png" alt="" class="new-auto-brand__img wrapper">
+            <p class="big-title wrapper">Модельный ряд Volkswagen</p>
+        </section>
+
+        <section class="new-auto-brand__second">
+            <div class="new-auto-brand__tabs tabs wrapper">
+                <button class="tabs__item active">Легковые автомобили</button>
+                <button class="tabs__item">Коммерческий транспорт</button>
+            </div>
+            <div class="wrapper">
+                @@include('../blocks/pages/catalog/new-auto/brand/brand-list/brand-list.html')
+                <!-- /.brand-list -->
+                <a href="" class="link-see-more new-auto-brand__link-see-more">Показать больше</a>
+            </div>
+        </section>
+
+        <section class="new-auto-brand__third">
+            <div class="wrapper">
+                <p class="medium-title">Подбор <span>Volkswagen</span> по параметрам</p>
+            </div>
+            @@include('../blocks/common/main-filter/main-filter.html')
+            <!-- /.main-filter -->
+        </section>
+
+        <section class="new-auto-brand__services">
+            <div class="wrapper">
+                <ul class="services-list">
+                    <li class="services-list__item">
+                        <div class="services-card wrapper">
+                            <img src="../images/icons/search.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Автоподбор</p>
+                                <p class="services-card__subtitle">Мы подберем для Вас самые лучшие и выгодные варианты</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="services-card wrapper">
+                            <img src="../images/icons/steering-control.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Тест-драйв</p>
+                                <p class="services-card__subtitle">Протестируйте автомобиль перед покупкой или арендой</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="services-card wrapper">
+                            <img src="../images/icons/search.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Рассчитать кредит</p>
+                                <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг физических лиц</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="services-card wrapper">
+                            <img src="../images/icons/search.svg" alt="" class="services-card__icon">
+                            <div>
+                                <p class="services-card__title">Выкуп автомобиля</p>
+                                <p class="services-card__subtitle">Предложим для Вас максимально выгодные условия выкупа</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="new-auto-brand__fourth wrapper">
+            @@include('../blocks/common/dealers/dealers-slider/dealers-slider.html')
+        </section>
+
+        <section class="new-auto-brand__fifth">
+            @@include('../blocks/common/promotions/promotions.html')
+            <!-- /.promotions -->
+        </section>
+
+        @@include('../blocks/common/seo-block/seo-block.html')
+            <!-- /.seo-block -->
+    </main>
+    <!-- /.main -->
+
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="../js/sliders/gallery-slider.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

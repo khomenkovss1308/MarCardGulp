@@ -1,0 +1,30 @@
+.models {
+    gap: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item {
+        width: calc(15% - (5% / 5));
+    }
+}
+
+@media (max-width: 1500px) {
+    .models__item {
+        width: 18%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .models__item {
+        width: 26%;
+    }
+}
+
+@media (max-width: 768px) {
+    .models {
+        gap: 5px;
+        &__item {
+            width: 49%;
+        }
+    }
+}

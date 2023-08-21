@@ -1,0 +1,27 @@
+.number-list {
+    gap: 18px;
+    display: flex;
+    padding-left: 20px;
+    flex-direction: column;
+
+    &__item {
+        color: $main-black;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        padding-left: 8px;
+
+        &::marker {
+            color: $main-blue;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .number-list__item {
+        font-size: 14px;
+    }
+}

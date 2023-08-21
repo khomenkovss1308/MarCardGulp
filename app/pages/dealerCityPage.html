@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/logoBlue.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MARCAR</title>
+</head>
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    <main class="main">
+        <section class="dealer__map-container wrapper">
+            <p class="dealer__map-container-title">Салоны Marcar <span>в Москве</span></p>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A24eb5aa19462d467597bd7c35810e4f706bd5346e08afe7c149ab77f396691a3&amp;source=constructor" class="dealer__map-container-map" frameborder="0"></iframe>
+        </section>
+    
+        <section class="dealer__list-container wrapper">
+            <p class="dealer__list-container-title">Автосалоны</p>
+            <ul class="dealer__list">
+                <li class="dealer__list__item">
+                    <a href="dealerCitySinglePage.html">
+                        @@include('../blocks/common/dealers/dealer-card/dealer-card.html')
+                        <!-- /.dealer-card -->
+                    </a>
+                </li>
+            </ul>
+        </section>
+    
+        <section class="dealer__model-container">
+            @@include('../blocks/common/models/models.html')
+            <!-- /.models -->
+            <a class="see-more-link">Показать больше</a>
+        </section>
+            
+        @@include('../blocks/common/seo-block/seo-block.html')
+        <!-- /.seo-block -->
+    </main>
+        
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.services-card {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    &__icon {
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+    }
+    &__title {
+        color: $main-black;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+    &__subtitle {
+        color: $sub-black;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-card {
+        &__icon {
+            width: 34px;
+            height: 34px;
+        }
+        &__title {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}

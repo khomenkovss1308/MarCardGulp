@@ -1,0 +1,106 @@
+//settings
+@import 'settings/color';
+@import 'settings/fonts';
+@import 'settings/reset';
+@import 'settings/global';
+@import 'settings/cards-contstants';
+
+//common
+@import 'settings/common/video';
+@import 'settings/common/service';
+@import 'settings/common/dealer';
+@import 'settings/common/system';
+@import 'settings/common/benefit';
+@import 'settings/common/carsGrid';
+@import 'settings/common/accordion';
+@import 'settings/common/itc-slider';
+@import 'settings/common/number-list';
+@import 'settings/common/additional-nav';
+@import 'settings/common/pagination';
+@import 'pages/catalogs/taxi/taxi';
+@import 'settings/common/services-list/services-list';
+@import 'settings/common/services-list/services-card';
+
+//pages news
+@import 'pages/news/news';
+@import 'pages/news/single';
+@import 'pages/news/videos';
+@import 'pages/news/promotions';
+@import 'pages/news/new-products';
+
+//pages catalog
+@import 'pages/catalogs/taxi/taxi';
+
+//pages account
+@import 'pages/account/account';
+
+//pages systems
+@import 'pages/systems/about';
+@import 'pages/systems/not-found';
+
+//common blocks
+@import '../blocks/common/header/header';
+@import '../blocks/common/footer/footer';
+@import '../blocks/common/sidebar/sidebar';
+@import '../blocks/common/feedback/feedback';
+@import '../blocks/common/seo-block/seo-block';
+@import '../blocks/common/promotions/promotions';
+@import '../blocks/common/new-products/new-products';
+@import '../blocks/common/new-products/new-products';
+@import '../blocks/common/dealers/dealer-card/dealer-card';
+@import '../blocks/common/dealers/dealers-slider/dealers-slider';
+@import "../blocks/common/promotions/promotion-card/promotion-card";
+@import '../blocks/common/new-products/new-products-card/new-products-card';
+@import '../blocks/common/models/models';
+@import '../blocks/common/models/models-card/models-card';
+@import '../blocks/common/main-filter/main-filter';
+@import '../blocks/common/new-cars/new-cars';
+@import '../blocks/common/new-cars/new-cars-card/new-cars-card';
+@import '../blocks/common/mileage-cars/mileage-cars';
+@import '../blocks/common/mileage-cars/mileage-cars-card/mileage-cars-card';
+@import '../blocks/common/taxi-cars/taxi-cars';
+@import '../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card';
+
+//home page blocks
+@import '../blocks/pages/home/home';
+
+//services components
+@import '../blocks/pages/services/components/company/company';
+@import '../blocks/pages/services/components/centers/centers';
+@import '../blocks/pages/services/components/callback/callback';
+@import '../blocks/pages/services/components/services-nav/services-nav';
+@import '../blocks/pages/services/components/centers/centers-card/centers-card';
+@import '../blocks/pages/services/components/company/company-card/company-card';
+
+// systems components
+@import '../blocks/pages/systems/components/systems-nav/systems-nav';
+
+//services pages
+@import '../blocks/pages/services/services';
+@import '../blocks/pages/services/services-buy';
+@import 'pages/services/services-main/services-main';
+@import '../blocks/pages/services/services-financial';
+@import '../blocks/pages/services/services-technical';
+@import '../blocks/pages/services/services-registration';
+
+//news pages
+@import 'pages/news/news';
+@import 'pages/news/single';
+@import 'pages/news/videos';
+@import 'pages/news/promotions';
+@import 'pages/news/new-products';
+
+//systems pages
+@import 'pages/systems/about';
+@import 'pages/systems/not-found';
+
+//catalog pages
+@import '../blocks/pages/catalog/new-auto/brand/brand';
+
+//catalog components brand page
+@import '../blocks/pages/catalog/new-auto/brand/brand-list/brand-list';
+@import '../blocks/pages/catalog/new-auto/brand/brand-list/brand-card/brand-card';
+
+//account pages
+@import '../blocks/pages/account/sms/sms';
+@import '../blocks/pages/account/login/login';

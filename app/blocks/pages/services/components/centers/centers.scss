@@ -1,0 +1,21 @@
+.centers {
+    padding: 30px;
+    background: $gray;
+    margin-top: 20px;
+    &__title {
+        color: $black;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 38px;
+        margin-bottom: 25px;
+    }
+    &__list {
+        gap: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__item {
+            width: 50%;
+        }
+    }
+}

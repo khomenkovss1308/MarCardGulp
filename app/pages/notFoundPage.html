@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/images/logoBlue.svg">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>MARCAR</title>
+</head>
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    <main class="main">
+        <div class="not-found">
+            <img src="../images/icons/default/404.svg" alt="" class="not-found__img">
+            <p class="not-found__title">К сожалению такой страницы не существует</p>
+            <a href="index.html" class="not-found__link">На главную</a>
+        </div>
+    </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

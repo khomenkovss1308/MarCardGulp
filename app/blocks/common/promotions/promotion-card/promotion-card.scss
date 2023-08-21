@@ -1,0 +1,61 @@
+.promotion-card {
+    position: relative;
+    &__img {
+        height: 370px;
+    }
+    &__list {
+        gap: 5px;
+        display: flex;
+        &__item-blue, &__item-red, &__item-orange {
+            color: $white;
+            padding: 8px 10px;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 13px;
+            border-radius: 2px;
+            background: $main-blue;
+            box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.18);
+        }
+        &__item-red {
+            background: $main-red;
+        }
+        &__item-orange {
+            background: $main-orange
+        }
+    }
+    &__top {
+        top: 20px;
+        left: 20px;
+        position: absolute;
+    }
+    &__bottom {
+        left: 20px;
+        bottom: 25px;
+        position: absolute;
+    }
+}
+
+@media (max-width: 768px) {
+    .promotion-card {
+        &__img {
+            height: 239px;
+        }
+        &__list {
+            gap: 4px;
+            &__item-blue, &__item-red, &__item-orange {
+                padding: 6px 10px;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 10px;
+            }
+        }
+        &__top {
+            top: 15px;
+            left: 15px;
+        }
+        &__bottom {
+            left: 15px;
+            bottom: 15px;
+        }
+    }
+}

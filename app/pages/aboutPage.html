@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/logoBlue.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>MARCAR</title>
+</head>
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    <main class="main">
+        <div class="wrapper wrapper__container">
+            <section class="wrapper__left">
+                <div class="about__first-block">
+                    <p class="big-title">О компании <span>Marcar</span></p>
+                    <p class="subtitle">
+                        Компания Major является лидером автомобильного бизнеса России. 
+                        Мы начали свою работу в 1998 году в качестве официального дилера 
+                        марок Chrysler и Jeep. Сегодня холдинг Major это разветвленная 
+                        структура из дилерских центров самых известных марок. Спектр марок, 
+                        продажей и обслуживанием которых мы занимаемся, постоянно расширяется, 
+                        компания строит новые центры и улучшает инфраструктуру существующих.
+                    </p>
+                </div>
+    
+                <ul class="about__list">
+                    <li class="about__list__item">
+                        <p class="about__list__item-title">55 000+</p>
+                        <p class="about__list__item-subtitle">
+                            Проданных автомобилей за период с 
+                            момента основания компании
+                        </p>
+                    </li>
+                    <li class="about__list__item">
+                        <p class="about__list__item-title">14 500+</p>
+                        <p class="about__list__item-subtitle">
+                            Новых и б/у автомобилей, которые 
+                            возможно найти на нашем портале 
+                        </p>
+                    </li>
+                    <li class="about__list__item">
+                        <p class="about__list__item-title">8 лет</p>
+                        <p class="about__list__item-subtitle">
+                            Успешной работы на российском рынке по продаже 
+                            и оказанию услуг для автолюбителей
+                        </p>
+                    </li>
+                    <li class="about__list__item">
+                        <p class="about__list__item-title">50+</p>
+                        <p class="about__list__item-subtitle">
+                            Автомобильных брендов из различных уголков всего мира, 
+                            которые уже ожидают Вас
+                        </p>
+                    </li>
+                </ul>
+                
+                <div class="about__second-block">
+                    <img src="../images/promo/about.png" alt="" class="about__second-block__img">
+                    <p class="subtitle">
+                        Компания Major является лидером автомобильного бизнеса России. 
+                        Мы начали свою работу в 1998 году в качестве официального дилера 
+                        марок Chrysler и Jeep. Сегодня холдинг Major это разветвленная 
+                        структура из дилерских центров самых известных марок. Спектр марок, 
+                        продажей и обслуживанием которых мы занимаемся, постоянно расширяется, 
+                        компания строит новые центры и улучшает инфраструктуру существующих.
+                    </p>
+                </div>
+    
+                <div class="about__third-block">
+                    <p class="about__third-block__title">Посмотрите видео о нас</p>
+                    <div class="video__container">
+                        <div class="plyr__video-wrapper">
+                            <video class="plyr video">
+                                <source src="../videos/video2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="wrapper__right">
+                @@include('../blocks/pages/systems/components/systems-nav/systems-nav.html')
+                <!-- /.system-nav -->
+            </section>
+        </div>
+    </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

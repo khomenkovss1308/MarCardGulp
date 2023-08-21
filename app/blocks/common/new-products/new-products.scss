@@ -1,0 +1,11 @@
+.new-products {
+    padding: 70px 0;
+    background: linear-gradient(180deg, $main-blue 65%, transparent 35%);
+    border-bottom: 1px solid #ECECEC;
+}
+
+@media (max-width: 768px) {
+    .new-products {
+        padding: 40px 0;
+    }
+}

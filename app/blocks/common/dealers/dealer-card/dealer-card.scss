@@ -1,0 +1,83 @@
+.dealer-card {
+    width: 100%;
+    border-radius: 8px;
+    background: $white;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0px 14px 90px 0px rgba(0, 0, 0, 0.06);
+    &__img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 8px 8px 0px 0px;
+    }
+    &__content {
+        margin: 0 30px 50px;
+        &__city {
+            color: $main-blue;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18px;
+            margin-bottom: 2px;
+        }
+        &__title {
+            color: $main-black;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+        &__subtitle {
+            color: $sub-black;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        &__info {
+            gap: 30px;
+            display: flex;
+            margin: 15px 0;
+            &-text {
+                color: $sub-black;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 18px;
+                & span {
+                    color: $main-black;
+                    margin-left: 5px;
+                }
+            }
+        }
+        &__phone {
+            gap: 8px;
+            display: flex;
+            align-items: center;
+            &-icon {
+                width: 24px;
+                height: 24px;
+            }
+            &-link {
+                color: $main-black;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+        &__btn {
+            width: 331px;
+            display: block;
+            margin: 41px auto 0;
+            padding: 18px 0;
+            color: $white;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            border-radius: 8px;
+            background-color: $main-blue;
+            box-shadow: 0px 14px 24px 0px rgba(36, 143, 236, 0.18);
+            transition: color 0.5s ease, background-color 0.5s ease;
+            &:hover {
+                color: $main-black;
+                background-color: $main-yellow;
+            }
+        }
+    }
+}

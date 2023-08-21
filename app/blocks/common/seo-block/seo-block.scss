@@ -1,0 +1,40 @@
+.seo-block {
+    padding: 70px 0;
+    background: $gray;
+    &__container {
+        max-width: 72%;
+    }
+    &__title {
+        color: $deep-blue;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+    &__subtitle {
+        color: $main-black;
+        max-height: 205px;
+        overflow: hidden;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 26px;
+        transition: max-height 0.5s ease;
+    }
+}
+
+@media (max-width: 1100px) {
+    .seo-block  {
+        padding: 40px 0;
+        &__container {
+            max-width: 100%;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &__subtitle {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}

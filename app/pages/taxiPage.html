@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/logoBlue.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>MARCAR</title>
+</head>
+
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+    
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+    <main class="main">
+        <section class="wrapper">
+            <img class="service__main-img" src="../images/promo/taxi.png" alt="">
+
+            <div class="taxi__block-title">
+                <p class="big-title">Аренда авто для такси</p>
+                <p class="subtitle">
+                    Выбирайте авто из 928 вариантов в аренду и начинайте работать уже через несколько часов!
+                </p>
+            </div>
+
+            <div class="service-lists">
+                <div class="service__benifit-content">
+                    <h2 class="wrapper__title-medium"><span>Преимущества</span> аренды</h2>
+                    <div class="service__benefit-container service__benefit-container--column">
+                        <ul class="service__list-benefit">
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/checkmark.svg"
+                                    alt="">
+                                <p class="service__list-benefit__item-text">
+                                    Оформление за 2 часа
+                                </p>
+                            </li>
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/checkmark.svg"
+                                    alt="">
+                                <p class="service__list-benefit__item-text">
+                                    Никаких скрытых платежей
+                                </p>
+                            </li>
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/checkmark.svg"
+                                    alt="">
+                                <p class="service__list-benefit__item-text">
+                                    Не требуется сервисное обслуживание
+                                </p>
+                            </li>
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/checkmark.svg"
+                                    alt="">
+                                <p class="service__list-benefit__item-text">
+                                    Отличное техническое состояние
+                                </p>
+                            </li>
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/checkmark.svg"
+                                    alt="">
+                                <p class="service__list-benefit__item-text">
+                                    Никаких скрытых платежей
+                                </p>
+                            </li>
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/checkmark.svg"
+                                    alt="">
+                                <p class="service__list-benefit__item-text">
+                                    Не требуется сервисное обслуживание
+                                </p>
+                            </li>
+                        </ul>
+                        <button id="btn-read-more-service" class="btn-read-more btn-read-more-color">
+                            <span>Показать больше</span>
+                            <img class="btn-read-more__img" src="../images/icons/default/arrowBack.svg" alt="">
+                        </button>
+                        <button id="btn-collapse-service" class="btn-collapse btn-read-more-color">
+                            <span>Свернуть</span>
+                            <img class="btn-collapse__img" src="../images/icons/default/arrowBack.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="service__benifit-content">
+                    <h2 class="wrapper__title-medium"><span>Условия</span> аренды</h2>
+                    <div class="service__benefit-container service__benefit-container-2 service__benefit-container--column">
+                        <ul class="service__list-benefit service__list-benefit-2">
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/plus.svg" alt="">
+                                <p class="service__list-benefit__item-text">
+                                    Возраст свыше 25 лет
+                                </p>
+                            </li>
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/plus.svg" alt="">
+                                <p class="service__list-benefit__item-text">
+                                    Медицинская справка о состоянии здоровья
+                                </p>
+                            </li>
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/plus.svg" alt="">
+                                <p class="service__list-benefit__item-text">
+                                    минимальный список документов для подачи заявки в банк
+                                </p>
+                            </li>
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/plus.svg" alt="">
+                                <p class="service__list-benefit__item-text">
+                                    Водительское удостоверение
+                                </p>
+                            </li>
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/plus.svg" alt="">
+                                <p class="service__list-benefit__item-text">
+                                    Медицинская справка о состоянии здоровья
+                                </p>
+                            </li>
+                            <li class="service__list-benefit__item">
+                                <img class="service__list-benefit__item-img" src="../images/icons/default/plus.svg" alt="">
+                                <p class="service__list-benefit__item-text">
+                                    минимальный список документов для подачи заявки в банк
+                                </p>
+                            </li>
+                        </ul>
+                        <button id="btn-read-more-service-2" class="btn-read-more btn-read-more-color">
+                            <span>Показать больше</span>
+                            <img class="btn-read-more__img" src="../images/icons/default/arrowBack.svg" alt="">
+                        </button>
+                        <button id="btn-collapse-service-2" class="btn-collapse btn-read-more-color">
+                            <span>Свернуть</span>
+                            <img class="btn-collapse__img" src="../images/icons/default/arrowBack.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            @@include('../blocks/common/main-filter/main-filter.html')
+            <!-- /.main-filter -->
+        </section>
+
+        <section class="selectionByParameters wrapper">
+            <ul class="pagination-list taxi-cars__list" data-limit="12">
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+                <li class="pagination-list__item taxi-cars__list__item">
+                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                    <!-- /.taxi-cars-card -->
+                </li>
+            </ul>
+            <div class="pagination"></div>
+        </section>
+
+        <section class="dealer__list-container wrapper">
+            <p class="dealer__list-container-title">Автосалоны</p>
+            <ul class="dealer__list">
+                <li class="dealer__list__item">
+                    <a href="dealerCitySinglePage.html">
+                        @@include('../blocks/common/dealers/dealer-card/dealer-card.html')
+                        <!-- /.dealer-card -->
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+
+        @@include('../blocks/common/promotions/promotions.html')
+        <!-- /.promotions -->
+
+        @@include('../blocks/common/seo-block/seo-block.html')
+        <!-- /.seo-block -->
+
+        @@include('../blocks/common/footer/footer.html')
+        <!-- /.footer -->
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+    <script src="/js/sliders/itc-slider.js"></script>
+    <script src="/js/pagination.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>

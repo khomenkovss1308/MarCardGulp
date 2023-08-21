@@ -1,0 +1,62 @@
+.accordion {
+  &__header {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding-right: 22px;
+    justify-content: space-between;
+    background-color: transparent;
+    transition: background-color 0.2s ease-out;
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-left: auto;
+      background-size: 1.25rem;
+      background-repeat: no-repeat;
+      transition: transform 0.2s ease-out;
+      background-image: url(../../images/service/arrow.svg);
+    }
+    &:hover::after {
+      filter: brightness(0) invert(1);
+    }
+  }
+  &__content {
+    cursor: default;
+    padding: 24px 20px 30px;
+    background: $white;
+    &__list {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      &__item {
+        width: 300px;
+        &-title {
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 22px;
+          color: $black;
+        }
+        &-subtitle {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          color: $sub-black;
+        }
+        &-link:hover .accordion__content__list__item-title {
+          color: $main-blue;
+        }
+      }
+    }
+  }
+}
+  
+.accordion__item_show .accordion__header::after,
+.accordion__item_slidedown .accordion__header::after {
+  transform: rotate(-180deg);
+}
+  
+.accordion__item:not(.accordion__item_show) .accordion__body {
+  display: none;
+}

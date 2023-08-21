@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/logoBlue.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>MARCAR</title>
+</head>
+
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    <main class="main">
+        <section class="wrapper wrapper__container">
+            <div class="wrapper__left">
+                <img src="../images/promo/about.png" alt="" class="service-const__img">
+
+                <div class="services-buy__first-block">
+                    <p class="big-title">Выкуп авто</p>
+                    <p class="subtitle">
+                        Хотите продать свой автомобиль или обменять его на новый?
+                    </p>
+                </div>
+
+                <form action="" class="service-const__form">
+                    <p class="service-const__form__title">Заявка на оценку автомобиля</p>
+                    <p class="service-const__form__subtitle">
+                        Заполните заявку и узнайте реальную стоимость своего автомобиля.
+                    </p>
+                    <div class="select-default service-const__form__content">
+                        <select class="service-const__form__select" name="carBrand" id="carBrand">
+                            <option value="" disabled selected hidden>Марка автомобиля</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <select class="select-default service-const__form__select " name="work" id="work">
+                            <option value="" disabled selected hidden>Необходимые работы</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <input class="service-const__form__input input-default" type="text" placeholder="Ваше имя">
+                        <input class="service-const__form__input input-default" type="text" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+                    </div>
+
+                    <button class="service-const__form__btn-more">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="system-uicons:filtering">
+                                <path id="Vector"
+                                    d="M21.1431 6.85725H8.57171M6.28599 6.85725H2.85742M21.1431 18.2858H8.57171M6.28599 18.2858H2.85742M15.4289 12.5715H2.85742M21.1431 12.5715p7.7146M7.42885 4.57153C7.73196 4.57153 8.02265 4.69194 8.23697 4.90627C8.4513 5.1206 8.57171 5.41129 8.57171 5.71439V8.0001C8.57171 8.30321 8.4513 8.5939 8.23697 8.80823C8.02265 9.02255 7.73196 9.14296 7.42885 9.14296C7.12575 9.14296 6.83506 9.02255 6.62073 8.80823C6.4064 8.5939 6.28599 8.30321 6.28599 8.0001V5.71439C6.28599 5.41129 6.4064 5.1206 6.62073 4.90627C6.83506 4.69194 7.12575 4.57153 7.42885 4.57153ZM7.42885 16.0001C7.73196 16.0001 8.02265 16.1205 8.23697 16.3348C8.4513 16.5492 8.57171 16.8399 8.57171 17.143V19.4287C8.57171 19.7318 8.4513 20.0225 8.23697 20.2368C8.02265 20.4511 7.73196 20.5715 7.42885 20.5715C7.12575 20.5715 6.83506 20.4511 6.62073 20.2368C6.4064 20.0225 6.28599 19.7318 6.28599 19.4287V17.143C6.28599 16.8399 6.4064 16.5492 6.62073 16.3348C6.83506 16.1205 7.12575 16.0001 7.42885 16.0001ZM16.5717 10.2858C16.8748 10.2858 17.1655 10.4062 17.3798 10.6206C17.5942 10.8349 17.7146 11.1256 17.7146 11.4287V13.7144C17.7146 14.0175 17.5942 14.3082 17.3798 14.5225C17.1655 14.7368 16.8748 14.8572 16.5717 14.8572C16.2686 14.8572 15.9779 14.7368 15.7636 14.5225C15.5493 14.3082 15.4289 14.0175 15.4289 13.7144V11.4287C15.4289 11.1256 15.5493 10.8349 15.7636 10.6206C15.9779 10.4062 16.2686 10.2858 16.5717 10.2858Z"
+                                    stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                        Указать больше параметров
+                    </button>
+
+                    <div class="service-const__form__content">
+                        <input class="service-const__form__input input-default" type="text" placeholder="Ваше имя">
+                        <input class="service-const__form__input input-default" type="text" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+                    </div>
+
+                    <div class="service-const__form__bottom">
+                        <div class="service-const__form__checkbox">
+                            <input type="checkbox">
+                            <label class="service-const__form__checkbox__text">
+                                Указывая свои данные в настоящей электронной анкете я соглашаюсь
+                                на обработку моих персональных данных в соответствии с федеральным
+                                законом российской Федерации от 27 июля 2006 г. № 152-ФЗ
+                            </label>
+                        </div>
+                        <button class="service-const__form__btn">Отправить</button>
+                    </div>
+                </form>
+
+                <div class="services-buy__second-block">
+                    <p class="service-const__title">Как это работает?</p>
+                    <ul class="services-buy__list">
+                        <li class="services-buy__list__item">
+                            <img class="services-buy__list__item-number" src="../images/icons/number/1.svg" alt="">
+                            <img class="services-buy__list__item-icon" src="../images/icons/services/document.svg" alt="">
+                            <p class="services-buy__list__item-desc">
+                                Оставляете онлайн-заявку на оценку автомобиля
+                            </p>
+                        </li>
+                        <li class="services-buy__list__item">
+                            <img class="services-buy__list__item-number" src="../images/icons/number/2.svg" alt="">
+                            <img class="services-buy__list__item-icon" src="../images/icons/services/manager.svg" alt="">
+                            <p class="services-buy__list__item-desc">
+                                С вами связывается менеджер для уточнения информации о вашем авто
+                            </p>
+                        </li>
+                        <li class="services-buy__list__item">
+                            <img class="services-buy__list__item-number" src="../images/icons/number/3.svg" alt="">
+                            <img class="services-buy__list__item-icon" src="../images/icons/services/calculator.svg" alt="">
+                            <p class="services-buy__list__item-desc">
+                                Информация передается специалисту оценщику, который перезванивает и делает вам взаимовыгодное предложение
+                            </p>
+                        </li>
+                        <li class="services-buy__list__item">
+                            <img class="services-buy__list__item-number" src="../images/icons/number/4.svg" alt="">
+                            <img class="services-buy__list__item-icon" src="../images/icons/services/garage.svg" alt="">
+                            <p class="services-buy__list__item-desc">
+                                Если предложение вас устраивает - приезжаете в один из наших автосалонов
+                            </p>
+                        </li>
+                        <li class="services-buy__list__item">
+                            <img class="services-buy__list__item-number" src="../images/icons/number/5.svg" alt="">
+                            <img class="services-buy__list__item-icon" src="../images/icons/services/money.svg" alt="">
+                            <p class="services-buy__list__item-desc">
+                                Составляем документы на продажу и готово! Расстаемся с вами до вашей следующей сделки с подержанным автомобилем
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="wrapper__right">
+                @@include('../blocks/pages/services/components/callback/callback.html')
+                <!-- /.callback -->
+
+                @@include('../blocks/pages/services/components/services-nav/services-nav.html')
+                <!-- /.services-nav -->
+            </div>
+        </section>
+        
+        @@include('../blocks/common/seo-block/seo-block.html')
+        <!-- /.seo-block -->
+    </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+    <script src="/js/accordion.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>

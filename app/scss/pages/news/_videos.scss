@@ -1,0 +1,13 @@
+.news-videos__new-products {
+    margin: 90px auto 50px;
+    & .new-products {
+        border: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-videos__new-products {
+        margin: 40px auto 0;
+    }
+}
+
