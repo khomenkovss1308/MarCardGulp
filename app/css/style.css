@@ -489,6 +489,9 @@ body {
   border-top: 0;
   border-bottom: 0;
 }
+.cars-card__top .itc-slider-item img {
+  width: 100%;
+}
 .cars-card__labels {
   gap: 6px;
   display: -webkit-box;
@@ -5789,8 +5792,6 @@ body {
 .recomendated-card__img {
   width: 100%;
   height: auto;
-  max-height: 255px;
-  min-height: 80px;
   padding: 30px 70px;
   border-radius: 4px;
   background: #FBFBFB;

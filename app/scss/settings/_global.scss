@@ -212,7 +212,14 @@ body {
                 border-bottom: 0;
             }
         }
+
+        .itc-slider-item {
+            img {
+                width: 100%;
+            }
+        }
     }
+
     &__labels {
         gap: 6px;
         display: flex;
