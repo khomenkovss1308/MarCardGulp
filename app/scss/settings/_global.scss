@@ -308,6 +308,12 @@ body {
     }
 }
 
+@media (max-width: 1450px) {
+    .wrapper{
+        width: 95%;
+    }
+}
+
 @media (max-width: 450px) {
     .cars-card {
         &__top {

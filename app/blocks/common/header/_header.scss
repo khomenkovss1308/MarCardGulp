@@ -233,21 +233,6 @@
     }
 }
 
-@media (max-width: 480px) {
-    .header {
-        margin-bottom: 0;
-
-        &__top,
-        &__bottom {
-            display: none;
-        }
-
-        &__mobile {
-            display: flex;
-        }
-    }
-}
-
 
 
 .dropdown-content {
@@ -732,13 +717,67 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1450px) {
+    .logo{
+        width: 110px;
+    }
+    .header__bottom-left-block{
+        width: 820px;
+    }
+    .block-contact__text-dark, .block-contact__text-light{
+        font-size: 11px;
+    }
+    .header__top-right-block{
+        width: 450px;
+    }
+    .header__top-left-block-btn-search__text{
+        font-size: 11px;
+
+    }
+    .header__top-left-block-btn-search__icon{
+        width: 15px;
+        height: 15px;
+    }
+    .header__top-left-block-btn-search{
+        padding: 13px;
+        margin-left: 10px;
+    }
+    .header__bottom__link-dropdown,.header__bottom__link{
+        font-size: 13px;
+    }
+    .navigation-list{
+        width: 690px !important;
+    }
+    .header__top-left-block-city{
+        margin-right: 10px;
+    }
+    .header__top-left-block-contact{
+        gap: 10px;
+    }
+}
+
+
+
+@media (max-width: 1080px) {
+    .header {
+        margin-bottom: 0;
+
+        &__top,
+        &__bottom {
+            display: none;
+        }
+
+        &__mobile {
+            display: flex;
+        }
+    }
+
     .navigation{
         &-sublist{
             box-shadow: none;
             &-group{
-                position: static;
                 width: 100%;
+                position: static;
                 padding-top: 0;
             }
             &__item{
@@ -766,6 +805,8 @@
                         flex-direction: column;
                     }
                     &_btn{
+                        display: flex;
+                        align-items: center;
                         width: 100%;
                         &:not(:last-child){
                             margin-right: 0;
@@ -794,7 +835,6 @@
 
             }
         }
-
         &-list{
             &__item{
                 .header__bottom__link-dropdown{
