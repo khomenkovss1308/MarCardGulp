@@ -21,18 +21,7 @@
         }
     }
     &__btn-primary {
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 14px;
-        color: $main-black;
         padding: 18px 34px;
-        border-radius: 4px;
-        transition: all .5s;
-        background-color: $main-yellow;
-        &:hover {
-            color: $white;
-            background-color: $main-blue;
-        }
     }
     &__btn-group {
         gap: 30px;

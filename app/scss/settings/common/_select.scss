@@ -1,0 +1,31 @@
+.select-default {
+    position: relative;
+
+    & select {
+        width: 100%;
+        outline: none;
+        cursor: pointer;
+        appearance: none;
+        padding: 17px 20px;
+        background-color: $white;
+        border: 1px solid #DFDFDF;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-image: url(../../../images/icons/default/arrowSelectBlue.svg);
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        color: $deep-gray;
+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .select-default select {
+        padding: 17px 15px;
+    }
+}

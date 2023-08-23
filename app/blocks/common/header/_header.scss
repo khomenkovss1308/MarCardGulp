@@ -413,16 +413,16 @@
                 font-weight: 600;
                 line-height: 12px;
                 padding: 2px 4px 3px;
-                color: var(--black, #232323);
+                color: $main-black;
                 border-radius: 2px;
-                background: var(--yellow, #FBE200);
+                background: $main-yellow;
             }
 
             &_price-info {
                 margin: 13px 39px 13px 0;
 
                 &_old {
-                    color: var(--black, #232323);
+                    color: $main-black;
                     font-size: 11px;
                     font-weight: 400;
                     line-height: 11px;
@@ -617,11 +617,11 @@
                     }
 
                     &--yellow {
-                        background: var(--yellow, #FBE200);
+                        background: $main-yellow;
 
                         h4,
                         p {
-                            color: var(--black, #232323);
+                            color: $main-black;
                         }
                     }
 

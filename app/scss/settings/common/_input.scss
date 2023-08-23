@@ -1,0 +1,23 @@
+.input-default {
+    padding: 17px 20px;
+    background-color: $white;
+    border: 1px solid #DFDFDF;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $deep-gray;
+
+    &::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        color: $deep-gray;
+    }
+}
+
+@media (max-width: 768px) {
+    .input-default {
+        padding: 17px 15px;
+    }
+}

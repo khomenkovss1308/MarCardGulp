@@ -254,71 +254,6 @@ body {
   width: 30%;
 }
 
-.input-default {
-  color: #969696;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-  padding: 17px 20px;
-  background: white;
-  border: 1px solid #DFDFDF;
-}
-.input-default::-webkit-input-placeholder {
-  color: #969696;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-}
-.input-default::-moz-placeholder {
-  color: #969696;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-}
-.input-default:-ms-input-placeholder {
-  color: #969696;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-}
-.input-default::-ms-input-placeholder {
-  color: #969696;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-}
-.input-default::placeholder {
-  color: #969696;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-.select-default {
-  position: relative;
-}
-.select-default select {
-  width: 100%;
-  outline: none;
-  cursor: pointer;
-  color: #969696;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  padding: 17px 20px;
-  border: 1px solid #DFDFDF;
-  background: white;
-  background-image: url(../../images/icons/default/arrowSelectBlue.svg);
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-}
-.select-default select::-ms-expand {
-  display: none;
-}
-
 .block-title {
   gap: 30px;
   display: -webkit-box;
@@ -340,7 +275,7 @@ body {
 .block-title__text-black {
   color: #232323;
 }
-.block-title__link-light, .block-title__link-dark, .block-title__link-more {
+.block-title__link-light, .block-title__link-dark {
   font-size: 14px;
   font-weight: 600;
   line-height: 14px;
@@ -354,13 +289,7 @@ body {
   padding: 14px 24px;
   color: #232323;
 }
-.block-title__link-more {
-  width: 100%;
-  display: none;
-  padding: 20px 0;
-  margin-top: 20px;
-}
-.block-title__link-more:hover, .block-title__link-dark:hover {
+.block-title__link-dark:hover {
   color: white;
   background-color: #248FEC;
 }
@@ -376,76 +305,17 @@ body {
           box-shadow: 0px 4px 45px 0px rgba(78, 78, 78, 0.45);
 }
 
-.big-title, .medium-title {
+.medium-title {
   color: #232323;
   font-weight: 700;
 }
-.big-title span, .medium-title span {
+.medium-title span {
   color: #248FEC;
-}
-
-.big-title {
-  font-size: 50px;
-  line-height: 60px;
 }
 
 .medium-title {
   font-size: 30px;
   line-height: 40px;
-}
-
-.subtitle {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 28px;
-  color: #232323;
-}
-
-.link-see-more {
-  width: 240px;
-  color: white;
-  display: block;
-  margin: 0 auto;
-  padding: 20px 0;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 15px;
-  text-align: center;
-  border-radius: 8px;
-  background-color: #248FEC;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-.link-see-more:hover {
-  color: #232323;
-  background-color: #FBE200;
-}
-
-.tabs {
-  gap: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.tabs__item {
-  white-space: nowrap;
-  font-size: 15px;
-  font-weight: 400;
-  color: #575757;
-  line-height: normal;
-  padding: 14px 30px;
-  border-radius: 4px;
-  background-color: #FAFAFA;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-.tabs__item:hover {
-  color: white;
-  background-color: #248FEC;
-}
-.tabs .active {
-  color: white;
-  background: #248FEC;
 }
 
 .cars-card__top {
@@ -759,10 +629,6 @@ body {
   .wrapper__left, .wrapper__right {
     width: 100%;
   }
-  .big-title {
-    font-size: 30px;
-    line-height: 40px;
-  }
   .medium-title {
     font-size: 26px;
     line-height: 36px;
@@ -779,12 +645,6 @@ body {
   }
   .block-title__link-more {
     display: block;
-  }
-  .tabs {
-    overflow-y: hidden;
-  }
-  .tabs__item {
-    font-size: 14px;
   }
 }
 .container {
@@ -850,40 +710,6 @@ body {
 }
 .block-contact__text-light {
   color: white;
-}
-
-.taxiRentPage .wrapper__left-block {
-  width: auto;
-}
-.taxiRentPage .selectionByParameters .carsGrid__list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
-}
-.taxiRentPage .selectionByParameters__form .filter-form__container__select {
-  width: 415px;
-}
-.taxiRentPage .selectionByParameters__form .filter-form__container__input {
-  width: 208px;
-}
-.taxiRentPage .selectionByParameters__form .filter-form__buttons {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-.taxiRentPage .service__list-benefit {
-  max-height: 138px;
-  overflow: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.rentPage .service__list-benefit {
-  max-height: 138px;
-  overflow: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 .main-cards__list {
@@ -963,6 +789,204 @@ body {
   }
   .main-cards__date, .main-cards__subtitle {
     font-size: 12px;
+  }
+}
+.tabs {
+  gap: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tabs__item {
+  border-radius: 4px;
+  padding: 14px 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #FAFAFA;
+  font-size: 15px;
+  font-weight: 400;
+  color: #575757;
+  line-height: normal;
+  white-space: nowrap;
+}
+.tabs__item:hover {
+  color: white;
+  background-color: #248FEC;
+}
+.tabs .active {
+  color: white;
+  font-weight: 600;
+  background-color: #248FEC;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    overflow-y: hidden;
+  }
+  .tabs__item {
+    padding: 12px 18px;
+  }
+}
+.input-default {
+  padding: 17px 20px;
+  background-color: white;
+  border: 1px solid #DFDFDF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #969696;
+}
+.input-default::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #969696;
+}
+.input-default::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #969696;
+}
+.input-default:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #969696;
+}
+.input-default::-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #969696;
+}
+.input-default::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #969696;
+}
+
+@media (max-width: 768px) {
+  .input-default {
+    padding: 17px 15px;
+  }
+}
+.select-default {
+  position: relative;
+}
+.select-default select {
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 17px 20px;
+  background-color: white;
+  border: 1px solid #DFDFDF;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-image: url(../../../images/icons/default/arrowSelectBlue.svg);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #969696;
+}
+.select-default select::-ms-expand {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .select-default select {
+    padding: 17px 15px;
+  }
+}
+.btn-yellow-defautlt {
+  border-radius: 4px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #FBE200;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  color: #232323;
+}
+.btn-yellow-defautlt:hover {
+  color: white;
+  background-color: #248FEC;
+}
+
+.btn-blue-default {
+  color: white;
+  border-radius: 8px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #248FEC;
+}
+.btn-blue-default:hover {
+  color: #232323;
+  background-color: #FBE200;
+}
+
+.link-more-default {
+  padding: 14px 24px;
+}
+.link-more-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .link-more-default {
+    display: none;
+  }
+  .link-more-mobile {
+    width: 100%;
+    display: block;
+    padding: 23px 0;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+.first-title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60px;
+  color: #232323;
+}
+.first-title span {
+  color: #248FEC;
+}
+
+.second-title {
+  color: black;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 55px;
+}
+.second-title span {
+  color: #248FEC;
+}
+
+.sub-title {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #232323;
+}
+
+@media (max-width: 768px) {
+  .first-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .second-title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .sub-title {
+    font-size: 14px;
+    line-height: 26px;
   }
 }
 .video {
@@ -2242,300 +2266,6 @@ body {
     line-height: 22px;
   }
 }
-.carsGrid__list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 40px;
-}
-.carsGrid__btn-seeMore {
-  display: none;
-  width: 100%;
-  padding: 20px 0;
-  border-radius: 4px;
-  background-color: #FBE200;
-  margin-top: 20px;
-  color: #000;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 14px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.carsGrid__btn-seeMore:hover {
-  background-color: #248fec;
-  color: white;
-}
-.carsGrid__item {
-  width: 390px;
-}
-.carsGrid__item-top {
-  position: relative;
-}
-.carsGrid__item-top_info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  z-index: 1;
-}
-.carsGrid__item-top_button {
-  padding: 8px;
-  border-radius: 50%;
-  background-color: white;
-  width: 32px;
-  height: 32px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.carsGrid__item-top_button:not(:last-child) {
-  margin-right: 5px;
-}
-.carsGrid__item-top_button:hover {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.carsGrid__item-top_slider .itc-slider {
-  width: 100%;
-}
-.carsGrid__item-top_slider .itc-slider-indicators {
-  color: transparent;
-  bottom: 15px;
-  left: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.carsGrid__item-top_slider .itc-slider-indicator {
-  border-top: 0;
-  border-bottom: 0;
-}
-.carsGrid__item-bottom {
-  padding: 10px;
-  padding-bottom: 0;
-}
-.carsGrid__item-label {
-  border-radius: 2px;
-  font-size: 12px;
-  line-height: 12px;
-  padding: 3px 8px;
-  font-weight: 500;
-}
-.carsGrid__item-label:not(:last-child) {
-  margin-right: 6px;
-}
-.carsGrid__item-labelNew {
-  background: #248FEC;
-  color: white;
-}
-.carsGrid__item-labelDiscount {
-  color: #232323;
-  background: #FBE200;
-}
-.carsGrid__item-title {
-  color: #232323;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 30px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.carsGrid__item-title:hover {
-  color: #248FEC;
-}
-.carsGrid__item-description {
-  color: #797979;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-}
-.carsGrid__item-moreInfo {
-  margin-top: 5px;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 18px;
-  color: #232323;
-}
-.carsGrid__item-tags {
-  margin-top: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.carsGrid__item-tags_btn {
-  font-size: 11px;
-  line-height: 11px;
-  background-color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.carsGrid__item-tags_btn img {
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
-}
-.carsGrid__item-tags_btn .more {
-  display: block;
-  margin-right: 5px;
-}
-.carsGrid__item-tags_btn .textBlue {
-  font-weight: 700;
-  color: #248FEC;
-}
-.carsGrid__item-tag {
-  display: block;
-  color: #000;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 11px;
-  border-radius: 2px;
-  background: #FBE200;
-  padding: 6px;
-}
-.carsGrid__item-tag:not(:last-child) {
-  margin-right: 4px;
-}
-.carsGrid__item-price {
-  margin-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #232323;
-}
-.carsGrid__item-price_description {
-  margin-bottom: 2px;
-  color: #248FEC;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 11px;
-}
-.carsGrid__item-oldPrice {
-  margin-right: 8px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 14px;
-}
-.carsGrid__item-oldPrice_digit {
-  color: #DC0000;
-  text-decoration: line-through;
-}
-.carsGrid__item-newPrice {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 28px;
-}
-.carsGrid__item-btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.carsGrid__item-btns_btn {
-  width: 49%;
-  border-radius: 4px;
-  padding: 13px 30px;
-  font-size: 13px;
-  line-height: 14px;
-}
-.carsGrid__item-btns_btn--grey {
-  background: #F5F5F5;
-  color: var(--black, #232323);
-  font-weight: 400;
-}
-.carsGrid__item-btns_btn--blue {
-  color: white;
-  background: var(--main-blue, #248FEC);
-  font-weight: 500;
-}
-
-@media (max-width: 480px) {
-  .carsGrid__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    grid-row-gap: 20px;
-  }
-  .carsGrid__btn-seeMore {
-    display: block;
-  }
-  .carsGrid__item {
-    width: 100%;
-  }
-  .carsGrid__item:nth-child(n+5) {
-    display: none;
-  }
-  .carsGrid__item-top_info {
-    left: 10px;
-    right: 10px;
-    top: 10px;
-  }
-  .carsGrid__item-bottom {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 8px;
-  }
-  .carsGrid__item-title {
-    font-size: 15px;
-    line-height: 24px;
-  }
-  .carsGrid__item_description {
-    font-size: 12px;
-    line-height: 18px;
-  }
-  .carsGrid__item-oldPrice {
-    font-size: 13px;
-    line-height: 13px;
-  }
-  .carsGrid__item-newPrice {
-    font-size: 16px;
-    line-height: 16px;
-  }
-  .carsGrid__item-moreInfo {
-    margin-top: 2px;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .carsGrid__item-tags {
-    margin-top: 5px;
-  }
-  .carsGrid__item-tags_btn {
-    font-size: 10px;
-    line-height: 10px;
-  }
-  .carsGrid__item-tag {
-    font-size: 10px;
-    line-height: 10px;
-  }
-  .carsGrid .itc-slider-indicator {
-    display: block;
-  }
-}
 .accordion__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3171,9 +2901,6 @@ body {
     font-size: 16px;
     line-height: 26px;
   }
-}
-.news__pagintion .big-title {
-  margin-bottom: 30px;
 }
 .news__new-products {
   margin: 90px auto 50px;
@@ -4004,15 +3731,15 @@ body {
   font-weight: 600;
   line-height: 12px;
   padding: 2px 4px 3px;
-  color: var(--black, #232323);
+  color: #232323;
   border-radius: 2px;
-  background: var(--yellow, #FBE200);
+  background: #FBE200;
 }
 .dropdown-content__list-auto__item_price-info {
   margin: 13px 39px 13px 0;
 }
 .dropdown-content__list-auto__item_price-info_old {
-  color: var(--black, #232323);
+  color: #232323;
   font-size: 11px;
   font-weight: 400;
   line-height: 11px;
@@ -4205,11 +3932,11 @@ body {
   color: white;
 }
 .navigation-sublist__item-content_btn--yellow {
-  background: var(--yellow, #FBE200);
+  background: #FBE200;
 }
 .navigation-sublist__item-content_btn--yellow h4,
 .navigation-sublist__item-content_btn--yellow p {
-  color: var(--black, #232323);
+  color: #232323;
 }
 .navigation-sublist__item-content_btn img {
   margin-right: 8px;
@@ -5016,6 +4743,9 @@ body {
   background: linear-gradient(180deg, #248FEC 65%, transparent 35%);
   border-bottom: 1px solid #ECECEC;
 }
+.new-products .second-title {
+  color: white;
+}
 
 @media (max-width: 768px) {
   .new-products {
@@ -5027,6 +4757,9 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, #248FEC), color-stop(35%, transparent));
   background: linear-gradient(180deg, #248FEC 65%, transparent 35%);
   border-bottom: 1px solid #ECECEC;
+}
+.new-products .second-title {
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -5312,11 +5045,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 4px;
-  background-color: #FBFBFB;
   padding: 18px 15px;
+  border-radius: 4px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  background-color: #FBFBFB;
 }
 .models-card:hover {
   background-color: white;
@@ -5357,11 +5090,11 @@ body {
   .models-card {
     gap: 5px;
     padding: 12px 15px;
+    text-align: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: center;
   }
   .models-card__img {
     width: 80px;
@@ -5398,19 +5131,7 @@ body {
   line-height: 24px;
 }
 .main-filter__btn-primary {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 14px;
-  color: #232323;
   padding: 18px 34px;
-  border-radius: 4px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  background-color: #FBE200;
-}
-.main-filter__btn-primary:hover {
-  color: white;
-  background-color: #248FEC;
 }
 .main-filter__btn-group {
   gap: 30px;
@@ -5607,12 +5328,12 @@ body {
   margin: 8px 0 10px;
 }
 .mileage-cars-card__list__item {
+  padding: 6px;
   color: black;
   font-size: 11px;
   font-weight: 400;
   line-height: 11px;
   border-radius: 2px;
-  padding: 6px;
   background: #FBE200;
 }
 
@@ -6539,9 +6260,6 @@ body {
   .services-register__centers__btn {
     width: 100%;
   }
-}
-.news__pagintion .big-title {
-  margin-bottom: 30px;
 }
 .news__new-products {
   margin: 90px auto 50px;

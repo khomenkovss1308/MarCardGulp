@@ -1,0 +1,38 @@
+.tabs {
+    gap: 8px;
+    display: flex;
+
+    &__item {
+        border-radius: 4px;
+        padding: 14px 30px;
+        transition: all .5s;
+        background-color: $sub-gray;
+        
+        font-size: 15px;
+        font-weight: 400;
+        color: $sub-black;
+        line-height: normal;
+        white-space: nowrap;
+
+        &:hover {
+            color: $white;
+            background-color: $main-blue;
+        }
+    }
+
+    .active {
+        color: $white;
+        font-weight: 600;
+        background-color: $main-blue;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        overflow-y: hidden;
+
+        &__item {
+            padding: 12px 18px;
+        }
+    }
+}

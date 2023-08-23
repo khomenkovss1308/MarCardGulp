@@ -22,45 +22,6 @@ body {
     }
 }
 
-.input-default {
-    color: #969696;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    padding: 17px 20px;
-    background: $white;
-    border: 1px solid #DFDFDF;
-    &::placeholder {
-        color: #969696;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16px;
-    }
-}
-
-.select-default {
-    position: relative;
-    & select {
-        width: 100%;
-        outline: none;
-        cursor: pointer;
-        color: #969696;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16px;
-        appearance: none;
-        padding: 17px 20px;
-        border: 1px solid #DFDFDF;
-        background: $white;
-        background-image: url(../../images/icons/default/arrowSelectBlue.svg);
-        background-repeat: no-repeat;
-        background-position: right 10px center;
-        &::-ms-expand {
-            display: none;
-        }
-    }
-}  
-
 .block-title {
     gap: 30px;
     display: flex;
@@ -77,7 +38,7 @@ body {
     &__text-black {
         color: $main-black;
     }
-    &__link-light, &__link-dark, &__link-more {
+    &__link-light, &__link-dark {
         font-size: 14px;
         font-weight: 600;
         line-height: 14px;
@@ -90,13 +51,7 @@ body {
         padding: 14px 24px;
         color: $main-black;
     }
-    &__link-more {
-        width: 100%;
-        display: none;
-        padding: 20px 0;
-        margin-top: 20px;
-    }
-    &__link-more:hover, &__link-dark:hover {
+    &__link-dark:hover {
         color: $white;
         background-color: $main-blue;
     }
@@ -109,7 +64,7 @@ body {
     }
 }
 
-.big-title, .medium-title {
+.medium-title {
     color: $main-black;
     font-weight: 700;
     & span {
@@ -117,64 +72,9 @@ body {
     }
 }
 
-.big-title {
-    font-size: 50px;
-    line-height: 60px;
-}
-
 .medium-title {
     font-size: 30px;
     line-height: 40px;
-}
-
-.subtitle {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 28px;
-    color: $main-black;
-}
-
-.link-see-more {
-    width: 240px;
-    color: $white;
-    display: block;
-    margin: 0 auto;
-    padding: 20px 0;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 15px;
-    text-align: center;
-    border-radius: 8px;
-    background-color: $main-blue;
-    transition: all .5s;
-    &:hover {
-        color: $main-black;
-        background-color: $main-yellow;
-    }
-}
-
-.tabs {
-    gap: 8px;
-    display: flex;
-    &__item {
-        white-space: nowrap;
-        font-size: 15px;
-        font-weight: 400;
-        color: $sub-black;
-        line-height: normal;
-        padding: 14px 30px;
-        border-radius: 4px;
-        background-color: #FAFAFA;
-        transition: all .5s;
-        &:hover {
-            color: $white;
-            background-color: $main-blue;
-        }
-    }
-    .active {
-        color: $white;
-        background: $main-blue;
-    }
 }
 
 .cars-card {
@@ -473,10 +373,6 @@ body {
             width: 100%;
         }
     }
-    .big-title {
-        font-size: 30px;
-        line-height: 40px;
-    }
     .medium-title {
         font-size: 26px;
         line-height: 36px;
@@ -492,12 +388,6 @@ body {
         }
         &__link-more {
             display: block;
-        }
-    }
-    .tabs {
-        overflow-y: hidden;
-        &__item {
-            font-size: 14px;
         }
     }
 }
@@ -562,42 +452,5 @@ body {
 
     &__text-light {
         color: $white;
-    }
-}
-
-.taxiRentPage{
-    .wrapper__left-block{
-        width: auto;
-    }
-
-    .selectionByParameters .carsGrid__list{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .selectionByParameters__form .filter-form__container__select{
-        width: 415px;
-    }
-
-    .selectionByParameters__form .filter-form__container__input{
-        width: 208px;
-    }
-
-    .selectionByParameters__form .filter-form__buttons{
-        justify-content: flex-start;
-    }
-
-    .service__list-benefit{
-        max-height: 138px;
-        overflow: hidden;
-        transition: all .3s;
-    }
-}
-
-.rentPage{
-    .service__list-benefit{
-        max-height: 138px;
-        overflow: hidden;
-        transition: all .3s;
     }
 }

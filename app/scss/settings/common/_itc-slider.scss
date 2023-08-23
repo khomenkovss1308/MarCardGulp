@@ -16,13 +16,13 @@
         height: 50px;
 
         &:hover {
-            stroke: #FBE200;
+            stroke: $main-yellow;
         }
     }
 }
 
 .itc-slider__btn-icon:hover circle {
-    stroke: #FBE200;
+    stroke: $main-yellow;
 }
 
 .itc-slider-wrapper {
@@ -87,7 +87,7 @@
         line-height: 14px;
         padding: 16px 34px;
         border-radius: 4px;
-        background: #FBE200;
+        background: $main-yellow;
         margin: 0 70px 20px;
         color: var(--black, #232323);
         box-shadow: 0px 4px 45px 0px rgba(251, 226, 0, 0.25);
@@ -158,7 +158,7 @@
 .itc-slider-indicator-active {
     width: 10px;
     height: 10px;
-    background-color: #FBE200;
+    background-color: $main-yellow;
     box-shadow: drop-shadow(0px 2px 18px rgba(251, 226, 0, 0.50));
 }
 

@@ -6,12 +6,17 @@
 @import 'settings/cards-contstants';
 
 //common
+@import 'settings/common/tabs';
+@import 'settings/common/input';
+@import 'settings/common/select';
+@import 'settings/common/buttons';
+@import 'settings/common/typographys';
+
 @import 'settings/common/video';
 @import 'settings/common/service';
 @import 'settings/common/dealer';
 @import 'settings/common/system';
 @import 'settings/common/benefit';
-@import 'settings/common/carsGrid';
 @import 'settings/common/accordion';
 @import 'settings/common/itc-slider';
 @import 'settings/common/number-list';
