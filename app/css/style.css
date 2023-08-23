@@ -4195,14 +4195,14 @@ body {
 .navigation-sublist__item-content_btn--blue {
   background: var(--main-blue, #248FEC);
 }
-.navigation-sublist__item-content_btn--blue h4,
+.navigation-sublist__item-content_btn--blue span,
 .navigation-sublist__item-content_btn--blue p {
   color: white;
 }
 .navigation-sublist__item-content_btn--yellow {
   background: var(--yellow, #FBE200);
 }
-.navigation-sublist__item-content_btn--yellow h4,
+.navigation-sublist__item-content_btn--yellow span,
 .navigation-sublist__item-content_btn--yellow p {
   color: var(--black, #232323);
 }
@@ -4211,7 +4211,7 @@ body {
   width: 30px;
   height: 30px;
 }
-.navigation-sublist__item-content_btn h4 {
+.navigation-sublist__item-content_btn span {
   font-size: 14px;
   font-weight: 700;
 }
@@ -4243,7 +4243,7 @@ body {
   width: 35px;
   height: 29px;
 }
-.navigation-sublist__item-content_cars-item h4 {
+.navigation-sublist__item-content_cars-item span {
   color: var(--black, #232323);
   font-size: 13px;
   font-weight: 500;
@@ -4271,7 +4271,7 @@ body {
   height: 34px;
   margin-right: 10px;
 }
-.navigation-sublist__item-content_title h2 {
+.navigation-sublist__item-content_title span {
   color: var(--main-blue, #248FEC);
   font-size: 18px;
   font-weight: 700;
@@ -4284,7 +4284,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 25px;
 }
-.navigation-sublist__item-content_item h3 {
+.navigation-sublist__item-content_item span {
   color: #000;
   font-size: 15px;
   font-weight: 700;
@@ -4406,7 +4406,7 @@ body {
   .navigation-sublist__item-content_btn:first-child {
     margin-bottom: 5px;
   }
-  .navigation-sublist__item-content_btn h4 {
+  .navigation-sublist__item-content_btn span {
     font-size: 13px;
   }
   .navigation-sublist__item-content_btn:hover {
