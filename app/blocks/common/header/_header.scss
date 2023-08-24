@@ -357,6 +357,10 @@
             display: flex;
             justify-content: space-between;
 
+            &_img {
+                height: 61px;
+            }
+
             &_more {
                 color: $white;
                 font-size: 13px;

@@ -1243,6 +1243,13 @@ body {
 .link-more-mobile {
   display: none;
 }
+.link-more-center {
+  width: 240px;
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+  margin: 40px auto 0;
+}
 
 @media (max-width: 768px) {
   .link-more-default {
@@ -1273,6 +1280,16 @@ body {
   line-height: 55px;
 }
 .second-title span {
+  color: #248FEC;
+}
+
+.third-title {
+  color: #232323;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 45px;
+}
+.third-title span {
   color: #248FEC;
 }
 
@@ -1307,16 +1324,12 @@ body {
   height: 100%;
 }
 .video__list {
-  gap: 40px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.video__list__item {
-  width: 49% !important;
+  gap: 30px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
 }
 .video__content {
   gap: 15px;
@@ -1345,16 +1358,11 @@ body {
   line-height: 40px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
   .video__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 30px 0;
-  }
-  .video__list__item {
-    width: 100% !important;
+    gap: 30px;
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
   }
   .video__description {
     margin: 0;
@@ -2563,7 +2571,7 @@ body {
   transition: -webkit-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  background-image: url(../../images/service/arrow.svg);
+  background-image: url(../../../images/icons/default/arrowAccordion.png);
 }
 .accordion__header:hover::after {
   -webkit-filter: brightness(0) invert(1);
@@ -3018,41 +3026,25 @@ body {
 }
 
 .pagination-list {
-  gap: 30px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.pagination-list__item {
-  width: 32%;
+  gap: 30px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .pagination-list {
-    gap: 30px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .pagination-list__item {
-    width: 49%;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   .pagination-list {
     gap: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .pagination-list__item {
-    width: 100%;
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .taxi__block-title {
@@ -3170,6 +3162,73 @@ body {
     line-height: 26px;
   }
 }
+.services-rent__text-block {
+  margin-bottom: 30px;
+}
+.services-rent__text-block .first-title {
+  margin-bottom: 10px;
+}
+.services-rent__conditions {
+  margin-bottom: 50px;
+}
+.services-rent__conditions .third-title {
+  margin-bottom: 20px;
+}
+.services-rent__cars .third-title {
+  margin-bottom: 20px;
+}
+.services-rent__cars .main-filter {
+  margin-bottom: 50px;
+}
+.services-rent__cars .main-filter__select {
+  width: 33.3%;
+}
+.services-rent__cars .main-filter__input {
+  width: 16.65%;
+}
+.services-rent__cars .main-filter__bottom {
+  gap: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.services-rent__cars__btns {
+  gap: 5px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 15px;
+}
+.services-rent__cars__btn-rent, .services-rent__cars__btn-see {
+  padding: 13px 0;
+  border-radius: 4px;
+}
+.services-rent__cars__btn-see {
+  color: #232323;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 14px;
+  background-color: #F5F5F5;
+}
+.services-rent__benefit {
+  max-height: 138px;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease;
+}
+.services-rent__dealer {
+  margin-bottom: 90px;
+}
+.services-rent__dealer-wrapper {
+  width: 49.5%;
+  margin-top: 34px;
+}
+.services-rent__promotions {
+  margin-bottom: 90px;
+}
+
 .services__card {
   color: white;
   position: relative;
@@ -3255,6 +3314,9 @@ body {
   .services__seo-block {
     margin-top: 40px;
   }
+}
+.news__pagintion .first-title {
+  margin-bottom: 30px;
 }
 .news__new-products {
   margin: 90px auto 50px;
@@ -3461,6 +3523,14 @@ body {
     width: 272px;
   }
 }
+.news-videos__pagination .pagination-list {
+  gap: 30px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
 .news-videos__new-products {
   margin: 90px auto 50px;
 }
@@ -3469,6 +3539,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .news-videos__pagination .pagination-list {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
   .news-videos__new-products {
     margin: 40px auto 0;
   }
@@ -4034,6 +4108,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.dropdown-content__list-auto__item_img {
+  height: 61px;
 }
 .dropdown-content__list-auto__item_more {
   color: white;
@@ -6595,6 +6672,9 @@ body {
     width: 100%;
   }
 }
+.news__pagintion .first-title {
+  margin-bottom: 30px;
+}
 .news__new-products {
   margin: 90px auto 50px;
 }
@@ -6800,6 +6880,14 @@ body {
     width: 272px;
   }
 }
+.news-videos__pagination .pagination-list {
+  gap: 30px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
 .news-videos__new-products {
   margin: 90px auto 50px;
 }
@@ -6808,6 +6896,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .news-videos__pagination .pagination-list {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
   .news-videos__new-products {
     margin: 40px auto 0;
   }
@@ -7167,6 +7259,7 @@ body {
   color: #248FEC;
 }
 .brand-card__btn-call {
+  margin-top: 30px;
   width: 100%;
   color: white;
   font-size: 16px;

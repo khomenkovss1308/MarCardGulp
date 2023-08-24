@@ -1,5 +1,8 @@
 .news {
     &__pagintion {
+        & .first-title {
+            margin-bottom: 30px;
+        }
     }
     &__new-products {
         margin: 90px auto 50px;

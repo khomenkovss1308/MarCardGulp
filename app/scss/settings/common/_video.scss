@@ -7,12 +7,10 @@
         height: 100%;
     }
     &__list {
-        gap: 40px 0;
-        display: flex;
-        justify-content: space-between;
-        &__item {
-            width: 49%!important;
-        }
+        gap: 30px;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(2, 1fr);
     }
     &__content {
         gap: 15px;
@@ -37,14 +35,11 @@
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
     .video {
         &__list {
-            flex-direction: column;
-            gap: 30px 0;
-            &__item {
-                width: 100%!important;
-            }
+            gap: 30px;
+            grid-template-columns: repeat(1, 1fr);
         }
         &__description {
             margin: 0;

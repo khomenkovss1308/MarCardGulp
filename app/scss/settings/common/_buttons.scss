@@ -33,6 +33,13 @@
     &-mobile {
         display: none;
     }
+    &-center {
+        width: 240px;
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+        margin: 40px auto 0;
+    }
 }
 
 @media (max-width: 768px) {

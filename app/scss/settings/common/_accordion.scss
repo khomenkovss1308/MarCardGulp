@@ -16,7 +16,7 @@
       background-size: 1.25rem;
       background-repeat: no-repeat;
       transition: transform 0.2s ease-out;
-      background-image: url(../../images/service/arrow.svg);
+      background-image: url(../../../images/icons/default/arrowAccordion.png);
     }
     &:hover::after {
       filter: brightness(0) invert(1);

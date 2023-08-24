@@ -1,0 +1,77 @@
+.services-rent {
+    &__text-block {
+        margin-bottom: 30px;
+
+        & .first-title {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__conditions {
+        margin-bottom: 50px;
+
+        & .third-title {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__cars {
+        & .third-title {
+            margin-bottom: 20px;
+        }
+
+        & .main-filter {
+            margin-bottom: 50px;
+            &__select {
+                width: 33.3%;
+            }
+            &__input {
+                width: 16.65%;
+            }
+            &__bottom {
+                gap: 0;
+                justify-content: space-between;
+            }
+        }
+
+        &__btns {
+            gap: 5px;
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 15px;
+        }
+
+        &__btn-rent, &__btn-see {
+            padding: 13px 0;
+            border-radius: 4px;
+        }
+        
+        &__btn-see {
+            color: $main-black;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 14px;
+            background-color: #F5F5F5;
+        }
+
+    }
+
+    &__benefit {
+        max-height: 138px;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+
+    &__dealer {
+        margin-bottom: 90px;
+        &-wrapper {
+            width: 49.5%;
+            margin-top: 34px;
+        }
+    }
+
+    &__promotions {
+        margin-bottom: 90px;
+    }
+ }
