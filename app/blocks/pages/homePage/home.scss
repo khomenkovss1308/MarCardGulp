@@ -1,0 +1,135 @@
+.home {
+    &__tabs {
+        margin: 40px auto 27px;
+    }
+    &__models {
+        margin: 50px auto 70px;
+    }
+    &__mileage-cars {
+        margin: 70px auto;
+    }
+    &__recomendated {
+        margin: 70px auto;
+        & .block-title__text-black {
+            margin-bottom: 70px;
+        }
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 46px 2%;
+            &__item {
+                width: 32%;
+            }
+        }
+    }
+    &__services {
+        padding: 70px 0;
+        background: #FBFBFB;
+        & .block-title__text-black {
+            margin-bottom: 70px;
+        }
+    }
+    &__promotions {
+        margin-top: 50px;
+    }
+    &__videos {
+        margin: 90px auto 70px;
+    }
+}
+
+.recomendated-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 46px 2%;
+    &__item {
+        width: 32%;
+    }
+}
+
+.recomendated-card {
+    &__img {
+        width: 100%;
+        height: auto;
+        padding: 30px 70px;
+        border-radius: 4px;
+        background: #FBFBFB;
+        object-fit: cover;
+    }
+    &__title {
+        color: $black;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 34px;
+        margin-top: 15px;
+    }
+    &__subtitle {
+        color: $main-blue;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .recomendated-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 46px 2%;
+        &__item {
+            width: 49%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        &__tabs {
+            margin: 20px auto;
+        }
+        &__models {
+            margin: 20px auto 40px;
+        }
+        &__recomendated {
+            margin: 40px auto;
+        }
+        &__services {
+            padding: 40px 0;
+            & .block-title__text-black {
+                margin-bottom: 25px;
+            }
+        }
+        &__new-products {
+            & .new-products {
+                border: 0;
+            }
+        }
+        &__promotions {
+            margin-top: 0;
+        }
+        &__videos {
+            margin: 40px auto;
+        }
+    }
+
+    .recomendated-list {
+        gap: 10px 2%;
+        &__item {
+            width: 49%;
+        }
+    }
+
+    .recomendated-card {
+        &__img {
+            padding: 10px 23px;
+        }
+        &__title {
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 5px;
+        }
+        &__subtitle {
+            font-size: 11px;
+            line-height: 16px;
+        }
+    }
+}
