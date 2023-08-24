@@ -253,6 +253,10 @@ body {
 .wrapper__right {
   width: 30%;
 }
+.wrapper-compare {
+  width: 93.5%;
+  margin-right: 0;
+}
 
 .block-title {
   gap: 30px;
@@ -2975,6 +2979,91 @@ body {
 }
 .additional-nav__list__item:hover .additional-nav__list__item-content-svg path {
   fill: white;
+}
+
+.compare-content {
+  margin-bottom: 90px;
+}
+.compare-content th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+.compare-content th:first-child .cars-card__top-info {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.compare-content td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+.compare-content td {
+  background: #FBFBFB;
+  padding: 14px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.compare-content td.table-group-title {
+  background: none;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+}
+.compare-content td.table-group-subtitle {
+  color: var(--main-blue, #248FEC);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  background: none;
+}
+.compare-content td.table-title {
+  width: 406px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+}
+.compare-content td.table-price {
+  color: var(--main-blue, #248FEC);
+  font-weight: 700;
+}
+.compare-content td.table-price span {
+  color: #000;
+}
+.compare-content .table-differences p {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+.compare-content .table-differences__group {
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.compare-content .table-differences__btns-yes {
+  padding: 14px 30px;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 4px;
+  background: var(--main-blue, #248FEC);
+}
+.compare-content .table-differences__btns-no {
+  padding: 14px 30px;
+  color: var(--sub-black-text, #575757);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 4px;
+  background: #FAFAFA;
 }
 
 .pagination {

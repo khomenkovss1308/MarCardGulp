@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/logoBlue.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MARCAR</title>
+</head>
+
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    <main class="main">
+        <div class="wrapper wrapper-compare">
+            <p class="first-title">Сравнение</p>
+
+            <section class="home__tabs">
+                <div class="tabs">
+                    <button class="tabs__item active">Новые автомобили</button>
+                    <button class="tabs__item">Б/У автомобили</button>
+                    <button class="tabs__item">Аренда такси</button>
+                    <button class="tabs__item">Аренда авто</button>
+                    <button class="tabs__item">Коммерческий транспорт</button>
+                </div>
+            </section>
+
+            <section class="compare-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="table-differences">
+                                <div class="table-differences__group">
+                                    <p>
+                                        Показывать только отличия?
+                                    </p>
+                                    <div class="table-differences__btns">
+                                        <button class="table-differences__btns-yes">Да</button>
+                                        <button class="table-differences__btns-no">Нет</button>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="new-cars-card">
+                                    <div class="cars-card__top">
+                                        <div class="cars-card__top-info">
+                                            <div class="cars-card__btns">
+                                                <button class="cars-card__btn comparison">
+                                                    <img src="../../../../images/icons/default/compare.svg" alt=""
+                                                        class="cars-card__btn-icon">
+                                                </button>
+                                                <button class="cars-card__btn favorites">
+                                                    <img src="../../../../images/icons/default/favorites.svg" alt=""
+                                                        class="cars-card__btn-icon">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cars-card__top-slider">
+                                            <div class="itc-slider" data-slider="itc-slider">
+                                                <div class="itc-slider-wrapper">
+                                                    <div class="itc-slider-items">
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                    <ol class="itc-slider-indicators">
+                                                        <li class="itc-slider-indicator" data-slide-to="0"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="1"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="2"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="3"></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-cars-card__bottom">
+                                        <p class="cars-card__title">Toyota Camry VIII</p>
+                                        <p class="cars-card__subtitle">Элеганс 2.5 AT</p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="new-cars-card">
+                                    <div class="cars-card__top">
+                                        <div class="cars-card__top-info">
+                                            <div class="cars-card__btns">
+                                                <button class="cars-card__btn comparison">
+                                                    <img src="../../../../images/icons/default/compare.svg" alt=""
+                                                        class="cars-card__btn-icon">
+                                                </button>
+                                                <button class="cars-card__btn favorites">
+                                                    <img src="../../../../images/icons/default/favorites.svg" alt=""
+                                                        class="cars-card__btn-icon">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cars-card__top-slider">
+                                            <div class="itc-slider" data-slider="itc-slider">
+                                                <div class="itc-slider-wrapper">
+                                                    <div class="itc-slider-items">
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                    <ol class="itc-slider-indicators">
+                                                        <li class="itc-slider-indicator" data-slide-to="0"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="1"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="2"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="3"></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-cars-card__bottom">
+                                        <p class="cars-card__title">Toyota Camry VIII</p>
+                                        <p class="cars-card__subtitle">Элеганс 2.5 AT</p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="new-cars-card">
+                                    <div class="cars-card__top">
+                                        <div class="cars-card__top-info">
+                                            <div class="cars-card__btns">
+                                                <button class="cars-card__btn comparison">
+                                                    <img src="../../../../images/icons/default/compare.svg" alt=""
+                                                        class="cars-card__btn-icon">
+                                                </button>
+                                                <button class="cars-card__btn favorites">
+                                                    <img src="../../../../images/icons/default/favorites.svg" alt=""
+                                                        class="cars-card__btn-icon">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cars-card__top-slider">
+                                            <div class="itc-slider" data-slider="itc-slider">
+                                                <div class="itc-slider-wrapper">
+                                                    <div class="itc-slider-items">
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                    <ol class="itc-slider-indicators">
+                                                        <li class="itc-slider-indicator" data-slide-to="0"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="1"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="2"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="3"></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-cars-card__bottom">
+                                        <p class="cars-card__title">Toyota Camry VIII</p>
+                                        <p class="cars-card__subtitle">Элеганс 2.5 AT</p>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                               <div class="new-cars-card">
+                                    <div class="cars-card__top">
+                                        <div class="cars-card__top-info">
+                                            <div class="cars-card__btns">
+                                                <button class="cars-card__btn comparison">
+                                                    <img src="../../../../images/icons/default/compare.svg" alt=""
+                                                        class="cars-card__btn-icon">
+                                                </button>
+                                                <button class="cars-card__btn favorites">
+                                                    <img src="../../../../images/icons/default/favorites.svg" alt=""
+                                                        class="cars-card__btn-icon">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="cars-card__top-slider">
+                                            <div class="itc-slider" data-slider="itc-slider">
+                                                <div class="itc-slider-wrapper">
+                                                    <div class="itc-slider-items">
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="itc-slider-item">
+                                                            <img src="../../../../images/auto/presentation/auto1.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                    <ol class="itc-slider-indicators">
+                                                        <li class="itc-slider-indicator" data-slide-to="0"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="1"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="2"></li>
+                                                        <li class="itc-slider-indicator" data-slide-to="3"></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-cars-card__bottom">
+                                        <p class="cars-card__title">Toyota Camry VIII</p>
+                                        <p class="cars-card__subtitle">Элеганс 2.5 AT</p>
+                                    </div>
+                                </div> 
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-title">Стоимость</td>
+                            <td class="table-price">26588 <span>р.</span> </td>
+                            <td class="table-price">26588 <span>р.</span> </td>
+                            <td class="table-price">26588 <span>р.</span> </td>
+                            <td class="table-price">26588 <span>р.</span> </td>
+                        </tr>
+                        <tr>
+                            <td class="table-group-title" colspan="5">
+                                Основные параметры
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">Год выпуска</td>
+                            <td>2018</td>
+                            <td>2018</td>
+                            <td>2018</td>
+                            <td>2018</td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">Пробег</td>
+                            <td>132 579</td>
+                            <td>131 500</td>
+                            <td>125 645</td>
+                            <td>89 889</td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">Кузов</td>
+                            <td>Седан</td>
+                            <td>Седан</td>
+                            <td>Седан</td>
+                            <td>Хэтчбэк</td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">Двигатель</td>
+                            <td>1.4 л., Бензин (150 л.с.)</td>
+                            <td>1.4 л., Бензин (150 л.с.)</td>
+                            <td>1.4 л., Бензин (150 л.с.)</td>
+                            <td>1.2 л., Бензин (105 л.с.)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">Салон</td>
+                            <td>
+                                Черные сидения, черная панель приборов, черное ковровое покрытие, серый потолок, 5 мест
+                            </td>
+                            <td>
+                                Ткань\Велюр, 5 мест
+                            </td>
+                            <td>
+                                Ткань\Велюр, 5 мест
+                            </td>
+                            <td>
+                                Темный цвет салона
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-group-title" colspan="5">
+                                Комплектация
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-group-subtitle" colspan="5">
+                                Комфорт
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">2-х зонный климат-контроль</td>
+                            <td>Нет</td>
+                            <td>Есть</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">
+                                Cпинка заднего сиденья, раздельно складывающаяся (в соотношении 40:60)
+                            </td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">Гидроусилитель руля</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td class="table-group-subtitle" colspan="5">
+                                Безопасность
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">2-х зонный климат-контроль</td>
+                            <td>Нет</td>
+                            <td>Есть</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">
+                                Cпинка заднего сиденья, раздельно складывающаяся (в соотношении 40:60)
+                            </td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">Гидроусилитель руля</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td class="table-group-subtitle" colspan="5">
+                                Общее
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">2-х зонный климат-контроль</td>
+                            <td>Нет</td>
+                            <td>Есть</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">
+                                Cпинка заднего сиденья, раздельно складывающаяся (в соотношении 40:60)
+                            </td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td class="table-title">Гидроусилитель руля</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                            <td>Есть</td>
+                            <td>Нет</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+        </div>
+    </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="/js/sliders/itc-slider.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
