@@ -1,6 +1,5 @@
 .promotion-card {
-    position: relative;
-    &__img {
+    &__img-container {
         height: 370px;
     }
     &__list {
@@ -23,21 +22,11 @@
             background: $main-orange
         }
     }
-    &__top {
-        top: 20px;
-        left: 20px;
-        position: absolute;
-    }
-    &__bottom {
-        left: 20px;
-        bottom: 25px;
-        position: absolute;
-    }
 }
 
 @media (max-width: 768px) {
     .promotion-card {
-        &__img {
+        &__img-container {
             height: 239px;
         }
         &__list {
@@ -48,14 +37,6 @@
                 font-weight: 600;
                 line-height: 10px;
             }
-        }
-        &__top {
-            top: 15px;
-            left: 15px;
-        }
-        &__bottom {
-            left: 15px;
-            bottom: 15px;
         }
     }
 }

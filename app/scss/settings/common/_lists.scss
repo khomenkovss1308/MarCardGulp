@@ -1,0 +1,82 @@
+.main-cards-list {
+    gap: 30px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    &__item {
+        z-index: 2;
+    }
+}
+
+.car-list {
+    gap: 33px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.benifit-list {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        gap: 8px;
+        display: flex;
+
+        &-icon {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+            margin-top: 3px;
+        }
+
+        &-text {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $main-black;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .car-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1100px) {
+    .main-cards-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .car-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-cards-list {
+        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .car-list {
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .benifit-list {
+        gap: 10px;
+
+        &__item {
+            gap: 6px;
+        
+            &-text {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}

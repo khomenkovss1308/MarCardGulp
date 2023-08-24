@@ -28,7 +28,7 @@
                     margin: 0 0 4px;
                     font-size: 12px;
                     line-height: 10px;
-                    color: var(--main-blue, #248FEC);
+                    color: $main-blue;
                 }
 
                 &__select {
@@ -36,7 +36,7 @@
                     font-size: 13px;
                     font-weight: 700;
                     line-height: 14px;
-                    color: var(--black, #232323);
+                    color: $main-black;
                 }
             }
 
@@ -122,7 +122,7 @@
                     margin: 0;
                     font-size: 15px;
                     font-weight: 600;
-                    color: var(--black, #232323);
+                    color: $main-black;
                 }
             }
         }
@@ -164,7 +164,7 @@
                 align-items: center;
                 padding: 8px 18px;
                 border-radius: 999px;
-                background: var(--main-blue, #248FEC);
+                background: $main-blue;
 
                 &__img {
                     width: 20px;
@@ -319,21 +319,21 @@
                     line-height: 18px;
 
                     &--active {
-                        color: var(--main-blue, #248FEC);
-                        border-bottom: 2px solid var(--main-blue, #248FEC);
+                        color: $main-blue;
+                        border-bottom: 2px solid $main-blue;
                     }
                 }
             }
 
             &_count {
-                color: var(--sub-black-text, #575757);
+                color: $sub-black;
                 font-size: 12px;
                 font-weight: 600;
                 line-height: 18px;
                 margin-bottom: 15px;
 
                 span {
-                    color: var(--black, #232323);
+                    color: $main-black;
                     font-size: 12px;
                     font-weight: 600;
                     line-height: 18px;
@@ -381,14 +381,14 @@
                 text-align: center;
                 border-radius: 4px;
                 padding: 12px 14px;
-                background: var(--main-blue, #248FEC);
+                background: $main-blue;
             }
 
             &_title {
                 font-size: 15px;
                 font-weight: 700;
                 line-height: 24px;
-                color: var(--black, #232323);
+                color: $main-black;
             }
 
             &_subtitle {
@@ -405,7 +405,7 @@
                 line-height: 12px;
                 padding: 2px 4px 3px;
                 border-radius: 2px;
-                background: var(--main-blue, #248FEC);
+                background: $main-blue;
             }
 
             &_discount {
@@ -437,7 +437,7 @@
                 }
 
                 &_new {
-                    color: var(--black, #232323);
+                    color: $main-black;
                     font-size: 14px;
                     font-weight: 700;
                     line-height: 14px;
@@ -447,7 +447,7 @@
                         font-weight: 700;
                         line-height: 24px;
                         margin-right: 5px;
-                        color: var(--black, #232323);
+                        color: $main-black;
                     }
                 }
             }
@@ -536,7 +536,7 @@
                 }
 
                 a {
-                    color: var(--main-blue, #248FEC);
+                    color: $main-blue;
                 }
             }
 
@@ -572,7 +572,7 @@
                 width: 190px;
                 font-size: 14px;
                 font-weight: 700;
-                color: var(--black, #232323);
+                color: $main-black;
             }
 
             &-content {
@@ -608,7 +608,7 @@
                     }
 
                     &--blue {
-                        background: var(--main-blue, #248FEC);
+                        background: $main-blue;
 
                         h4,
                         p {
@@ -663,7 +663,7 @@
                         }
 
                         h4 {
-                            color: var(--black, #232323);
+                            color: $main-black;
                             font-size: 13px;
                             font-weight: 500;
                             line-height: 18px;
@@ -672,7 +672,7 @@
                         }
 
                         p {
-                            color: var(--sub-black-text, #575757);
+                            color: $sub-black;
                             font-size: 10px;
                             font-weight: 400;
                             line-height: 10px;
@@ -692,7 +692,7 @@
                     }
 
                     h2 {
-                        color: var(--main-blue, #248FEC);
+                        color: $main-blue;
                         font-size: 18px;
                         font-weight: 700;
                         line-height: 24px;

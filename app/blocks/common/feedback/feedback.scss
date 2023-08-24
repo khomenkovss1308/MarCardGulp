@@ -67,7 +67,7 @@
             font-weight: 400;
             line-height: normal;
             & span {
-                color: var(--sub-blue, #44A8FF);
+                color: $sub-blue;
             }
         }
     }

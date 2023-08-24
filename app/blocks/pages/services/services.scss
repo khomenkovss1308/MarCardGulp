@@ -26,7 +26,7 @@
         color: $white;
         padding: 40px;
         border-radius: 8px;
-        background: var(--gradient, linear-gradient(48deg, #2775B8 0%, #44A8FF 100%));
+        background: linear-gradient(48deg, #2775B8 0%, #44A8FF 100%);
         &__title {
             font-size: 30px;
             font-weight: 700;
@@ -59,7 +59,7 @@
             font-weight: 600;
             line-height: 24px;
             border-radius: 4px;
-            background-color: $yellow;
+            background-color: $main-yellow;
             transition: background-color 0.5s ease, box-shadow 0.5s ease;
             &:hover {
                 background-color: #FFF27E;

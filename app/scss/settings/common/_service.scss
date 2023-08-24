@@ -169,7 +169,7 @@
         color: $white;
         padding: 40px;
         border-radius: 8px;
-        background: var(--gradient, linear-gradient(48deg, #2775B8 0%, #44A8FF 100%));
+        background: linear-gradient(48deg, #2775B8 0%, #44A8FF 100%);
 
         &-btn {
             border: 1px solid $white;
@@ -269,7 +269,7 @@
                 font-weight: 500;
                 line-height: 15px;
                 border-radius: 4px;
-                background: var(--yellow, #FBE200);
+                background: $main-yellow;
             }
         }
     }
@@ -278,7 +278,7 @@
         color: $white;
         padding: 30px 48px;
         border-radius: 8px;
-        background: var(--gradient, linear-gradient(48deg, #2775B8 0%, #44A8FF 100%));
+        background: linear-gradient(48deg, #2775B8 0%, #44A8FF 100%);
         margin-bottom: 40px;
 
         &-title {
@@ -305,7 +305,7 @@
             border-radius: 4px;
             align-items: center;
             justify-content: center;
-            background: var(--yellow, #FBE200);
+            background: $main-yellow;
             margin-top: 20px;
         }
     }
@@ -344,7 +344,7 @@
 
                     &-info {
                         &__title {
-                            color: var(--black, #232323);
+                            color: $main-black;
                             font-size: 13px;
                             font-weight: 500;
                             line-height: 18px;
@@ -352,7 +352,7 @@
                         }
 
                         &__subtitle {
-                            color: var(--sub-black-text, #575757);
+                            color: $sub-black;
                             font-size: 10px;
                             font-weight: 400;
                             line-height: 10px;
@@ -363,7 +363,7 @@
 
             &__button {
                 border-radius: 4px;
-                background: var(--main-blue, #248FEC);
+                background: $main-blue;
                 color: $white;
                 font-size: 14px;
                 font-weight: 500;
@@ -372,8 +372,8 @@
                 transition: all .3s;
 
                 &:hover {
-                    background: var(--yellow, #FBE200);
-                    color: var(--black, #232323);
+                    background: $main-yellow;
+                    color: $main-black;
                 }
             }
         }
@@ -405,7 +405,7 @@
 
             &-description {
                 width: 345px;
-                color: var(--black, #232323);
+                color: $main-black;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 24px;
@@ -426,7 +426,7 @@
 
     .wrapper__title-large {
         margin-bottom: 30px;
-        color: var(--black, #232323);
+        color: $main-black;
         font-size: 35px;
         font-weight: 700;
         line-height: 45px;

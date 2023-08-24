@@ -12,7 +12,7 @@
 }
 
 .pagination li a {
-    color: var(--sub-black-text, #575757);
+    color: $sub-black;
     font-size: 16px;
     line-height: 2.6em;
     font-weight: 500;
@@ -27,7 +27,7 @@
 
 .current-page:hover {
     padding: 8px;
-    background: var(--main-blue, #248FEC);
+    background: $main-blue;
 }
 
 .current-page:hover a {
@@ -35,7 +35,7 @@
 }
 
 .pagination li.active {
-    background: var(--main-blue, #248FEC);
+    background: $main-blue;
     padding: 8px;
 }
 

@@ -1,80 +1,72 @@
-html,
-body {
-    font-family: 'Inter';
-    font-style: normal;
-    overflow-x: hidden;
-    height: 100%;
-    color: #051B1F;
-}
+.main-card {
+    position: relative;
 
-.wrapper {
-    width: 87%;
-    margin: 0 auto;
-    &__container {
+    &__top, &__bottom  {
+        z-index: 2;
+        left: 20px;
+        position: absolute;
+    }
+    
+    &__top {
+        top: 20px;
+    }
+    
+    &__bottom {
+        gap: 5px;
+        bottom: 20px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
     }
-    &__left {
-        width: 67%;
-    }
-    &__right {
-        width: 30%;
-    }
-}
 
-.block-title {
-    gap: 30px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-    &__text-white, &__text-black {
-        font-size: 45px;
-        font-weight: 700;
-        line-height: 55px;
-    }
-    &__text-white {
-        color: $white;
-    }
-    &__text-black {
-        color: $main-black;
-    }
-    &__link-light, &__link-dark {
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 14px;
-        text-align: center;
+    &__img-container {
+        width: 100%;
+        height: 290px;
         border-radius: 4px;
-        background-color: $main-yellow;
-        transition: color 0.5s ease, background-color 0.5s ease;
+        border-radius: 4px;
+        background: linear-gradient(225deg, rgba(0, 0, 0, 0.00) 0%, #100 100%);
+        overflow: hidden;
+        position: relative;
     }
-    &__link-light, &__link-dark {
-        padding: 14px 24px;
-        color: $main-black;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
     }
-    &__link-dark:hover {
+    
+    &__title, &__sub-title {
         color: $white;
-        background-color: $main-blue;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
     }
-    &__link-light {
-        transition: background-color 0.5s ease, box-shadow 0.5s ease;
-    }
-    &__link-light:hover {
-        background-color: $yellow;
-        box-shadow: 0px 4px 45px 0px rgba(78, 78, 78, 0.45);
-    }
-}
 
-.medium-title {
-    color: $main-black;
-    font-weight: 700;
-    & span {
-        color: $main-blue;
-    }
-}
+    &__date, &__sub-title {
+        font-size: 13px;
+        font-weight: 400;
 
-.medium-title {
-    font-size: 30px;
-    line-height: 40px;
+    }
+
+    &__date {
+        line-height: 18px;
+        color: $main-yellow;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    &__sub-title {
+        line-height: 20px;
+    }
 }
 
 .cars-card {
@@ -208,7 +200,36 @@ body {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
+    .main-card {
+        position: relative;
+
+        &__top, &__bottom  {
+            left: 15px;
+        }
+        
+        &__top {
+            top: 15px;
+        }
+        
+        &__bottom {
+            gap: 0;
+        }
+    
+        &__date {
+            font-size: 12px;
+        }
+    
+        &__title {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &__sub-title {
+            -webkit-line-clamp: 1;
+        }
+    }
+
     .cars-card {
         &__top {
             position: relative;
@@ -262,195 +283,5 @@ body {
                 line-height: 16px;
             }
         }
-    }
-}
-
-.block-contact {
-    gap: 8px;
-    color: $white;
-    display: flex;
-    align-items: center;
-    transition: color 0.5s ease;
-
-    &:hover {
-        color: $main-blue;
-    }
-
-    &__icon {
-        width: 18px;
-        height: 18px;
-    }
-
-    &__icon-big {
-        width: 20px;
-        height: 20px;
-    }
-
-    &__text-default {
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 18px;
-        color: $sub-black;
-    }
-
-    &__text-dark,
-    &__text-light {
-        font-size: 15px;
-        font-weight: 600;
-        color: $main-black;
-    }
-
-    &__text-light {
-        color: $white;
-    }
-}
-
-.list-social {
-    gap: 5px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-
-    &__item {
-        width: 30px;
-        height: 30px;
-
-        &-img {
-            width: 100%;
-            height: auto;
-        }
-    }
-}
-
-.btn-collapse,
-.btn-read-more {
-    display: flex;
-    margin-top: 20px;
-    align-items: center;
-    background: transparent;
-
-    span {
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 11px;
-        margin-right: 5px;
-        color: $deep-blue;
-    }
-}
-
-.btn-read-more-color{
-    span{
-        color: $main-blue;
-    }
-}
-
-.btn-collapse {
-    display: none;
-
-    &__img {
-        transform: rotate(180deg);
-    }
-}
-
-@media (min-width: 1100px) and (max-width: 1300px) {
-    .wrapper {
-        &__left {
-            width: 57%;
-        }
-        &__right {
-            width: 40%;
-        }
-    }
-}
-
-@media (max-width: 1100px) {
-    .wrapper {
-        &__container {
-            gap: 40px;
-            flex-direction: column;
-        }
-        &__left, &__right {
-            width: 100%;
-        }
-    }
-    .medium-title {
-        font-size: 26px;
-        line-height: 36px;
-    }
-    .block-title {
-        margin-bottom: 25px;
-        &__text-white, &__text-black {
-            font-size: 26px;
-            line-height: 36px;
-        }
-        &__link-dark, &__link-light {
-            display: none;
-        }
-        &__link-more {
-            display: block;
-        }
-    }
-}
-
-.container{
-    width: 86.5%;
-    margin: auto;
-}
-
-.main {
-    flex: 1 0 auto;
-}
-
-.footer {
-    flex: 0 0 auto;
-}
-
-.logo {
-    width: 165px;
-    height: 34px;
-}
-
-.icon {
-    width: 20px;
-    height: 20px;
-}
-
-.block-contact {
-    gap: 8px;
-    color: $white;
-    display: flex;
-    align-items: center;
-    transition: color 0.5s ease;
-
-    &:hover {
-        color: $blue;
-    }
-
-    &__icon {
-        width: 18px;
-        height: 18px;
-    }
-
-    &__icon-big {
-        width: 20px;
-        height: 20px;
-    }
-
-    &__text-default {
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 18px;
-        color: $sub-black;
-    }
-
-    &__text-dark,
-    &__text-light {
-        font-size: 15px;
-        font-weight: 600;
-        color: $black;
-    }
-
-    &__text-light {
-        color: $white;
     }
 }

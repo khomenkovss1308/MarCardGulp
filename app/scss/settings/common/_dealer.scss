@@ -9,13 +9,13 @@
     &__city {
         &-container {
             &-title {
-                color: var(--black, #232323);
+                color: $main-black;
                 font-size: 50px;
                 font-weight: 700;
                 line-height: 60px;
             }
             &-subtitle {
-                color: var(--sub-black-text, #575757);
+                color: $sub-black;
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 30px;
@@ -37,12 +37,12 @@
     &__map-container {
         gap: 40px;
         &-title {
-            color: var(--black, #232323);
+            color: $main-black;
             font-size: 50px;
             font-weight: 700;
             line-height: 60px;
             & span {
-                color: var(--main-blue, #248FEC);
+                color: $main-blue;
             }
         }
         &-map {
@@ -79,20 +79,20 @@
             &-content {
                 margin: 0 30px 50px;
                 &__city {
-                    color: var(--main-blue, #248FEC);
+                    color: $main-blue;
                     font-size: 13px;
                     font-weight: 500;
                     line-height: 18px;
                     margin-bottom: 2px;
                 }
                 &__title {
-                    color: var(--black, #232323);
+                    color: $main-black;
                     font-size: 20px;
                     font-weight: 700;
                     line-height: 30px;
                 }
                 &__subtitle {
-                    color: var(--sub-black-text, #575757);
+                    color: $sub-black;
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 20px;
@@ -102,12 +102,12 @@
                     display: flex;
                     margin: 15px 0;
                     &-text {
-                        color: var(--sub-black-text, #575757);
+                        color: $sub-black;
                         font-size: 13px;
                         font-weight: 400;
                         line-height: 18px;
                         & span {
-                            color: var(--black, #232323);
+                            color: $main-black;
                             margin-left: 5px;
                         }
                     }
@@ -121,7 +121,7 @@
                         height: 24px;
                     }
                     &-link {
-                        color: var(--black, #232323);
+                        color: $main-black;
                         font-variant-numeric: lining-nums tabular-nums;
                         font-size: 18px;
                         font-weight: 600;
@@ -138,7 +138,7 @@
                     font-weight: 500;
                     line-height: 24px;
                     border-radius: 8px;
-                    background: var(--main-blue, #248FEC);
+                    background: $main-blue;
                     box-shadow: 0px 14px 24px 0px rgba(36, 143, 236, 0.18);
                 }
             }
@@ -169,12 +169,12 @@
                     height: 24px;
                 }
                 &-text {
-                    color: var(--black, #232323);
+                    color: $main-black;
                     font-size: 15px;
                     font-weight: 500;
                     line-height: 24px;
                     & span {
-                        color: var(--sub-black-text, #575757);
+                        color: $sub-black;
                     }
                 }
             }
@@ -192,13 +192,13 @@
         padding: 70px 0;
         background: #FBFBFB;
         &__title {
-            color: var(--main-blue, #248FEC);
+            color: $main-blue;
             font-size: 35px;
             font-weight: 700;
             line-height: 45px;
             margin-bottom: 30px;
             & span {
-                color: var(--black, #232323);
+                color: $main-black;
             }
         }
         &__container {
@@ -223,7 +223,7 @@
                     height: 18px;
                 }
                 &-text {
-                    color: var(--black, #232323);
+                    color: $main-black;
                     font-size: 15px;
                     font-weight: 500;
                     line-height: 24px;
@@ -246,13 +246,13 @@
                     height: 45px;
                 }
                 &-title {
-                    color: var(--black, #232323);
+                    color: $main-black;
                     font-size: 17px;
                     font-weight: 700;
                     line-height: 30px;
                 }
                 &-subtitle {
-                    color: var(--sub-black-text, #575757);
+                    color: $sub-black;
                     font-size: 13px;
                     font-weight: 400;
                     line-height: 18px;
@@ -271,17 +271,17 @@
         border-top: 1px solid #DFDFDF;
         border-bottom: 1px solid #DFDFDF;
         &__title {
-            color: var(--black, #232323);
+            color: $main-black;
             font-size: 24px;
             font-weight: 700;
             line-height: 34px;
             margin-bottom: 15px;
             & span {
-                color: var(--main-blue, #248FEC);
+                color: $main-blue;
             }
         }
         &__subtitle {
-            color: var(--black, #232323);
+            color: $main-black;
             font-size: 15px;
             font-weight: 400;
             line-height: 30px;
@@ -320,7 +320,7 @@
     font-weight: 600;
     line-height: 15px;
     border-radius: 8px;
-    background: var(--main-blue, #248FEC);
+    background: $main-blue;
 }
 
 /* Стили слайдера и его элементов */

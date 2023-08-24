@@ -7,6 +7,8 @@
 
 //common
 @import 'settings/common/tabs';
+@import 'settings/common/cards';
+@import 'settings/common/lists';
 @import 'settings/common/input';
 @import 'settings/common/select';
 @import 'settings/common/buttons';
@@ -16,7 +18,6 @@
 @import 'settings/common/service';
 @import 'settings/common/dealer';
 @import 'settings/common/system';
-@import 'settings/common/benefit';
 @import 'settings/common/accordion';
 @import 'settings/common/itc-slider';
 @import 'settings/common/number-list';
@@ -25,6 +26,9 @@
 @import 'pages/catalogs/taxi/taxi';
 @import 'settings/common/services-list/services-list';
 @import 'settings/common/services-list/services-card';
+
+//pages services
+@import 'pages/services/services';
 
 //pages news
 @import 'pages/news/news';

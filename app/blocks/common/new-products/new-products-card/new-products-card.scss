@@ -1,23 +1,13 @@
 .new-products-card {
-    position: relative;
-    &__img {
+    &__img-container {
         height: 290px;
-    }
-    &__bottom {
-        left: 20px;
-        bottom: 20px;
-        position: absolute;
     }
 }
 
 @media (max-width: 768px) {
     .new-products-card {
-        &__img {
+        &__img-container {
             height: 187px;
-        }
-        &__bottom {
-            left: 15px;
-            bottom: 15px;
         }
     }
 }
