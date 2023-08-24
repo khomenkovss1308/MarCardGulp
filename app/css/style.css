@@ -2817,9 +2817,10 @@ body {
           box-shadow: drop-shadow(0px 2px 18px rgba(251, 226, 0, 0.5));
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
   .itc-slider {
     width: 100%;
+    height: auto !important;
   }
   .itc-slider-indicators {
     display: none;
@@ -2847,7 +2848,7 @@ body {
     padding: 25px 35px 38px 15px;
   }
   .itc-slider-item__img {
-    height: 200px;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     -webkit-box-ordinal-group: 1;
@@ -2876,6 +2877,11 @@ body {
     width: 147px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+}
+@media (max-width: 480px) {
+  .itc-slider-item__img {
+    height: 200px;
   }
 }
 .number-list {
@@ -5960,6 +5966,16 @@ body {
 }
 .recomendated-list__item {
   width: 32%;
+}
+
+.advertisement .itc-slider {
+  height: 470px;
+}
+.advertisement .itc-slider-wrapper {
+  height: 100%;
+}
+.advertisement .itc-slider-items {
+  height: 100%;
 }
 
 .recomendated-card__img {
