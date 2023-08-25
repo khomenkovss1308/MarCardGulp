@@ -32,6 +32,15 @@ function styles() {
 }
 
 
+function scripts() {
+  return src([
+    'app/js/main.js',
+  ])
+    // .pipe(uglify())
+    // .pipe(dest("app/js"))
+    .pipe(browserSync.stream());
+}
+
 
 function images() {
   return src("app/images/**/*").pipe(dest("dist/images"));
@@ -48,7 +57,7 @@ function browsersync() {
 function watching() {
   watch(["app/pages/**/*.html", "app/blocks/**/*.html"], html).on("change", browserSync.reload);
   watch(["app/scss/**/*.scss", "app/blocks/**/*.scss"], styles);
-  watch(["app/js/**/*.js"], browserSync.stream());
+  watch(["app/js/**/*.js"], scripts);
 }
 
 function build() {
@@ -73,7 +82,7 @@ function cleanPages() {
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
-// exports.scripts = scripts;
+exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.cleanPages = cleanPages;
@@ -84,7 +93,7 @@ exports.default = parallel(
   cleanPages,
   html,
   styles,
-//   scripts,
+  scripts,
   browsersync,
   watching
 );

@@ -139,8 +139,6 @@ const toggleSubMenu = () => {
         }
     }
 
-
-
     listItems.forEach(function (item) {
         item.addEventListener("click", function (event) {
             handleMenuItemClick(event, item, '.navigation-sublist-group', listItems);
@@ -170,5 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleToggleText('.service__benefit-container-2', '.service__list-benefit-2', '#btn-read-more-service-2', '#btn-collapse-service-2', '138px');
 
     sidebarFunctioning();
-    toggleSubMenu();
+    if (window.innerWidth <= 1080){
+        toggleSubMenu();
+    }
 });
