@@ -2366,7 +2366,6 @@ body {
   width: 10px;
   height: 10px;
   background-color: #FBE200;
-  box-shadow: 0px 2px 18px rgba(251, 226, 0, 0.5);
 }
 
 @media (max-width: 1000px) {
@@ -3657,7 +3656,10 @@ body {
 }
 
 .dropdown-content.active {
-  top: 200px;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .navigation-list {
@@ -6270,7 +6272,7 @@ body {
   color: #248FEC;
 }
 .brand-card__btn-call {
-  margin-top: 30px;
+  margin: 30px 0 30px;
   width: 100%;
   color: white;
   font-size: 16px;
