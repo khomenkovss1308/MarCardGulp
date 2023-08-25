@@ -76,5 +76,8 @@ class ItcAccordion {
     }
 }
 
-new ItcAccordion("#accordion-one");
-new ItcAccordion("#accordion-two");
+document.addEventListener("DOMContentLoaded", () => {
+    new ItcAccordion("#accordion-one");
+    new ItcAccordion("#accordion-two");
+    new ItcAccordion("#accordion-footer");
+});

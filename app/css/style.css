@@ -396,7 +396,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
-  text-decoration-line: strikethrough;
+  text-decoration-line: line-through;
 }
 .cars-card__old-price .currency {
   font-size: 13px;
@@ -828,7 +828,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
-  text-decoration-line: strikethrough;
+  text-decoration-line: line-through;
 }
 .cars-card__old-price .currency {
   font-size: 13px;
@@ -1639,7 +1639,7 @@ body {
   }
   .service__main-content__title-large {
     font-size: 30px;
-    line-height: 40x;
+    line-height: 40px;
   }
   .service__main-content__title-medium {
     font-size: 26px;
@@ -2349,7 +2349,7 @@ body {
   width: 10px;
   height: 10px;
   background-color: #FBE200;
-  box-shadow: drop-shadow(0px 2px 18px rgba(251, 226, 0, 0.5));
+  box-shadow: 0px 2px 18px rgba(251, 226, 0, 0.5);
 }
 
 @media (max-width: 1000px) {
@@ -5137,15 +5137,24 @@ body {
   margin-bottom: 25px;
 }
 .centers__list {
-  gap: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.centers__list__item {
-  width: 50%;
+  gap: 20px 14px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
 }
 
+@media (max-width: 768px) {
+  .centers {
+    padding: 40px;
+    margin-top: 40px;
+  }
+  .centers__list {
+    gap: 9;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .callback {
   color: white;
   padding: 30px 47px;
@@ -5228,6 +5237,13 @@ body {
   line-height: 10px;
 }
 
+@media (max-width: 768px) {
+  .centers-card {
+    border-radius: 2px;
+    background: #FFF;
+    padding: 10px 14px;
+  }
+}
 .company-card {
   gap: 15px;
   display: flex;

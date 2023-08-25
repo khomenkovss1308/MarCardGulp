@@ -21,3 +21,11 @@
         line-height: 10px;
     }
 }
+
+@media (max-width: 768px) {
+    .centers-card {
+        border-radius: 2px;
+        background: #FFF;
+        padding: 10px 14px;
+    }
+}
