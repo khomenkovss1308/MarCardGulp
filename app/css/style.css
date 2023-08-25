@@ -2133,6 +2133,9 @@ body {
 .favorites__list {
   margin-bottom: 90px;
 }
+.favorites__list .block-title {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .favorites__tabs {
