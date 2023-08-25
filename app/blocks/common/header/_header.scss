@@ -334,7 +334,7 @@
         height: 353px;
         overflow-y: scroll;
         flex-direction: column;
-        scrollbar-color: blue;
+        scrollbar-color: $main-blue;
         margin-bottom: 12px;
 
         &::-webkit-scrollbar {

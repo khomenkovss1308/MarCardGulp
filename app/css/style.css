@@ -3532,7 +3532,7 @@ body {
   height: 353px;
   overflow-y: scroll;
   flex-direction: column;
-  scrollbar-color: blue;
+  scrollbar-color: #248FEC;
   margin-bottom: 12px;
 }
 .dropdown-content__list-auto::-webkit-scrollbar {
