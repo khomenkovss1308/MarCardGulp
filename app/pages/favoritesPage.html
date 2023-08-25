@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <link rel="shortcut icon" href="../images/icons/default/logoAccount.svg">
+    
+    <title>MARCAR</title>
+</head>
+
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    <main class="main">
+        <p class="first-title wrapper">Избранное</p>
+
+        <section class="favorites__tabs">   
+            <div class="tabs wrapper">
+                <button class="tabs__item active">Новые автомобили</button>
+                <button class="tabs__item">Б/У автомобили</button>
+                <button class="tabs__item">Аренда такси</button>
+                <button class="tabs__item">Аренда авто</button>
+                <button class="tabs__item">Коммерческий транспорт</button>
+            </div>
+        </section>
+
+        <section class="favorites__list">
+            @@include('../blocks/common/new-cars/new-cars.html')
+            <!-- /.new-cars -->
+        </section>
+    </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

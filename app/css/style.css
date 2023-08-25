@@ -2087,7 +2087,7 @@ body {
   margin-bottom: 10px;
 }
 .system__not-data__title span {
-  color: blue;
+  color: #248FEC;
 }
 .system__not-data__subtitle {
   width: 472px;
@@ -2127,6 +2127,21 @@ body {
   box-shadow: 0px 14px 24px 0px rgba(36, 143, 236, 0.18);
 }
 
+.favorites__tabs {
+  margin: 20px auto 30px;
+}
+.favorites__list {
+  margin-bottom: 90px;
+}
+
+@media (max-width: 768px) {
+  .favorites__tabs {
+    margin: 15px auto 25px;
+  }
+  .favorites__list {
+    margin-bottom: 40px;
+  }
+}
 @media (max-width: 480px) {
   .system__not-data__subtitle {
     width: 345px;

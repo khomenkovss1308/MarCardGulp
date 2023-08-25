@@ -12,7 +12,7 @@
             line-height: 28px;
             margin-bottom: 10px;
             span {
-                color: $blue;
+                color: $main-blue;
             }
         }
         &__subtitle {
@@ -52,6 +52,26 @@
         text-align: center;
         background: $main-blue;
         box-shadow: 0px 14px 24px 0px rgba(36, 143, 236, 0.18);
+    }
+}
+
+.favorites {
+    &__tabs {
+        margin: 20px auto 30px;
+    }
+    &__list {
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .favorites {
+        &__tabs {
+            margin: 15px auto 25px;
+        }
+        &__list {
+            margin-bottom: 40px;
+        }
     }
 }
 
