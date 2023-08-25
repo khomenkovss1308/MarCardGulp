@@ -2,4 +2,12 @@
     &__block-title {
         margin-bottom: 50px;
     }
+    &__main-filter {
+        margin-top: 70px;
+    }
+    &__benifit-list-1, &__benifit-list-2 {
+        max-height: 138px;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
 }

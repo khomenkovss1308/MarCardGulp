@@ -7,6 +7,7 @@ const uglify = require("gulp-uglify-es").default;
 const autoprefixer = require("gulp-autoprefixer");
 const del = require("del");
 const fileinclude = require("gulp-file-include");
+const replace = require("gulp-replace");
 
 function html() {
   return src("app/pages/**/*.html")
@@ -18,15 +19,9 @@ function html() {
 
 function styles() {
   return src("app/scss/style.scss")
-    .pipe(scss({outputStyle: "expanded"}))
-    // .pipe(scss({ outputStyle: "compressed" }))
+    .pipe(scss({ outputStyle: "expanded" }))
+    .pipe(replace("-ms-grid", "grid"))
     .pipe(concat("style.css"))
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 10 version"],
-        grid: true,
-      })
-    )
     .pipe(dest("app/css"))
     .pipe(browserSync.stream())
 }
