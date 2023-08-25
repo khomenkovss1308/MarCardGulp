@@ -35,7 +35,7 @@
         }
 
         td.table-group-subtitle {
-            color: var(--main-blue, #248FEC);
+            color: $main-blue;
             font-size: 16px;
             font-weight: 700;
             line-height: 24px;
@@ -52,7 +52,7 @@
         }
 
         td.table-price {
-            color: var(--main-blue, #248FEC);
+            color: $main-blue;
             font-weight: 700;
 
             span {
@@ -83,12 +83,12 @@
                     font-weight: 600;
                     line-height: normal;
                     border-radius: 4px;
-                    background: var(--main-blue, #248FEC);
+                    background: $main-blue;
                 }
 
                 &-no {
                     padding: 14px 30px;
-                    color: var(--sub-black-text, #575757);
+                    color: $sub-black;
                     font-size: 15px;
                     font-weight: 400;
                     line-height: normal;
