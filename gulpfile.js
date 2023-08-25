@@ -22,6 +22,12 @@ function styles() {
     .pipe(scss({ outputStyle: "expanded" }))
     .pipe(replace("-ms-grid", "grid"))
     .pipe(concat("style.css"))
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 10 version"],
+        grid: true,
+      })
+    )
     .pipe(dest("app/css"))
     .pipe(browserSync.stream())
 }
