@@ -500,6 +500,12 @@ class ItcSlider {
     }
     this.#updateClasses();
     this.#autoplay();
+
+    if (this.#state.countActiveItems === 1) {
+      this.#state.elListItem.forEach((el) => {
+        el.style.transform = '';
+      });
+    }
   }
 
   #reset() {

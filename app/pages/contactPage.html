@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../images/icons/default/logoAccount.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="../images/icons/default/logoAccount.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>MARCAR</title>
-</head>
-<body>
-    <div class="wrapper">
-        @@include('../blocks/common/header/header.html')
-        <!-- /.header -->
+  </head>
+  <body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
 
-        @@include('../blocks/common/sidebar/sidebar.html')
-        <!-- /.sidebar -->
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
 
-        <main class="main">
-            
-        </main>
+    <main class="main">
+        <div class="contact__wrapper">
+            <section class="contact__left">
+                <div class="contact__text-block">
+                    <p class="first-title">Контакты <span>Marcar</span></p>
+                    <p class="sub-title">
+                        Вы можете связаться напрямую с представителями нашей компании для<br/>
+                        получения необходимой информации по услугам компании.
+                    </p>
+                </div>
+            </section>
 
-        @@include('../blocks/common/footer/footer.html')
-        <!-- /.footer -->
-    </div>
+            <section class="contact__right">
+                @@include('../blocks/pages/systems/components/systems-nav/systems-nav.html')
+                <!-- /.system-nav -->
+            </section>
+        </div>
+    </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
 
     <script src="/js/main.js"></script>
-</body>
+  </body>
 </html>

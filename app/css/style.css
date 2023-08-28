@@ -2256,7 +2256,6 @@ body {
   flex: 0 0 100%;
   max-width: 100%;
   user-select: none;
-  will-change: transform;
   display: flex;
   position: relative;
 }
@@ -3229,6 +3228,21 @@ body {
     width: 100%;
   }
 }
+.contact__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__left {
+  width: 67%;
+}
+.contact__right {
+  width: 30%;
+  margin-right: auto;
+}
+.contact__text-block {
+  margin-left: 10.5%;
+}
+
 .not-found {
   height: 60vh;
   display: flex;
