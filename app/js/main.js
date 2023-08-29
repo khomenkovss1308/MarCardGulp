@@ -10,8 +10,6 @@ const sidebarFunctioning = () => {
     });
 }
 
-
-
 const toggleDropdown = (dropdownId) => {
     let dropdown = document.getElementById("dropdown-" + dropdownId);
     let header = document.querySelector(".header");
@@ -41,7 +39,6 @@ const closeDropdown = (dropdownId) => {
     header.classList.remove("dropdown-active");
     mainContent.classList.remove("dropdown-active");
 };
-
 
 const videPlayer = (videoContainers, video) => {
     const VIDEOCONTAINERS = document.querySelectorAll(videoContainers);
@@ -104,53 +101,146 @@ const toggleSubMenu = () => {
     const sidebarBack = document.querySelector(".sidebar__back");
     const sidebarBackBtn = sidebarBack.querySelector("button");
 
-    const handleMenuItemClick = (event, clickedItem, subListToShow, menu) => {
-        if (clickedItem.querySelector(subListToShow)) {
-            event.preventDefault();
-            event.stopPropagation();
+    if (window.innerWidth <= 1080) {
+        const handleMenuItemClick = (event, clickedItem, subListToShow, menu) => {
+            if (clickedItem.querySelector(subListToShow)) {
+                event.preventDefault();
+                event.stopPropagation();
 
-            // sidebarBack.style.display = "block";
-            sidebarBottom.style.display = "none";
-            sidebarTopTel.style.display = "none";
-            sidebarTopAddress.style.display = "none";
-            sidebarTop.style.marginBottom = "0";
+                // sidebarBack.style.display = "block";
+                sidebarBottom.style.display = "none";
+                sidebarTopTel.style.display = "none";
+                sidebarTopAddress.style.display = "none";
+                sidebarTop.style.marginBottom = "0";
 
-            menu.forEach(function (item) {
-                if (item !== clickedItem) {
-                    item.style.display = "none";
-                } else {
-                    clickedItem.querySelector("a").style.display = "none";
-                    clickedItem.querySelectorAll(":scope > img").forEach(img => img.style.display = "none");
-                    clickedItem.style.paddingBottom = "0";
-                    clickedItem.style.borderBottom = "none";
-                    clickedItem.querySelector(subListToShow).style.display = "block";
+                menu.forEach(function (item) {
+                    if (item !== clickedItem) {
+                        item.style.display = "none";
+                    } else {
+                        clickedItem.querySelector("a").style.display = "none";
+                        clickedItem.querySelectorAll(":scope > img").forEach(img => img.style.display = "none");
+                        clickedItem.style.paddingBottom = "0";
+                        clickedItem.style.borderBottom = "none";
+                        clickedItem.querySelector(subListToShow).style.display = "block";
+                    }
+                });
+
+                titleName.textContent = clickedItem.querySelector("a").textContent;
+
+                const sidebarComeBack = () => {
+
                 }
-            });
 
-            titleName.textContent = clickedItem.querySelector("a").textContent;
-
-            const sidebarComeBack = () => {
-
-            }
-
-            if (sidebarBackBtn) {
-                sidebarBackBtn.addEventListener('click', sidebarComeBack);
+                if (sidebarBackBtn) {
+                    sidebarBackBtn.addEventListener('click', sidebarComeBack);
+                }
             }
         }
+
+        listItems.forEach(function (item) {
+            item.addEventListener("click", function (event) {
+                handleMenuItemClick(event, item, '.navigation-sublist-group', listItems);
+            });
+        });
+
+        subListItems.forEach(function (submenuItem) {
+            submenuItem.addEventListener("click", function (event) {
+                handleMenuItemClick(event, submenuItem, '.navigation-sublist__item-content', subListItems);
+            });
+        });
     }
 
-    listItems.forEach(function (item) {
-        item.addEventListener("click", function (event) {
-            handleMenuItemClick(event, item, '.navigation-sublist-group', listItems);
+
+}
+
+const swiperSliderInit = () => {
+
+    let reachedEnd = false;
+
+    const swiper = new Swiper('.swiper', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 3.5,
+        on: {
+            reachEnd: function () {
+                document.querySelector('.compare-content__shadow--right').style.opacity = '0';
+                reachedEnd = true;
+            },
+            slideChangeTransitionStart: function () {
+                if (swiper.activeIndex === 0 && swiper.realIndex === 0) {
+                    document.querySelector('.compare-content__shadow--left').style.opacity = '0';
+                } else {
+                    document.querySelector('.compare-content__shadow--left').style.opacity = '1';
+                }
+
+                if (reachedEnd && swiper.activeIndex < swiper.previousIndex) {
+                    document.querySelector('.compare-content__shadow--right').style.opacity = '1';
+                    reachedEnd = false;
+                }
+            },
+        }
+    });
+}
+
+const compareTableAutoHeight = () => {
+    const leftThead = document.querySelector('.compare-content__left thead');
+    const rightTheads = document.querySelectorAll('.compare-content__right thead');
+
+    // Находим максимальную высоту среди всех thead в правом блоке
+    let maxTheadHeight = 0;
+
+    rightTheads.forEach(rightThead => {
+        const rightTheadHeight = rightThead.clientHeight;
+        maxTheadHeight = Math.max(maxTheadHeight, rightTheadHeight);
+    });
+
+    // Применяем максимальную высоту к thead в левом блоке
+    leftThead.style.height = maxTheadHeight + 'px';
+
+
+    const leftRows = document.querySelectorAll('.compare-content__left tbody tr');
+    const swiperSlides = document.querySelectorAll('.swiper-slide');
+
+    // Создаем массив для хранения максимальных высот для каждого tr
+    const maxHeights = Array.from({
+        length: leftRows.length
+    }, () => 0);
+
+    swiperSlides.forEach(slide => {
+        const rightRows = slide.querySelectorAll('.compare-content__right tbody tr');
+
+        rightRows.forEach((rightRow, i) => {
+            const leftRowHeight = leftRows[i].clientHeight;
+            const rightRowHeight = rightRow.clientHeight;
+
+            maxHeights[i] = Math.max(maxHeights[i], leftRowHeight, rightRowHeight);
         });
     });
 
-    subListItems.forEach(function (submenuItem) {
-        submenuItem.addEventListener("click", function (event) {
-            handleMenuItemClick(event, submenuItem, '.navigation-sublist__item-content', subListItems);
-        });
+    // Применяем максимальные высоты к tr в обоих блоках
+    leftRows.forEach((leftRow, i) => {
+        leftRow.style.height = maxHeights[i] + 'px';
     });
 
+    swiperSlides.forEach(slide => {
+        const rightRows = slide.querySelectorAll('.compare-content__right tbody tr');
+
+        rightRows.forEach((rightRow, i) => {
+            rightRow.style.height = maxHeights[i] + 'px';
+        });
+    });
+}
+
+const compareContentWidth = () => {
+    const compareContent = document.querySelector('.compare-content');
+    const compareContentLeftWidth = 406;
+    const compareContentRight = document.querySelector('.compare-content__right');
+
+    const compareContentWidth = compareContent.offsetWidth;
+
+    compareContentRight.style.width = (compareContentWidth - compareContentLeftWidth) + 'px';
 }
 
 
@@ -168,7 +258,12 @@ document.addEventListener('DOMContentLoaded', () => {
     handleToggleText('.service__benefit-container-2', '.service__list-benefit-2', '#btn-read-more-service-2', '#btn-collapse-service-2', '138px');
 
     sidebarFunctioning();
-    if (window.innerWidth <= 1080){
-        toggleSubMenu();
-    }
+    toggleSubMenu();
+    swiperSliderInit();
+
+    compareContentWidth();
+    compareTableAutoHeight();
+
+    window.addEventListener('resize', compareContentWidth);
+    window.addEventListener('resize', compareTableAutoHeight);
 });

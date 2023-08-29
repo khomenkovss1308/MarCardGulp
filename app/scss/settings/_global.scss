@@ -150,6 +150,7 @@ body {
         display: flex;
     }
     &__btn {
+        box-sizing: border-box;
         padding: 8px;
         border-radius: 50%;
         background-color: $white;
@@ -222,6 +223,9 @@ body {
 @media (max-width: 1450px) {
     .wrapper{
         width: 95%;
+        &-compare{
+            width: 97.5%;
+        }
     }
 }
 
