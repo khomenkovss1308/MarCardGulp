@@ -1,0 +1,105 @@
+.catalog-used {
+    &__text-block {
+        margin-bottom: 40px;
+
+        & .first-title {
+            width: 793px;
+            margin-bottom: 10px;
+        }
+
+        & .sub-title {
+            width: 963px;
+        }
+    }
+
+    &__filter {
+        padding: 50px 0 60px;
+        background: #FBFBFB;
+        margin-bottom: 25px;
+
+        & .first-title {
+            width: 760px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__models {
+        margin-bottom: 70px;
+    }
+
+    &__services {
+        margin-bottom: 70px;
+
+        & .second-title {
+            margin-bottom: 40px;
+        }
+
+        & .services-sublist {
+            gap: 12px;
+            grid-template-columns: repeat(3, 1fr); 
+        }
+
+        & .services-card {
+            padding: 34px 35px;
+            border-radius: 8px;
+            background: #FBFBFB;
+        }
+    }
+
+    &__seo-block {
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-used {
+        &__text-block {
+    
+            & .first-title {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+    
+            & .sub-title {
+                width: 100%;
+            }
+        }
+    
+        &__filter {
+            padding: 25px 0 30px;
+            margin-bottom: 15px;
+    
+            & .first-title {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+        }
+    
+        &__models {
+            margin-bottom: 40px;
+        }
+    
+        &__services {
+            margin-bottom: 40px;
+    
+            & .second-title {
+                margin-bottom: 25px;
+            }
+    
+            & .services-sublist {
+                gap: 30px;
+                grid-template-columns: repeat(1, 1fr); 
+            }
+    
+            & .services-card {
+                padding: 0;
+                border-radius: 0;
+                background: transparent;
+            }
+        }
+    
+        &__seo-block {
+            margin-top: 40px;
+        }
+    }
+}

@@ -960,6 +960,13 @@ body {
   color: #232323;
 }
 
+.services-sublist {
+  gap: 51px 128px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 @media (max-width: 1300px) {
   .car-list {
     grid-template-columns: repeat(3, 1fr);
@@ -2708,25 +2715,6 @@ body {
   border-right: 0;
 }
 
-.services-sublist {
-  gap: 50px 7%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.services-sublist__item {
-  width: 19.3%;
-}
-
-@media (max-width: 1300px) {
-  .services-sublist__item {
-    width: 23%;
-  }
-}
-@media (max-width: 1100px) {
-  .services-sublist__item {
-    width: 40%;
-  }
-}
 @media (max-width: 768px) {
   .services-list {
     flex-direction: column;
@@ -6798,5 +6786,84 @@ body {
   }
   .login__signin-btn, .login__signup-btn {
     width: 100%;
+  }
+}
+.catalog-used__text-block {
+  margin-bottom: 40px;
+}
+.catalog-used__text-block .first-title {
+  width: 793px;
+  margin-bottom: 10px;
+}
+.catalog-used__text-block .sub-title {
+  width: 963px;
+}
+.catalog-used__filter {
+  padding: 50px 0 60px;
+  background: #FBFBFB;
+  margin-bottom: 25px;
+}
+.catalog-used__filter .first-title {
+  width: 760px;
+  margin-bottom: 40px;
+}
+.catalog-used__models {
+  margin-bottom: 70px;
+}
+.catalog-used__services {
+  margin-bottom: 70px;
+}
+.catalog-used__services .second-title {
+  margin-bottom: 40px;
+}
+.catalog-used__services .services-sublist {
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.catalog-used__services .services-card {
+  padding: 34px 35px;
+  border-radius: 8px;
+  background: #FBFBFB;
+}
+.catalog-used__seo-block {
+  margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+  .catalog-used__text-block .first-title {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .catalog-used__text-block .sub-title {
+    width: 100%;
+  }
+  .catalog-used__filter {
+    padding: 25px 0 30px;
+    margin-bottom: 15px;
+  }
+  .catalog-used__filter .first-title {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .catalog-used__models {
+    margin-bottom: 40px;
+  }
+  .catalog-used__services {
+    margin-bottom: 40px;
+  }
+  .catalog-used__services .second-title {
+    margin-bottom: 25px;
+  }
+  .catalog-used__services .services-sublist {
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .catalog-used__services .services-card {
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+  .catalog-used__seo-block {
+    margin-top: 40px;
   }
 }
