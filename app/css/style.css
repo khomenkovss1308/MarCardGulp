@@ -633,6 +633,11 @@ body {
   color: white;
 }
 
+.map {
+  width: 100%;
+  height: auto;
+}
+
 .tabs {
   gap: 8px;
   display: flex;
@@ -3228,21 +3233,127 @@ body {
     width: 100%;
   }
 }
-.contact__wrapper {
+.contact__text-block .first-title {
+  margin-bottom: 5px;
+}
+.contact__text-block .sub-title {
+  margin-bottom: 40px;
+}
+.contact__info {
+  margin: 25px 0 70px;
+  gap: 25px 100px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
+}
+.contact__dealers {
+  margin: 70px 0;
+}
+.contact__dealers .second-title {
+  margin-bottom: 34px;
+}
+.contact__map {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 70px;
+}
+.contact__form {
+  margin-bottom: 90px;
+}
+.contact__form .third-title {
+  margin-bottom: 5px;
+}
+.contact__form .sub-title {
+  margin-bottom: 41px;
+}
+.contact__form-content {
+  gap: 15px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
+}
+.contact__form-input, .contact__form-textarea {
+  padding: 13px 18px;
+  border-radius: 4px;
+  background: #FAFAFA;
+  border: 1px solid #EDEDED;
+  color: #7C7C7C;
+}
+.contact__form-input::placeholder, .contact__form-textarea::placeholder {
+  color: #7C7C7C;
+}
+.contact__form-textarea {
+  width: 100%;
+  min-width: 100%;
+  min-height: 160px;
+  margin: 15px 0;
+  resize: vertical;
+  overflow: auto;
+}
+.contact__form-bottom {
   display: flex;
   justify-content: space-between;
 }
-.contact__left {
-  width: 67%;
+.contact__form-checkbox {
+  gap: 10px;
+  display: flex;
+  align-items: center;
 }
-.contact__right {
-  width: 30%;
-  margin-right: auto;
+.contact__form-checkbox__text {
+  color: #232323;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
 }
-.contact__text-block {
-  margin-left: 10.5%;
+.contact__form-checkbox__text a {
+  color: #248FEC;
+  text-decoration: underline;
+}
+.contact__form-btn {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 18px 54px;
 }
 
+@media (max-width: 768px) {
+  .contact__text-block .sub-title {
+    margin-bottom: 25px;
+  }
+  .contact__dealers {
+    margin: 40px 0;
+  }
+  .contact__dealers .second-title {
+    margin-bottom: 20px;
+  }
+  .contact__map {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+  .contact__form {
+    margin-bottom: 0;
+  }
+  .contact__form .sub-title {
+    margin-bottom: 30px;
+  }
+  .contact__form-content {
+    gap: 10px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact__form-bottom {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact__form-btn {
+    width: 234px;
+    display: block;
+    margin: 0 auto;
+    padding: 18px 0;
+  }
+}
 .not-found {
   height: 60vh;
   display: flex;
@@ -4549,6 +4660,13 @@ body {
     padding: 40px 0;
   }
 }
+.dealers {
+  gap: 50px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .dealer-card {
   width: 100%;
   border-radius: 8px;

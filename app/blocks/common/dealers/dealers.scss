@@ -1,7 +1,6 @@
 .dealers {
     gap: 50px;
-    display: flex;
-    &__item {
-        width: 525px;
-    }
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
 }

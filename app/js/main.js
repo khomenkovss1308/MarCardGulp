@@ -164,8 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
     handleToggleText('.services-rent__benefit-container', '.services-rent__benefit', '#btn-read-more-rent', '#btn-collapse-rent', '138px');
 
     handleToggleText('.service__maintenance-collapse__container', '.service__maintenance-collapse__content', '#btn-read-more-service', '#btn-collapse-service', '290px');
-    handleToggleText('.service__benefit-container', '.service__list-benefit', '#btn-read-more-service', '#btn-collapse-service', '138px');
-    handleToggleText('.service__benefit-container-2', '.service__list-benefit-2', '#btn-read-more-service-2', '#btn-collapse-service-2', '138px');
+    handleToggleText('.taxi__benifit-container-1', '.taxi__benifit-list-1', '#btn-read-more-taxi-1', '#btn-collapse-taxi-1', '138px');
+    handleToggleText('.taxi__benifit-container-2', '.taxi__benifit-list-2', '#btn-read-more-taxi-2', '#btn-collapse-taxi-2', '138px');
 
     sidebarFunctioning();
     if (window.innerWidth <= 1080){

@@ -103,11 +103,13 @@ class ItcSlider {
   slideNext() {
     this.#state.direction = 'next';
     this.#move();
+    this.#updateIndicators();
   }
-
+  
   slidePrev() {
     this.#state.direction = 'prev';
     this.#move();
+    this.#updateIndicators();
   }
 
   slideTo(index) {
@@ -408,14 +410,25 @@ class ItcSlider {
       } else {
         this.#state.elListItem[index].classList.remove(activeClass);
       }
-      const elListIndicators = this.#state.el.querySelectorAll(`.${this.#state.prefix}${this.constructor.#EL_INDICATOR}`);
-      if (elListIndicators.length && item) {
-        elListIndicators[index].classList.add(`${this.#state.prefix}${this.constructor.#EL_INDICATOR_ACTIVE}`);
-      } else if (elListIndicators.length && !item) {
-        elListIndicators[index].classList.remove(`${this.#state.prefix}${this.constructor.#EL_INDICATOR_ACTIVE}`);
+    });
+  
+    // Добавляем класс для активного индикатора
+    const activeIndicatorClass = this.#state.prefix + this.constructor.#EL_INDICATOR_ACTIVE;
+    const elListIndicators = this.#state.el.querySelectorAll(`.${this.#state.prefix}${this.constructor.#EL_INDICATOR}`);
+    elListIndicators.forEach((el, index) => {
+      if (this.#state.activeItems[index]) {
+        el.classList.add(activeIndicatorClass);
+      } else {
+        el.classList.remove(activeIndicatorClass);
       }
     });
+  
+    // Если активных слайдов нет, добавляем класс для первого индикатора
+    if (!this.#state.activeItems.includes(true) && elListIndicators.length > 0) {
+      elListIndicators[0].classList.add(activeIndicatorClass);
+    }
   }
+  
 
   #move() {
     if (this.#state.direction === 'none') {
@@ -423,8 +436,10 @@ class ItcSlider {
       this.#state.elItems.style.transform = `translate3D(${transform}px, 0px, 0.1px)`;
       return;
     }
+  
     const widthItem = this.#state.direction === 'next' ? -this.#state.width : this.#state.width;
     const transform = this.#state.translate + widthItem;
+  
     if (!this.#config.loop) {
       const limit = this.#state.width * (this.#state.elListItem.length - this.#state.countActiveItems);
       if (transform < -limit || transform > 0) {
@@ -440,47 +455,108 @@ class ItcSlider {
         this.#state.btnPrev.classList.add(this.#state.btnClassHide);
       }
     }
+  
     if (this.#state.direction === 'next') {
-      this.#state.activeItems = [...this.#state.activeItems.slice(-1), ...this.#state.activeItems.slice(0, -1)];
+      this.#state.activeItems.unshift(this.#state.activeItems.pop());
     } else {
-      this.#state.activeItems = [...this.#state.activeItems.slice(1), ...this.#state.activeItems.slice(0, 1)];
+      this.#state.activeItems.push(this.#state.activeItems.shift());
     }
-    this.#updateClasses();
+  
+    const updateClasses = () => {
+      const activeClass = this.#state.prefix + this.constructor.#EL_ITEM_ACTIVE;
+      this.#state.activeItems.forEach((item, index) => {
+        if (item) {
+          this.#state.elListItem[index].classList.add(activeClass);
+        } else {
+          this.#state.elListItem[index].classList.remove(activeClass);
+        }
+      });
+  
+      // Добавляем класс для активного индикатора
+      const activeIndicatorClass = this.#state.prefix + this.constructor.#EL_INDICATOR_ACTIVE;
+      const elListIndicators = this.#state.el.querySelectorAll(`.${this.#state.prefix}${this.constructor.#EL_INDICATOR}`);
+      elListIndicators.forEach((el, index) => {
+        if (this.#state.activeItems[index]) {
+          el.classList.add(activeIndicatorClass);
+        } else {
+          el.classList.remove(activeIndicatorClass);
+        }
+      });
+  
+      // Если активных слайдов нет, добавляем класс для первого индикатора
+      if (!this.#state.activeItems.includes(true) && elListIndicators.length > 0) {
+        elListIndicators[0].classList.add(activeIndicatorClass);
+      }
+    };
+  
     this.#state.translate = transform;
     this.#state.elItems.style.transform = `translate3D(${transform}px, 0px, 0.1px)`;
+  
+    updateClasses();
   }
+  
+  #updateIndicators() {
+    const activeIndicatorClass = this.#state.prefix + this.constructor.#EL_INDICATOR_ACTIVE;
+    const elListIndicators = this.#state.el.querySelectorAll(`.${this.#state.prefix}${this.constructor.#EL_INDICATOR}`);
+    
+    elListIndicators.forEach((indicator, index) => {
+      if (this.#state.activeItems[index]) {
+        indicator.classList.add(activeIndicatorClass);
+      } else {
+        indicator.classList.remove(activeIndicatorClass);
+      }
+    });
+  
+    // Если активных слайдов нет, добавляем класс для первого индикатора
+    if (!this.#state.activeItems.includes(true) && elListIndicators.length > 0) {
+      elListIndicators[0].classList.add(activeIndicatorClass);
+    } else if (this.#state.activeItems.includes(true)) {
+      elListIndicators[0].classList.remove(activeIndicatorClass);
+    }
+  }
+  
 
   #moveTo(index) {
-    const delta = this.#state.activeItems.reduce((acc, current, currentIndex) => {
-      const diff = current ? index - currentIndex : acc;
-      return Math.abs(diff) < Math.abs(acc) ? diff : acc;
-    }, this.#state.activeItems.length);
+    const delta = index - this.#state.activeItems.indexOf(1);
+  
     if (delta !== 0) {
       this.#state.direction = delta > 0 ? 'next' : 'prev';
       for (let i = 0; i < Math.abs(delta); i++) {
         this.#move();
       }
+  
+      // Обновляем активный индикатор при переключении слайдов
+      this.#updateIndicators();
     }
   }
+  
+  
+  
 
   // приватный метод для выполнения первичной инициализации
   #init() {
-    // состояние элементов
     this.#state.els = [];
-    // текущее значение translate
     this.#state.translate = 0;
-    // позиции активных элементов
     this.#state.activeItems = [];
-    // состояние элементов
     this.#state.isBalancing = false;
-    // получаем gap между слайдами
     const gap = parseFloat(getComputedStyle(this.#state.elItems).gap) || 0;
-    // ширина одного слайда
     this.#state.width = this.#state.elListItem[0].getBoundingClientRect().width + gap;
-    // ширина #EL_WRAPPER
     const widthWrapper = this.#state.elWrapper.getBoundingClientRect().width;
-    // количество активных элементов
     this.#state.countActiveItems = Math.round(widthWrapper / this.#state.width);
+
+    // Если элемент всего один, то не показываем навигацию и индикаторы
+    if (this.#state.elListItem.length === 1) {
+      this.#config.loop = false;
+      this.#config.autoplay = false;
+      this.#config.swipe = false;
+      if (this.#state.btnPrev) {
+        this.#state.btnPrev.style.display = 'none';
+        this.#state.btnNext.style.display = 'none';
+      }
+      const elListIndicators = this.#state.el.querySelectorAll(`.${this.#state.prefix}${this.constructor.#EL_INDICATOR}`);
+      elListIndicators.forEach(el => el.style.display = 'none');
+    }
+
     this.#state.elListItem.forEach((el, index) => {
       el.style.transform = '';
       this.#state.activeItems.push(index < this.#state.countActiveItems ? 1 : 0);
@@ -488,6 +564,7 @@ class ItcSlider {
         el, index, order: index, translate: 0
       });
     });
+
     if (this.#config.loop) {
       const lastIndex = this.#state.elListItem.length - 1;
       const translate = -(lastIndex + 1) * this.#state.width;
@@ -495,18 +572,20 @@ class ItcSlider {
       this.#state.els[lastIndex].order = -1;
       this.#state.els[lastIndex].translate = translate;
       this.#updateExProperties();
-    } else if (this.#state.btnPrev) {
-      this.#state.btnPrev.classList.add(this.#state.btnClassHide);
     }
+
+    // Обновляем состояние активных элементов и классы
     this.#updateClasses();
     this.#autoplay();
 
-    if (this.#state.countActiveItems === 1) {
-      this.#state.elListItem.forEach((el) => {
-        el.style.transform = '';
-      });
+    // Убираем пустой элемент
+    if (this.#state.countActiveItems > 0) {
+      this.#state.elListItem[this.#state.countActiveItems - 1].classList.remove(this.#state.prefix + this.constructor.#EL_ITEM_ACTIVE);
+      this.#state.activeItems[this.#state.countActiveItems - 1] = 0;
+      this.#updateClasses();
     }
   }
+
 
   #reset() {
     const transitionNoneClass = this.#state.prefix + this.constructor.#TRANSITION_NONE;
