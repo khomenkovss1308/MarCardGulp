@@ -26,7 +26,6 @@ $(() => {
     let numberOfItems = $(".pagination-list .pagination-list__item").length;
     let limitPerPage = parseInt($(".pagination-list").data("limit"));
     let totalPages = Math.ceil(numberOfItems / limitPerPage);
-    let paginationSize = 6;
     let currentPage;
 
     const showPage = (whichPage) => {
@@ -35,11 +34,8 @@ $(() => {
         currentPage = whichPage;
 
         $(".pagination-list .pagination-list__item").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
-        $(".pagination li").slice(1, -1).remove();
-
-        getPageList(totalPages, currentPage, paginationSize).forEach(item => {
-            $("<li>").addClass("page-item").addClass(item ? "current-page" : "dots").toggleClass("active", item === currentPage).append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(item || "...")).insertBefore(".next-page");
-        });
+        $(".pagination li").removeClass("active");
+        $(".pagination li").eq(currentPage).addClass("active");
 
         $(".previous-page").toggleClass("disable", currentPage === 1);
         $(".next-page").toggleClass("disable", currentPage === totalPages);
@@ -47,16 +43,11 @@ $(() => {
         return true;
     }
 
-    $(".pagination").append(
-        $("<li>").addClass("page-item").addClass("previous-page").append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text("")),
-        $("<li>").addClass("page-item").addClass("next-page").append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(""))
-    );
-
     $(".pagination-list").show();
     showPage(1);
 
-    $(document).on("click", ".pagination li.current-page:not(.active)", function() {
-        return showPage(+$(this).text());
+    $(".pagination li:not(.previous-page, .next-page)").on("click", function() {
+        return showPage($(this).index());
     });
 
     $(".next-page").on("click", function() {

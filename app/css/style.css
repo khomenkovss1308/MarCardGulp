@@ -2603,8 +2603,9 @@ body {
 .pagination li {
   display: inline-block;
   background: #FBFBFB;
-  margin-right: 5px;
-  padding: 5px 5px;
+  padding: 8px;
+  border-radius: 50%;
+  padding: 0 16px;
 }
 
 .pagination li a {
@@ -2621,9 +2622,15 @@ body {
   cursor: pointer;
 }
 
-.current-page:hover {
-  padding: 8px;
+.pagination li:hover {
   background: #248FEC;
+  padding: 8px;
+  border-radius: 50%;
+  padding: 0 16px;
+}
+
+.pagination li:hover a {
+  color: #FFF;
 }
 
 .current-page:hover a {
@@ -2633,6 +2640,15 @@ body {
 .pagination li.active {
   background: #248FEC;
   padding: 8px;
+  border-radius: 50%;
+  padding: 0 16px;
+}
+
+.page-link {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
 }
 
 .pagination li.active a {
@@ -2667,6 +2683,13 @@ body {
   max-height: 138px;
   overflow: hidden;
   transition: max-height 0.5s ease;
+}
+.taxi__block {
+  margin-top: 70px;
+}
+.taxi__block .pagination-list {
+  gap: 33px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .services-list {
@@ -3137,6 +3160,13 @@ body {
   max-height: 138px;
   overflow: hidden;
   transition: max-height 0.5s ease;
+}
+.taxi__block {
+  margin-top: 70px;
+}
+.taxi__block .pagination-list {
+  gap: 33px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .account {

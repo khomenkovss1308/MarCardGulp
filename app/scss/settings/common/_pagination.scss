@@ -7,8 +7,9 @@
 .pagination li {
     display: inline-block;
     background: #FBFBFB;
-    margin-right: 5px;
-    padding: 5px 5px;
+    padding: 8px;
+    border-radius: 50%;
+    padding: 0 16px;
 }
 
 .pagination li a {
@@ -25,9 +26,15 @@
     cursor: pointer;
 }
 
-.current-page:hover {
-    padding: 8px;
+.pagination li:hover {
     background: $main-blue;
+    padding: 8px;
+    border-radius: 50%;
+    padding: 0 16px;
+}
+
+.pagination li:hover a {
+    color: #FFF;
 }
 
 .current-page:hover a {
@@ -37,6 +44,15 @@
 .pagination li.active {
     background: $main-blue;
     padding: 8px;
+    border-radius: 50%;
+    padding: 0 16px;
+}
+
+.page-link {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
 }
 
 .pagination li.active a {
