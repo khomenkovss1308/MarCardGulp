@@ -162,7 +162,20 @@ const swiperSliderInit = () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        slidesPerView: 3.5,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            320: {
+                slidesPerView: 1.8,
+            },
+            1100: {
+                slidesPerView: 2.5,
+            },
+            1300: {
+                slidesPerView: 3.5,
+            }
+        },
         on: {
             reachEnd: function () {
                 document.querySelector('.compare-content__shadow--right').style.opacity = '0';
@@ -234,13 +247,44 @@ const compareTableAutoHeight = () => {
 }
 
 const compareContentWidth = () => {
-    const compareContent = document.querySelector('.compare-content');
-    const compareContentLeftWidth = 406;
-    const compareContentRight = document.querySelector('.compare-content__right');
 
+    const getCompareContentLeftWidth = () => {
+
+        if (window.innerWidth > 1100){
+            const compareContentLeftWidth = 406;
+            return compareContentLeftWidth;
+        }
+
+        if (window.innerWidth <= 1100 && window.innerWidth > 850){
+            const compareContentLeftWidth = 370;
+            return compareContentLeftWidth;
+        } 
+
+        if (window.innerWidth <= 850 && window.innerWidth > 700) {
+            const compareContentLeftWidth = 300;
+            return compareContentLeftWidth;
+        }
+
+        if (window.innerWidth <= 700 && window.innerWidth > 500) {
+            const compareContentLeftWidth = 200;
+            return compareContentLeftWidth;
+        }
+
+        if (window.innerWidth <= 500) {
+            const compareContentLeftWidth = 170;
+            return compareContentLeftWidth;
+        }
+        
+    }
+
+    const compareContent = document.querySelector('.compare-content');
+
+    const compareContentRight = document.querySelector('.compare-content__right');
     const compareContentWidth = compareContent.offsetWidth;
 
-    compareContentRight.style.width = (compareContentWidth - compareContentLeftWidth) + 'px';
+    compareContentRight.style.width = (compareContentWidth - getCompareContentLeftWidth()) + 'px';
+
+    console.log(compareContentRight.style.width);
 }
 
 
