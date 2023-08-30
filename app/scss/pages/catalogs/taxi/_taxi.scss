@@ -10,4 +10,39 @@
         overflow: hidden;
         transition: max-height 0.5s ease;
     }
+    &__block {
+        margin-top: 70px;
+        & .pagination-list {
+            gap: 33px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .taxi {
+        &__block-title {
+            margin-bottom: 40px;
+        }
+        &__main-filter {
+            margin-top: 40px;
+        }
+        &__benifit-list-1, &__benifit-list-2 {
+            max-height: 138px;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        &__block {
+            margin-top: 25px;
+            & .pagination-list {
+                gap: 10px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+
+    .service-lists {
+        gap: 40px;
+        flex-direction: column;
+    }
 }

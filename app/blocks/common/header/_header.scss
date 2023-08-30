@@ -217,6 +217,7 @@
             align-items: center;
 
             &__item {
+                display: flex;
                 &-btn {
                     padding: 8px;
                     border-radius: 36px;

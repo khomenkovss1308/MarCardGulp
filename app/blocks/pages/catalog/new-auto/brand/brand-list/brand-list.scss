@@ -1,36 +1,24 @@
 .brand-list {
     gap: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
     margin: 25px auto 40px;
     &__item {
-        width: 23.5%;
+        position: relative;
     }
 }
 
-@media (max-width: 1300px) {
-    .brand-list {
-        &__item {
-            width: 30%;
-        }
-    }
-}
 
 @media (max-width: 1100px) {
     .brand-list {
-        &__item {
-            width: 45%;
-        }
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .brand-list {
         gap: 20px;
-        flex-direction: column;
-        &__item {
-            width: 100%;
-        }
+        grid-template-columns: repeat(1, 1fr);
     }
 }

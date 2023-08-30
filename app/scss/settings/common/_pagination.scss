@@ -1,46 +1,39 @@
 .pagination {
-    text-align: center;
     margin: 50px;
     user-select: none;
-}
+    text-align: center;
 
-.pagination li {
-    display: inline-block;
-    background: #FBFBFB;
-    margin-right: 5px;
-    padding: 5px 5px;
-}
+    &__item {
+        display: inline-block;
+        & .active {
+            color: $white;
+            font-weight: 700;
+            padding: 16px 20px;
+            background-color: $main-blue;
+        }
+        & .ellipsis {
+            font-size: 19px;
+            color: $main-blue;
+        }
+    }
 
-.pagination li a {
-    color: $sub-black;
-    font-size: 16px;
-    line-height: 2.6em;
-    font-weight: 500;
-}
+    &__link {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        color: $sub-black;
+        padding: 16px 19px;
+        border-radius: 50%;
+        background-color: #FBFBFB;
+        transition: all .5s;
 
-.current-page,
-.dots {
-    width: 2.8em;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.current-page:hover {
-    padding: 8px;
-    background: $main-blue;
-}
-
-.current-page:hover a {
-    color: $white;
-}
-
-.pagination li.active {
-    background: $main-blue;
-    padding: 8px;
-}
-
-.pagination li.active a {
-    color: $white;
+        &:hover {
+            color: $white;
+            font-weight: 700;
+            padding: 16px 20px;
+            background-color: $main-blue;
+        }
+    }
 }
 
 .pagination-list {

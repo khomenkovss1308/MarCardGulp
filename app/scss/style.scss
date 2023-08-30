@@ -47,6 +47,7 @@
 
 //pages systems
 @import 'pages/systems/about';
+@import 'pages/systems/contact';
 @import 'pages/systems/not-found';
 
 //common blocks
@@ -58,6 +59,7 @@
 @import '../blocks/common/promotions/promotions';
 @import '../blocks/common/new-products/new-products';
 @import '../blocks/common/new-products/new-products';
+@import '../blocks/common/dealers/dealers';
 @import '../blocks/common/dealers/dealer-card/dealer-card';
 @import '../blocks/common/dealers/dealers-slider/dealers-slider';
 @import "../blocks/common/promotions/promotion-card/promotion-card";
@@ -115,3 +117,7 @@
 //account pages
 @import '../blocks/pages/account/sms/sms';
 @import '../blocks/pages/account/login/login';
+
+// catalogs pages
+@import 'pages/catalogs/catalog-used';
+@import 'pages/catalogs/catalog-used-mark';

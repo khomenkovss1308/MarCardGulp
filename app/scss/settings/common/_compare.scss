@@ -1,66 +1,107 @@
-.compare {
-    &-content {
-        margin-bottom: 90px;
+.compare-content {
+    display: flex;
+    margin-bottom: 90px;
 
-        th:first-child {
-            position: sticky;
-            left: 0;
-            z-index: 1;
-            .cars-card__top-info {
-                justify-content: flex-end;
+    &__left {
+        width: 406px;
+    }
+
+    &__right {
+        flex: 1 1 0%;
+
+        tbody {
+            td.table-center {
+                text-align: center;
+                vertical-align: middle;
+
+                img {
+                    margin: auto;
+                }
             }
         }
+    }
 
-        td:first-child {
-            position: sticky;
+    &__shadow {
+        background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 194px;
+        height: 100%;
+        z-index: 10;
+        transition: all .3s;
+
+        &--right {
+            right: 0;
+        }
+
+        &--left {
+            opacity: 0;
             left: 0;
-            z-index: 1;
+            transform: rotate(180deg);
+        }
+    }
+
+    td {
+        vertical-align: top;
+        box-sizing: border-box;
+        background: #FBFBFB;
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        line-height: 22px;
+        padding: 14px;
+        font-weight: 400;
+    }
+
+    td.table {
+
+        &-title {
+            font-weight: 700;
         }
 
-        td {
-            background: #FBFBFB;
-            padding: 14px;
-            color: #000;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 22px;
-        }
-
-        td.table-group-title {
+        &-empty {
             background: none;
-            color: #000;
+        }
+
+        &-group-title {
+            background: none;
             font-size: 24px;
             font-weight: 700;
             line-height: 34px;
+            padding: 0;
+            padding-top: 30px;
+
+            &--main {
+                padding-bottom: 17px;
+            }
         }
 
-        td.table-group-subtitle {
-            color: $main-blue;
+        &-group-subtitle {
+            background: none;
+            padding: 0;
+            color: #248FEC;
             font-size: 16px;
             font-weight: 700;
             line-height: 24px;
-            background: none;
-
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
-        td.table-title {
-            width: 406px;
-            color: #000;
+        &-price {
+            color: #248FEC;
             font-size: 14px;
             font-weight: 700;
             line-height: 22px;
-        }
-
-        td.table-price {
-            color: $main-blue;
-            font-weight: 700;
 
             span {
                 color: #000;
             }
         }
+    }
 
-        .table-differences {
+    .table {
+        &-differences {
             p {
                 color: #000;
                 font-size: 18px;
@@ -71,30 +112,274 @@
 
             &__group {
                 width: 270px;
-                margin-left: auto;
-                margin-right: auto;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
             }
 
             &__btns {
-                &-yes {
-                    padding: 14px 30px;
-                    color: #FFF;
+                button {
                     font-size: 15px;
-                    font-weight: 600;
-                    line-height: normal;
+                    padding: 14px 30px;
                     border-radius: 4px;
-                    background: $main-blue;
+                }
+
+
+                &-yes {
+                    background: #248FEC;
+                    font-weight: 600;
+                    color: #FFF;
+                    margin-right: 8px;
                 }
 
                 &-no {
-                    padding: 14px 30px;
-                    color: $sub-black;
-                    font-size: 15px;
-                    font-weight: 400;
-                    line-height: normal;
-                    border-radius: 4px;
                     background: #FAFAFA;
+                    font-weight: 400;
+                    color: #575757;
                 }
+            }
+
+        }
+    }
+
+    .cars-card__title {
+        text-align: left;
+    }
+
+    .cars-card__top-info {
+        justify-content: flex-end;
+    }
+
+    .cars-card__delete-btn{
+        position: absolute;
+        top: -9px;
+        z-index: 10;
+        display: none;
+        width: 26px;
+        height: 26px;
+        background-color: #232323;
+        border-radius: 50%;
+        img{
+            width: 22px;
+            height: 22px;
+            margin: auto;
+        }
+    }
+
+    .new-cars-card__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+}
+
+
+.swiper {
+    position: relative;
+
+    &-button {
+
+        &-prev,
+        &-next {
+            top: 115px;
+            border-radius: 50%;
+            width: 74px;
+            height: 74px;
+            background-color: #248FEC;
+            transition: all .3s;
+            z-index: 100;
+
+            &:after {
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+
+        &-disabled {
+            opacity: 0 !important;
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .compare-content {
+        &__left {
+            width: 370px;
+            padding-top: 73px;
+        }
+
+        .swiper {
+            padding-top: 73px;
+
+            &-button {
+
+                &-next,
+                &-prev {
+                    top: 0;
+                    width: 40px;
+                    height: 40px;
+                    margin-top: 0;
+
+                    &::after {
+                        font-size: 10px;
+                    }
+                }
+
+                &-prev {
+                    left: 0;
+                }
+
+                &-next {
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .compare-content {
+        &__left {
+            width: 300px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .compare-content {
+        &__left {
+            width: 200px;
+        }
+
+        .table-differences {
+            &__group {
+                width: 170px;
+                margin: 0;
+            }
+
+            &__btns {
+                button {
+                    font-size: 12px;
+                }
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    .compare-content{
+        .cars-card__top-info{
+            top: 5px;
+            right: 5px;
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .compare-content {
+        &__left {
+            width: 170px;
+        }
+
+        &__shadow {
+            width: 32px;
+            background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+        }
+
+        .new-cars-card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .new-cars-card__bottom {
+            padding: 0;
+            width: 100%;
+        }
+
+        .cars-card__title {
+            display: -webkit-box;
+            -webkit-line-clamp: 1; // количество строк
+            -webkit-box-orient: vertical;
+            overflow-y: hidden;
+            width: 100%;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 16px;
+        }
+
+        .cars-card__subtitle {
+            font-size: 10px;
+            line-height: 16px;
+        }
+
+        .cars-card__btns {
+            display: none;
+        }
+    
+        .cars-card__delete-btn{
+            display: block;
+        }
+
+        .table {
+            &-differences {
+                &__btns {
+                    button {
+                        line-height: 12px;
+                        padding: 8px 16px;
+                    }
+                }
+
+                p {
+                    font-size: 10px;
+                    line-height: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &-title {
+                font-size: 11px;
+                line-height: 16px;
+                padding: 10px 8px;
+            }
+        }
+
+        td {
+            font-size: 11px;
+            line-height: 16px;
+            padding: 10px 5px;
+        }
+
+        td.table {
+            &-group-title {
+                font-size: 15px;
+                line-height: 24px;
+                padding-top: 20px;
+
+                &--main {
+                    padding-bottom: 10px;
+                }
+            }
+
+            &-group-subtitle {
+                font-size: 13px;
+                line-height: 13px;
+            }
+
+            &-price {
+                font-size: 11px;
+                line-height: 16px;
+                padding: 10px 5px;
             }
         }
     }

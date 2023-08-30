@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="../images/icons/default/logoAccount.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>MARCAR</title>
+</head>
+
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    <main class="main">
+        <section class="catalog-used__text-block wrapper">
+            <p class="first-title">
+                Купить автомобиль с пробегом
+                <span>в Санкт-Петербурге</span>
+            </p>
+            <p class="sub-title">
+                Предлагаем Вашему вниманию 4 387 авто с пробегом в Санкт-Петербурге от
+                официального дилера. Машины прошли все необходимые технические
+                диагностики и предпродажную подготовку по стандартам Marcar
+            </p>
+        </section>
+
+        <section class="catalog-used__filter">
+            <div class="wrapper">
+                <p class="first-title">Подбор автомобиля по параметрам</p>
+                
+                @@include('../blocks/common/main-filter/main-filter.html')
+                <!-- /.main-filter -->
+            </div>
+        </section>
+
+        <section class="catalog-used__models">
+            @@include('../blocks/common/models/models.html')
+            <!-- /.models -->
+        </section>
+
+        <section class="catalog-used__services wrapper">
+            <p class="second-title">Дополнительные услуги</p>
+            <ul class="services-sublist">
+                <li class="services-sublist__item">
+                    <div class="services-card">
+                        <img src="../images/icons/services/search.svg" alt="" class="services-card__icon">
+                        <div>
+                            <p class="services-card__title">Автоподбор</p>
+                            <p class="services-card__subtitle">Протестируйте автомобиль перед покупкой или арендой</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="services-sublist__item">
+                    <div class="services-card">
+                        <img src="../images/icons/services/testDrive.svg" alt="" class="services-card__icon">
+                        <div>
+                            <p class="services-card__title">Авто с преимуществами</p>
+                            <p class="services-card__subtitle">Отобрали для Вас авто с преимуществами: гарантия, 100% история и минимальный пробег</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="services-sublist__item">
+                    <div class="services-card">
+                        <img src="../images/icons/services/engineBelt.svg" alt="" class="services-card__icon">
+                        <div>
+                            <p class="services-card__title">Проверка состояния авто</p>
+                            <p class="services-card__subtitle">Проверим каждый автомобиль с пробегом по 86 пунктам.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="services-sublist__item">
+                    <div class="services-card">
+                        <img src="../images/icons/services/money.svg" alt="" class="services-card__icon">
+                        <div>
+                            <p class="services-card__title">Выкуп авто</p>
+                            <p class="services-card__subtitle">Самый простой и быстрый способ быстро продать автомобиль.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="services-sublist__item">
+                    <div class="services-card">
+                        <img src="../images/icons/services/sparePart.svg" alt="" class="services-card__icon">
+                        <div>
+                            <p class="services-card__title">Обмен авто</p>
+                            <p class="services-card__subtitle">Обменяйте свой автомобиль на новый или с пробегом.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="services-sublist__item">
+                    <div class="services-card">
+                        <img src="../images/icons/services/newTire.svg" alt="" class="services-card__icon">
+                        <div>
+                            <p class="services-card__title">Оценка авто</p>
+                            <p class="services-card__subtitle">Узнайте цену Вашего автомобиля, заполнив простую форму</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="services-sublist__item">
+                    <div class="services-card">
+                        <img src="../images/icons/services/electro.svg" alt="" class="services-card__icon">
+                        <div>
+                            <p class="services-card__title">Специальные программы</p>
+                            <p class="services-card__subtitle">Продажа автомобилей по программам: StarClass, Approved, Das WeltAuto и д.р.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="services-sublist__item">
+                    <div class="services-card">
+                        <img src="../images/icons/services/delivery.svg" alt="" class="services-card__icon">
+                        <div>
+                            <p class="services-card__title">Автомобиль с доставкой домой</p>
+                            <p class="services-card__subtitle">Покупайте авто онлайн без посещения дилерского центра.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="services-sublist__item">
+                    <div class="services-card">
+                        <img src="../images/icons/services/checklist.svg" alt="" class="services-card__icon">
+                        <div>
+                            <p class="services-card__title">Рассчитать кредит</p>
+                            <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг физических лиц</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="catalog-used__promotions">
+            @@include('../blocks/common/promotions/promotions.html')
+            <!-- /.promotions --> 
+        </section>
+
+        <section class="catalog-used__feedback">
+            @@include('../blocks/common/feedback/feedback.html')
+            <!-- /.feedback -->
+        </section>
+
+        <section class="catalog-used__seo-block">
+            @@include('../blocks/common/seo-block/seo-block.html')
+            <!-- /.seo-block -->
+        </section>
+    </main>
+    <!-- /.main -->
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="/js/sliders/gallery-slider.js"></script>
+    <script src="/js/main.js"></script>
+</body> 
+</html>

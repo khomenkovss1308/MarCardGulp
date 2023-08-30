@@ -1,28 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../images/icons/default/logoAccount.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="../images/icons/default/logoAccount.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>MARCAR</title>
 </head>
 <body>
-    <div class="wrapper">
-        @@include('../blocks/common/header/header.html')
-        <!-- /.header -->
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
 
-        @@include('../blocks/common/sidebar/sidebar.html')
-        <!-- /.sidebar -->
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
 
-        <main class="main">
+    <main class="main">
+        <div class="wrapper wrapper__container">
+            <section class="wrapper__left">
+                <div class="contact__text-block">
+                    <p class="first-title">Контакты <span>Marcar</span></p>
+
+                    <p class="sub-title">
+                        Вы можете связаться напрямую с представителями нашей компании
+                        для<br />
+                        получения необходимой информации по услугам компании.
+                    </p>
+                    <div class="block-contact">
+                        <img src="../images/icons/default/location.svg" alt="" class="block-contact__icon">
+                        <p class="block-contact__text-default">г. Москва, ул. Маршала Прошлякова (бывший Лыковский проезд) д. 13</p>
+                    </div>
+                    <div class="contact__info">
+                        <div class="block-contact">
+                            <img src="../images/icons/default/timer.svg" alt="" class="block-contact__icon">
+                            <p class="block-contact__text-default">Ежедневно: 09:00-21:00</p>
+                        </div>
+                        <div class="block-contact">
+                            <img src="../images/icons/default/timer.svg" alt="" class="block-contact__icon">
+                            <p class="block-contact__text-default">+7 (495) 126 42 13</p>
+                        </div>
+                        <div class="block-contact">
+                            <img src="../images/icons/default/timer.svg" alt="" class="block-contact__icon">
+                            <p class="block-contact__text-default">Отдел продаж: 09:00-21:00</p>
+                        </div>
+                        <div class="block-contact">
+                            <img src="../images/icons/default/callBlue.svg" alt="" class="block-contact__icon">
+                            <p class="block-contact__text-default">+7 (495) 126 42 13</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__details">
+                    <p class="third-title">Наши <span>реквизиты</span></p>
+
+                </div>
+
+                <div class="contact__dealers">
+                    <p class="second-title">Автосалоны</p>
+                    <ul class="dealers">
+                        <li class="dealers__item">
+                            <a href="">
+                                @@include('../blocks/common/dealers/dealer-card/dealer-card.html')
+                                <!-- /.dealer-card -->
+                            </a>
+                        </li>
+                        <li class="dealers__item">
+                            <a href="">
+                                @@include('../blocks/common/dealers/dealer-card/dealer-card.html')
+                                <!-- /.dealer-card -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A24eb5aa19462d467597bd7c35810e4f706bd5346e08afe7c149ab77f396691a3&amp;source=constructor" class="contact__map" frameborder="0"></iframe>
             
-        </main>
+                <form action="" class="contact__form">
+                    <p class="third-title">Написать нам <span>на электронную почту</span></p>
+                    <p class="sub-title">Вы можете связаться напрямую с представителями нашей компании для<br/> получения необходимой информации по услугам компании.</p>
+                
+                    <div class="contact__form-content">
+                        <input type="text" placeholder="Ваше ФИО" class="input-default contact__form-input">
+                        <input type="text" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" class="input-default contact__form-input">
+                        <input type="text" placeholder="Ваш Email" class="input-default contact__form-input">
+                    </div>
 
-        @@include('../blocks/common/footer/footer.html')
-        <!-- /.footer -->
-    </div>
+                    <textarea name="" placeholder="Текст сообщения" class="contact__form-textarea"></textarea>
+
+                    <div class="contact__form-bottom">
+                        <div class="contact__form-checkbox">
+                            <input type="checkbox">
+                            <label class="contact__form-checkbox__text">
+                                Согласие на обработку <a href="#">персональных данных</a>
+                            </label>
+                        </div>
+                        <button class="btn-blue-default contact__form-btn">Отправить письмо</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="wrapper__right">
+                @@include('../blocks/pages/systems/components/systems-nav/systems-nav.html')
+                <!-- /.system-nav -->
+            </section>
+        </div>
+    </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
 
     <script src="/js/main.js"></script>
 </body>
