@@ -64,9 +64,9 @@ function build() {
   return src([
     'app/*.html',
     'app/css/style.css',
-    'app/js/*.js',
+    'app/js/**/*',
     'app/fonts/**/*',
-    //'app/favicon.ico'
+    'app/videos/*',
   ], {base: 'app'})
     .pipe(dest('dist'));
 }
