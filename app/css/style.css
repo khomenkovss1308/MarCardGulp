@@ -6523,13 +6523,18 @@ body {
     display: none;
   }
   .brand-card__subblock {
+    opacity: 1;
     display: block;
     margin-top: 14px;
     border-top: 0;
     padding: 0;
   }
   .brand-card:hover {
-    box-shadow: 0px 18px 90px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .brand-card:hover .brand-card__subblock {
+    opacity: 1;
+    display: block;
   }
 }
 .sms__wrapper {
