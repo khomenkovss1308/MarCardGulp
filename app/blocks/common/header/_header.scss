@@ -236,6 +236,7 @@
 
 
 .dropdown-content {
+    z-index: 10;
     visibility: hidden;
     opacity: 0;
     position: fixed;
