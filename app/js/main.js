@@ -13,12 +13,10 @@ const sidebarFunctioning = () => {
 const toggleDropdown = (dropdownId) => {
     let dropdown = document.getElementById("dropdown-" + dropdownId);
     let header = document.querySelector(".header");
-    let mainContent = document.querySelector(".main-content");
 
     if (dropdown.classList.contains("active")) {
         dropdown.classList.remove("active");
         header.classList.remove("dropdown-active");
-        mainContent.classList.remove("dropdown-active");
     } else {
         let activeDropdown = document.querySelector(".dropdown-content.active");
         if (activeDropdown) {
@@ -26,18 +24,15 @@ const toggleDropdown = (dropdownId) => {
         }
         dropdown.classList.add("active");
         header.classList.add("dropdown-active");
-        mainContent.classList.add("dropdown-active");
     }
 };
 
 const closeDropdown = (dropdownId) => {
     let dropdown = document.getElementById("dropdown-" + dropdownId);
     let header = document.querySelector(".header");
-    let mainContent = document.querySelector(".main-content");
 
     dropdown.classList.remove("active");
     header.classList.remove("dropdown-active");
-    mainContent.classList.remove("dropdown-active");
 };
 
 const videPlayer = (videoContainers, video) => {
