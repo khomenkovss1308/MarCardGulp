@@ -2679,6 +2679,30 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+@media (max-width: 768px) {
+  .taxi__block-title {
+    margin-bottom: 40px;
+  }
+  .taxi__main-filter {
+    margin-top: 40px;
+  }
+  .taxi__benifit-list-1, .taxi__benifit-list-2 {
+    max-height: 138px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  .taxi__block {
+    margin-top: 25px;
+  }
+  .taxi__block .pagination-list {
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service-lists {
+    gap: 40px;
+    flex-direction: column;
+  }
+}
 .services-list {
   display: flex;
 }
@@ -3137,6 +3161,30 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+@media (max-width: 768px) {
+  .taxi__block-title {
+    margin-bottom: 40px;
+  }
+  .taxi__main-filter {
+    margin-top: 40px;
+  }
+  .taxi__benifit-list-1, .taxi__benifit-list-2 {
+    max-height: 138px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  .taxi__block {
+    margin-top: 25px;
+  }
+  .taxi__block .pagination-list {
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service-lists {
+    gap: 40px;
+    flex-direction: column;
+  }
+}
 .account {
   padding: 102px 0;
   background: linear-gradient(48deg, #2775B8 0%, #44A8FF 100%) left/50% 100% no-repeat, white right/50% 100% no-repeat;
@@ -6916,4 +6964,38 @@ body {
   font-weight: 400;
   line-height: 22px;
   margin-bottom: 20px;
+}
+.catalog-used-mark__call-btn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  width: 100%;
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+@media (max-width: 768px) {
+  .catalog-used-mark__text-block {
+    margin-bottom: 40px;
+  }
+  .catalog-used-mark__text-block .first-title {
+    width: 517px;
+    margin-bottom: 10px;
+  }
+  .catalog-used-mark__text-block .sub-title {
+    width: 963px;
+  }
+  .catalog-used-mark__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .catalog-used-mark__left {
+    display: none;
+  }
+  .catalog-used-mark__right {
+    width: 100%;
+  }
 }

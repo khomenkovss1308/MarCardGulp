@@ -82,4 +82,46 @@
             margin-bottom: 20px;
         }
     }
+
+    &__call-btn {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 30px;
+        width: 100%;
+        gap: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-used-mark {
+        &__text-block {
+            margin-bottom: 40px;
+    
+            & .first-title {
+                width: 517px;
+                margin-bottom: 10px;
+            }
+    
+            & .sub-title {
+                width: 963px;
+            }
+        }
+    
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        &__left {
+            display: none;
+        }
+    
+        &__right {
+            width: 100%;
+        }
+    }
 }
