@@ -1,0 +1,85 @@
+.catalog-used-mark {
+    &__text-block {
+        margin-bottom: 40px;
+
+        & .first-title {
+            width: 517px;
+            margin-bottom: 10px;
+        }
+
+        & .sub-title {
+            width: 963px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 28.6%;
+    }
+
+    &__right {
+        width: 68.4%;
+    }
+
+    &__form {
+        padding: 30px;
+        border-radius: 8px;
+        background-color: #FBFBFB;
+
+        &-title {
+            color: $main-black;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 34px;
+            margin-bottom: 20px;
+        }
+
+        &-inputs {
+            gap: 0;
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: repeat(2, 1fr); 
+        }
+
+        &-btns {
+            margin: 25px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-input {
+            width: 100%;
+        }
+
+        & .main-filter__btn-primary {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__info-block {
+        margin-top: 15px;
+        padding: 30px;
+        border-radius: 8px;
+        background-color: #FBFBFB;
+
+        &-title {
+            color: $main-black;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 34px;
+        }
+        
+        &-sub-title {
+            color: $sub-black;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+    }
+}

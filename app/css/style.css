@@ -999,6 +999,12 @@ body {
     font-size: 14px;
     line-height: 22px;
   }
+  .services-sublist {
+    gap: 30px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .input-default {
   padding: 17px 20px;
@@ -2602,64 +2608,38 @@ body {
 }
 
 .pagination {
-  text-align: center;
   margin: 50px;
   user-select: none;
+  text-align: center;
 }
-
-.pagination li {
+.pagination__item {
   display: inline-block;
-  background: #FBFBFB;
-  padding: 8px;
-  border-radius: 50%;
-  padding: 0 16px;
 }
-
-.pagination li a {
-  color: #575757;
-  font-size: 16px;
-  line-height: 2.6em;
-  font-weight: 500;
-}
-
-.current-page,
-.dots {
-  width: 2.8em;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.pagination li:hover {
-  background: #248FEC;
-  padding: 8px;
-  border-radius: 50%;
-  padding: 0 16px;
-}
-
-.pagination li:hover a {
-  color: #FFF;
-}
-
-.current-page:hover a {
+.pagination__item .active {
   color: white;
-}
-
-.pagination li.active {
-  background: #248FEC;
-  padding: 8px;
-  border-radius: 50%;
-  padding: 0 16px;
-}
-
-.page-link {
-  color: #FFF;
-  font-size: 16px;
   font-weight: 700;
-  line-height: 16px;
+  padding: 16px 20px;
+  background-color: #248FEC;
 }
-
-.pagination li.active a {
+.pagination__item .ellipsis {
+  font-size: 19px;
+  color: #248FEC;
+}
+.pagination__link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #575757;
+  padding: 16px 19px;
+  border-radius: 50%;
+  background-color: #FBFBFB;
+  transition: all 0.5s;
+}
+.pagination__link:hover {
   color: white;
+  font-weight: 700;
+  padding: 16px 20px;
+  background-color: #248FEC;
 }
 
 .pagination-list {
@@ -6316,32 +6296,24 @@ body {
 }
 .brand-list {
   gap: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
   margin: 25px auto 40px;
 }
 .brand-list__item {
-  width: 23.5%;
+  position: relative;
 }
 
-@media (max-width: 1300px) {
-  .brand-list__item {
-    width: 30%;
-  }
-}
 @media (max-width: 1100px) {
-  .brand-list__item {
-    width: 45%;
+  .brand-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .brand-list {
     gap: 20px;
-    flex-direction: column;
-  }
-  .brand-list__item {
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .brand-card {
@@ -6351,6 +6323,7 @@ body {
   background: white;
   overflow: hidden;
   transition: all 0.5s ease;
+  transition: opacity 0.3s ease-in-out;
   position: relative;
 }
 .brand-card__top {
@@ -6444,15 +6417,23 @@ body {
   margin-top: 25px;
   border-top: 1px dashed #DFDFDF;
   padding: 20px 0 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 .brand-card:hover {
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
   box-shadow: 0px 18px 90px 0px rgba(0, 0, 0, 0.1);
 }
 .brand-card:hover .brand-card__subblock {
+  opacity: 1;
   display: block;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .brand-card {
     padding: 25px;
     box-shadow: 0px 18px 90px 0px rgba(0, 0, 0, 0.1);
@@ -6866,4 +6847,73 @@ body {
   .catalog-used__seo-block {
     margin-top: 40px;
   }
+}
+.catalog-used-mark__text-block {
+  margin-bottom: 40px;
+}
+.catalog-used-mark__text-block .first-title {
+  width: 517px;
+  margin-bottom: 10px;
+}
+.catalog-used-mark__text-block .sub-title {
+  width: 963px;
+}
+.catalog-used-mark__container {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog-used-mark__left {
+  width: 28.6%;
+}
+.catalog-used-mark__right {
+  width: 68.4%;
+}
+.catalog-used-mark__form {
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #FBFBFB;
+}
+.catalog-used-mark__form-title {
+  color: #232323;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 20px;
+}
+.catalog-used-mark__form-inputs {
+  gap: 0;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
+}
+.catalog-used-mark__form-btns {
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.catalog-used-mark__form-input {
+  width: 100%;
+}
+.catalog-used-mark__form .main-filter__btn-primary {
+  display: block;
+  margin: 0 auto;
+}
+.catalog-used-mark__info-block {
+  margin-top: 15px;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #FBFBFB;
+}
+.catalog-used-mark__info-block-title {
+  color: #232323;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+}
+.catalog-used-mark__info-block-sub-title {
+  color: #575757;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 20px;
 }
