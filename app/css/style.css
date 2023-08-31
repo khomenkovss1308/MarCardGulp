@@ -5696,6 +5696,9 @@ body {
   .home__videos {
     margin: 40px auto;
   }
+  .advertisement .wrapper {
+    width: 100%;
+  }
   .recomendated-list {
     gap: 10px 2%;
   }

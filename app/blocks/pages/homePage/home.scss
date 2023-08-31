@@ -127,6 +127,12 @@
         }
     }
 
+    .advertisement{
+        & .wrapper {
+            width: 100%;
+        }
+    }
+
     .recomendated-list {
         gap: 10px 2%;
         &__item {
