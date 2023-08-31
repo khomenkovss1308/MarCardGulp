@@ -645,6 +645,10 @@ body {
 .tabs {
   gap: 8px;
   display: flex;
+  overflow-x: scroll;
+}
+.tabs::-webkit-scrollbar {
+  width: 0;
 }
 .tabs__item {
   border-radius: 4px;
@@ -696,9 +700,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .tabs {
-    overflow-y: hidden;
-  }
   .tabs__item {
     padding: 12px 18px;
   }
