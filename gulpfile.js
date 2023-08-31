@@ -1,19 +1,19 @@
-const { src, dest, watch, parallel, series } = require("gulp");
+const { src, dest, watch, parallel, series } = require("gulp")
 
-const scss = require("gulp-sass")(require("sass"));
-const concat = require("gulp-concat");
-const browserSync = require("browser-sync").create();
-// const uglify = require("gulp-uglify-es").default;
-// const autoprefixer = require("gulp-autoprefixer");
-const del = require("del");
-const fileinclude = require("gulp-file-include");
-const replace = require("gulp-replace");
+const scss = require("gulp-sass")(require("sass"))
+const concat = require("gulp-concat")
+const browserSync = require("browser-sync").create()
+const del = require("del")
+const fileinclude = require("gulp-file-include")
+const replace = require("gulp-replace")
 
 function html() {
   return src("app/pages/**/*.html")
     .pipe(fileinclude())
+    .pipe(replace(/\.\.\/\.\.\//g, ""))
+    .pipe(replace(/\.\.\//g, ""))
     .pipe(dest("app"))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 }
 
 function styles() {
@@ -21,12 +21,6 @@ function styles() {
     .pipe(scss({ outputStyle: "expanded" }))
     .pipe(replace("-ms-grid", "grid"))
     .pipe(concat("style.css"))
-    // .pipe(
-    //   autoprefixer({
-    //     overrideBrowserslist: ["last 10 version"],
-    //     grid: true,
-    //   })
-    // )
     .pipe(dest("app/css"))
     .pipe(browserSync.stream())
 }
@@ -36,14 +30,12 @@ function scripts() {
   return src([
     'app/js/main.js',
   ])
-    // .pipe(uglify())
-    // .pipe(dest("app/js"))
+    .pipe(replace(/\.\.\//g, ""))
     .pipe(browserSync.stream());
 }
 
-
 function images() {
-  return src("app/images/**/*").pipe(dest("dist/images"));
+  return src("app/images/**/*").pipe(dest("dist/images"))
 }
 
 function browsersync() {
@@ -51,14 +43,15 @@ function browsersync() {
     server: {
       baseDir: "app/",
     },
-  });
+  })
 }
 
 function watching() {
-  watch(["app/pages/**/*.html", "app/blocks/**/*.html"], html).on("change", browserSync.reload);
-  watch(["app/scss/**/*.scss", "app/blocks/**/*.scss"], styles);
-  watch(["app/js/**/*.js"], scripts);
+  watch(["app/pages/**/*.html", "app/blocks/**/*.html"], html).on("change", browserSync.reload)
+  watch(["app/scss/**/*.scss", "app/blocks/**/*.scss"], styles)
+  watch(["app/js/**/*.js"], scripts)
 }
+
 
 function build() {
   return src([
@@ -68,27 +61,29 @@ function build() {
     'app/fonts/**/*',
     'app/videos/*',
   ], {base: 'app'})
-    .pipe(dest('dist'));
+    .pipe(replace(/\.\.\/\.\.\//g, ""))
+    .pipe(replace(/\.\.\//g, ""))
+    .pipe(dest('dist'))
 }
 
 function cleanDist() {
-  return del("dist");
+  return del("dist")
 }
 
 function cleanPages() {
-  return del("app/*.html");
+  return del("app/*.html")
 }
 
-exports.styles = styles;
-exports.watching = watching;
-exports.browsersync = browsersync;
-exports.scripts = scripts;
-exports.images = images;
-exports.cleanDist = cleanDist;
-exports.cleanPages = cleanPages;
-exports.html = html;
+exports.styles = styles
+exports.watching = watching
+exports.browsersync = browsersync
+exports.scripts = scripts
+exports.images = images
+exports.cleanDist = cleanDist
+exports.cleanPages = cleanPages
+exports.html = html
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, images, build)
 exports.default = parallel(
   cleanPages,
   html,
@@ -96,4 +91,4 @@ exports.default = parallel(
   scripts,
   browsersync,
   watching
-);
+)
