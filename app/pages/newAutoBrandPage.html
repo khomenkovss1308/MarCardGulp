@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../images/icons/default/logoAccount.svg">
+    <link rel="shortcut icon" href="images/icons/default/logoAccount.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>MARCAR</title>
 </head>
@@ -17,8 +18,21 @@
     <!-- /.sidebar -->
 
     <main class="main">
+        <ul class="breadcrumbs wrapper">
+            <li class="breadcrumbs__item">
+                <a href="index.html" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">Новые авто</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">Volkswagen</a>
+            </li>
+        </ul>
+    
+
         <section class="new-auto-brand__first">
-            <img src="../images/auto/new-auto/main.png" alt="" class="new-auto-brand__img wrapper">
+            <img src="images/auto/new-auto/main.png" alt="" class="new-auto-brand__img wrapper">
             <p class="first-title wrapper">Модельный ряд Volkswagen</p>
         </section>
 
@@ -27,6 +41,32 @@
                 <button class="tabs__item active">Легковые автомобили</button>
                 <button class="tabs__item">Коммерческий транспорт</button>
             </div>
+
+            <div class="new-auto-brand__sub-tabs sub-tabs">
+                <div class="wrapper">
+                    <ul class="sub-tabs__list">
+                        <li class="sub-tabs__list__item active">
+                            Хиты продаж
+                        </li>
+                        <li class="sub-tabs__list__item">
+                            Все модели
+                        </li>
+                        <li class="sub-tabs__list__item">
+                            Хэтчбек
+                        </li>
+                        <li class="sub-tabs__list__item">
+                            Седан
+                        </li>
+                        <li class="sub-tabs__list__item">
+                            Кроссовер
+                        </li>
+                        <li class="sub-tabs__list__item">
+                            Внедорожник
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="wrapper">
                 @@include('../blocks/pages/catalog/new-auto/brand/brand-list/brand-list.html')
                 <!-- /.brand-list -->
@@ -45,7 +85,7 @@
                 <ul class="services-list">
                     <li class="services-list__item">
                         <div class="services-card wrapper">
-                            <img src="../images/icons/services/search.svg" alt="" class="services-card__icon">
+                            <img src="images/icons/services/search.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Автоподбор</p>
                                 <p class="services-card__subtitle">Мы подберем для Вас самые лучшие и выгодные варианты</p>
@@ -54,7 +94,7 @@
                     </li>
                     <li class="services-list__item">
                         <div class="services-card wrapper">
-                            <img src="../images/icons/services/testDrive.svg" alt="" class="services-card__icon">
+                            <img src="images/icons/services/testDrive.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Тест-драйв</p>
                                 <p class="services-card__subtitle">Протестируйте автомобиль перед покупкой или арендой</p>
@@ -63,7 +103,7 @@
                     </li>
                     <li class="services-list__item">
                         <div class="services-card wrapper">
-                            <img src="../images/icons/services/checklist.svg" alt="" class="services-card__icon">
+                            <img src="images/icons/services/checklist.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Рассчитать кредит</p>
                                 <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг физических лиц</p>
@@ -72,7 +112,7 @@
                     </li>
                     <li class="services-list__item">
                         <div class="services-card wrapper">
-                            <img src="../images/icons/services/money.svg" alt="" class="services-card__icon">
+                            <img src="images/icons/services/money.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Выкуп автомобиля</p>
                                 <p class="services-card__subtitle">Предложим для Вас максимально выгодные условия выкупа</p>
@@ -105,6 +145,31 @@
 
     <script src="../js/sliders/gallery-slider.js"></script>
     <script src="/js/main.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.slider-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: false, // Prevent loop
+        });
+
+        swiper.on('slideChange', function () {
+            if (swiper.isBeginning) {
+                document.querySelector('.swiper-button-prev').disabled = true;
+            } else {
+                document.querySelector('.swiper-button-prev').disabled = false;
+            }
+
+            if (swiper.isEnd) {
+                document.querySelector('.swiper-button-next').disabled = true;
+            } else {
+                document.querySelector('.swiper-button-next').disabled = false;
+            }
+        });
+    </script>
 </body>
 
 </html>
