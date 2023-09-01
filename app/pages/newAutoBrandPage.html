@@ -149,33 +149,8 @@
     @@include('../blocks/common/footer/footer.html')
     <!-- /.footer -->
 
-    <script src="../js/sliders/gallery-slider.js"></script>
-    <script src="/js/main.js"></script>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.slider-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            loop: false, // Prevent loop
-        });
-
-        swiper.on('slideChange', function () {
-            if (swiper.isBeginning) {
-                document.querySelector('.swiper-button-prev').disabled = true;
-            } else {
-                document.querySelector('.swiper-button-prev').disabled = false;
-            }
-
-            if (swiper.isEnd) {
-                document.querySelector('.swiper-button-next').disabled = true;
-            } else {
-                document.querySelector('.swiper-button-next').disabled = false;
-            }
-        });
-    </script>
+    <script src="js/sliders/gallery-slider.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
