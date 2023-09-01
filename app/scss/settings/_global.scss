@@ -7,6 +7,38 @@ body {
     color: #051B1F;
 }
 
+.modals{
+    margin-bottom: 70px;
+    h1{
+        margin-bottom: 20px;
+    }
+
+    ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding: 0;
+    }
+
+    li{
+        background-color: $main-blue;
+        padding: 20px;
+        text-align: center;
+        border-radius: 20px;
+        list-style: none;
+        transition: all .3s;
+        border: 1px solid transparent;
+        color: #fff;
+
+        &:hover{
+            background-color: transparent;
+            border: 1px solid $main-blue;
+            cursor: pointer;
+            color: $main-blue;
+        }
+    }
+}
+
 .wrapper {
     width: 87%;
     margin: 0 auto;

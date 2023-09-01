@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
@@ -8,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
     <link rel="shortcut icon" href="images/icons/default/logoAccount.svg">
-    
+
     <title>MARCAR</title>
 </head>
 
@@ -19,11 +20,11 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-@@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
-    <!-- /.dropdown-1 -->
+    @@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
+    <!-- /.dropdown chooseCity -->
 
-@@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
-    <!-- /.dropdown-2 -->
+    @@include('../blocks/common/dropdown/search/search.html')
+    <!-- /.dropdown search -->
 
     <main class="main">
 
@@ -54,12 +55,12 @@
             @@include('../blocks/common/new-cars/new-cars.html')
             <!-- /.new-cars -->
         </section>
-        
+
         <section class="home__mileage-cars">
             @@include('../blocks/common/mileage-cars/mileage-cars.html')
             <!-- /.mileage-cars -->
         </section>
-        
+
         <section class="home__taxi-cars">
             @@include('../blocks/common/taxi-cars/taxi-cars.html')
             <!-- /.taxi-cars -->
@@ -135,7 +136,8 @@
                             <img src="images/icons/services/search.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Автоподбор</p>
-                                <p class="services-card__subtitle">Мы подберем для Вас самые лучшие и выгодные варианты</p>
+                                <p class="services-card__subtitle">Мы подберем для Вас самые лучшие и выгодные варианты
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -180,7 +182,8 @@
                             <img src="images/icons/services/testDrive.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Тест-драйв</p>
-                                <p class="services-card__subtitle">Протестируйте автомобиль перед покупкой или арендой</p>
+                                <p class="services-card__subtitle">Протестируйте автомобиль перед покупкой или арендой
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -189,7 +192,8 @@
                             <img src="images/icons/services/checklist.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Финансовые услуги</p>
-                                <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг физических лиц</p>
+                                <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг
+                                    физических лиц</p>
                             </div>
                         </div>
                     </li>
@@ -204,7 +208,7 @@
 
         <section class="home__promotions">
             @@include('../blocks/common/promotions/promotions.html')
-            <!-- /.promotions --> 
+            <!-- /.promotions -->
         </section>
 
         @@include('../blocks/common/feedback/feedback.html')

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/icons/default/logoAccount.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>MARCAR</title>
+</head>
+
+<body>
+    @@include('../blocks/common/header/header.html')
+    <!-- /.header -->
+
+    @@include('../blocks/common/sidebar/sidebar.html')
+    <!-- /.sidebar -->
+
+    @@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
+    <!-- /.dropdown chooseCity -->
+
+    @@include('../blocks/common/dropdown/search/search.html')
+    <!-- /.dropdown search -->
+
+    @@include('../blocks/common/dropdown/orderCallback/orderCallback.html')
+    <!-- /.dropdown orderCallback -->
+
+    @@include('../blocks/common/dropdown/carRental/carRental.html')
+    <!-- /.dropdown carRental -->
+
+    @@include('../blocks/common/dropdown/carRegistration/carRegistration.html')
+    <!-- /.dropdown carRegistration -->
+
+    @@include('../blocks/common/dropdown/ratesDetails/ratesDetails.html')
+    <!-- /.dropdown ratesDetails -->
+
+    <main class="main">
+        <div class="wrapper wrapper__container">
+
+            <div class="modals">
+                <h1>Модальные окна</h1>
+
+                <ul>
+                    <li onclick="toggleDropdown(3)">
+                        Заказ обратного звонка
+                    </li>
+                    <li onclick="toggleDropdown(4)">
+                        Заявка на аренду автомобиля
+                    </li>
+                    <li onclick="toggleDropdown(5)">
+                        Оформление автомобиля
+                    </li>
+                    <li onclick="toggleDropdown(6)">
+                        Тарифы и детали
+                    </li>
+                </ul>
+    
+
+            </div>
+
+
+        </div>
+    </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
