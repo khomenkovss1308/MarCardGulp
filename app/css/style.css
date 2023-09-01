@@ -5154,9 +5154,10 @@ body {
   line-height: 20px;
 }
 .dealer-card__content__info {
-  gap: 30px;
+  gap: 5px;
   display: flex;
-  margin: 15px 0;
+  flex-direction: column;
+  margin: 10px 0 21px;
 }
 .dealer-card__content__info-text {
   color: #575757;
@@ -5167,6 +5168,11 @@ body {
 .dealer-card__content__info-text span {
   color: #232323;
   margin-left: 5px;
+}
+.dealer-card__content__phones {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
 }
 .dealer-card__content__phone {
   gap: 8px;
@@ -5184,7 +5190,7 @@ body {
   line-height: normal;
 }
 .dealer-card__content__btn {
-  width: 331px;
+  width: 100%;
   display: block;
   margin: 41px auto 0;
   padding: 18px 0;
@@ -5202,51 +5208,12 @@ body {
   background-color: #FBE200;
 }
 
-.slider-gallery {
-  display: flex;
+.my-swiper {
+  width: 100%;
   overflow: hidden;
 }
-.slider-gallery__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-.slider-gallery__header__title {
-  color: black;
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 55px;
-}
-.slider-gallery__container {
-  position: relative;
-  overflow: hidden;
-}
-.slider-gallery__list {
-  display: flex;
-  transition: all 0.3s ease;
-}
-.slider-gallery__list-item {
-  width: 25%;
-  margin-right: 47px;
-}
-.slider-gallery__controls {
-  gap: 5px;
-  display: flex;
-  justify-content: center;
-}
-.slider-gallery__controls__prev-btn, .slider-gallery__controls__next-btn {
-  width: 50px;
-  height: 50px;
-  background: transparent;
-}
-.slider-gallery__controls__prev-btn {
-  transform: rotate(180deg);
-}
-
-.disabled {
-  pointer-events: none;
-  opacity: 0.5;
+.my-swiper .swiper-slide {
+  margin-right: 50px !important;
 }
 
 .promotion-card__img-container {

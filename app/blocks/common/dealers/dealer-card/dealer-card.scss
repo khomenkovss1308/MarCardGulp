@@ -32,9 +32,10 @@
             line-height: 20px;
         }
         &__info {
-            gap: 30px;
+            gap: 5px;
             display: flex;
-            margin: 15px 0;
+            flex-direction: column;
+            margin: 10px 0 21px;
             &-text {
                 color: $sub-black;
                 font-size: 13px;
@@ -45,6 +46,11 @@
                     margin-left: 5px;
                 }
             }
+        }
+        &__phones {
+            gap: 5px;
+            display: flex;
+            flex-direction: column;
         }
         &__phone {
             gap: 8px;
@@ -62,7 +68,7 @@
             }
         }
         &__btn {
-            width: 331px;
+            width: 100%;
             display: block;
             margin: 41px auto 0;
             padding: 18px 0;
