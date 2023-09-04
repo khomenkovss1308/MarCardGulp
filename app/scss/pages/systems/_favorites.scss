@@ -1,0 +1,19 @@
+.favorites {
+    & .tabs {
+        margin: 20px auto 30px;
+    }
+    & .new-cars-list {
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .favorites {
+        & .tabs {
+            margin: 15px auto 25px;
+        }
+        & .new-cars-list {
+            margin-bottom: 40px;
+        }
+    }
+}

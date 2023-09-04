@@ -1,0 +1,66 @@
+.picking-list {
+    display: flex;
+    flex-direction: column;
+
+    & .accordion__header {
+        padding: 20px 15px;
+        transition: all .3s;
+        background-color: #FFF;
+        border-bottom: 1px solid #E9E9E9;
+
+        &:hover {
+            border-bottom: 0;
+            border-radius: 4px;
+            background: $main-blue;
+
+            & .picking-list__item__header-number, & .picking-list__item__header-text {
+                color: $white;
+            }
+        }
+    }
+
+    &__item {
+        &__header {
+            gap: 10px;
+            display: flex;
+            align-items: center;
+
+            &-number {
+                color: $main-blue;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 15px;
+                transition: all .5s;
+            }
+    
+            &-text {
+                color: $black;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 15px;
+                transition: all .5s;
+            }
+        }
+
+        &__body {
+            gap: 12px 0;
+            display: grid;
+            grid-auto-flow: row;
+            margin: 25px 0 20px;
+            grid-template-columns: 1fr auto;
+            &__item {
+                margin: 0 10px 0 30px;
+                color: $main-black;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 18px;
+                list-style: disc;
+                
+                &::marker {
+                    color: $main-blue;
+                }
+            }
+        }
+    }
+
+}

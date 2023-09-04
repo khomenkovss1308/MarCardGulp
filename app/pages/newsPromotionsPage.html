@@ -20,17 +20,17 @@
 @@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
     <!-- /.dropdown-2 -->
     
-    <main class="main">
+    <main class="main news-promotions">
         <ul class="breadcrumbs wrapper">
             <li class="breadcrumbs__item">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
             </li>
             <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link">Акции и спецпредложения</a>
+                <span class="breadcrumbs__link">Акции и спецпредложения</span>
             </li>
         </ul>
 
-        <section class="news__pagintion wrapper">
+        <section class="news-promotions wrapper">
             <h1 class="first-title">Акции и спецпредложения</h1>
             <div>
                 <ul class="pagination-list main-cards-list">
@@ -130,10 +130,8 @@
             </div>
         </section>
 
-        <section class="news-promotions__new-products">
-            @@include('../blocks/common/new-products/new-products.html')
-            <!-- /.new-products -->
-        </section>
+        @@include('../blocks/common/new-products/new-products.html')
+        <!-- /.new-products --> 
     </main>
     <!-- /.main -->
 

@@ -1,0 +1,99 @@
+.catalogs {
+    & .tech-specs {
+        margin: 120px 0 40px;
+
+        & .third-title {
+            margin-bottom: 25px;    
+        }
+
+        & .tech-list {
+            gap: 40px;
+            &__item {
+                width: 402px;
+                &:last-child {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+    & .description {
+        margin-bottom: 40px;
+
+        & .third-title {
+            margin-bottom: 22px;
+        }
+
+        & .sub-title {
+            margin-top: 30px;
+        }
+    }
+
+    & .tech-list {
+        gap: 12px 0;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr auto;
+
+        &__item {
+            width: 402px;
+        }
+
+        &__header {
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            & .icon {
+                width: 34px;
+                height: 34px;
+                object-fit: cover;
+            }
+
+            & .text {
+                color: $main-black;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 28px;
+            }
+        }
+    }
+
+    & .tech-block {
+        display: flex;
+        font-size: 14px;
+        line-height: 24px;
+        align-items: center;
+        padding: 12px 0;
+        justify-content: space-between;
+        border-bottom: 1px dashed #E9E9E9;
+
+        & .title {
+            color: $sub-black;
+            font-weight: 400;
+        }
+
+        & .sub-title {
+            color: $main-black;
+            // text-align: right;
+            font-weight: 700;
+        }
+    }
+
+    & .pickings {
+        margin: 40px 0 70px;
+        & .third-title {
+            margin-bottom: 25px;
+        }
+    }
+
+    & .section-models {
+        margin: 70px auto;
+
+        & .second-title {
+            margin-bottom: 50px;
+        }
+    }
+}

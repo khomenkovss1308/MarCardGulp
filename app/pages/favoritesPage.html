@@ -19,26 +19,26 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-@@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
-    <!-- /.dropdown-1 -->
+    @@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
+        <!-- /.dropdown-1 -->
 
-@@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
-    <!-- /.dropdown-2 -->
+    @@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
+        <!-- /.dropdown-2 -->
 
-    <main class="main">
+    <main class="main favorites">
         <ul class="breadcrumbs wrapper">
             <li class="breadcrumbs__item">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
             </li>
             <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link">Сравнение</a>
+                <span class="breadcrumbs__link">Сравнение</span>
             </li>
         </ul>
 
-        <p class="first-title wrapper">Избранное</p>
+        <section class="wrapper">
+            <h1 class="first-title">Избранное</h1>
 
-        <section class="favorites__tabs">   
-            <div class="tabs wrapper">
+            <div class="tabs">
                 <button class="tabs__item active">Новые автомобили</button>
                 <button class="tabs__item">Б/У автомобили</button>
                 <button class="tabs__item">Аренда такси</button>
@@ -47,9 +47,9 @@
             </div>
         </section>
 
-        <section class="favorites__list">
-            @@include('../blocks/common/new-cars/new-cars.html')
-            <!-- /.new-cars -->
+        <section class="new-cars-list">
+            @@include('../blocks/common/lists/new-cars-list/new-cars-list.html')
+            <!-- /.new-cars-list -->
         </section>
     </main>
 

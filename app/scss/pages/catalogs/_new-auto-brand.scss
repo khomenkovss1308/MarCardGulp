@@ -1,0 +1,39 @@
+.new-auto-brand {
+    &__img {
+        width: 87%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+    & .first {
+        margin-bottom: 40px;
+    }
+
+    & .second {
+        margin-bottom: 70px;
+    }
+
+    & .filter {
+        padding: 70px 0;
+        background: #FBFBFB;
+
+        & .third-title {
+            margin-bottom: 25px;
+        }
+    }
+
+    & .services {
+        margin-bottom: 70px;
+        border-bottom: 1px solid #DFDFDF;
+    }
+
+    & .promotions {
+        margin-top: 70px;
+    }
+
+    & .feedback {
+        margin-bottom: 70px;
+    }
+}

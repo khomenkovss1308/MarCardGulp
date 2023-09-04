@@ -1,9 +1,19 @@
-.news-new-products__promotions {
-    margin-bottom: 90px;
+.news-new-products {
+    & .pagintions {
+        & .first-title {
+            margin-bottom: 30px;
+        }
+    }
+
+    & .promotions {
+        margin-bottom: 90px;
+    }
 }
 
 @media (max-width: 768px) {
-    .news-new-products__promotions {
-        margin-bottom: 40px;
+    .news-new-products {
+        & .promotions {
+            margin-bottom: 40px;
+        }
     }
 }

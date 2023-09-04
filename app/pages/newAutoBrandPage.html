@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="images/icons/default/logoAccount.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/icons/default/logoAccount.svg">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
     <title>MARCAR</title>
 </head>
 
@@ -17,38 +19,35 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-@@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
-    <!-- /.dropdown-1 -->
+    @@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
+        <!-- /.dropdown-1 -->
 
-@@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
-    <!-- /.dropdown-2 -->
+    @@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
+        <!-- /.dropdown-2 -->
 
-    <main class="main">
+    <main class="main new-auto-brand">
         <ul class="breadcrumbs wrapper">
             <li class="breadcrumbs__item">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
             </li>
             <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link">Новые авто</a>
-            </li>
-            <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link">Volkswagen</a>
+                <span class="breadcrumbs__link">Volkswagen</span>
             </li>
         </ul>
     
 
-        <section class="new-auto-brand__first">
+        <section class="first">
             <img src="images/auto/new-auto/main.png" alt="" class="new-auto-brand__img wrapper">
-            <p class="first-title wrapper">Модельный ряд Volkswagen</p>
+            <h1 class="first-title wrapper">Модельный ряд Volkswagen</h1>
         </section>
 
-        <section class="new-auto-brand__second">
-            <div class="new-auto-brand__tabs tabs wrapper">
+        <section class="second">
+            <div class="tabs wrapper">
                 <button class="tabs__item active">Легковые автомобили</button>
                 <button class="tabs__item">Коммерческий транспорт</button>
             </div>
 
-            <div class="new-auto-brand__sub-tabs sub-tabs">
+            <div class="sub-tabs">
                 <div class="wrapper">
                     <ul class="sub-tabs__list">
                         <li class="sub-tabs__list__item active">
@@ -80,13 +79,14 @@
             </div>
         </section>
 
-        <section class="new-auto-brand__third wrapper">
-            <p class="medium-title">Подбор <span>Volkswagen</span> по параметрам</p>
+        <section class="filter">
+            <p class="third-title wrapper">Подбор <span>Volkswagen</span> по параметрам</p>
+
             @@include('../blocks/common/main-filter/main-filter.html')
             <!-- /.main-filter -->
         </section>
 
-        <section class="new-auto-brand__services">
+        <section class="services">
             <div class="wrapper">
                 <ul class="services-list">
                     <li class="services-list__item">
@@ -133,12 +133,11 @@
             @@include('../blocks/common/dealers/dealers-slider/dealers-slider.html')
         </section>
 
-        <section class="new-auto-brand__fifth">
-            @@include('../blocks/common/promotions/promotions.html')
-            <!-- /.promotions -->
-            @@include('../blocks/common/feedback/feedback.html')
-            <!-- /.feedback -->
-        </section>
+        @@include('../blocks/common/promotions/promotions.html')
+        <!-- /.promotions -->
+        
+        @@include('../blocks/common/feedback/feedback.html')
+        <!-- /.feedback -->
 
         @@include('../blocks/common/seo-block/seo-block.html')
             <!-- /.seo-block -->

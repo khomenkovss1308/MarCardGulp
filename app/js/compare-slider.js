@@ -46,7 +46,6 @@ const swiperSliderInit = () => {
 
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
     swiperSliderInit();
 });

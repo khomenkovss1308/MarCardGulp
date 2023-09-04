@@ -1,19 +1,18 @@
 .news {
-    &__pagintion {
+    & .pagintions {
         & .first-title {
             margin-bottom: 30px;
         }
     }
-    &__new-products {
+
+    & .new-products {
         margin: 90px auto 50px;
-        & .new-products {
-            border: 0;
-        }
+        border: 0;
     }
 }
 
 @media (max-width: 768px) {
-    .news__new-products {
+    .new-products {
         margin: 40px auto 0;
     }
 }

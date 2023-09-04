@@ -48,11 +48,23 @@
             display: none;
         }
         &-mobile {
+            width: 345px;
+            display: block;
+            padding: 23px 0;
+            margin: 15px auto 0;
+            text-align: center;
+        }
+    }   
+}
+
+@media (max-width: 400px) {
+    .link-more {
+        &-mobile {
             width: 100%;
             display: block;
             padding: 23px 0;
             margin-top: 15px;
             text-align: center;
         }
-    }   
+    }
 }

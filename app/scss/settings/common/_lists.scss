@@ -51,9 +51,14 @@
     .car-list {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .services-sublist {
+        gap: 25px;
+        grid-template-columns: repeat(3, 1fr); 
+    }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
     .main-cards-list {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -61,9 +66,13 @@
     .car-list {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .services-sublist {
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .main-cards-list {
         gap: 10px;
         grid-template-columns: repeat(1, 1fr);

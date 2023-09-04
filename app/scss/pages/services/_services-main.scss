@@ -1,4 +1,19 @@
-.services {
+.services-main {
+    & .navigation {
+        margin-bottom: 80px;
+
+        & .first-title {
+            margin-bottom: 50px;
+        }
+
+        &__list {
+            gap: 12px;
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
     &__card {
         color: $white;
         position: relative;
@@ -34,40 +49,29 @@
         }
     }
 
-    &__nav {
-        margin-bottom: 80px;
-
-        & .first-title {
-            margin-bottom: 50px;
-        }
-
-        &__list {
-            gap: 12px;
-            display: grid;
-            grid-auto-flow: row;
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
-
-    &__seo-block {
+    & .seo-block {
         margin-top: 50px;
     }
 }
 
 @media (max-width: 1300px) {
-    .services__nav__list {
-        grid-template-columns: repeat(3, 1fr);
+    .services-main {
+        & .navigation__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
-@media (max-width: 1100px) {
-    .services__nav__list {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 760px) {
+    .services-main {
+        & .navigation__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
 
-@media (max-width: 768px ) {
-    .services {
+@media (max-width: 500px ) {
+    .services-main {
         &__card {
             &__img-container {
                 height: 345px;
@@ -79,7 +83,7 @@
             }
         }
     
-        &__nav {
+        & .navigation {
             margin-bottom: 40px;
             & .first-title {
                 margin-bottom: 25px;
@@ -89,8 +93,8 @@
                 grid-template-columns: repeat(1, 1fr);
             }
         }
-    
-        &__seo-block {
+
+        & .seo-block {
             margin-top: 40px;
         }
     }

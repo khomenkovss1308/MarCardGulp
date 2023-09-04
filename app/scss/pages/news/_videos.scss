@@ -1,5 +1,9 @@
 .news-videos {
-    &__pagination {
+    & .pagintions {
+        & .first-title {
+            margin-bottom: 30px;
+        }
+
         & .pagination-list {
             gap: 30px;
             display: grid;
@@ -7,24 +11,27 @@
             grid-template-columns: repeat(2, 1fr);
         }
     }
-    &__new-products {
+    & .new-products {
         margin: 90px auto 50px;
-        & .new-products {
-            border: 0;
-        }
+        border: 0;
     }
 }
 
 @media (max-width: 768px) {
     .news-videos {
-        &__pagination {
-            & .pagination-list {
-                grid-template-columns: repeat(1, 1fr);
-            }
-        }
-        &__new-products {
+        & .new-products {
             margin: 40px auto 0;
         }
     }
 }
 
+
+@media (max-width: 700px) {
+    .news-videos {
+        & .pagintions {
+            & .pagination-list {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}

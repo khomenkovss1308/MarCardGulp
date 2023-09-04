@@ -1,0 +1,113 @@
+.home {
+    & .tabs {
+        margin: 40px auto 27px;
+    }
+
+    & .main-filter {
+        margin-bottom: 70px;
+    }
+
+    & .models {
+        margin-bottom: 70px;
+    }
+
+    & .new-cars {
+        margin-bottom: 70px;
+    }
+
+    & .mileage-cars {
+        margin-bottom: 70px;
+    }
+
+    & .taxi-cars {
+        padding: 70px 0;
+        margin-bottom: 70px;
+        background: #FBFBFB;
+    }
+
+    & .recomendated {
+        margin-bottom: 70px;
+
+        & .second-title {
+            margin-bottom: 40px;
+        }
+    }
+
+    & .services {
+        padding: 70px 0;
+        background: #FBFBFB;
+
+        & .second-title {
+            margin-bottom: 40px;
+        }
+    }
+
+    & .new-products {
+        margin-bottom: 50px;
+    }
+
+    & .feedback {
+        margin-bottom: 70px;
+    }
+
+    & .videos {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home {
+        & .tabs {
+            margin: 20px auto;
+        }
+    
+        & .main-filter {
+            margin-bottom: 40px;
+        }
+    
+        & .models {
+            margin-bottom: 40px;
+        }
+
+        & .new-cars {
+            margin-bottom: 40px;
+        }
+    
+        & .mileage-cars {
+            margin-bottom: 40px;
+        }
+
+        & .taxi-cars {
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+
+        & .services {
+            padding: 40px 0;
+
+            & .second-title {
+                margin-bottom: 25px;
+            }
+        }
+    
+        & .recomendated {
+            margin-bottom: 40px;
+
+            & .second-title {
+                margin-bottom: 25px;
+            }
+        }
+
+        & .new-products {
+            margin-bottom: 0;
+        }
+
+        & .feedback {
+            margin-bottom: 40px;
+        }
+
+        & .videos {
+            margin-bottom: 40px;
+        }
+    }
+}

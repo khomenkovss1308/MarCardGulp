@@ -17,18 +17,19 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-@@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
-    <!-- /.dropdown-1 -->
+    @@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
+        <!-- /.dropdown-1 -->
 
-@@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
-    <!-- /.dropdown-2 -->
-    <main class="main">
+    @@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
+        <!-- /.dropdown-2 -->
+
+    <main class="main taxi">
         <ul class="breadcrumbs wrapper">
             <li class="breadcrumbs__item">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
             </li>
             <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link">Аренда такси</a>
+                <span class="breadcrumbs__link">Аренда такси</span>
             </li>
         </ul>
 
@@ -233,62 +234,63 @@
             </div>
         </section>
 
-        <section class="taxi__main-filter wrapper">
+        <section class="taxi__main-filter">
             @@include('../blocks/common/main-filter/main-filter.html')
             <!-- /.main-filter -->
         </section>
 
-        <section class="taxi__block wrapper">
-            <ul class="pagination-list taxi-cars__list" >
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+        <section class="taxi-list wrapper">
+            <ul class="pagination-list">
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
-                <li class="pagination-list__item taxi-cars__list__item">
-                    @@include('../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card.html')
+                <li class="pagination-list__item">
+                    @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card.html')
                     <!-- /.taxi-cars-card -->
                 </li>
             </ul>
+
             <ul class="pagination">
                 <li class="pagination__item">
                     <a class="pagination__link active" href="#">1</a>
@@ -330,9 +332,10 @@
         @@include('../blocks/common/seo-block/seo-block.html')
         <!-- /.seo-block -->
 
-        @@include('../blocks/common/footer/footer.html')
-        <!-- /.footer -->
     </main>
+
+    @@include('../blocks/common/footer/footer.html')
+    <!-- /.footer -->
     
     <script src="js/sliders/itc-slider.js"></script>
     <script src="js/main.js"></script>

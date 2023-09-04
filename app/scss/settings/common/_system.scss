@@ -55,29 +55,6 @@
     }
 }
 
-.favorites {
-    &__tabs {
-        margin: 20px auto 30px;
-    }
-    &__list {
-        margin-bottom: 90px;
-        & .block-title {
-            display: none;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .favorites {
-        &__tabs {
-            margin: 15px auto 25px;
-        }
-        &__list {
-            margin-bottom: 40px;
-        }
-    }
-}
-
 @media (max-width: 480px) {
     .system {
         &__not-data__subtitle {

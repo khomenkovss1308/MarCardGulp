@@ -250,6 +250,8 @@ document.addEventListener('DOMContentLoaded', () => {
     handleToggleText('.service__maintenance-collapse__container', '.service__maintenance-collapse__content', '#btn-read-more-service', '#btn-collapse-service', '290px');
     handleToggleText('.taxi__benifit-container-1', '.taxi__benifit-list-1', '#btn-read-more-taxi-1', '#btn-collapse-taxi-1', '138px');
     handleToggleText('.taxi__benifit-container-2', '.taxi__benifit-list-2', '#btn-read-more-taxi-2', '#btn-collapse-taxi-2', '138px');
+    
+    handleToggleText('.appearance-1', '.sub-title', '#btn-read-more-appearance-1', '#btn-collapse-appearance-1', '376px');
 
     sidebarFunctioning();
     toggleSubMenu();

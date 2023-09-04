@@ -25,13 +25,11 @@
 @import 'settings/common/additional-nav';
 @import 'settings/common/compare';
 @import 'settings/common/pagination';
-@import 'pages/catalogs/taxi/taxi';
 @import 'settings/common/services-list/services-list';
 @import 'settings/common/services-list/services-card';
 
 //pages services
 @import 'pages/services/rent';
-@import 'pages/services/services';
 
 //pages news
 @import 'pages/news/news';
@@ -39,9 +37,6 @@
 @import 'pages/news/videos';
 @import 'pages/news/promotions';
 @import 'pages/news/new-products';
-
-//pages catalog
-@import 'pages/catalogs/taxi/taxi';
 
 //pages account
 @import 'pages/account/account';
@@ -56,6 +51,8 @@
 @import '../blocks/common/footer/footer';
 @import '../blocks/common/sidebar/sidebar';
 @import '../blocks/common/dropdown/dropdown';
+
+
 @import '../blocks/common/feedback/feedback';
 @import '../blocks/common/seo-block/seo-block';
 @import '../blocks/common/promotions/promotions';
@@ -66,15 +63,7 @@
 @import '../blocks/common/dealers/dealers-slider/dealers-slider';
 @import "../blocks/common/promotions/promotion-card/promotion-card";
 @import '../blocks/common/new-products/new-products-card/new-products-card';
-@import '../blocks/common/models/models';
-@import '../blocks/common/models/models-card/models-card';
 @import '../blocks/common/main-filter/main-filter';
-@import '../blocks/common/new-cars/new-cars';
-@import '../blocks/common/new-cars/new-cars-card/new-cars-card';
-@import '../blocks/common/mileage-cars/mileage-cars';
-@import '../blocks/common/mileage-cars/mileage-cars-card/mileage-cars-card';
-@import '../blocks/common/taxi-cars/taxi-cars';
-@import '../blocks/common/taxi-cars/taxi-cars-card/taxi-cars-card';
 
 //home page blocks
 @import '../blocks/pages/homePage/home';
@@ -121,5 +110,29 @@
 @import '../blocks/pages/account/login/login';
 
 // catalogs pages
+@import 'pages/catalogs/catalogs';
+@import 'pages/catalogs/card-auto';
 @import 'pages/catalogs/catalog-used';
+@import 'pages/catalogs/new-auto-card';
 @import 'pages/catalogs/catalog-used-mark';
+
+// home page
+@import 'pages/home';
+@import 'pages/catalogs/new-auto-brand';
+
+@import '../blocks/pages/catalog/picking/picking';
+
+// pages
+@import 'pages/catalogs/taxi';
+@import 'pages/systems/favorites';
+@import 'pages/services/services-main';
+
+// common blocks lists
+@import '../blocks/common/lists/models-list/models-list';
+@import '../blocks/common/lists/recomendated-list/recomendated-list';
+
+
+// common blocks lists card
+@import '../blocks/common/lists/new-cars-list/new-cars-card/new-cars-card';
+@import '../blocks/common/lists/taxi-cars-list/taxi-cars-card/taxi-cars-card';
+@import '../blocks/common/lists/mileage-cars-list/mileage-cars-card/mileage-cars-card';

@@ -1,5 +1,11 @@
 .news-promotions {
-    &__new-products {
+    & .news-promotions {
+        & .first-title {
+            margin-bottom: 30px;
+        }
+    }
+
+    & .new-products {
         border: 0;
         margin-bottom: 50px;
     }
@@ -7,7 +13,7 @@
 
 @media (max-width: 768px) {
     .news-promotions {
-        &__new-products {
+        & .new-products {
             margin-bottom: 0;
         }
     }

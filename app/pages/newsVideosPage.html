@@ -23,17 +23,17 @@
 @@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
     <!-- /.dropdown-2 -->
 
-    <main class="main">
+    <main class="main news-videos">
         <ul class="breadcrumbs wrapper">
             <li class="breadcrumbs__item">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
             </li>
             <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link">Видеообзоры</a>
+                <span class="breadcrumbs__link">Видеообзоры</span>
             </li>
         </ul>
 
-        <section class="news__pagintion news-videos__pagination wrapper">
+        <section class="pagintions wrapper">
             <h1 class="first-title">Видеообзоры</h1>
             <ul class="pagination-list video__list">
                 <li class="pagination-list__item video__list__item">
@@ -179,20 +179,14 @@
             </ul>
         </section>
 
-        <section class="news-videos__promotions">
-            @@include('../blocks/common/promotions/promotions.html')
-            <!-- /.promotions -->
-        </section>
+        @@include('../blocks/common/promotions/promotions.html')
+        <!-- /.promotions -->
 
-        <section class="news-videos__new-products">
-            @@include('../blocks/common/new-products/new-products.html')
-            <!-- /.new-products -->
-        </section>
+        @@include('../blocks/common/new-products/new-products.html')
+        <!-- /.new-products -->
 
-        <section class="news-videos__seo-block">
-            @@include('../blocks/common/seo-block/seo-block.html')
-            <!-- /.seo-block -->
-        </section>
+        @@include('../blocks/common/seo-block/seo-block.html')
+        <!-- /.seo-block -->
     </main>
     <!-- /.main -->
 

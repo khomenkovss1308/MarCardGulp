@@ -19,116 +19,72 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-@@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
+    @@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
     <!-- /.dropdown-1 -->
 
-@@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
+    @@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
     <!-- /.dropdown-2 -->
 
-    <main class="main">
-
+    <main class="main home">
         @@include('../blocks/pages/homePage/advertisement/advertisement.html')
         <!-- /.advertisement -->
 
-        <section class="home__tabs">
-            <div class="tabs wrapper">
-                <button class="tabs__item active">Новые авто</button>
-                <button class="tabs__item">Авто с пробегом</button>
-                <button class="tabs__item">Семейные авто</button>
-                <button class="tabs__item">Кроссоверы</button>
-                <button class="tabs__item">Внедорожники</button>
+        <section class="tabs wrapper">
+            <button class="tabs__item active">Новые авто</button>
+            <button class="tabs__item">Авто с пробегом</button>
+            <button class="tabs__item">Семейные авто</button>
+            <button class="tabs__item">Кроссоверы</button>
+            <button class="tabs__item">Внедорожники</button>
+        </section>
+
+        @@include('../blocks/common/main-filter/main-filter.html')
+        <!-- /.main-filter -->
+
+        <section class="models">
+            @@include('../blocks/common/lists/models-list/models-list.html')
+            <!-- /.models-list -->
+        </section>
+
+        <section class="new-cars">
+            <div class="block-title wrapper">
+                <p class="second-title">Новые авто</p>
+                <a href="#" class="link-more-default btn-blue-default">Показать все</a>
             </div>
+
+            @@include('../blocks/common/lists/new-cars-list/new-cars-list.html')
+            <!-- /.new-cars-list -->
         </section>
 
-        <section class="home__filter wrapper">
-            @@include('../blocks/common/main-filter/main-filter.html')
-            <!-- /.main-filter -->
-        </section>
+        <section class="mileage-cars">
+            <div class="block-title wrapper">
+                <p class="second-title">Авто с пробегом</p>
+                <a href="#" class="link-more-default btn-blue-default">Показать все</a>
+            </div>
 
-        <section class="home__models">
-            @@include('../blocks/common/models/models.html')
-            <!-- /.models -->
-        </section>
-
-        <section class="home__new-cars">
-            @@include('../blocks/common/new-cars/new-cars.html')
-            <!-- /.new-cars -->
+            @@include('../blocks/common/lists/mileage-cars-list/mileage-cars-list.html')
+            <!-- /.mileage-cars-list -->
         </section>
         
-        <section class="home__mileage-cars">
-            @@include('../blocks/common/mileage-cars/mileage-cars.html')
-            <!-- /.mileage-cars -->
+        <section class="taxi-cars">
+            <div class="block-title wrapper">
+                <p class="second-title">Авто для такси</p>
+                <a href="#" class="link-more-default btn-blue-default">Показать все</a>
+            </div>
+
+            @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-list.html')
+            <!-- /.taxi-cars-list -->
         </section>
         
-        <section class="home__taxi-cars">
-            @@include('../blocks/common/taxi-cars/taxi-cars.html')
-            <!-- /.taxi-cars -->
+        <section class="recomendated">
+            <p class="second-title wrapper">Рекомендованные подборки</p>
+            
+            @@include('../blocks/common/lists/recomendated-list/recomendated-list.html')
+            <!-- /.recomendated-list -->
         </section>
 
-
-        <section class="home__recomendated wrapper">
-            <p class="block-title__text-black">Рекомендованные подборки</p>
-            <ul class="recomendated-list">
-                <li class="recomendated-list__item">
-                    <a href="#">
-                        <div class="recomendated-card">
-                            <img src="images/auto/recomendated/auto1.png" alt="" class="recomendated-card__img">
-                            <p class="recomendated-card__title">Внедорожники</p>
-                            <p class="recomendated-card__subtitle">2 148 авто</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="recomendated-list__item">
-                    <a href="#">
-                        <div class="recomendated-card">
-                            <img src="images/auto/recomendated/auto2.png" alt="" class="recomendated-card__img">
-                            <p class="recomendated-card__title">Кроссоверы</p>
-                            <p class="recomendated-card__subtitle">2 148 авто</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="recomendated-list__item">
-                    <a href="#">
-                        <div class="recomendated-card">
-                            <img src="images/auto/recomendated/auto3.png" alt="" class="recomendated-card__img">
-                            <p class="recomendated-card__title">Семейные авто</p>
-                            <p class="recomendated-card__subtitle">2 148 авто</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="recomendated-list__item">
-                    <a href="#">
-                        <div class="recomendated-card">
-                            <img src="images/auto/recomendated/auto4.png" alt="" class="recomendated-card__img">
-                            <p class="recomendated-card__title">Премиум авто</p>
-                            <p class="recomendated-card__subtitle">2 148 авто</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="recomendated-list__item">
-                    <a href="#">
-                        <div class="recomendated-card">
-                            <img src="images/auto/recomendated/auto5.png" alt="" class="recomendated-card__img">
-                            <p class="recomendated-card__title">Недорогие авто</p>
-                            <p class="recomendated-card__subtitle">2 148 авто</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="recomendated-list__item">
-                    <a href="#">
-                        <div class="recomendated-card">
-                            <img src="images/auto/recomendated/auto6.png" alt="" class="recomendated-card__img">
-                            <p class="recomendated-card__title">Седаны</p>
-                            <p class="recomendated-card__subtitle">2 148 авто</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="home__services">
+        <section class="services">
             <div class="wrapper">
-                <p class="block-title__text-black">Предоставляемые услуги</p>
+                <p class="second-title">Предоставляемые услуги</p>
                 <ul class="services-sublist">
                     <li class="services-sublist__item">
                         <div class="services-card">
@@ -197,20 +153,16 @@
             </div>
         </section>
 
-        <section class="home__new-products">
-            @@include('../blocks/common/new-products/new-products.html')
-            <!-- /.new-products -->
-        </section>
+        @@include('../blocks/common/new-products/new-products.html')
+        <!-- /.new-products -->
 
-        <section class="home__promotions">
-            @@include('../blocks/common/promotions/promotions.html')
-            <!-- /.promotions --> 
-        </section>
+        @@include('../blocks/common/promotions/promotions.html')
+        <!-- /.promotions -->
 
         @@include('../blocks/common/feedback/feedback.html')
         <!-- /.feedback -->
 
-        <section class="home__videos wrapper">
+        <section class="videos wrapper">
             <div class="block-title">
                 <p class="block-title__text-black">Видеообзоры</p>
                 <a href="#" class="link-more-default btn-yellow-defautlt">Показать все</a>
@@ -247,14 +199,12 @@
                     </div>
                 </li>
             </ul>
-            <a href="/pages/newsPages/newsVideosPage.html" class="link-more-mobile btn-yellow-defautlt">
+            <a href="/pages/newsPages/newsVideosPage.html" class="link-more-mobile btn-blue-default">
                 Показать больше
             </a>
         </section>
-
     </main>
     <!-- /.main -->
-
 
     @@include('../blocks/common/footer/footer.html')
     <!-- /.footer -->

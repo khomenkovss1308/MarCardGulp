@@ -34,7 +34,7 @@
 }
 
 .sub-tabs {
-    margin-top: 25px;
+    margin-top: 15px;
     border-top: 1px solid #DFDFDF;
     border-bottom: 1px solid #DFDFDF;
 
@@ -62,6 +62,59 @@
             color: $main-blue;
             border-bottom: 3px solid $main-blue;
         }
+    }
+}
+
+.tabs-colors {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    
+    &__btn {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        transition: all .2s;
+
+        &:hover {
+            width: 37px;
+            height: 37px;
+            border: 3px solid $main-blue;
+        }
+    }
+
+    & .active {
+        width: 37px;
+        height: 37px;
+        border: 3px solid $main-blue;
+    }
+
+    & .white {
+        background-color: $white;
+    }
+
+    & .black {
+        background-color: #040404;
+    }
+
+    & .red {
+        background-color: #BD0000;
+    }
+
+    & .green {
+        background-color: #00A757;
+    }
+
+    & .light-green {
+        background-color: #D3E318;
+    }
+
+    & .purple {
+        background-color: #4214A4;
+    }
+
+    & .blue {
+        background-color: #0A4EB2;
     }
 }
 

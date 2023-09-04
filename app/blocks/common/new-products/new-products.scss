@@ -5,9 +5,15 @@
     & .second-title {
         color: $white;
     }
+
+    &-card {
+        &__img-container {
+            height: 290px;
+        }
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .new-products {
         padding: 40px 0;
     }

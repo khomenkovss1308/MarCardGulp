@@ -14,22 +14,23 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-@@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
-    <!-- /.dropdown-1 -->
+    @@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
+        <!-- /.dropdown-1 -->
 
-@@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
-    <!-- /.dropdown-2 -->
-    <main class="main">
+    @@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
+        <!-- /.dropdown-2 -->
+
+    <main class="main news">
         <ul class="breadcrumbs wrapper">
             <li class="breadcrumbs__item">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
             </li>
             <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link">Новости</a>
+                <span class="breadcrumbs__link">Новости</span>
             </li>
         </ul>
 
-        <section class="news__pagintion wrapper">
+        <section class="pagintions wrapper">
             <h1 class="first-title">Новости</h1>
             <div>
                 <ul class="pagination-list main-cards-list">
@@ -117,15 +118,11 @@
             </div>
         </section>
         
-        <section class="news__promotions">
-            @@include('../blocks/common/promotions/promotions.html')
-            <!-- /.promotions -->
-        </section>
+        @@include('../blocks/common/promotions/promotions.html')
+        <!-- /.promotions -->
 
-        <section class="news__new-products">
-            @@include('../blocks/common/new-products/new-products.html')
-            <!-- /.new-products -->
-        </section>
+        @@include('../blocks/common/new-products/new-products.html')
+        <!-- /.new-products -->
     </main>
     <!-- /.main -->
 
