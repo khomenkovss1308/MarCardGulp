@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
@@ -8,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
     <link rel="shortcut icon" href="images/icons/default/logoAccount.svg">
-    
+
     <title>MARCAR</title>
 </head>
 
@@ -19,11 +20,11 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-    @@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
-    <!-- /.dropdown-1 -->
+    @@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
+    <!-- /.dropdown chooseCity -->
 
-    @@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
-    <!-- /.dropdown-2 -->
+    @@include('../blocks/common/dropdown/search/search.html')
+    <!-- /.dropdown search -->
 
     <main class="main home">
         @@include('../blocks/pages/homePage/advertisement/advertisement.html')
@@ -64,6 +65,7 @@
             @@include('../blocks/common/lists/mileage-cars-list/mileage-cars-list.html')
             <!-- /.mileage-cars-list -->
         </section>
+<<<<<<< HEAD
         
         <section class="taxi-cars">
             <div class="block-title wrapper">
@@ -80,6 +82,17 @@
             
             @@include('../blocks/common/lists/recomendated-list/recomendated-list.html')
             <!-- /.recomendated-list -->
+=======
+
+        <section class="home__mileage-cars">
+            @@include('../blocks/common/mileage-cars/mileage-cars.html')
+            <!-- /.mileage-cars -->
+        </section>
+
+        <section class="home__taxi-cars">
+            @@include('../blocks/common/taxi-cars/taxi-cars.html')
+            <!-- /.taxi-cars -->
+>>>>>>> 464b8322429757c9cbe62e14637f5f651a4400b3
         </section>
 
         <section class="services">
@@ -91,7 +104,8 @@
                             <img src="images/icons/services/search.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Автоподбор</p>
-                                <p class="services-card__subtitle">Мы подберем для Вас самые лучшие и выгодные варианты</p>
+                                <p class="services-card__subtitle">Мы подберем для Вас самые лучшие и выгодные варианты
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -136,7 +150,8 @@
                             <img src="images/icons/services/testDrive.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Тест-драйв</p>
-                                <p class="services-card__subtitle">Протестируйте автомобиль перед покупкой или арендой</p>
+                                <p class="services-card__subtitle">Протестируйте автомобиль перед покупкой или арендой
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -145,7 +160,8 @@
                             <img src="images/icons/services/checklist.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Финансовые услуги</p>
-                                <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг физических лиц</p>
+                                <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг
+                                    физических лиц</p>
                             </div>
                         </div>
                     </li>
@@ -156,8 +172,15 @@
         @@include('../blocks/common/new-products/new-products.html')
         <!-- /.new-products -->
 
+<<<<<<< HEAD
         @@include('../blocks/common/promotions/promotions.html')
         <!-- /.promotions -->
+=======
+        <section class="home__promotions">
+            @@include('../blocks/common/promotions/promotions.html')
+            <!-- /.promotions -->
+        </section>
+>>>>>>> 464b8322429757c9cbe62e14637f5f651a4400b3
 
         @@include('../blocks/common/feedback/feedback.html')
         <!-- /.feedback -->

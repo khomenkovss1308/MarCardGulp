@@ -54,10 +54,13 @@
         background-repeat: no-repeat;
         background-position: right 10px center;
         background-image: url(../images/icons/default/arrowSelectBlue.svg);
+        border: 1px solid #EEE;
+        background: #F8F8F8;
     }
 
     &__header {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         margin-bottom: 20px;
 
@@ -66,8 +69,71 @@
             font-size: 24px;
             font-weight: 600;
             line-height: 34px;
+
+            span {
+                color: #248FEC;
+            }
+        }
+
+        &_info {
+            display: flex;
+            flex-direction: column;
+
+            &-name {
+                color: #232323;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 28px;
+            }
+
+            &-description {
+                color: #575757;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+            }
         }
     }
+
+    &__list {
+        margin-bottom: 20px;
+
+        &-item {
+            display: flex;
+            
+            &:not(:last-child) {
+                border-bottom: 1px dashed #E9E9E9;
+                padding-bottom: 8px;
+                margin-bottom: 8px;
+            }
+
+            &_left {
+                display: block;
+                width: 180px;
+                margin-right: 21px;
+                color: #000;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+            }
+
+            &_right {
+                display: block;
+                color: #000;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 18px;
+            }
+        }
+    }
+
+    &__description {
+        color:#575757;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
 
     &__main {
         width: 100%;
@@ -80,11 +146,60 @@
         }
 
         &-title {
-            color:#575757;
+            color: #575757;
         }
 
         &-value {
-            color:#248FEC;
+            color: #248FEC;
+        }
+
+        &-btn {
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            padding: 18px 54px;
+            border-radius: 4px;
+            background: #248FEC;
+            transition: all .3s;
+            border: 1px solid transparent;
+
+            &:hover {
+                background: #fff;
+                color: #248FEC;
+                border: 1px solid #248FEC;
+            }
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &_checkbox {
+                width: 100%;
+                margin-top: 22px;
+                margin-bottom: 32px;
+                display: flex;
+                align-items: center;
+
+                input {
+                    margin-right: 10px;
+                }
+
+                label {
+                    color: #232323;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 18px;
+
+                    a {
+                        color: #248FEC;
+                        border-bottom: 1px solid #248FEC;
+                    }
+                }
+            }
         }
 
         &__container {
@@ -262,11 +377,58 @@
     }
 }
 
-#dropdown-1{
-    .dropdown-content__header{
+#dropdown-1 {
+    width: 451px;
+
+    .dropdown-content__header {
         margin-bottom: 5px;
     }
 }
+
+#dropdown-3,
+#dropdown-4,
+#dropdown-5 {
+    width: 445px;
+
+    .dropdown-content__header_title {
+        width: 345px;
+        font-size: 30px;
+    }
+
+    .dropdown-content__input {
+        margin-bottom: 10px;
+        padding: 13px 18px;
+        border: 1px solid #EDEDED;
+        background: #FAFAFA;
+    }
+
+}
+
+#dropdown-5 {
+    .dropdown-content__header_title {
+        margin-bottom: 10px;
+    }
+
+    .dropdown-content__header {
+        margin-bottom: 30px;
+    }
+}
+
+#dropdown-6 {
+    width: 445px;
+
+    .dropdown-content__header_title {
+        color: #248FEC;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .dropdown-content__header {
+        margin-bottom: 15px;
+    }
+}
+
 
 @media (max-width: 900px) {
     .dropdown-content {
@@ -277,7 +439,7 @@
 @media (max-width: 680px) {
     .dropdown-content {
         padding: 15px;
-        width: 100%;
+        width: 100% !important;
         height: 100%;
         overflow-y: scroll;
 

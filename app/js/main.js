@@ -3,10 +3,12 @@ const sidebarFunctioning = () => {
     const sidebarCloseBtn = document.querySelector('.sidebar__close-btn');
     const sidebar = document.querySelector('.sidebar');
     headerMobileBtn.addEventListener('click', () => {
-        sidebar.style.display = 'block';
+        sidebar.style.visibility = 'visible';
+        sidebar.style.opacity = '1';
     });
     sidebarCloseBtn.addEventListener('click', () => {
-        sidebar.style.display = 'none';
+        sidebar.style.visibility = 'hidden';
+        sidebar.style.opacity = '0';
     });
 }
 
