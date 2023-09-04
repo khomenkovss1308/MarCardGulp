@@ -17,13 +17,13 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-    @@include('../blocks/common/dropdown/dropdown-1/dropdown-1.html')
-    <!-- /.dropdown-1 -->
+    @@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
+    <!-- /.dropdown chooseCity -->
 
-    @@include('../blocks/common/dropdown/dropdown-2/dropdown-2.html')
-    <!-- /.dropdown-2 -->
+@@include('../blocks/common/dropdown/search/search.html')
+    <!-- /.dropdown search -->
 
-    <main class="main new-auto-model">
+    <main class="main model-auto">
         <ul class="breadcrumbs wrapper">
             <li class="breadcrumbs__item">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
@@ -230,8 +230,11 @@
                     </div>
                 </section>
 
-                <section class="new-auto-card__equipment">
+                <section class="equipment">
                     <p class="first-title"><span>//</span> Комплектации авто</p>
+
+                    @@include('../blocks/pages/catalog/equipment/equipment-list.html')
+                    <!-- /.equipment-list -->
                 </section>
 
                 <section class="new-auto-card__about">
@@ -553,7 +556,7 @@
                     </div>
                 </section>
 
-                <section class="new-auto-card__credit">
+                <<section class="new-auto-card__credit">
                     <div class="new-auto-card__credit__time">
                         <img src="images/card/timer.svg" alt="" class="new-auto-card__credit__time-img">
                         <div>
@@ -574,7 +577,7 @@
                     <a href="#" class="new-auto-card__credit__btn btn-yellow-defautlt">
                         Подробнее
                     </a>
-                </section>
+                </section>>
 
                 <section class="new-auto-card__other-model">
                     <p class="first-title"><span>//</span> Другие модели</p>

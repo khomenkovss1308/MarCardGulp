@@ -125,7 +125,9 @@
 // pages
 @import 'pages/catalogs/taxi';
 @import 'pages/systems/favorites';
+@import 'pages/catalogs/model-auto';
 @import 'pages/services/services-main';
+@import '../blocks/pages/catalog/equipment/equipment-list';
 
 // common blocks lists
 @import '../blocks/common/lists/models-list/models-list';

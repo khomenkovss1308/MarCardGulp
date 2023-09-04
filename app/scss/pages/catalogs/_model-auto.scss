@@ -1,0 +1,9 @@
+.model-auto {
+
+    & .equipment {
+        margin: 130px auto 70px;
+        & .first-title {
+            margin-bottom: 30px;
+        }
+    }
+}

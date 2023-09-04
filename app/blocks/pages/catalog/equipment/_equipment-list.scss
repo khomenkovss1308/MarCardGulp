@@ -1,0 +1,144 @@
+.equipment {
+    &-list {
+        gap: 14px 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        & .accordion__item_show {
+            width: 100%;
+        }
+
+        &__item {
+            width: 49%;
+            & .accordion {
+                &__header {
+                    padding: 20px 25px;
+                    border-radius: 4px;
+                    background: #FBFBFB;
+                    transition: all .3s;
+
+                    &:hover {
+                        color: $white;
+                        background: linear-gradient(88deg, #2775B8 0%, #44A8FF 99.66%);
+
+                        &::after {
+                            background-image: url(../images/icons/default/minus.svg);
+                        }
+                    }
+
+                    &::after {
+                        background-image: url(../images/icons/default/plus.svg);
+                    }
+                }
+            }
+        }
+    }
+
+    &-sub-list {
+        gap: 14px 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        &__item {
+            width: 49%;
+            padding: 20px;
+            background: #FBFBFB;
+
+            &-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & .title {
+                    color: $main-black;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 26px;
+                }
+                & .btn-group {
+                    gap: 5px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            & .price-info {
+                display: flex;
+                align-items: center;
+
+                & .old-price {
+                    gap: 3px;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 10px;
+
+                    & .price {
+                        color: #DC0000;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        text-decoration: line-through;
+                    }
+
+                    & .currency {
+                        color: $main-black;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 14px;
+                    }
+                }
+
+                & .new-price {
+                    gap: 5px;
+                    display: flex;
+                    align-items: center;
+
+                    & .text {
+                        color: $black;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 15px;
+                    }
+
+                    & .price {
+                        color: $main-black;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 24px;
+                    }
+
+                    & .currency {
+                        color: $main-black;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 18px;
+                    }
+                }
+            }
+
+            & .btn-group {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+                margin-top: 15px;
+                
+                & .btn-more {
+                    padding: 14px 24px;
+                }
+
+                & .btn-credit {
+                    color: $main-blue;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 14px;
+                    padding: 14px 24px;
+                    border-radius: 4px;
+                    border: 1px solid $main-blue;
+                }
+            }
+        }
+    }
+}
