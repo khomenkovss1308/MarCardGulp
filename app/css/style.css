@@ -6564,11 +6564,11 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 .brand-card:hover {
-  z-index: 1000;
+  z-index: 1;
   position: absolute;
   left: 0;
   right: 0;
-  top: 0px;
+  top: 0;
   box-shadow: 0px 18px 90px 0px rgba(0, 0, 0, 0.1);
 }
 .brand-card:hover .brand-card__subblock {
@@ -6917,6 +6917,10 @@ body {
     width: 100%;
   }
 }
+.catalogs .car-list {
+  gap: 42px;
+  grid-template-columns: repeat(3, 1fr);
+}
 .catalogs .tech-specs {
   margin: 120px 0 40px;
 }
@@ -6996,11 +7000,44 @@ body {
 .catalogs .section-models .second-title {
   margin-bottom: 50px;
 }
-.catalogs .equipment {
+.catalogs .equipment, .catalogs.equipment-model {
   margin-bottom: 70px;
 }
-.catalogs .equipment .first-title {
+.catalogs .equipment .first-title, .catalogs.equipment-model .first-title {
   margin-bottom: 40px;
+}
+.catalogs .equipment-model {
+  margin: 130px 0 70px;
+}
+.catalogs .other-model {
+  margin-bottom: 70px;
+}
+.catalogs .other-model .first-title {
+  margin-bottom: 50px;
+}
+.catalogs .other-model .brand-list {
+  gap: 33px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.catalogs .cars {
+  margin-bottom: 70px;
+}
+.catalogs .cars .first-title {
+  margin-bottom: 50px;
+}
+.catalogs .cars .wrapper {
+  width: 100%;
+}
+.catalogs .services {
+  padding: 70px 0;
+  background: #FBFBFB;
+  margin-bottom: 70px;
+}
+.catalogs .services .second-title {
+  margin-bottom: 70px;
+}
+.catalogs .feedback {
+  margin-bottom: 30px;
 }
 
 .card-auto {
@@ -7461,7 +7498,7 @@ body {
 }
 .new-auto-card__form {
   top: 120px;
-  z-index: 100;
+  z-index: 1;
   position: sticky;
   height: 648px;
   padding: 40px;
@@ -8167,6 +8204,244 @@ body {
 }
 .picking-list__item__body__item::marker {
   color: #248FEC;
+}
+
+.discount-season {
+  top: 120px;
+  z-index: 1;
+  position: sticky;
+  height: 648px;
+  padding: 40px;
+  width: 24.1%;
+  border-radius: 8px;
+  background: #EEF300;
+  box-shadow: 0px 4px 90px 0px rgba(238, 243, 0, 0.25);
+}
+.discount-season .title {
+  color: black;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+.discount-season .sub-title {
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.discount-season .first {
+  margin-bottom: 10px;
+}
+.discount-season .second {
+  margin-bottom: 24px;
+}
+.discount-season .time-counter {
+  display: flex;
+  justify-content: space-between;
+}
+.discount-season .time-counter__item {
+  display: inline-block;
+}
+.discount-season .time-counter__item .number {
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22px;
+  padding: 18px 14px;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
+}
+.discount-season .time-counter__item .text {
+  color: #575757;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  margin-top: 8px;
+}
+.discount-season .price-block {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  margin: 23px 0;
+}
+.discount-season .price-block .text {
+  color: #575757;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.discount-season .price-block .price {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.discount-season .price-block .currency {
+  color: #232323;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+.discount-season__elements {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.discount-season__btn {
+  width: 100%;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+.discount-season__btn:hover {
+  color: white;
+  background-color: #248FEC;
+  transform: scale(1.05);
+}
+
+.advert-gift {
+  margin: 70px 0;
+  border-radius: 8px;
+  padding: 39px 40px 41px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), url(../images/card/image4.png), lightgray 0px -396.481px/100% 329.651% no-repeat;
+}
+.advert-gift__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 39px;
+}
+.advert-gift__top .text-block {
+  display: flex;
+  color: white;
+  font-weight: 400;
+  line-height: 100%;
+  align-items: center;
+}
+.advert-gift__top .text-block .text {
+  font-size: 34px;
+  margin-right: 10px;
+}
+.advert-gift__top .text-block .price {
+  font-size: 44px;
+  font-weight: 700;
+  margin-right: 4px;
+}
+.advert-gift__top .text-block .currency {
+  font-size: 24px;
+}
+.advert-gift__top .sub-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.advert-gift__top .sub-title span {
+  color: #EEF300;
+}
+.advert-gift__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.advert-gift__bottom .btn-green {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 4px;
+  padding: 12px 24px;
+  background: #00A811;
+  box-shadow: 0px 4px 34px 0px rgba(0, 168, 17, 0.25);
+}
+.advert-gift__bottom .btn-green:hover {
+  transform: scale(1.1);
+}
+.advert-gift__info {
+  gap: 70px;
+  display: flex;
+}
+.advert-gift__info .text {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+.advert-gift__info .sub-text {
+  color: #EEF300;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.advert-credit {
+  gap: 95px;
+  display: flex;
+  padding: 24px 70px 24px 40px;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 70px;
+  background: var(--Gradient, linear-gradient(88deg, #2775B8 0%, #44A8FF 99.66%));
+}
+.advert-credit__time {
+  gap: 24px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.advert-credit__time-img {
+  max-width: 140px;
+  max-height: 140px;
+  object-fit: cover;
+}
+.advert-credit__time-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.advert-credit__time-sub-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.advert-credit__info {
+  gap: 50px;
+  display: flex;
+}
+.advert-credit__info-title {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 4px;
+}
+.advert-credit__info-title span {
+  color: #EEF300;
+}
+.advert-credit__info-sub-title {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.advert-credit__btn {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 12px 34px;
+  border-radius: 4px;
+  background: #EEF300;
+  box-shadow: 0px 4px 34px 0px rgba(238, 243, 0, 0.25);
+}
+.advert-credit__btn:hover {
+  transform: scale(1.1);
 }
 
 .taxi__block-title {

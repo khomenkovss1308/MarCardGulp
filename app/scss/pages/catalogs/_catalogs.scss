@@ -1,4 +1,9 @@
 .catalogs {
+    & .car-list {
+        gap: 42px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     & .tech-specs {
         margin: 120px 0 40px;
 
@@ -97,11 +102,54 @@
         }
     }
 
-    & .equipment {
+    & .equipment , &.equipment-model {
         margin-bottom: 70px;
 
         & .first-title {
             margin-bottom: 40px;
         }
+    }
+
+    & .equipment-model {
+        margin: 130px 0 70px;
+    }
+
+    & .other-model {
+        margin-bottom: 70px;
+
+        & .first-title {
+            margin-bottom: 50px;
+        }
+
+        & .brand-list {
+            gap: 33px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    & .cars {
+        margin-bottom: 70px;    
+        
+        & .first-title {
+            margin-bottom: 50px;
+        }
+
+        & .wrapper {
+            width: 100%;
+        }
+    
+    }
+
+    & .services {
+        padding: 70px 0;
+        background: #FBFBFB;
+        margin-bottom: 70px;
+        & .second-title {
+            margin-bottom: 70px;
+        }
+    }
+
+    & .feedback {
+        margin-bottom: 30px;
     }
 }

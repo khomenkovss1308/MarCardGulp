@@ -1,0 +1,111 @@
+.discount-season {
+    top: 120px;
+    z-index: 1;
+    position: sticky;
+    height: 648px;
+    padding: 40px;
+    width: 24.1%;
+    border-radius: 8px;
+    background: #EEF300;
+    box-shadow: 0px 4px 90px 0px rgba(238, 243, 0, 0.25);
+
+    & .title {
+        color: $black;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+
+    & .sub-title {
+        color: $black;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    & .first {
+        margin-bottom: 10px;
+    }
+
+    & .second {
+        margin-bottom: 24px;
+    }
+
+    & .time-counter {
+        display: flex;
+        justify-content: space-between;
+
+        &__item {
+            display: inline-block;
+
+            & .number {
+                color: #000;
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 22px;
+                padding: 18px 14px;
+                border-radius: 4px;
+                background: #FFF;
+                box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.10);
+            }
+
+            & .text {
+                color: $sub-black;
+                text-align: center;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 12px;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    & .price-block {
+        gap: 5px;
+        display: flex;
+        align-items: center;
+        margin: 23px 0;
+
+        & .text {
+            color: $sub-black;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+
+        & .price {
+            color: #000;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 20px;
+        }
+
+        & .currency {
+            color: $main-black;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+        }
+    }
+
+    &__elements {
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 15px 0;
+        margin-top: 20px;
+
+        &:hover {
+            color: $white;
+            background-color: $main-blue;
+            transform: scale(1.05);
+        } 
+    }
+}

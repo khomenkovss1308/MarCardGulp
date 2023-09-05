@@ -23,7 +23,7 @@
 @@include('../blocks/common/dropdown/search/search.html')
     <!-- /.dropdown search -->
 
-    <main class="main model-auto">
+    <main class="main catalogs">
         <ul class="breadcrumbs wrapper">
             <li class="breadcrumbs__item">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
@@ -214,7 +214,7 @@
                         </div>
 
                         <div class="tabs">
-                            <a href="newAutoCardPage.html" class="tabs-btn blue">Оформить заявку</a>
+                            <button class="tabs-btn blue">Оформить заявку</button>
                             <button class="tabs-btn dashed">Получить консультацию</button>
                             <button class="tabs-btn red">Нашли дешевле?</button>
                         </div>
@@ -230,11 +230,11 @@
                     </div>
                 </section>
 
-                <section class="equipment">
+                <section class="equipment-model">
                     <p class="first-title"><span>//</span> Комплектации авто</p>
 
                     @@include('../blocks/pages/catalog/equipment/equipment-list.html')
-                    <!-- /.equipment-list -->
+                        <!-- /.equipment-list -->
                 </section>
 
                 <section class="new-auto-card__about">
@@ -556,30 +556,10 @@
                     </div>
                 </section>
 
-                <section class="new-auto-card__credit">
-                    <div class="new-auto-card__credit__time">
-                        <img src="images/card/timer.svg" alt="" class="new-auto-card__credit__time-img">
-                        <div>
-                            <p class="new-auto-card__credit__time-title">Экспресс-кредит</p>
-                            <p class="new-auto-card__credit__time-sub-title">за 30 минут!</p>
-                        </div>
-                    </div>
-                    <div class="new-auto-card__credit__info">
-                        <div>
-                            <p class="new-auto-card__credit__info-title">ВЗНОС <span>0%</span></p>
-                            <p class="new-auto-card__credit__info-sub-title">24 банка партнера</p>
-                        </div>
-                        <div>
-                            <p class="new-auto-card__credit__info-title">СТАВКА <span>4.9%</span></p>
-                            <p class="new-auto-card__credit__info-sub-title">95% одобрения</p>
-                        </div>
-                    </div>
-                    <a href="#" class="new-auto-card__credit__btn btn-yellow-defautlt">
-                        Подробнее
-                    </a>
-                </section>
+                @@include('../blocks/pages/catalog/advert-credit/advert-credit.html')
+                <!-- /.advert-credit -->
 
-                <section class="new-auto-card__other-model">
+                <section class="other-model">
                     <p class="first-title"><span>//</span> Другие модели</p>
 
                     @@include('../blocks/pages/catalog/new-auto/brand/brand-list/brand-list.html')
@@ -587,112 +567,48 @@
                     <a href="" class="link-more-center btn-blue-default">Показать больше</a>
                 </section>
 
-                <!-- <section class="new-auto-card__publicity-first">
-                    <div class="image">
-                        <img src="images/card/image3.png" alt="Your Image">
-                    </div>
-                    <div class="text">
-                        <p>Your text goes here...</p>
-                    </div>
-                </section> -->
+                <section class="cars">
+                    <p class="first-title"><span>//</span> Автомобили с пробегом</p>
 
-                <section class="new-auto-card__publicity-second">
-                    <div class="new-auto-card__publicity-second__top">
-                        <div class="text-block">
-                            <p class="text">Скидка до</p>
-                            <p class="price">350 000</p>
-                            <p class="currency">₽</p>
-                        </div>
-                        <p class="sub-title">Только <span>до 21.08.2023</span></p>
-                    </div>
-                    <div class="new-auto-card__publicity-second__bottom">
-                        <div class="new-auto-card__publicity-second__info">
-                            <div>
-                                <p class="text">ДОРОГА ДО МОСКВЫ</p>
-                                <p class="sub-text">ЗА НАШ СЧЕТ</p>
-                            </div>
-                            <div>
-                                <p class="text">ЗИМНЯЯ РЕЗИНА</p>
-                                <p class="sub-text">В ПОДАРОК</p>
-                            </div>
-                            <div>
-                                <p class="text">КАСКО</p>
-                                <p class="sub-text">В ПОДАРОК</p>
-                            </div>
-                        </div>
-                        <button class="btn-green">Оформить заявку</button>
-                    </div>
+                    @@include('../blocks/common/lists/mileage-cars-list/mileage-cars-list.html')
+                    <!-- /.mileage-cars-list -->
+                    <a href="" class="link-more-center btn-blue-default">Показать больше</a>
                 </section>
 
-                <section class="new-auto-card__auto">
+                <section class="cars">
+                    <p class="first-title"><span>//</span> Машины в эту стоимость</p>
+
+                    @@include('../blocks/common/lists/new-cars-list/new-cars-list.html')
+                    <!-- /.new-cars-list -->
+                    <a href="" class="link-more-center btn-blue-default">Показать больше</a>
+                </section>
+
+                @@include('../blocks/pages/catalog/advert-gift/advert-gift.html')
+                <!-- /.advert-gift -->
+
+                <section class="cars">
                     <p class="first-title"><span>//</span> Автомобили в таком же кузове</p>
 
                     @@include('../blocks/common/lists/new-cars-list/new-cars-list.html')
                     <!-- /.new-cars-list -->
+                    <a href="" class="link-more-center btn-blue-default">Показать больше</a>
                 </section>
 
-                @@include('../blocks/common/lists/recomendated-list/recomendated-list.html')
-                <!-- /.recomendated-list -->
+                <section class="cars">
+                    <p class="first-title"><span>//</span> Рекомендованные подборки</p>
+                    
+                    @@include('../blocks/common/lists/recomendated-list/recomendated-list.html')
+                    <!-- /.recomendated-list -->
+                </section>
             </div>
 
-            <form class="new-auto-card__form">
-                <p class="title">Сезон скидок</p>
-                <p class="sub-title first">Только до 31.07.2023</p>
-                <p class="sub-title second">Распродажа со скидкой до 40% и подарки каждому!</p>
-
-                <div class="time-counter">
-                    <div class="time-counter__item">
-                        <div class="number">30</div>
-                        <p class="text">Дней</p>
-                    </div>
-                    <div class="time-counter__item">
-                        <div class="number">11</div>
-                        <p class="text">Часов</p>
-                    </div>
-                    <div class="time-counter__item">
-                        <div class="number">03</div>
-                        <p class="text">Минут</p>
-                    </div>
-                    <div class="time-counter__item">
-                        <div class="number">49</div>
-                        <p class="text">Секунд</p>
-                    </div>
-                </div>
-
-                <p class="price-block">
-                    <span class="text">Цена от:</span>
-                    <span class="price">706 700</span>
-                    <span class="currency">₽</span>
-                </p>
-
-                <div class="new-auto-card__form__elements">
-                    <div class="select-default">
-                        <select>
-                            <option value="" disabled selected hidden>1.6 МТ Стандарт от 1 240 000</option>
-                            <option value="option1">1</option>
-                            <option value="option2">2</option>
-                            <option value="option3">3</option>
-                        </select>
-                    </div>
-                    <div class="select-default">
-                        <select>
-                            <option value="" disabled selected hidden>Выберите подарок</option>
-                            <option value="option1">1</option>
-                            <option value="option2">2</option>
-                            <option value="option3">3</option>
-                        </select>
-                    </div>
-                    <input type="text" placeholder="Имя" class="input-default">
-                    <input type="text" placeholder="Телефон" class="input-default">
-                </div>
-
-                <button class="new-auto-card__form__btn btn-blue-default">Заказать автомобиль</button>
-            </form>
+            @@include('../blocks/pages/catalog/discount-season/discount-season.html')
+            <!-- /.discount-season -->
         </div>
 
-        <section class="home__services">
+        <section class="services">
             <div class="wrapper">
-                <p class="block-title__text-black">Предоставляемые услуги</p>
+                <p class="second-title">Предоставляемые услуги</p>
                 <ul class="services-sublist">
                     <li class="services-sublist__item">
                         <div class="services-card">
@@ -762,8 +678,8 @@
         </section>
 
 
-        <section class="models wrapper">
-            <p class="second-title">Другие бренды</p>
+        <section class="section-models">
+            <p class="second-title wrapper">Другие бренды</p>
 
             @@include('../blocks/common/lists/models-list/models-list.html')
             <!-- /.models-list -->
@@ -777,6 +693,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/accordion.js"></script>
     <script src="js/swiper/services-slider.js"></script>
     <script src="js/swiper/swiper-img.js"></script>
     <script src="js/swiper/thumbs.js"></script>

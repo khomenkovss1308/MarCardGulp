@@ -1,0 +1,72 @@
+.advert-credit {
+    gap: 95px;
+    display: flex;
+    padding: 24px 70px 24px 40px;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 70px;
+    background: var(--Gradient, linear-gradient(88deg, #2775B8 0%, #44A8FF 99.66%));
+
+    &__time {
+        gap: 24px;
+        display: flex;
+        align-items: center;
+        color: $white;
+
+        &-img {
+            max-width: 140px;
+            max-height: 140px;
+            object-fit: cover;
+        }
+
+        &-title {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 30px;
+        }
+
+        &-sub-title {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 40px;
+        }
+    }
+
+    &__info {
+        gap: 50px;
+        display: flex;
+
+        &-title {
+            color: $white;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 28px;
+            margin-bottom: 4px;
+            & span {
+                color: #EEF300;
+            }
+        }
+
+        &-sub-title {
+            color: $white;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    &__btn {
+        color: $black;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        padding: 12px 34px;
+        border-radius: 4px;
+        background: #EEF300;
+        box-shadow: 0px 4px 34px 0px rgba(238, 243, 0, 0.25);
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
