@@ -508,7 +508,7 @@ body {
   align-items: center;
   transition: color 0.5s ease;
 }
-.block-contact:hover {
+.block-contact a:hover {
   color: #248FEC;
 }
 .block-contact__icon {
@@ -4218,6 +4218,9 @@ body {
   text-decoration-line: underline;
   color: #44A8FF;
 }
+.footer__second-block__title a:hover {
+  color: #FBE200;
+}
 .footer__third-block {
   display: flex;
   justify-content: space-between;
@@ -4264,6 +4267,9 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
+}
+.footer__nav-list__link:hover {
+  color: #248FEC;
 }
 .footer__nav-mobile {
   gap: 14px;
@@ -4332,6 +4338,9 @@ body {
 .footer__contact__login-btn--mobile {
   display: none;
 }
+.footer .sub-block-contacts {
+  display: none;
+}
 .footer__subinfo-container {
   display: flex;
   justify-content: space-between;
@@ -4349,21 +4358,58 @@ body {
   margin-left: 8px;
 }
 
-@media (max-width: 1500px) {
-  .footer__social {
-    margin-right: 3%;
-  }
-  .footer__nav {
-    width: 65%;
-  }
-}
 @media (max-width: 1300px) {
+  .footer__first-block {
+    flex-wrap: wrap;
+  }
+  .footer__social {
+    margin-right: 5%;
+  }
   .footer__nav {
+    width: 80%;
     gap: 20px 0;
     flex-wrap: wrap;
   }
   .footer__nav-block {
-    width: 50%;
+    width: 23%;
+  }
+  .footer__contact {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+  .footer__contact__content:nth-child(2) {
+    margin-top: 0;
+  }
+}
+@media (max-width: 900px) {
+  .footer__first-block {
+    flex-wrap: wrap;
+  }
+  .footer__social {
+    margin-right: 5%;
+  }
+  .footer__nav {
+    margin-top: 40px;
+    width: 100%;
+    gap: 20px 0;
+    flex-wrap: wrap;
+  }
+  .footer__nav-block {
+    width: 23%;
+  }
+  .footer__contact {
+    width: 70%;
+    margin-top: 0;
+  }
+  .footer .block-contacts {
+    display: none;
+  }
+  .footer .sub-block-contacts {
+    display: flex;
   }
 }
 @media (max-width: 768px) {
@@ -4413,12 +4459,23 @@ body {
     width: 100%;
     margin-left: 0;
   }
+  .footer__contact__content {
+    width: 100%;
+  }
   .footer__contact__login-btn--desctop {
     display: none;
   }
   .footer__contact__login-btn--mobile {
     margin-top: 0;
     display: flex;
+  }
+  .footer .sub-block-contacts {
+    display: none;
+  }
+  .footer .block-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
   }
   .footer__social-content {
     margin-right: 0;
