@@ -109,3 +109,15 @@
         } 
     }
 }
+
+@media (max-width: 1500px) {
+    .discount-season {
+        width: 26.1%;
+    }
+}
+
+@media (max-width: 768px) {
+    .discount-season {
+        display: none;
+    }
+}

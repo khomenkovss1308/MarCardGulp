@@ -1,4 +1,8 @@
 .catalogs {
+    &__content {
+        width: 72.9%;
+    }
+
     & .car-list {
         gap: 42px;
         grid-template-columns: repeat(3, 1fr);
@@ -14,7 +18,6 @@
         & .tech-list {
             gap: 40px;
             &__item {
-                width: 402px;
                 &:last-child {
                     width: 100%;
                 }
@@ -37,12 +40,12 @@
 
     & .tech-list {
         gap: 12px 0;
-        display: grid;
-        grid-auto-flow: row;
-        grid-template-columns: 1fr auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
         &__item {
-            width: 402px;
+            width: 35.9%;
         }
 
         &__header {
@@ -151,5 +154,21 @@
 
     & .feedback {
         margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .catalogs {
+        &__content {
+            width: 68.9%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .catalogs {
+        &__content {
+            width: 100%;
+        }
     }
 }

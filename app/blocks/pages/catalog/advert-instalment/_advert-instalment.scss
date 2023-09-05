@@ -1,0 +1,52 @@
+.advert-instalment {
+    border-radius: 8px;
+    position: relative;
+    padding: 28px 60px 28px 28%;
+    margin-bottom: 78px;
+    background: var(--Gradient, linear-gradient(88deg, #2775B8 0%, #44A8FF 99.66%));
+    
+    &__img {
+        top: -8px;
+        left: 0;
+        width: 26%;
+        position: absolute;
+        border-radius: 8px 30px 30px 8px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-group {
+            gap: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        &-icon {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        &-title {
+            width: 375px;
+            color: $white;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 100%;
+        }
+
+        &-btn {
+            color: $black;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+            padding: 12px 34px;
+            border-radius: 4px;
+            background: #EEF300;
+            box-shadow: 0px 4px 34px 0px rgba(238, 243, 0, 0.25);
+        }
+    }
+}
