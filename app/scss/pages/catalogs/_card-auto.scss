@@ -8,11 +8,23 @@
         & .swiper-img {
             cursor: pointer;
 
-            & .swiper-pagination .swiper-pagination-bullet-active {
+            & .swiper-pagination{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            & .swiper-pagination-bullet {
+                background-color: #EAEAEA;
+                opacity: 1;
+            }
+
+            & .swiper-pagination-bullet-active {
                 background-color: #FBE200;
-                box-shadow: 0px 2px 18px rgba(251, 226, 0, 0.50);
+                opacity: 1;
             }
         }
+        
 
         & .tabs {
             gap: 5px;

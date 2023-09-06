@@ -9,11 +9,13 @@
     }
 }
 
+
 .second-title {
     color: $black;
     font-size: 45px;
     font-weight: 700;
     line-height: 55px;
+    z-index: 100;
 
     & span {
         color: $main-blue;

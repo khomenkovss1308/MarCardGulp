@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="images/icons/default/logoAccount.svg" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="css/style.css" />
 
     <title>MARCAR</title>
@@ -17,10 +20,10 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-@@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
+    @@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
     <!-- /.dropdown chooseCity -->
 
-@@include('../blocks/common/dropdown/search/search.html')
+    @@include('../blocks/common/dropdown/search/search.html')
     <!-- /.dropdown search -->
 
     <main class="main">
@@ -36,13 +39,20 @@
             </p>
         </section>
 
+
+        <section class="new-arrivals__slider wrapper">
+            @@include('../blocks/pages/catalogUsedPage/used-slider/used-slider.html')
+            <!-- /.new-arrivals__slider used-->        
+        </section>
+        
+
         <section class="catalog-used__filter">
             <div class="wrapper">
                 <p class="first-title">Подбор автомобиля по параметрам</p>
-                
+            </div>
+
                 @@include('../blocks/common/main-filter/main-filter.html')
                 <!-- /.main-filter -->
-            </div>
         </section>
 
         <section class="catalog-used__models">
@@ -67,7 +77,8 @@
                         <img src="images/icons/services/testDrive.svg" alt="" class="services-card__icon">
                         <div>
                             <p class="services-card__title">Авто с преимуществами</p>
-                            <p class="services-card__subtitle">Отобрали для Вас авто с преимуществами: гарантия, 100% история и минимальный пробег</p>
+                            <p class="services-card__subtitle">Отобрали для Вас авто с преимуществами: гарантия, 100%
+                                история и минимальный пробег</p>
                         </div>
                     </div>
                 </li>
@@ -85,7 +96,8 @@
                         <img src="images/icons/services/money.svg" alt="" class="services-card__icon">
                         <div>
                             <p class="services-card__title">Выкуп авто</p>
-                            <p class="services-card__subtitle">Самый простой и быстрый способ быстро продать автомобиль.</p>
+                            <p class="services-card__subtitle">Самый простой и быстрый способ быстро продать автомобиль.
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -103,7 +115,8 @@
                         <img src="images/icons/services/newTire.svg" alt="" class="services-card__icon">
                         <div>
                             <p class="services-card__title">Оценка авто</p>
-                            <p class="services-card__subtitle">Узнайте цену Вашего автомобиля, заполнив простую форму</p>
+                            <p class="services-card__subtitle">Узнайте цену Вашего автомобиля, заполнив простую форму
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -112,7 +125,8 @@
                         <img src="images/icons/services/electro.svg" alt="" class="services-card__icon">
                         <div>
                             <p class="services-card__title">Специальные программы</p>
-                            <p class="services-card__subtitle">Продажа автомобилей по программам: StarClass, Approved, Das WeltAuto и д.р.</p>
+                            <p class="services-card__subtitle">Продажа автомобилей по программам: StarClass, Approved,
+                                Das WeltAuto и д.р.</p>
                         </div>
                     </div>
                 </li>
@@ -121,7 +135,8 @@
                         <img src="images/icons/services/delivery.svg" alt="" class="services-card__icon">
                         <div>
                             <p class="services-card__title">Автомобиль с доставкой домой</p>
-                            <p class="services-card__subtitle">Покупайте авто онлайн без посещения дилерского центра.</p>
+                            <p class="services-card__subtitle">Покупайте авто онлайн без посещения дилерского центра.
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -130,7 +145,8 @@
                         <img src="images/icons/services/checklist.svg" alt="" class="services-card__icon">
                         <div>
                             <p class="services-card__title">Рассчитать кредит</p>
-                            <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг физических лиц</p>
+                            <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг физических
+                                лиц</p>
                         </div>
                     </div>
                 </li>
@@ -139,7 +155,7 @@
 
         <section class="catalog-used__promotions">
             @@include('../blocks/common/promotions/promotions.html')
-            <!-- /.promotions --> 
+            <!-- /.promotions -->
         </section>
 
         <section class="catalog-used__feedback">
@@ -157,7 +173,10 @@
     @@include('../blocks/common/footer/footer.html')
     <!-- /.footer -->
 
-    <script src="js/sliders/gallery-slider.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/swiper/cars-img-slider.js"></script>
+    <script src="js/swiper/gallery-slider.js"></script>
     <script src="js/main.js"></script>
-</body> 
+</body>
+
 </html>

@@ -236,8 +236,6 @@ const compareContentWidth = () => {
     const compareContentWidth = compareContent.offsetWidth;
 
     compareContentRight.style.width = (compareContentWidth - getCompareContentLeftWidth()) + 'px';
-
-    console.log(compareContentRight.style.width);
 }
 
 

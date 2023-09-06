@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="images/icons/default/logoAccount.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>MARCAR</title>
 </head>
@@ -17,13 +17,13 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-@@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
+    @@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
     <!-- /.dropdown chooseCity -->
 
-@@include('../blocks/common/dropdown/search/search.html')
+    @@include('../blocks/common/dropdown/search/search.html')
     <!-- /.dropdown search -->
 
-    <main class="main">
+    <main class="main comparePage">
         <ul class="breadcrumbs wrapper">
             <li class="breadcrumbs__item">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
@@ -37,12 +37,16 @@
             <h1 class="first-title">Сравнение</h1>
 
             <section class="home__tabs">
-                <div class="tabs">
-                    <button class="tabs__item active">Новые автомобили</button>
-                    <button class="tabs__item">Б/У автомобили</button>
-                    <button class="tabs__item">Аренда такси</button>
-                    <button class="tabs__item">Аренда авто</button>
-                    <button class="tabs__item">Коммерческий транспорт</button>
+                <div class="tabs swiper-tabs">
+                    <ul class="tabs__wrapper swiper-wrapper">
+                        <button class="tabs__item swiper-slide active">Новые автомобили</button>
+                        <button class="tabs__item swiper-slide">Б/У автомобили</button>
+                        <button class="tabs__item swiper-slide">Аренда такси</button>
+                        <button class="tabs__item swiper-slide">Аренда авто</button>
+                        <button class="tabs__item swiper-slide">Коммерческий транспорт</button>
+                    </ul>
+                    <div class="compare-content__shadow compare-content__shadow--right"></div>
+                    <div class="compare-content__shadow compare-content__shadow--left"></div>
                 </div>
             </section>
 
@@ -161,46 +165,39 @@
                                                         <div class="cars-card__top-info">
                                                             <div class="cars-card__btns">
                                                                 <button class="cars-card__btn comparison">
-                                                                    <img src="images/icons/default/compare.svg"
-                                                                        alt="" class="cars-card__btn-icon">
+                                                                    <img src="images/icons/default/compare.svg" alt=""
+                                                                        class="cars-card__btn-icon">
                                                                 </button>
                                                                 <button class="cars-card__btn favorites">
-                                                                    <img src="images/icons/default/favorites.svg"
-                                                                        alt="" class="cars-card__btn-icon">
+                                                                    <img src="images/icons/default/favorites.svg" alt=""
+                                                                        class="cars-card__btn-icon">
                                                                 </button>
                                                             </div>
                                                         </div>
                                                         <div class="cars-card__top-slider">
-                                                            <div class="itc-slider" data-slider="itc-slider">
-                                                                <div class="itc-slider-wrapper">
-                                                                    <div class="itc-slider-items">
-                                                                        <div class="itc-slider-item">
+                                                            <div class="itc-slider">
+                                                                <div class="itc-slider-wrapper swiper-cars-img">
+                                                                    <div class="itc-slider-items swiper-wrapper">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
                                                                     </div>
-                                                                    <ol class="itc-slider-indicators">
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="0"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="1"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="2"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="3"></li>
-                                                                    </ol>
+                                                                    <div
+                                                                        class="itc-slider-indicators swiper-pagination">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -305,46 +302,39 @@
                                                         <div class="cars-card__top-info">
                                                             <div class="cars-card__btns">
                                                                 <button class="cars-card__btn comparison">
-                                                                    <img src="images/icons/default/compare.svg"
-                                                                        alt="" class="cars-card__btn-icon">
+                                                                    <img src="images/icons/default/compare.svg" alt=""
+                                                                        class="cars-card__btn-icon">
                                                                 </button>
                                                                 <button class="cars-card__btn favorites">
-                                                                    <img src="images/icons/default/favorites.svg"
-                                                                        alt="" class="cars-card__btn-icon">
+                                                                    <img src="images/icons/default/favorites.svg" alt=""
+                                                                        class="cars-card__btn-icon">
                                                                 </button>
                                                             </div>
                                                         </div>
                                                         <div class="cars-card__top-slider">
-                                                            <div class="itc-slider" data-slider="itc-slider">
-                                                                <div class="itc-slider-wrapper">
-                                                                    <div class="itc-slider-items">
-                                                                        <div class="itc-slider-item">
+                                                            <div class="itc-slider">
+                                                                <div class="itc-slider-wrapper swiper-cars-img">
+                                                                    <div class="itc-slider-items swiper-wrapper">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
                                                                     </div>
-                                                                    <ol class="itc-slider-indicators">
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="0"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="1"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="2"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="3"></li>
-                                                                    </ol>
+                                                                    <div
+                                                                        class="itc-slider-indicators swiper-pagination">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -449,46 +439,39 @@
                                                         <div class="cars-card__top-info">
                                                             <div class="cars-card__btns">
                                                                 <button class="cars-card__btn comparison">
-                                                                    <img src="images/icons/default/compare.svg"
-                                                                        alt="" class="cars-card__btn-icon">
+                                                                    <img src="images/icons/default/compare.svg" alt=""
+                                                                        class="cars-card__btn-icon">
                                                                 </button>
                                                                 <button class="cars-card__btn favorites">
-                                                                    <img src="images/icons/default/favorites.svg"
-                                                                        alt="" class="cars-card__btn-icon">
+                                                                    <img src="images/icons/default/favorites.svg" alt=""
+                                                                        class="cars-card__btn-icon">
                                                                 </button>
                                                             </div>
                                                         </div>
                                                         <div class="cars-card__top-slider">
-                                                            <div class="itc-slider" data-slider="itc-slider">
-                                                                <div class="itc-slider-wrapper">
-                                                                    <div class="itc-slider-items">
-                                                                        <div class="itc-slider-item">
+                                                            <div class="itc-slider">
+                                                                <div class="itc-slider-wrapper swiper-cars-img">
+                                                                    <div class="itc-slider-items swiper-wrapper">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
                                                                     </div>
-                                                                    <ol class="itc-slider-indicators">
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="0"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="1"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="2"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="3"></li>
-                                                                    </ol>
+                                                                    <div
+                                                                        class="itc-slider-indicators swiper-pagination">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -593,46 +576,39 @@
                                                         <div class="cars-card__top-info">
                                                             <div class="cars-card__btns">
                                                                 <button class="cars-card__btn comparison">
-                                                                    <img src="images/icons/default/compare.svg"
-                                                                        alt="" class="cars-card__btn-icon">
+                                                                    <img src="images/icons/default/compare.svg" alt=""
+                                                                        class="cars-card__btn-icon">
                                                                 </button>
                                                                 <button class="cars-card__btn favorites">
-                                                                    <img src="images/icons/default/favorites.svg"
-                                                                        alt="" class="cars-card__btn-icon">
+                                                                    <img src="images/icons/default/favorites.svg" alt=""
+                                                                        class="cars-card__btn-icon">
                                                                 </button>
                                                             </div>
                                                         </div>
                                                         <div class="cars-card__top-slider">
-                                                            <div class="itc-slider" data-slider="itc-slider">
-                                                                <div class="itc-slider-wrapper">
-                                                                    <div class="itc-slider-items">
-                                                                        <div class="itc-slider-item">
+                                                            <div class="itc-slider">
+                                                                <div class="itc-slider-wrapper swiper-cars-img">
+                                                                    <div class="itc-slider-items swiper-wrapper">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
                                                                     </div>
-                                                                    <ol class="itc-slider-indicators">
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="0"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="1"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="2"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="3"></li>
-                                                                    </ol>
+                                                                    <div
+                                                                        class="itc-slider-indicators swiper-pagination">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -737,46 +713,39 @@
                                                         <div class="cars-card__top-info">
                                                             <div class="cars-card__btns">
                                                                 <button class="cars-card__btn comparison">
-                                                                    <img src="images/icons/default/compare.svg"
-                                                                        alt="" class="cars-card__btn-icon">
+                                                                    <img src="images/icons/default/compare.svg" alt=""
+                                                                        class="cars-card__btn-icon">
                                                                 </button>
                                                                 <button class="cars-card__btn favorites">
-                                                                    <img src="images/icons/default/favorites.svg"
-                                                                        alt="" class="cars-card__btn-icon">
+                                                                    <img src="images/icons/default/favorites.svg" alt=""
+                                                                        class="cars-card__btn-icon">
                                                                 </button>
                                                             </div>
                                                         </div>
                                                         <div class="cars-card__top-slider">
-                                                            <div class="itc-slider" data-slider="itc-slider">
-                                                                <div class="itc-slider-wrapper">
-                                                                    <div class="itc-slider-items">
-                                                                        <div class="itc-slider-item">
+                                                            <div class="itc-slider">
+                                                                <div class="itc-slider-wrapper swiper-cars-img">
+                                                                    <div class="itc-slider-items swiper-wrapper">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
-                                                                        <div class="itc-slider-item">
+                                                                        <div class="itc-slider-item swiper-slide">
                                                                             <img src="images/auto/presentation/auto1.png"
                                                                                 alt="">
                                                                         </div>
                                                                     </div>
-                                                                    <ol class="itc-slider-indicators">
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="0"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="1"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="2"></li>
-                                                                        <li class="itc-slider-indicator"
-                                                                            data-slide-to="3"></li>
-                                                                    </ol>
+                                                                    <div
+                                                                        class="itc-slider-indicators swiper-pagination">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -885,8 +854,10 @@
     <!-- /.footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="js/sliders/itc-slider.js"></script>
-    <script src="js/compare-slider.js"></script>
+
+    <script src="js/swiper/compare-slider.js"></script>
+    <script src="js/swiper/cars-img-slider.js"></script>
+    <script src="js/swiper/tabs-slider.js"></script>
     <script src="js/main.js"></script>
 </body>
 

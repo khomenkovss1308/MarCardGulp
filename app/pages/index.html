@@ -30,12 +30,16 @@
         @@include('../blocks/pages/homePage/advertisement/advertisement.html')
         <!-- /.advertisement -->
 
-        <section class="tabs wrapper">
-            <button class="tabs__item active">Новые авто</button>
-            <button class="tabs__item">Авто с пробегом</button>
-            <button class="tabs__item">Семейные авто</button>
-            <button class="tabs__item">Кроссоверы</button>
-            <button class="tabs__item">Внедорожники</button>
+        <section class="tabs wrapper swiper-tabs">
+            <ul class="tabs__wrapper swiper-wrapper">
+                <li class="tabs__item swiper-slide active">Новые авто</li>
+                <li class="tabs__item swiper-slide">Авто с пробегом</li>
+                <li class="tabs__item swiper-slide">Семейные авто</li>
+                <li class="tabs__item swiper-slide">Кроссоверы</li>
+                <li class="tabs__item swiper-slide">Внедорожники</li>
+            </ul>
+            <div class="compare-content__shadow compare-content__shadow--right"></div>
+            <div class="compare-content__shadow compare-content__shadow--left"></div>
         </section>
 
         @@include('../blocks/common/main-filter/main-filter.html')
@@ -65,7 +69,7 @@
             @@include('../blocks/common/lists/mileage-cars-list/mileage-cars-list.html')
             <!-- /.mileage-cars-list -->
         </section>
-        
+
         <section class="taxi-cars">
             <div class="block-title wrapper">
                 <p class="second-title">Авто для такси</p>
@@ -75,10 +79,10 @@
             @@include('../blocks/common/lists/taxi-cars-list/taxi-cars-list.html')
             <!-- /.taxi-cars-list -->
         </section>
-        
+
         <section class="recomendated">
             <p class="second-title wrapper">Рекомендованные подборки</p>
-            
+
             @@include('../blocks/common/lists/recomendated-list/recomendated-list.html')
             <!-- /.recomendated-list -->
         </section>
@@ -214,7 +218,10 @@
     <!-- /.footer -->
 
     <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
-    <script src="js/sliders/itc-slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/swiper/main-slider.js"></script>
+    <script src="js/swiper/tabs-slider.js"></script>
+    <script src="js/swiper/cars-img-slider.js"></script>
     <script src="js/main.js"></script>
 
 </body>

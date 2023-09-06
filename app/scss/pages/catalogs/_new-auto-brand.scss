@@ -37,3 +37,10 @@
         margin-bottom: 70px;
     }
 }
+
+@media (max-width: 1450px) {
+    .new-auto-brand__img{
+        width: 100%;
+        border-radius: 0;
+    }
+}
