@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
@@ -8,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
     <link rel="shortcut icon" href="images/icons/default/logoAccount.svg">
-    
+
     <title>MARCAR</title>
 </head>
 
@@ -19,10 +20,10 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-@@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
+    @@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
     <!-- /.dropdown chooseCity -->
 
-@@include('../blocks/common/dropdown/search/search.html')
+    @@include('../blocks/common/dropdown/search/search.html')
     <!-- /.dropdown search -->
 
     <main class="main favorites">
@@ -38,11 +39,16 @@
         <section class="wrapper">
             <h1 class="first-title">Избранное</h1>
 
-            <div class="tabs">
-                <button class="tabs__item active">Новые автомобили</button>
-                <button class="tabs__item">Б/У автомобили</button>
-                <button class="tabs__item">Аренда такси</button>
-                <button class="tabs__item">Аренда авто</button>
+            <div class="tabs swiper-tabs">
+                <ul class="tabs__wrapper swiper-wrapper">
+                    <li class="tabs__item swiper-slide active">Новые автомобили</li>
+                    <li class="tabs__item swiper-slide">Б/У автомобили</li>
+                    <li class="tabs__item swiper-slide">Аренда такси</li>
+                    <li class="tabs__item swiper-slide">Аренда авто</li>
+                    <li class="tabs__item swiper-slide">Коммерческий транспорт</li>
+                </ul>
+                <div class="compare-content__shadow compare-content__shadow--right"></div>
+                <div class="compare-content__shadow compare-content__shadow--left"></div>
             </div>
         </section>
 
@@ -55,6 +61,9 @@
     @@include('../blocks/common/footer/footer.html')
     <!-- /.footer -->
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/swiper/cars-img-slider.js"></script>
+    <script src="js/swiper/tabs-slider.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/main.js"></script>
 </body>

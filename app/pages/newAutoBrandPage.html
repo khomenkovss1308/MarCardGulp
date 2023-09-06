@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/icons/default/logoAccount.svg">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <title>MARCAR</title>
 </head>
@@ -19,10 +19,10 @@
     @@include('../blocks/common/sidebar/sidebar.html')
     <!-- /.sidebar -->
 
-@@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
+    @@include('../blocks/common/dropdown/chooseCity/chooseCity.html')
     <!-- /.dropdown chooseCity -->
 
-@@include('../blocks/common/dropdown/search/search.html')
+    @@include('../blocks/common/dropdown/search/search.html')
     <!-- /.dropdown search -->
 
     <main class="main new-auto-brand">
@@ -34,7 +34,7 @@
                 <span class="breadcrumbs__link">Volkswagen</span>
             </li>
         </ul>
-    
+
 
         <section class="first">
             <img src="images/auto/new-auto/main.png" alt="" class="new-auto-brand__img wrapper">
@@ -42,34 +42,38 @@
         </section>
 
         <section class="second">
-            <div class="tabs wrapper">
-                <button class="tabs__item active">Легковые автомобили</button>
-                <button class="tabs__item">Грузовой транспорт</button>
+            <div class="tabs wrapper swiper-tabs">
+                <ul class="swiper-wrapper">
+                    <li class="tabs__item active swiper-slide">Легковые автомобили</li>
+                    <li class="tabs__item swiper-slide">Коммерческий транспорт</li>
+                </ul>
+                <div class="compare-content__shadow compare-content__shadow--right"></div>
+                <div class="compare-content__shadow compare-content__shadow--left"></div>
             </div>
 
-            <div class="sub-tabs">
-                <div class="wrapper">
-                    <ul class="sub-tabs__list">
-                        <li class="sub-tabs__list__item active">
-                            Хиты продаж
-                        </li>
-                        <li class="sub-tabs__list__item">
-                            Все модели
-                        </li>
-                        <li class="sub-tabs__list__item">
-                            Хэтчбек
-                        </li>
-                        <li class="sub-tabs__list__item">
-                            Седан
-                        </li>
-                        <li class="sub-tabs__list__item">
-                            Кроссовер
-                        </li>
-                        <li class="sub-tabs__list__item">
-                            Внедорожник
-                        </li>
-                    </ul>
-                </div>
+            <div class="sub-tabs wrapper swiper-tabs">
+                <ul class="sub-tabs__list swiper-wrapper">
+                    <li class="sub-tabs__list__item swiper-slide active">
+                        Хиты продаж
+                    </li>
+                    <li class="sub-tabs__list__item swiper-slide">
+                        Все модели
+                    </li>
+                    <li class="sub-tabs__list__item swiper-slide">
+                        Хэтчбек
+                    </li>
+                    <li class="sub-tabs__list__item swiper-slide">
+                        Седан
+                    </li>
+                    <li class="sub-tabs__list__item swiper-slide">
+                        Кроссовер
+                    </li>
+                    <li class="sub-tabs__list__item swiper-slide">
+                        Внедорожник
+                    </li>
+                </ul>
+                <div class="compare-content__shadow compare-content__shadow--right"></div>
+                <div class="compare-content__shadow compare-content__shadow--left"></div>
             </div>
 
             <div class="wrapper">
@@ -94,7 +98,8 @@
                             <img src="images/icons/services/search.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Автоподбор</p>
-                                <p class="services-card__subtitle">Мы подберем для Вас самые лучшие и выгодные варианты</p>
+                                <p class="services-card__subtitle">Мы подберем для Вас самые лучшие и выгодные варианты
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -103,7 +108,8 @@
                             <img src="images/icons/services/testDrive.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Тест-драйв</p>
-                                <p class="services-card__subtitle">Протестируйте автомобиль перед покупкой или арендой</p>
+                                <p class="services-card__subtitle">Протестируйте автомобиль перед покупкой или арендой
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -112,7 +118,8 @@
                             <img src="images/icons/services/checklist.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Рассчитать кредит</p>
-                                <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг физических лиц</p>
+                                <p class="services-card__subtitle">Кредит, рассрочка, лизинг, страхование, лизинг
+                                    физических лиц</p>
                             </div>
                         </div>
                     </li>
@@ -121,7 +128,8 @@
                             <img src="images/icons/services/money.svg" alt="" class="services-card__icon">
                             <div>
                                 <p class="services-card__title">Выкуп автомобиля</p>
-                                <p class="services-card__subtitle">Предложим для Вас максимально выгодные условия выкупа</p>
+                                <p class="services-card__subtitle">Предложим для Вас максимально выгодные условия выкупа
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -135,12 +143,12 @@
 
         @@include('../blocks/common/promotions/promotions.html')
         <!-- /.promotions -->
-        
+
         @@include('../blocks/common/feedback/feedback.html')
         <!-- /.feedback -->
 
         @@include('../blocks/common/seo-block/seo-block.html')
-            <!-- /.seo-block -->
+        <!-- /.seo-block -->
     </main>
     <!-- /.main -->
 
@@ -149,7 +157,8 @@
     <!-- /.footer -->
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/sliders/gallery-slider.js"></script>
+    <script src="js/swiper/gallery-slider.js"></script>
+    <script src="js/swiper/tabs-slider.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -5,6 +5,9 @@ const swiperSliderInit = () => {
 
     if (document.querySelector(slider)) {
         const swiper = new Swiper(slider, {
+            allowTouchMove: false,
+            mousewheel: false,
+
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',

@@ -75,7 +75,7 @@
             top: 15px;
             left: 15px;
             right: 15px;
-            z-index: 1;
+            z-index: 10;
             display: flex;
             position: absolute;
             align-items: flex-start;
@@ -86,7 +86,7 @@
             .itc-slider {
                 width: 100%;
                 &-item {
-                    width: 100%;
+                    width: 100% !important;
                 }
             }
 
@@ -236,7 +236,7 @@
                 top: 15px;
                 left: 15px;
                 right: 15px;
-                z-index: 1;
+                z-index: 10;
                 display: flex;
                 position: absolute;
                 align-items: flex-start;

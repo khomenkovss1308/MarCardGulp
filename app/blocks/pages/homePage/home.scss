@@ -46,17 +46,7 @@
 //     }
 // }
 
-.advertisement{
-    .itc-slider{
-        height: 470px;
-        &-wrapper{
-            height: 100%;
-        }
-        &-items{
-            height: 100%;
-        }
-    }
-}
+
 
 // .recomendated-card {
 //     &__img {
@@ -89,34 +79,35 @@
         &__tabs {
             margin: 20px auto;
         }
+
         &__models {
             margin: 20px auto 40px;
         }
+
         &__recomendated {
             margin: 40px auto;
         }
+
         &__services {
             padding: 40px 0;
+
             & .block-title__text-black {
                 margin-bottom: 25px;
             }
         }
+
         &__new-products {
             & .new-products {
                 border: 0;
             }
         }
+
         &__promotions {
             margin-top: 0;
         }
+
         &__videos {
             margin: 40px auto;
-        }
-    }
-
-    .advertisement{
-        & .wrapper {
-            width: 100%;
         }
     }
 }
