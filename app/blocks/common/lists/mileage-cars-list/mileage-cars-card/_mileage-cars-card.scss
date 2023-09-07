@@ -8,6 +8,7 @@
     &__list {
         gap: 4px;
         display: flex;
+        flex-wrap: wrap;
         margin: 8px 0 10px;
         &__item {
             padding: 6px;
@@ -17,6 +18,24 @@
             line-height: 11px;
             border-radius: 2px;
             background: $main-yellow;
+        }
+
+        & .toggle-btn {
+            gap: 5px;
+            display: flex;
+            padding: 3.5px 0;
+            align-items: center;
+            color: $main-black;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 11px;
+            & .blue {
+                color: $main-blue;
+            }
+        }
+
+        & .hidden {
+            display: none;
         }
     }
 }

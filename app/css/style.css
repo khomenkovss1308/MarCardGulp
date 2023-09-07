@@ -9214,6 +9214,7 @@ body {
 .mileage-cars-card__list {
   gap: 4px;
   display: flex;
+  flex-wrap: wrap;
   margin: 8px 0 10px;
 }
 .mileage-cars-card__list__item {
@@ -9224,4 +9225,20 @@ body {
   line-height: 11px;
   border-radius: 2px;
   background: #FBE200;
+}
+.mileage-cars-card__list .toggle-btn {
+  gap: 5px;
+  display: flex;
+  padding: 3.5px 0;
+  align-items: center;
+  color: #232323;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 11px;
+}
+.mileage-cars-card__list .toggle-btn .blue {
+  color: #248FEC;
+}
+.mileage-cars-card__list .hidden {
+  display: none;
 }
