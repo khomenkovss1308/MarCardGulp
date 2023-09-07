@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lists.forEach((list) => {
         const items = list.querySelectorAll('.mileage-cars-card__list__item');
         const hiddenItems = list.querySelectorAll('.mileage-cars-card__list__item.hidden');
-        const toggleButton = list.querySelector('.toggle-btn'); // Измените на класс кнопки внутри списка
+        const toggleButton = list.querySelector('.toggle-btn');
 
         let isExpanded = false;
 

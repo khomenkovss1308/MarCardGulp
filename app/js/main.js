@@ -104,7 +104,7 @@ const toggleSubMenu = () => {
                 event.preventDefault();
                 event.stopPropagation();
 
-                // sidebarBack.style.display = "block";
+                
                 sidebarBottom.style.display = "none";
                 sidebarTopTel.style.display = "none";
                 sidebarTopAddress.style.display = "none";

@@ -5642,32 +5642,6 @@ body {
     flex-direction: column;
   }
 }
-@media (max-width: 768px) {
-  .home__tabs {
-    margin: 20px auto;
-  }
-  .home__models {
-    margin: 20px auto 40px;
-  }
-  .home__recomendated {
-    margin: 40px auto;
-  }
-  .home__services {
-    padding: 40px 0;
-  }
-  .home__services .block-title__text-black {
-    margin-bottom: 25px;
-  }
-  .home__new-products .new-products {
-    border: 0;
-  }
-  .home__promotions {
-    margin-top: 0;
-  }
-  .home__videos {
-    margin: 40px auto;
-  }
-}
 .company {
   gap: 30px;
   display: flex;

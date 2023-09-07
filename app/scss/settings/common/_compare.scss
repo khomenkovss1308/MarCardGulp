@@ -309,7 +309,7 @@
 
         .cars-card__title {
             display: -webkit-box;
-            -webkit-line-clamp: 1; // количество строк
+            -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
             overflow-y: hidden;
             width: 100%;
