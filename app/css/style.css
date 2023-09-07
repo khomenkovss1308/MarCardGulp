@@ -9193,12 +9193,12 @@ body {
 }
 .mileage-cars-card__list__item {
   padding: 6px;
-  color: black;
+  color: white;
   font-size: 11px;
   font-weight: 400;
   line-height: 11px;
   border-radius: 2px;
-  background: #FBE200;
+  background: #248FEC;
 }
 .mileage-cars-card__list .toggle-btn {
   gap: 5px;
