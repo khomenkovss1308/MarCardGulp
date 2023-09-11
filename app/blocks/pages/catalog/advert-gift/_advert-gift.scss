@@ -23,15 +23,22 @@
                 margin-right: 10px;
             }
 
-            & .price {
-                font-size: 44px;
-                font-weight: 700;
-                margin-right: 4px;
+            & .price-info {
+                gap: 4px;
+                display: flex;
+                align-items: center;
+                
+                & .price {
+                    font-size: 44px;
+                    font-weight: 700;
+                    margin-right: 4px;
+                }
+    
+                & .currency {
+                    font-size: 24px;
+                }
             }
 
-            & .currency {
-                font-size: 24px;
-            }
         }
 
         & .sub-title {
@@ -84,6 +91,59 @@
             font-size: 30px;
             font-weight: 700;
             line-height: 30px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .advert-gift {
+        margin: 70px 0;
+        border-radius: 8px;
+        padding: 30px 67px 40px;
+        background-size: 100%!important;
+        background-repeat: no-repeat;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), url(../images/card/image4-mobile.png), lightgray 50% / cover no-repeat;
+
+        &__top {
+            gap: 10px;
+            flex-direction: column-reverse;
+            margin-bottom: 25px;
+
+            & .text-block {
+                gap: 25px;
+                flex-direction: column;
+                align-items: center;
+
+                & .text {
+                    text-align: center;
+                    margin-right: 0;
+                }
+            }
+        }
+    
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        
+            & .btn-green {
+                width: 254px;
+                display: block;
+                margin: 30px auto 0;
+                padding: 12px 0;
+            }
+        }
+    
+    
+        &__info {
+            gap: 25px;
+            flex-direction: column;
+    
+            & .text, & .sub-text {
+                text-align: center;
+                
+            }
         }
     }
 }

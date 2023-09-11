@@ -70,3 +70,43 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .advert-credit {
+        gap: 30px;
+        flex-direction: column;
+        padding: 18px 60px 40px; 
+        border-radius: 0;
+        margin-bottom: 40px;
+    
+        &__time {
+            gap: 0;
+            width: 100%;
+            position: relative;
+            justify-content: center;
+
+            & .content {
+                top: 32px;
+                position: absolute;
+            }
+    
+            &-title,  &-sub-title {
+                text-align: center;
+            }
+        }
+    
+        &__info {
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+    
+            &-title, &-sub-title {
+                text-align: center;
+            }
+        }
+    
+        &__btn {
+            padding: 12px 81px;
+        }
+    }
+}

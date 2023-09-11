@@ -113,7 +113,12 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener('click', () => {
             isExpanded = !isExpanded;
             item.style.transition = 'flex-basis 0.35s ease-in-out';
+
             item.style.flexBasis = isExpanded ? '100%' : '49%';
+            if (window.innerWidth <= 768) {
+                item.style.flexBasis =  isExpanded ? '100%' : '100%'
+            }
+
             const accordionHeader = item.querySelector('.accordion__header');
             if (accordionHeader) {
                 accordionHeader.style.transition = 'background-color 0.35s ease-in-out, color 0.35s ease-in-out';

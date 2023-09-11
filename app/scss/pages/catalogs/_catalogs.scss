@@ -85,7 +85,6 @@
 
         & .sub-title {
             color: $main-black;
-            // text-align: right;
             font-weight: 700;
         }
     }
@@ -146,7 +145,6 @@
     & .services {
         padding: 70px 0;
         background: #FBFBFB;
-        margin-bottom: 70px;
         & .second-title {
             margin-bottom: 70px;
         }
@@ -154,6 +152,98 @@
 
     & .feedback {
         margin-bottom: 30px;
+    }
+
+    & .btn-group {
+        bottom: 0;
+        z-index: 12;
+        position: sticky;
+
+        &__contact {
+            display: flex;
+        }
+
+        & .btn-discount-season {
+            margin: 0 0 8px;
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 8px;
+            background: #EEF300;
+            box-shadow: 0px 4px 90px 0px rgba(238, 243, 0, 0.25);
+
+            &__left {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+
+                & .icon {
+                    width: 24px;
+                    height: 24px;
+                    object-fit: cover;
+                }
+
+                & .text {
+                    color: $black;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 16px;
+                }
+            }
+
+            &__date {
+                color: $black;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 12px;
+            }
+        }
+
+        & .button  {
+            gap: 8px;
+            width: 100%;
+            display: flex;
+            padding: 12px 0;
+            align-items: center;
+            justify-content: center;
+
+            &-icon {
+                width: 24px;
+                height: 24px;
+                object-fit: cover;
+            }
+
+            &-info {
+                gap: 2px;
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+
+                & .text {
+                    font-size: 10px;
+                    font-weight: 400;
+                    line-height: 10px;
+                }
+
+                & .sub-text {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 14px;
+                }
+            }
+
+        }
+
+        & .btn-call {
+            background: $main-blue;
+        }
+
+        & .btn-write {
+            background: #0DC143;
+        }
     }
 }
 
@@ -165,10 +255,64 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .catalogs {
         &__content {
             width: 100%;
+        }
+
+        & .other-model {
+            margin-bottom: 50px;
+    
+            & .first-title {
+                margin-bottom: 20px;
+            }
+    
+            & .brand-list {
+                gap: 30px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        & .cars {
+            margin-bottom: 50px;    
+            
+            & .first-title {
+                margin-bottom: 20px;
+            }
+    
+            & .wrapper {
+                width: 100%;
+
+                & .link-more-mobile {
+                    display: none;
+                }
+            }
+        
+        }
+
+        & .car-list {
+            gap: 20px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        & .services {
+            padding: 40px 0;
+            & .second-title {
+                margin-bottom: 25px;
+            }
+        }
+
+        & .section-models {
+            margin: 40px auto;
+    
+            & .second-title {
+                margin-bottom: 25px;
+            }
+        }
+
+        & .feedback {
+            margin-bottom: 40px;
         }
     }
 }

@@ -7211,7 +7211,6 @@ body {
 .catalogs .services {
   padding: 70px 0;
   background: #FBFBFB;
-  margin-bottom: 70px;
 }
 .catalogs .services .second-title {
   margin-bottom: 70px;
@@ -7219,15 +7218,133 @@ body {
 .catalogs .feedback {
   margin-bottom: 30px;
 }
+.catalogs .btn-group {
+  bottom: 0;
+  z-index: 12;
+  position: sticky;
+}
+.catalogs .btn-group__contact {
+  display: flex;
+}
+.catalogs .btn-group .btn-discount-season {
+  margin: 0 0 8px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  background: #EEF300;
+  box-shadow: 0px 4px 90px 0px rgba(238, 243, 0, 0.25);
+}
+.catalogs .btn-group .btn-discount-season__left {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.catalogs .btn-group .btn-discount-season__left .icon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.catalogs .btn-group .btn-discount-season__left .text {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.catalogs .btn-group .btn-discount-season__date {
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+.catalogs .btn-group .button {
+  gap: 8px;
+  width: 100%;
+  display: flex;
+  padding: 12px 0;
+  align-items: center;
+  justify-content: center;
+}
+.catalogs .btn-group .button-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.catalogs .btn-group .button-info {
+  gap: 2px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.catalogs .btn-group .button-info .text {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+}
+.catalogs .btn-group .button-info .sub-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+.catalogs .btn-group .btn-call {
+  background: #248FEC;
+}
+.catalogs .btn-group .btn-write {
+  background: #0DC143;
+}
 
 @media (max-width: 1500px) {
   .catalogs__content {
     width: 68.9%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .catalogs__content {
     width: 100%;
+  }
+  .catalogs .other-model {
+    margin-bottom: 50px;
+  }
+  .catalogs .other-model .first-title {
+    margin-bottom: 20px;
+  }
+  .catalogs .other-model .brand-list {
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .catalogs .cars {
+    margin-bottom: 50px;
+  }
+  .catalogs .cars .first-title {
+    margin-bottom: 20px;
+  }
+  .catalogs .cars .wrapper {
+    width: 100%;
+  }
+  .catalogs .cars .wrapper .link-more-mobile {
+    display: none;
+  }
+  .catalogs .car-list {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .catalogs .services {
+    padding: 40px 0;
+  }
+  .catalogs .services .second-title {
+    margin-bottom: 25px;
+  }
+  .catalogs .section-models {
+    margin: 40px auto;
+  }
+  .catalogs .section-models .second-title {
+    margin-bottom: 25px;
+  }
+  .catalogs .feedback {
+    margin-bottom: 40px;
   }
 }
 .card-auto {
@@ -8116,7 +8233,7 @@ body {
 
 @media (max-width: 768px) {
   .new-auto-card__content {
-    width: 75.9%;
+    width: 100%;
   }
   .new-auto-card__right {
     width: 21.1%;
@@ -8570,12 +8687,17 @@ body {
   font-size: 34px;
   margin-right: 10px;
 }
-.advert-gift__top .text-block .price {
+.advert-gift__top .text-block .price-info {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+}
+.advert-gift__top .text-block .price-info .price {
   font-size: 44px;
   font-weight: 700;
   margin-right: 4px;
 }
-.advert-gift__top .text-block .currency {
+.advert-gift__top .text-block .price-info .currency {
   font-size: 24px;
 }
 .advert-gift__top .sub-title {
@@ -8622,6 +8744,48 @@ body {
   line-height: 30px;
 }
 
+@media (max-width: 768px) {
+  .advert-gift {
+    margin: 70px 0;
+    border-radius: 8px;
+    padding: 30px 67px 40px;
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), url(../images/card/image4-mobile.png), lightgray 50%/cover no-repeat;
+  }
+  .advert-gift__top {
+    gap: 10px;
+    flex-direction: column-reverse;
+    margin-bottom: 25px;
+  }
+  .advert-gift__top .text-block {
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .advert-gift__top .text-block .text {
+    text-align: center;
+    margin-right: 0;
+  }
+  .advert-gift__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .advert-gift__bottom .btn-green {
+    width: 254px;
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 0;
+  }
+  .advert-gift__info {
+    gap: 25px;
+    flex-direction: column;
+  }
+  .advert-gift__info .text, .advert-gift__info .sub-text {
+    text-align: center;
+  }
+}
 .advert-credit {
   gap: 95px;
   display: flex;
@@ -8686,6 +8850,39 @@ body {
   transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+  .advert-credit {
+    gap: 30px;
+    flex-direction: column;
+    padding: 18px 60px 40px;
+    border-radius: 0;
+    margin-bottom: 40px;
+  }
+  .advert-credit__time {
+    gap: 0;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+  }
+  .advert-credit__time .content {
+    top: 32px;
+    position: absolute;
+  }
+  .advert-credit__time-title, .advert-credit__time-sub-title {
+    text-align: center;
+  }
+  .advert-credit__info {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .advert-credit__info-title, .advert-credit__info-sub-title {
+    text-align: center;
+  }
+  .advert-credit__btn {
+    padding: 12px 81px;
+  }
+}
 .taxi__block-title {
   margin-bottom: 50px;
 }
@@ -8954,6 +9151,73 @@ body {
   border: 1px solid #248FEC;
 }
 
+@media (max-width: 768px) {
+  .equipment-list {
+    gap: 8px 0;
+  }
+  .equipment-list .accordion__item_show {
+    width: 100%;
+  }
+  .equipment-list__item {
+    width: 100%;
+  }
+  .equipment-list__item .accordion__header {
+    padding: 10px 15px;
+  }
+  .equipment-sub-list {
+    gap: 14px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .equipment-sub-list__item {
+    width: 100%;
+    padding: 10px;
+  }
+  .equipment-sub-list__item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .equipment-sub-list__item-header .title {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .equipment-sub-list__item-header .btn-group {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .equipment-sub-list__item .price-info {
+    display: flex;
+    align-items: center;
+  }
+  .equipment-sub-list__item .price-info .old-price .price {
+    font-size: 13px;
+  }
+  .equipment-sub-list__item .price-info .new-price .price {
+    font-size: 18px;
+  }
+  .equipment-sub-list__item .price-info .new-price .currency {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .equipment-sub-list__item .btn-group {
+    gap: 5px;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .equipment-sub-list__item .btn-group .btn-more {
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+  }
+  .equipment-sub-list__item .btn-group .btn-credit {
+    width: 100%;
+    padding: 14px 0;
+  }
+}
 .advert-instalment {
   border-radius: 8px;
   position: relative;
@@ -9001,6 +9265,684 @@ body {
   box-shadow: 0px 4px 34px 0px rgba(238, 243, 0, 0.25);
 }
 
+.card-auto {
+  display: flex;
+  justify-content: space-between;
+}
+.card-auto__dealer-title {
+  color: #232323;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 20px 0 8px;
+}
+.card-auto__left-block {
+  width: 43.2%;
+}
+.card-auto__left-block .swiper-img {
+  cursor: pointer;
+}
+.card-auto__left-block .swiper-img .swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-auto__left-block .swiper-img .swiper-pagination-bullet {
+  background-color: #EAEAEA;
+  opacity: 1;
+}
+.card-auto__left-block .swiper-img .swiper-pagination-bullet-active {
+  background-color: #FBE200;
+  opacity: 1;
+}
+.card-auto__left-block .tabs {
+  gap: 5px;
+  display: flex;
+  margin: 34px 0 30px;
+}
+.card-auto__left-block .tabs-btn {
+  gap: 2px;
+  display: flex;
+  padding: 12px 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: #F2F2F2;
+  transition: all 0.5s;
+}
+.card-auto__left-block .tabs-btn path {
+  fill: #232323;
+  transition: all 0.5s;
+}
+.card-auto__left-block .tabs-btn span {
+  color: #232323;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 11px;
+  transition: all 0.5s;
+}
+.card-auto__left-block .tabs-btn:hover {
+  background-color: #248FEC;
+}
+.card-auto__left-block .tabs-btn:hover path {
+  fill: white;
+}
+.card-auto__left-block .tabs-btn:hover span {
+  color: white;
+}
+.card-auto__left-block .tabs .active {
+  background-color: #248FEC;
+}
+.card-auto__left-block .tabs .active path {
+  fill: white;
+}
+.card-auto__left-block .tabs .active span {
+  color: white;
+}
+.card-auto__right-block {
+  width: 52.8%;
+}
+.card-auto__right-block__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-auto__right-block__top .content {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+}
+.card-auto__right-block__top .label-green {
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  padding: 5px 8px;
+  border-radius: 2px;
+  background: #00A811;
+}
+.card-auto__right-block .title {
+  color: #232323;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-top: 15px;
+}
+.card-auto__right-block .sub-title {
+  font-size: 14px;
+  line-height: 24px;
+}
+.card-auto__right-block .price-info {
+  display: flex;
+  align-items: center;
+}
+.card-auto__right-block .price-info .old-price {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.card-auto__right-block .price-info .old-price .price {
+  color: #DC0000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: line-through;
+}
+.card-auto__right-block .price-info .old-price .currency {
+  color: #232323;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+.card-auto__right-block .price-info .new-price {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  margin-right: 31px;
+}
+.card-auto__right-block .price-info .new-price .text {
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 15px;
+}
+.card-auto__right-block .price-info .new-price .price {
+  color: #232323;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+}
+.card-auto__right-block .price-info .new-price .currency {
+  color: #232323;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.card-auto__right-block .price-info__btn {
+  color: #575757;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  padding: 0 0 5px;
+  border-bottom: 1px dashed #248FEC;
+}
+.card-auto__right-block .price-info__btn:hover {
+  transform: scale(1.1);
+}
+.card-auto__right-block .services-slider__card {
+  gap: 8px;
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.08);
+}
+.card-auto__right-block .services-slider__card-img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+}
+.card-auto__right-block .services-slider__card-text {
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+.card-auto__right-block .services-slider .swiper {
+  width: 100%;
+  height: 82px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: none;
+}
+.card-auto__right-block .services-slider .swiper-slide {
+  width: 35.7142857143%;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+.card-auto__right-block .services-slider .swiper-slide-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.card-auto__right-block .services-slider .swiper-button-next, .card-auto__right-block .services-slider .swiper-button-prev {
+  position: absolute;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  transition: background-color 0.3s ease;
+}
+.card-auto__right-block .sub-stock {
+  margin: 15px 0 20px;
+}
+.card-auto__right-block .sub-stock__item {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.card-auto__right-block .sub-stock__item:first-of-type {
+  margin-top: 20px;
+}
+.card-auto__right-block .sub-stock__item .toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+.card-auto__right-block .sub-stock__item .toggle-switch {
+  display: inline-block;
+  background-color: #EDEDED;
+  border-radius: 999px;
+  width: 44px;
+  height: 22px;
+  position: relative;
+  vertical-align: middle;
+  transition: background-color 0.3s;
+}
+.card-auto__right-block .sub-stock__item .toggle-switch::before, .card-auto__right-block .sub-stock__item .toggle-switch::after {
+  content: "";
+}
+.card-auto__right-block .sub-stock__item .toggle-switch:before {
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  display: block;
+  position: absolute;
+  background: #7C7C7C;
+  border-radius: 50%;
+  transition: left 0.25s;
+}
+.card-auto__right-block .sub-stock__item .toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.card-auto__right-block .sub-stock__item .toggle-checkbox:checked + .toggle-switch {
+  background: #248FEC;
+}
+.card-auto__right-block .sub-stock__item .toggle-checkbox:checked + .toggle-switch:before {
+  left: 24px;
+  background: white;
+}
+.card-auto__right-block .sub-stock__item .toggle-label {
+  color: #232323;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  margin-left: 10px;
+  position: relative;
+}
+.card-auto__right-block .sub-stock__item .price {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: right;
+}
+.card-auto__right-block .sub-stock__item .price span {
+  font-weight: 400;
+  margin-left: 4px;
+}
+.card-auto__right-block .sub-stock .label-yellow {
+  display: inline-block;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  padding: 10px 19px;
+  border-radius: 4px;
+  background: #EEF300;
+}
+.card-auto__right-block .sub-stock .text-block {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.card-auto__right-block .sub-stock .text-block .text {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  margin-right: 9px;
+}
+.card-auto__right-block .sub-stock .text-block .price {
+  color: #232323;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  margin-right: 5px;
+}
+.card-auto__right-block .sub-stock .text-block .currency {
+  color: #232323;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.card-auto__right-block .tabs {
+  gap: 8px;
+}
+.card-auto__right-block .tabs-btn {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 4px;
+  padding: 12px 24px;
+}
+.card-auto__right-block .tabs-btn:hover {
+  transform: scale(0.9);
+}
+.card-auto__right-block .tabs .blue {
+  background: #248FEC;
+}
+.card-auto__right-block .tabs .dashed {
+  color: #ACACAC;
+  border: 1px dashed #ACACAC;
+  background: rgba(36, 143, 236, 0);
+}
+.card-auto__right-block .tabs .red {
+  background: #DC0505;
+}
+.card-auto__right-block .dealer-block {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+.card-auto__right-block .dealer-block__img {
+  width: 124px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.card-auto__right-block .dealer-block__title {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.card-auto__right-block .dealer-block__sub-title {
+  margin-top: 5px;
+  color: #575757;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+.card-auto__right-block .dealer-block__sub-title span {
+  color: #232323;
+  margin-left: 5px;
+}
+.card-auto--mobile {
+  width: 100%;
+  display: none;
+}
+.card-auto--mobile__header {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.card-auto--mobile__header .label {
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  padding: 5px 8px;
+  border-radius: 2px;
+}
+.card-auto--mobile__header .orange {
+  background: #FF7A00;
+}
+.card-auto--mobile .title {
+  color: #232323;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+}
+.card-auto--mobile .sub-title {
+  color: #575757;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.card-auto--mobile .swiper {
+  width: 100%;
+}
+.card-auto--mobile .tabs {
+  gap: 5px;
+  display: flex;
+  margin: 5px 0 20px;
+}
+.card-auto--mobile .tabs-btn {
+  gap: 2px;
+  display: flex;
+  padding: 11px 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: #F2F2F2;
+  transition: all 0.5s;
+}
+.card-auto--mobile .tabs-btn path {
+  fill: #232323;
+  transition: all 0.5s;
+}
+.card-auto--mobile .tabs-btn span {
+  color: #232323;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 11px;
+  transition: all 0.5s;
+}
+.card-auto--mobile .tabs-btn:hover {
+  background-color: #248FEC;
+}
+.card-auto--mobile .tabs-btn:hover path {
+  fill: white;
+}
+.card-auto--mobile .tabs-btn:hover span {
+  color: white;
+}
+.card-auto--mobile .tabs .active {
+  background-color: #248FEC;
+}
+.card-auto--mobile .tabs .active path {
+  fill: white;
+}
+.card-auto--mobile .tabs .active span {
+  color: white;
+}
+.card-auto--mobile .price-info {
+  display: flex;
+  align-items: center;
+}
+.card-auto--mobile .price-info .old-price {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.card-auto--mobile .price-info .old-price .price {
+  color: #DC0000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: line-through;
+}
+.card-auto--mobile .price-info .old-price .currency {
+  color: #232323;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 15px;
+}
+.card-auto--mobile .price-info .new-price {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+.card-auto--mobile .price-info .new-price .price {
+  color: #232323;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.card-auto--mobile .price-info .new-price .currency {
+  color: #232323;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.card-auto--mobile .price-info__btn {
+  color: #575757;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  padding: 0 0 5px;
+  border-bottom: 1px dashed #248FEC;
+}
+.card-auto--mobile .price-info__btn:hover {
+  transform: scale(1.1);
+}
+.card-auto--mobile .sub-stock {
+  margin: 15px 0 20px;
+}
+.card-auto--mobile .sub-stock__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.card-auto--mobile .sub-stock__item:first-of-type {
+  margin-top: 20px;
+}
+.card-auto--mobile .sub-stock__item .toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+.card-auto--mobile .sub-stock__item .toggle-switch {
+  display: inline-block;
+  background-color: #EDEDED;
+  border-radius: 999px;
+  width: 44px;
+  height: 22px;
+  position: relative;
+  vertical-align: middle;
+  transition: background-color 0.3s;
+}
+.card-auto--mobile .sub-stock__item .toggle-switch::before, .card-auto--mobile .sub-stock__item .toggle-switch::after {
+  content: "";
+}
+.card-auto--mobile .sub-stock__item .toggle-switch:before {
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  display: block;
+  position: absolute;
+  background: #7C7C7C;
+  border-radius: 50%;
+  transition: left 0.25s;
+}
+.card-auto--mobile .sub-stock__item .toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.card-auto--mobile .sub-stock__item .toggle-checkbox:checked + .toggle-switch {
+  background: #248FEC;
+}
+.card-auto--mobile .sub-stock__item .toggle-checkbox:checked + .toggle-switch:before {
+  left: 24px;
+  background: white;
+}
+.card-auto--mobile .sub-stock__item .toggle-label {
+  color: #232323;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  margin-left: 10px;
+  position: relative;
+}
+.card-auto--mobile .sub-stock__item .price {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: right;
+}
+.card-auto--mobile .sub-stock__item .price span {
+  font-weight: 400;
+  margin-left: 4px;
+}
+.card-auto--mobile .sub-stock .label-yellow {
+  display: inline-block;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  padding: 10px 19px;
+  border-radius: 4px;
+  background: #EEF300;
+}
+.card-auto--mobile .sub-stock .text-block {
+  margin: 15px 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-auto--mobile .sub-stock .text-block .title {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-bottom: 3px;
+}
+.card-auto--mobile .sub-stock .text-block .sub-title {
+  font-size: 12px;
+  line-height: 12px;
+}
+.card-auto--mobile .sub-stock .text-block .price-info {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  color: #232323;
+  font-weight: 700;
+}
+.card-auto--mobile .sub-stock .text-block .price-info .price {
+  font-size: 28px;
+  line-height: 38px;
+}
+.card-auto--mobile .sub-stock .text-block .price-info .currency {
+  font-size: 18px;
+  line-height: 18px;
+}
+.card-auto--mobile .sub-stock .tabs-btns {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.card-auto--mobile .sub-stock .tabs-btns .tabs-btn {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 4px;
+  padding: 16px;
+}
+.card-auto--mobile .sub-stock .tabs-btns .tabs-btn:hover {
+  transform: scale(0.9);
+}
+.card-auto--mobile .sub-stock .tabs-btns .blue {
+  background: #248FEC;
+}
+.card-auto--mobile .sub-stock .tabs-btns .dashed {
+  color: #ACACAC;
+  border: 1px dashed #ACACAC;
+  background: rgba(36, 143, 236, 0);
+}
+.card-auto--mobile .sub-stock .tabs-btns .red {
+  background: #DC0505;
+}
+.card-auto--mobile .dealer-block {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+.card-auto--mobile .dealer-block__img {
+  width: 124px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.card-auto--mobile .dealer-block__title {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.card-auto--mobile .dealer-block__sub-title {
+  margin-top: 5px;
+  color: #575757;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+.card-auto--mobile .dealer-block__sub-title span {
+  color: #232323;
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .card-auto__left-block, .card-auto__right-block {
+    display: none;
+  }
+  .card-auto--mobile {
+    display: block;
+  }
+}
 .models-list {
   gap: 33px;
   display: grid;
