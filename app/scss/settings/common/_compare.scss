@@ -249,6 +249,16 @@
     }
 }
 
+@media (max-width: 800px) {
+    .compare-content{
+        .swiper{
+            &-pagination{
+                display: none;
+            }
+        }
+    }
+}
+
 @media (max-width: 700px) {
     .compare-content {
         &__left {

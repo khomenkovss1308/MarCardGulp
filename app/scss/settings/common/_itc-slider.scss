@@ -175,6 +175,13 @@
 }
 
 @media (max-width: 1000px) {
+
+    .advertisement{
+        .swiper-pagination-main{
+            display: none;
+        }
+    }
+
     .itc-slider {
         width: 100%;
         height: auto !important;

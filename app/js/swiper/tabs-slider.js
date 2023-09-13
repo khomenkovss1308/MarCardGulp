@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
         on: {
             sliderFirstMove: function() {
                 if (start){
-                    document.querySelector('.compare-content__shadow--left').style.opacity = '0';
+                    document.querySelector('.tabs__shadow--left').style.opacity = '0';
                     start = false;
                 } else {
-                    document.querySelector('.compare-content__shadow--left').style.opacity = '1';
+                    document.querySelector('.tabs__shadow--left').style.opacity = '1';
                     start = true;
                 }
             },
