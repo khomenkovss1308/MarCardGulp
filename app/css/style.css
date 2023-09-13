@@ -5240,6 +5240,90 @@ body {
     font-size: 10px;
   }
 }
+.btn-group-mobile {
+  bottom: 0;
+  z-index: 12;
+  position: sticky;
+  display: none;
+}
+.btn-group-mobile__contact {
+  display: flex;
+}
+.btn-group-mobile .btn-discount-season {
+  margin: 0 0 8px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  background: #EEF300;
+  box-shadow: 0px 4px 90px 0px rgba(238, 243, 0, 0.25);
+}
+.btn-group-mobile .btn-discount-season__left {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.btn-group-mobile .btn-discount-season__left .icon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.btn-group-mobile .btn-discount-season__left .text {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.btn-group-mobile .btn-discount-season__date {
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+.btn-group-mobile .button {
+  gap: 8px;
+  width: 100%;
+  display: flex;
+  padding: 12px 0;
+  align-items: center;
+  justify-content: center;
+}
+.btn-group-mobile .button-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.btn-group-mobile .button-info {
+  gap: 2px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.btn-group-mobile .button-info .text {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+}
+.btn-group-mobile .button-info .sub-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+.btn-group-mobile .btn-call {
+  background: #248FEC;
+}
+.btn-group-mobile .btn-write {
+  background: #0DC143;
+}
+
+@media (max-width: 768px) {
+  .btn-group-mobile {
+    display: block;
+  }
+}
 .feedback {
   display: flex;
   border-radius: 4px;
