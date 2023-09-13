@@ -1,0 +1,226 @@
+.specialOffers {
+    margin: 50px 0;
+    overflow: hidden;
+    position: relative;
+
+    &__left{
+        display: flex;
+        align-items: center;
+    }
+
+    .swiper {
+        &-slide {
+            box-sizing: border-box;
+            width: 100% !important;
+            border-radius: 8px;
+            background: linear-gradient(88deg, #2775B8 0%, #44A8FF 99.66%);
+            padding: 40px 47px 46px 40px;
+        }
+
+        &-button-next,
+        &-button-prev {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            transition: all 0.3s;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 1px solid #fff;
+
+            &::after {
+                color: #fff;
+                font-size: 17px;
+            }
+
+            &:hover {
+                background-color: #fff;
+
+                &::after {
+                    color: #2775B8;
+                }
+            }
+        }
+
+        &-button-next{
+            right: 47px;
+            &::after{
+                margin-left: 5px;
+            }
+        }
+
+        &-button-prev{
+            right: 105px;
+            left: auto;
+        }
+
+        &-pagination{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &-bullet{
+                opacity: 1;
+                width: 8px;
+                height: 8px;
+                &-active{
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+    }
+
+    &__slide {
+        &-container {
+            width: 82.5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__img{
+        margin-right: 30px;
+    }
+
+    &__info {
+        width: 500px;
+        color: #FFF;
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+
+    &__text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    &__btn {
+        display: block;
+        text-align: center;
+        border-radius: 4px;
+        background: #EEF300;
+        box-shadow: 0px 4px 34px 0px rgba(238, 243, 0, 0.25);
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        padding: 12px 34px;
+        transition: all .3s;
+        border: 1px solid #EEF300;
+        &:hover{
+            background-color: transparent;
+            color: #EEF300;
+
+        }
+    }
+}
+
+
+@media (max-width: 1800px) {
+    .specialOffers{
+        &__slide{
+            &-container{
+                flex-direction: column;
+            }
+        }
+        &__info{
+            width: 100%;
+        }
+        &__right,&__left{
+            width: 100%;
+        }
+        &__left{
+            margin-bottom: 20px;
+        }
+        &__btn{
+            width: fit-content;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .specialOffers{
+        .swiper{
+            &-button{
+                &-prev,&-next{
+                    top: 15px;
+                    margin-top: 0;
+                }
+                &-next{
+                    right: 15px;
+                }
+                &-prev{
+                    right: 73px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .specialOffers{
+        .swiper{
+            &-button{
+                &-prev,&-next{
+                    display: none;
+                }
+            }
+        }
+        
+        &__slide{
+            &-container{
+                width: 100%;
+            }
+        }
+
+        &__btn{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .specialOffers{
+
+        .swiper{
+            &-slide{
+                padding: 40px 15px 92px 15px;
+            }
+            &_-pagination{
+                bottom: 20px;
+            }
+        }
+
+        &__left{
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+        &__title{
+            text-align: center;
+        }
+        &__text{
+            text-align: center;
+        }
+        &__img{
+            margin-bottom: 23px;
+            margin-right: 0;
+        }
+        &__slide{
+            &-container{
+                margin-bottom: 0;
+            }
+        }
+        &__btn{
+            width: fit-content;
+            padding: 15px 34px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

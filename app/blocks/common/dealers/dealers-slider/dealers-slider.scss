@@ -50,15 +50,27 @@
 
 @media (max-width: 1000px) {
     .my-swiper{
+        .link-more-default{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .my-swiper{
         .swiper{
             &-button{
                 &-prev,&-next{
-                    display: none;
+                    width: 35px;
+                    height: 35px;
+                    &::after{
+                        font-size: 13px;
+                    }
+                }
+                &-prev{
+                    right: 50px;
                 }
             }
-        }
-        .link-more-default{
-            display: none;
         }
     }
 }

@@ -16,7 +16,7 @@
         & .swiper-img {
             cursor: pointer;
 
-            & .swiper-pagination{
+            & .swiper-pagination {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -32,7 +32,7 @@
                 opacity: 1;
             }
         }
-        
+
 
         & .tabs {
             gap: 5px;
@@ -65,6 +65,7 @@
 
                 &:hover {
                     background-color: $main-blue;
+
                     & path {
                         fill: $white;
                     }
@@ -77,6 +78,7 @@
 
             & .active {
                 background-color: $main-blue;
+
                 & path {
                     fill: $white;
                 }
@@ -226,18 +228,18 @@
                 position: relative;
                 box-shadow: none;
             }
-          
+
             & .swiper-slide {
                 width: calc(100% / 2.8);
                 transition: opacity 0.3s ease;
                 opacity: 1;
             }
-            
+
             & .swiper-slide-hidden {
                 opacity: 0;
                 pointer-events: none
             }
-            
+
             & .swiper-button-next,
             & .swiper-button-prev {
                 position: absolute;
@@ -245,8 +247,19 @@
                 width: 40px;
                 height: 40px;
                 text-align: center;
-                line-height: 40px;
-                transition: background-color 0.3s ease;
+                line-height: 38px;
+                transition: all 0.3s ease;
+                background-color: #248FEC;
+                border-radius: 50%;
+
+                &::after {
+                    color: #fff;
+                    font-size: 13px;
+                }
+            }
+
+            & .swiper-button-disabled {
+                opacity: 0;
             }
         }
 
@@ -258,7 +271,7 @@
                 display: flex;
                 align-items: center;
                 margin-top: 12px;
-                
+
                 &:first-of-type {
                     margin-top: 20px;
                 }
@@ -277,10 +290,11 @@
                         vertical-align: middle;
                         transition: background-color 0.3s;
 
-                        &::before, &::after {
+                        &::before,
+                        &::after {
                             content: "";
                         }
-                        
+
                         &:before {
                             top: 2px;
                             left: 2px;
@@ -297,11 +311,12 @@
                     &-checkbox {
                         position: absolute;
                         visibility: hidden;
-                        
-                        &:checked + .toggle-switch {
+
+                        &:checked+.toggle-switch {
                             background: $main-blue;
                         }
-                        &:checked + .toggle-switch:before {
+
+                        &:checked+.toggle-switch:before {
                             left: 24px;
                             background: $white;
                         }
@@ -383,7 +398,7 @@
                 line-height: 24px;
                 border-radius: 4px;
                 padding: 12px 24px;
-                
+
                 &:hover {
                     transform: scale(0.9);
                 }
@@ -408,7 +423,7 @@
             gap: 20px;
             display: flex;
             align-items: center;
-        
+
             &__img {
                 width: 124px;
                 height: auto;
@@ -461,7 +476,7 @@
                 background: #FF7A00;
             }
         }
-        
+
         & .title {
             color: $main-black;
             font-size: 24px;
@@ -478,6 +493,28 @@
 
         & .swiper {
             width: 100%;
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                position: absolute;
+                top: 30px;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 38px;
+                transition: all 0.3s ease;
+                background-color: #248FEC;
+                border-radius: 50%;
+
+                &::after {
+                    color: #fff;
+                    font-size: 13px;
+                }
+            }
+
+            .swiper-button-disabled {
+                opacity: 0;
+            }
         }
 
         & .tabs {
@@ -511,6 +548,7 @@
 
                 &:hover {
                     background-color: $main-blue;
+
                     & path {
                         fill: $white;
                     }
@@ -523,6 +561,7 @@
 
             & .active {
                 background-color: $main-blue;
+
                 & path {
                     fill: $white;
                 }
@@ -601,7 +640,7 @@
                 align-items: center;
                 justify-content: space-between;
                 margin-top: 12px;
-                
+
                 &:first-of-type {
                     margin-top: 20px;
                 }
@@ -620,10 +659,11 @@
                         vertical-align: middle;
                         transition: background-color 0.3s;
 
-                        &::before, &::after {
+                        &::before,
+                        &::after {
                             content: "";
                         }
-                        
+
                         &:before {
                             top: 2px;
                             left: 2px;
@@ -640,11 +680,12 @@
                     &-checkbox {
                         position: absolute;
                         visibility: hidden;
-                        
-                        &:checked + .toggle-switch {
+
+                        &:checked+.toggle-switch {
                             background: $main-blue;
                         }
-                        &:checked + .toggle-switch:before {
+
+                        &:checked+.toggle-switch:before {
                             left: 24px;
                             background: $white;
                         }
@@ -736,22 +777,22 @@
                     line-height: 24px;
                     border-radius: 4px;
                     padding: 16px;
-                    
+
                     &:hover {
                         transform: scale(0.9);
                     }
                 }
-    
+
                 & .blue {
                     background: $main-blue;
                 }
-    
+
                 & .dashed {
                     color: #ACACAC;
                     border: 1px dashed #ACACAC;
                     background: rgba(36, 143, 236, 0.00);
                 }
-    
+
                 & .red {
                     background: #DC0505;
                 }
@@ -762,7 +803,7 @@
             gap: 20px;
             display: flex;
             align-items: center;
-        
+
             &__img {
                 width: 124px;
                 height: auto;
@@ -795,7 +836,9 @@
 
 @media (max-width: 768px) {
     .card-auto {
-        &__left-block, &__right-block {
+
+        &__left-block,
+        &__right-block {
             display: none;
         }
 
