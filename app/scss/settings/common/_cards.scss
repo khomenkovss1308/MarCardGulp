@@ -1,6 +1,21 @@
 .main-card {
     position: relative;
 
+    &:hover {
+        .main-card__img-container {
+            background: linear-gradient(253deg, rgba(0, 0, 0, 0.00) -59.58%, #100 100%);
+            box-shadow: 0px 24px 90px 0px rgba(0, 0, 0, 0.18);
+        }
+
+        .main-card__date {
+            color: $white;
+        }
+
+        .main-card__title {
+            color: $main-yellow;
+        }
+    }
+
     &__top, &__bottom  {
         z-index: 2;
         left: 20px;
@@ -25,6 +40,7 @@
         background: linear-gradient(225deg, rgba(0, 0, 0, 0.00) 0%, #100 100%);
         overflow: hidden;
         position: relative;
+        transition: all .5s;
     }
 
     &__img {
@@ -44,6 +60,7 @@
         -webkit-line-clamp: 2;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
+        transition: all .5s;
     }
 
     &__date, &__sub-title {

@@ -373,10 +373,15 @@ body {
     &__item {
         width: 30px;
         height: 30px;
+        transition: all .3s;
 
         &-img {
             width: 100%;
             height: auto;
+        }
+
+        &:hover {
+            transform: scale(1.2);
         }
     }
 }

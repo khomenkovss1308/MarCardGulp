@@ -11,6 +11,12 @@
         display: grid;
         grid-auto-flow: row;
         grid-template-columns: repeat(2, 1fr);
+
+        &__item:hover {
+            .video__title {
+                color: $main-blue;
+            } 
+        }
     }
     &__content {
         gap: 15px;
@@ -32,6 +38,7 @@
         font-size: 30px;
         font-weight: 700;
         line-height: 40px;
+        transition: all .3s;
     }
 }
 

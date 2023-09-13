@@ -44,8 +44,15 @@
         width: 100%;
         padding: 13px 20px;
         border-radius: 4px;
-        background: #F2F2F2;
+        background-color: #F2F2F2;
         margin-bottom: 20px;
+        transition: all .5s;
+
+        &:hover {
+            color: $main-black;
+            background-color: $white;
+            box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
+        }
     }
 
     &__select {
@@ -218,6 +225,11 @@
                         color: $main-blue;
                         border-bottom: 2px solid $main-blue;
                     }
+
+                    &:hover {
+                        color: $main-blue;
+                        border-bottom: 2px solid $main-blue;
+                    }
                 }
             }
 
@@ -281,10 +293,16 @@
                 font-weight: 700;
                 line-height: 13px;
                 margin: 12px 0;
+                transition: all .5s;
                 text-align: center;
                 border-radius: 4px;
                 padding: 12px 14px;
-                background: $main-blue;
+                background-color: $main-blue;
+
+                &:hover {
+                    color: $main-black;
+                    background-color: $main-yellow;
+                }
             }
 
             &_title {
@@ -399,7 +417,7 @@
         margin-bottom: 10px;
         padding: 13px 18px;
         border: 1px solid #EDEDED;
-        background: #FAFAFA;
+        background-color: #FAFAFA;
     }
 
 }

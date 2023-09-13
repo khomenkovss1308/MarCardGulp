@@ -1,7 +1,7 @@
 .breadcrumbs {
     gap: 4px;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     &__item {
         &::after {
             content: '/';
@@ -32,6 +32,6 @@
 
 @media (max-width: 768px) {
     .breadcrumbs {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 }

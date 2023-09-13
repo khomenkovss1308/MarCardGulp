@@ -134,14 +134,36 @@
             }
         }
 
+        &__info {
+            margin-bottom: 40px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__details {
+            padding: 40px 0;
+            line-height: 28px;
+            color: $main-black;
+            background: linear-gradient(90deg, #FBFBFB 0%, rgba(251, 251, 251, 0.00) 100%);
+
+            & .third-title {
+                font-size: 26px;
+                line-height: 36px;
+            }
+        }
+
         &__dealers {
             margin: 40px 0;
     
             & .second-title {
                 margin-bottom: 20px;
             }
+
+            & .dealers {
+                gap: 15px;
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
-    
+
         &__map {
             height: 300px;
             margin-bottom: 40px;
