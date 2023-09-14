@@ -214,6 +214,8 @@
             color: #141B2B;
             font-size: 15px;
             font-weight: 600;
+            transition: all .3s;
+
             &:hover {
                 color: $main-blue;
             }
@@ -225,10 +227,6 @@
             font-weight: 600;
             margin-right: 5px;
             transition: all .3s;
-
-            &:hover {
-                color: $main-blue;
-            }
         }
     }
 
@@ -291,6 +289,10 @@
 
                 .navigation-sublist-group {
                     display: block;
+                }
+
+                .header__bottom__link-dropdown{
+                    color: $main-blue;
                 }
             }
 

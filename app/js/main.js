@@ -104,7 +104,7 @@ const toggleSubMenu = () => {
                 event.preventDefault();
                 event.stopPropagation();
 
-                
+
                 sidebarBottom.style.display = "none";
                 sidebarTopTel.style.display = "none";
                 sidebarTopAddress.style.display = "none";
@@ -154,17 +154,19 @@ const compareTableAutoHeight = () => {
     const leftThead = document.querySelector('.compare-content__left thead');
     const rightTheads = document.querySelectorAll('.compare-content__right thead');
 
-    // Находим максимальную высоту среди всех thead в правом блоке
-    let maxTheadHeight = 0;
+    // Проверяем существование leftThead
+    if (leftThead) {
+        // Находим максимальную высоту среди всех thead в правом блоке
+        let maxTheadHeight = 0;
 
-    rightTheads.forEach(rightThead => {
-        const rightTheadHeight = rightThead.clientHeight;
-        maxTheadHeight = Math.max(maxTheadHeight, rightTheadHeight);
-    });
+        rightTheads.forEach(rightThead => {
+            const rightTheadHeight = rightThead.clientHeight;
+            maxTheadHeight = Math.max(maxTheadHeight, rightTheadHeight);
+        });
 
-    // Применяем максимальную высоту к thead в левом блоке
-    leftThead.style.height = maxTheadHeight + 'px';
-
+        // Применяем максимальную высоту к thead в левом блоке
+        leftThead.style.height = maxTheadHeight + 'px';
+    }
 
     const leftRows = document.querySelectorAll('.compare-content__left tbody tr');
     const swiperSlides = document.querySelectorAll('.swiper-slide');
@@ -200,42 +202,28 @@ const compareTableAutoHeight = () => {
 }
 
 const compareContentWidth = () => {
-
     const getCompareContentLeftWidth = () => {
-
-        if (window.innerWidth > 1100){
-            const compareContentLeftWidth = 406;
-            return compareContentLeftWidth;
+        if (window.innerWidth > 1100) {
+            return 406;
+        } else if (window.innerWidth <= 1100 && window.innerWidth > 850) {
+            return 370;
+        } else if (window.innerWidth <= 850 && window.innerWidth > 700) {
+            return 300;
+        } else if (window.innerWidth <= 700 && window.innerWidth > 500) {
+            return 200;
+        } else {
+            return 170;
         }
-
-        if (window.innerWidth <= 1100 && window.innerWidth > 850){
-            const compareContentLeftWidth = 370;
-            return compareContentLeftWidth;
-        } 
-
-        if (window.innerWidth <= 850 && window.innerWidth > 700) {
-            const compareContentLeftWidth = 300;
-            return compareContentLeftWidth;
-        }
-
-        if (window.innerWidth <= 700 && window.innerWidth > 500) {
-            const compareContentLeftWidth = 200;
-            return compareContentLeftWidth;
-        }
-
-        if (window.innerWidth <= 500) {
-            const compareContentLeftWidth = 170;
-            return compareContentLeftWidth;
-        }
-        
     }
 
     const compareContent = document.querySelector('.compare-content');
 
-    const compareContentRight = document.querySelector('.compare-content__right');
-    const compareContentWidth = compareContent.offsetWidth;
+    if (compareContent) {
+        const compareContentRight = document.querySelector('.compare-content__right');
+        const compareContentWidth = compareContent.offsetWidth;
 
-    compareContentRight.style.width = (compareContentWidth - getCompareContentLeftWidth()) + 'px';
+        compareContentRight.style.width = (compareContentWidth - getCompareContentLeftWidth()) + 'px';
+    }
 }
 
 
@@ -250,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleToggleText('.service__maintenance-collapse__container', '.service__maintenance-collapse__content', '#btn-read-more-service', '#btn-collapse-service', '290px');
     handleToggleText('.taxi__benifit-container-1', '.taxi__benifit-list-1', '#btn-read-more-taxi-1', '#btn-collapse-taxi-1', '138px');
     handleToggleText('.taxi__benifit-container-2', '.taxi__benifit-list-2', '#btn-read-more-taxi-2', '#btn-collapse-taxi-2', '138px');
-    
+
     handleToggleText('.appearance-1', '.sub-title', '#btn-read-more-appearance-1', '#btn-collapse-appearance-1', '376px');
 
     sidebarFunctioning();

@@ -4009,6 +4009,7 @@ body {
   color: #141B2B;
   font-size: 15px;
   font-weight: 600;
+  transition: all 0.3s;
 }
 .header__bottom__link:hover {
   color: #248FEC;
@@ -4019,9 +4020,6 @@ body {
   font-weight: 600;
   margin-right: 5px;
   transition: all 0.3s;
-}
-.header__bottom__link-dropdown:hover {
-  color: #248FEC;
 }
 .header__mobile {
   padding: 10px 0;
@@ -4074,6 +4072,9 @@ body {
 }
 .navigation-list__item:hover .navigation-sublist-group {
   display: block;
+}
+.navigation-list__item:hover .header__bottom__link-dropdown {
+  color: #248FEC;
 }
 .navigation-list__item:nth-child(2) .navigation-sublist__item-content {
   border-radius: 0px 0px 8px 0px;
