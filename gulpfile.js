@@ -10,8 +10,8 @@ const replace = require("gulp-replace")
 function html() {
   return src("app/pages/**/*.html")
     .pipe(fileinclude())
-    .pipe(replace(/\.\.\/\.\.\//g, ""))
-    .pipe(replace(/\.\.\//g, ""))
+    // .pipe(replace(/\.\.\/\.\.\//g, ""))
+    // .pipe(replace(/\.\.\//g, ""))
     .pipe(dest("app"))
     .pipe(browserSync.stream())
 }
@@ -61,8 +61,8 @@ function build() {
     'app/fonts/**/*',
     'app/videos/*',
   ], {base: 'app'})
-    .pipe(replace(/\.\.\/\.\.\//g, ""))
-    .pipe(replace(/\.\.\//g, ""))
+    // .pipe(replace(/\.\.\/\.\.\//g, ""))
+    // .pipe(replace(/\.\.\//g, ""))
     .pipe(dest('dist'))
 }
 
