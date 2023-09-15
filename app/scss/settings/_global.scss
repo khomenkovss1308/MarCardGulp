@@ -58,6 +58,12 @@ body {
     }
 }
 
+@media (min-width: 1500px) {
+    .wrapper {
+        width: 75%;
+    }
+}
+
 .comparePage{
     .tabs{
         margin: 20px auto 30px;

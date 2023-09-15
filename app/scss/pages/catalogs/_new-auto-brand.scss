@@ -38,7 +38,23 @@
     }
 }
 
+@media (min-width: 1500px) {
+    .new-auto-brand {
+        &__img {
+            width: 75%;
+        }
+    }
+}
+
 @media (max-width: 1450px) {
+    .new-auto-brand {
+        &__img {
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
     .new-auto-brand__img{
         width: 100%;
         border-radius: 0;
