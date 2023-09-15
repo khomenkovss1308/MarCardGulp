@@ -5338,9 +5338,16 @@ body {
   background: #0DC143;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .btn-group-mobile {
     display: block;
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .btn-group-mobile {
+    width: 100%;
   }
 }
 .feedback {
@@ -7048,7 +7055,6 @@ body {
 }
 .brand-card__img {
   width: 100%;
-  height: 219px;
   object-fit: cover;
   margin-bottom: 5px;
 }
@@ -7554,10 +7560,10 @@ body {
 .catalogs .section-models .second-title {
   margin-bottom: 50px;
 }
-.catalogs .equipment, .catalogs.equipment-model {
+.catalogs .equipment, .catalogs .equipment-model {
   margin-bottom: 70px;
 }
-.catalogs .equipment .first-title, .catalogs.equipment-model .first-title {
+.catalogs .equipment .first-title, .catalogs .equipment-model .first-title {
   margin-bottom: 40px;
 }
 .catalogs .equipment-model {
@@ -7675,10 +7681,7 @@ body {
     width: 68.9%;
   }
 }
-@media (max-width: 1024px) {
-  .catalogs__content {
-    width: 100%;
-  }
+@media (max-width: 1200px) {
   .catalogs .other-model {
     margin-bottom: 50px;
   }
@@ -7687,7 +7690,7 @@ body {
   }
   .catalogs .other-model .brand-list {
     gap: 30px;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .catalogs .cars {
     margin-bottom: 50px;
@@ -7703,7 +7706,7 @@ body {
   }
   .catalogs .car-list {
     gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .catalogs .services {
     padding: 40px 0;
@@ -7719,6 +7722,36 @@ body {
   }
   .catalogs .feedback {
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 1000px) {
+  .catalogs__content {
+    width: 100%;
+  }
+  .catalogs .other-model .brand-list {
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .catalogs .car-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .catalogs .other-model .brand-list {
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .catalogs .car-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .catalogs .other-model .brand-list {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .catalogs .car-list {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .card-auto {
@@ -9031,7 +9064,7 @@ body {
     width: 26.1%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .discount-season {
     display: none;
   }
@@ -9118,7 +9151,7 @@ body {
   line-height: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .advert-gift {
     margin: 70px 0;
     border-radius: 8px;
@@ -9224,7 +9257,7 @@ body {
   transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .advert-credit {
     gap: 30px;
     flex-direction: column;
@@ -9752,44 +9785,48 @@ body {
   display: flex;
   align-items: center;
 }
-.card-auto__right-block .price-info .old-price {
+.card-auto__right-block .price-info .price {
+  display: flex;
+  align-items: center;
+}
+.card-auto__right-block .price-info .price .old-price {
   gap: 5px;
   display: flex;
   align-items: center;
   margin-right: 15px;
 }
-.card-auto__right-block .price-info .old-price .price {
+.card-auto__right-block .price-info .price .old-price .price {
   color: #DC0000;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   text-decoration: line-through;
 }
-.card-auto__right-block .price-info .old-price .currency {
+.card-auto__right-block .price-info .price .old-price .currency {
   color: #232323;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
 }
-.card-auto__right-block .price-info .new-price {
+.card-auto__right-block .price-info .price .new-price {
   gap: 5px;
   display: flex;
   align-items: center;
   margin-right: 31px;
 }
-.card-auto__right-block .price-info .new-price .text {
+.card-auto__right-block .price-info .price .new-price .text {
   color: black;
   font-size: 15px;
   font-weight: 400;
   line-height: 15px;
 }
-.card-auto__right-block .price-info .new-price .price {
+.card-auto__right-block .price-info .price .new-price .price {
   color: #232323;
   font-size: 28px;
   font-weight: 700;
   line-height: 38px;
 }
-.card-auto__right-block .price-info .new-price .currency {
+.card-auto__right-block .price-info .price .new-price .currency {
   color: #232323;
   font-size: 18px;
   font-weight: 700;
@@ -9837,6 +9874,7 @@ body {
   width: 35.7142857143%;
   transition: opacity 0.3s ease;
   opacity: 1;
+  margin-right: 0;
 }
 .card-auto__right-block .services-slider .swiper-slide-hidden {
   opacity: 0;
@@ -9864,9 +9902,10 @@ body {
   margin: 15px 0 20px;
 }
 .card-auto__right-block .sub-stock__item {
-  gap: 30px;
+  width: 335px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 12px;
 }
 .card-auto__right-block .sub-stock__item:first-of-type {
@@ -10338,7 +10377,97 @@ body {
   margin-left: 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1260px) {
+  .card-auto {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-auto__dealer-title {
+    color: #232323;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 20px 0 8px;
+  }
+  .card-auto__left-block {
+    width: 43.2%;
+  }
+  .card-auto__left-block .swiper-img {
+    cursor: pointer;
+  }
+  .card-auto__left-block .swiper-img .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-auto__left-block .swiper-img .swiper-pagination-bullet {
+    background-color: #EAEAEA;
+    opacity: 1;
+  }
+  .card-auto__left-block .swiper-img .swiper-pagination-bullet-active {
+    background-color: #FBE200;
+    opacity: 1;
+  }
+  .card-auto__left-block .tabs {
+    gap: 5px;
+    display: flex;
+    margin: 34px 0 30px;
+  }
+  .card-auto__left-block .tabs-btn {
+    gap: 2px;
+    display: flex;
+    padding: 12px 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 2px;
+    background-color: #F2F2F2;
+    transition: all 0.5s;
+  }
+  .card-auto__left-block .tabs-btn path {
+    fill: #232323;
+    transition: all 0.5s;
+  }
+  .card-auto__left-block .tabs-btn span {
+    color: #232323;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 11px;
+    transition: all 0.5s;
+  }
+  .card-auto__left-block .tabs-btn:hover {
+    background-color: #248FEC;
+  }
+  .card-auto__left-block .tabs-btn:hover path {
+    fill: white;
+  }
+  .card-auto__left-block .tabs-btn:hover span {
+    color: white;
+  }
+  .card-auto__left-block .tabs .active {
+    background-color: #248FEC;
+  }
+  .card-auto__left-block .tabs .active path {
+    fill: white;
+  }
+  .card-auto__left-block .tabs .active span {
+    color: white;
+  }
+  .card-auto__right-block .title {
+    font-size: 24px;
+    line-height: 34px;
+    margin-top: 10px;
+  }
+  .card-auto__right-block .price-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-auto__right-block .tabs-btn {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+}
+@media (max-width: 700px) {
   .card-auto__left-block, .card-auto__right-block {
     display: none;
   }

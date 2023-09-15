@@ -104,7 +104,7 @@
         }
     }
 
-    & .equipment , &.equipment-model {
+    & .equipment, .equipment-model {
         margin-bottom: 70px;
 
         & .first-title {
@@ -255,12 +255,8 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .catalogs {
-        &__content {
-            width: 100%;
-        }
-
         & .other-model {
             margin-bottom: 50px;
     
@@ -270,7 +266,7 @@
     
             & .brand-list {
                 gap: 30px;
-                grid-template-columns: repeat(1, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -293,7 +289,7 @@
 
         & .car-list {
             gap: 20px;
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
 
         & .services {
@@ -313,6 +309,56 @@
 
         & .feedback {
             margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .catalogs {
+        &__content {
+            width: 100%;
+        }
+
+        & .other-model {
+            & .brand-list {
+                gap: 20px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        & .car-list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .catalogs {
+
+        & .other-model {
+            & .brand-list {
+                gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        & .car-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .catalogs {
+        & .other-model {
+            & .brand-list {
+                gap: 20px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        & .car-list {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
