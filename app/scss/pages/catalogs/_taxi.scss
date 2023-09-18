@@ -5,11 +5,6 @@
     &__main-filter {
         margin-top: 70px;
     }
-    &__benifit-list-1, &__benifit-list-2 {
-        max-height: 138px;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-    }
     & .taxi-list {
         margin-top: 70px;
         & .pagination-list {
@@ -17,6 +12,12 @@
             grid-template-columns: repeat(4, 1fr);
         }
     }
+
+    & .benifit-list {
+        max-height: 220px;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    } 
 
     & .seo-block {
         margin-top: 70px;
