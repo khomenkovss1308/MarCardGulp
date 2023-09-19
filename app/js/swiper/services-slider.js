@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (this.isBeginning) {
                     document.querySelector(".swiper-button-prev").style.display = "none";
                 }
+                if (this.slides.length === 1) {
+                    if (this.pagination && this.pagination.el) {
+                        this.pagination.el.style.display = 'none';
+                    }
+    
+                    if (this.navigation && this.navigation.nextEl && this.navigation.prevEl) {
+                        this.navigation.nextEl.style.display = 'none';
+                        this.navigation.prevEl.style.display = 'none';
+                    }
+                }
             },
             slideChange: function () {
                 if (this.isBeginning) {
