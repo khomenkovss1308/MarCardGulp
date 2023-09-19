@@ -62,27 +62,35 @@ const videPlayer = (videoContainers, video) => {
     });
 }
 
-const handleToggleText = (containerSelector, subtitleSelector, readMoreSelector, collapseSelector, maxHeight) => {
-    const container = document.querySelector(containerSelector);
-    const subtitle = container && container.querySelector(subtitleSelector);
-    const btnReadMore = container && container.querySelector(readMoreSelector);
-    const btnCollapse = container && container.querySelector(collapseSelector);
-
-    if (!container || !subtitle || !btnReadMore || !btnCollapse) {
-        return;
-    }
-
-    btnReadMore.addEventListener('click', () => {
-        subtitle.style.maxHeight = subtitle.scrollHeight + 'px';
-        btnReadMore.style.display = 'none';
-        btnCollapse.style.display = 'flex';
-    });
-
-    btnCollapse.addEventListener('click', () => {
-        subtitle.style.maxHeight = maxHeight;
-        btnCollapse.style.display = 'none';
-        btnReadMore.style.display = 'flex';
-        subtitle.scrollTop = 0;
+const toggleText = () => {
+    const containers = document.querySelectorAll('.toggle-container');
+  
+    containers.forEach(container => {
+        const btnReadMore = container.querySelector('.btn-read-more');
+        const btnCollapse = container.querySelector('.btn-collapse');
+        const target = container.querySelector('.toggle-content');
+        const maxHeight = parseInt(target.getAttribute('data-max-height'));
+  
+        if (!btnReadMore || !btnCollapse || !target) return;
+  
+        btnReadMore.addEventListener('click', () => {
+            target.style.maxHeight = '1000px';
+            btnReadMore.style.display = 'none';
+            btnCollapse.style.display = 'flex';
+        });
+  
+        btnCollapse.addEventListener('click', () => {
+            target.style.maxHeight = `${maxHeight}px`;
+            btnCollapse.style.display = 'none';
+            btnReadMore.style.display = 'flex';
+            target.scrollTop = 0;
+        });
+  
+        const targetHeight = target.scrollHeight;
+        if (targetHeight <= maxHeight) {
+            btnReadMore.style.display = 'none';
+            btnCollapse.style.display = 'none';
+        }
     });
 }
 
@@ -231,20 +239,12 @@ const compareContentWidth = () => {
 document.addEventListener('DOMContentLoaded', () => {
     //call function videoPlayer
     videPlayer(".video__container", ".video");
+    
+    toggleText();
 
-    //call fuction handleToggleText
-    handleToggleText('.seo-block__content', '.seo-block__subtitle', '#btn-read-more-seo', '#btn-collapse-seo', '208px');
-    handleToggleText('.services-rent__benefit-container', '.services-rent__benefit', '#btn-read-more-rent', '#btn-collapse-rent', '138px');
-
-    handleToggleText('.service__maintenance-collapse__container', '.service__maintenance-collapse__content', '#btn-read-more-service', '#btn-collapse-service', '290px');
-    handleToggleText('.taxi__benifit-container-1', '.taxi__benifit-list-1', '#btn-read-more-taxi-1', '#btn-collapse-taxi-1', '138px');
-    handleToggleText('.taxi__benifit-container-2', '.taxi__benifit-list-2', '#btn-read-more-taxi-2', '#btn-collapse-taxi-2', '138px');
-
-    handleToggleText('.appearance-1', '.sub-title', '#btn-read-more-appearance-1', '#btn-collapse-appearance-1', '376px');
-
-    sidebarFunctioning();
     toggleSubMenu();
-
+    sidebarFunctioning();
+    
     compareContentWidth();
     compareTableAutoHeight();
 
