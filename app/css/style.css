@@ -566,6 +566,12 @@ body {
   transform: scale(1.2);
 }
 
+.toggle-content {
+  max-height: 210px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
 .btn-collapse,
 .btn-read-more {
   display: flex;
@@ -3714,6 +3720,11 @@ body {
   height: 540px;
   object-fit: cover;
   border-radius: 8px;
+}
+.about__first-block .toggle-content, .about__second-block .toggle-content {
+  max-height: 210px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 .about__third-block {
   gap: 29px;
@@ -6881,6 +6892,11 @@ body {
   height: 540px;
   object-fit: cover;
   border-radius: 8px;
+}
+.about__first-block .toggle-content, .about__second-block .toggle-content {
+  max-height: 210px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 .about__third-block {
   gap: 29px;

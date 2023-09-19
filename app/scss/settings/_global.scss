@@ -396,6 +396,12 @@ body {
     }
 }
 
+.toggle-content {
+    max-height: 210px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
 .btn-collapse,
 .btn-read-more {
     display: flex;
