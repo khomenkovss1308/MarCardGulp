@@ -261,13 +261,16 @@ body {
   width: 30%;
 }
 .wrapper-compare {
-  width: 93.5%;
+  width: 93.5% !important;
   margin-right: 0;
 }
 
 @media (min-width: 1660px) {
   .wrapper {
     width: 75%;
+  }
+  .wrapper-compare {
+    width: 87.5% !important;
   }
 }
 .comparePage .tabs {
@@ -463,7 +466,7 @@ body {
     width: 95%;
   }
   .wrapper-compare {
-    width: 97.5%;
+    width: 97.5% !important;
   }
 }
 @media (max-width: 450px) {
@@ -728,6 +731,7 @@ body {
   white-space: nowrap;
 }
 .tabs__item:hover {
+  cursor: pointer;
   color: white;
   background-color: #248FEC;
 }
@@ -786,37 +790,20 @@ body {
   height: 34px;
   border-radius: 50%;
   transition: all 0.2s;
+  border: 3px solid transparent;
+  overflow: hidden;
+}
+.tabs-colors__btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .tabs-colors__btn:hover {
-  width: 37px;
-  height: 37px;
+  cursor: pointer;
   border: 3px solid #248FEC;
 }
 .tabs-colors .active {
-  width: 37px;
-  height: 37px;
   border: 3px solid #248FEC;
-}
-.tabs-colors .white {
-  background-color: white;
-}
-.tabs-colors .black {
-  background-color: #040404;
-}
-.tabs-colors .red {
-  background-color: #BD0000;
-}
-.tabs-colors .green {
-  background-color: #00A757;
-}
-.tabs-colors .light-green {
-  background-color: #D3E318;
-}
-.tabs-colors .purple {
-  background-color: #4214A4;
-}
-.tabs-colors .blue {
-  background-color: #0A4EB2;
 }
 
 @media (max-width: 768px) {
@@ -4858,7 +4845,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
   background-color: white;
   padding-top: 9px;
   padding-bottom: 26px;
@@ -4975,7 +4962,7 @@ body {
 }
 
 .dropdown-content {
-  z-index: 100;
+  z-index: 1000;
   visibility: hidden;
   opacity: 0;
   position: fixed;
