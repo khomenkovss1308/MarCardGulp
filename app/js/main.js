@@ -227,6 +227,7 @@ const compareContentWidth = () => {
 }
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
     //call function videoPlayer
     videPlayer(".video__container", ".video");

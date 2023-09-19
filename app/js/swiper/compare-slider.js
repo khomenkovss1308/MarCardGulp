@@ -24,9 +24,27 @@ const swiperSliderInit = () => {
                 },
                 1300: {
                     slidesPerView: 3.5,
+                },
+                1660: {
+                    slidesPerView: 4,
+                },
+                2000: {
+                    slidesPerView: 5,
                 }
             },
             on: {
+                init: function () {
+                    if (this.slides.length === 1) {
+                        if (this.pagination && this.pagination.el) {
+                            this.pagination.el.style.display = 'none';
+                        }
+
+                        if (this.navigation && this.navigation.nextEl && this.navigation.prevEl) {
+                            this.navigation.nextEl.style.display = 'none';
+                            this.navigation.prevEl.style.display = 'none';
+                        }
+                    }
+                },
                 reachEnd: function () {
                     document.querySelector('.compare-content__shadow--right').style.opacity = '0';
                     reachedEnd = true;
