@@ -600,6 +600,12 @@
 }
 
 @media (max-width: 800px) {
+
+    .dealer__map-container-title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
     .dealer {
         &__city {
             &-content {
@@ -686,6 +692,17 @@
     }
 }
 
+@media (max-width: 768px) {
+    .dealer__list-container-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .dealer__map-container-map{
+        height: 400px;
+    }
+}
+
 @media (max-width: 650px) {
     .dealer {
         &__service {
@@ -719,6 +736,12 @@
 }
 
 @media (max-width: 500px) {
+
+    .dealer__map-container-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
     .dealer {
         &__contact {
             margin: 30px auto 40px;
