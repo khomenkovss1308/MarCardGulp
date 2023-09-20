@@ -964,6 +964,20 @@
 
         &--mobile {
             display: block;
+
+            .swiper{
+                &-pagination {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &-bullet{
+                        background-color: #EAEAEA;
+                        &-active{
+                            background-color: #FBE200;
+                        }
+                    }
+                }
+            }
         }
     }
 }

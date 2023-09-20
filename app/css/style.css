@@ -2405,6 +2405,10 @@ body {
   }
 }
 @media (max-width: 800px) {
+  .dealer__map-container-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
   .dealer__city-content {
     flex-direction: column;
   }
@@ -2457,6 +2461,15 @@ body {
     line-height: 25px;
   }
 }
+@media (max-width: 768px) {
+  .dealer__list-container-title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .dealer__map-container-map {
+    height: 400px;
+  }
+}
 @media (max-width: 650px) {
   .dealer__service {
     padding-bottom: 40px;
@@ -2480,6 +2493,10 @@ body {
   }
 }
 @media (max-width: 500px) {
+  .dealer__map-container-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
   .dealer__contact {
     margin: 30px auto 40px;
   }
@@ -10597,6 +10614,17 @@ body {
   }
   .card-auto--mobile {
     display: block;
+  }
+  .card-auto--mobile .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-auto--mobile .swiper-pagination-bullet {
+    background-color: #EAEAEA;
+  }
+  .card-auto--mobile .swiper-pagination-bullet-active {
+    background-color: #FBE200;
   }
 }
 .models-list {
