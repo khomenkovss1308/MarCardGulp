@@ -4,26 +4,10 @@
     &__wrapper {
         gap: 8px;
         display: flex;
-    }
+        overflow-x: scroll;
 
-    &__shadow {
-        background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 54px;
-        height: 100%;
-        z-index: 10;
-        transition: all .3s;
-
-        &--right {
-            right: -20px;
-        }
-
-        &--left {
-            opacity: 0;
-            left: -20px;
-            transform: rotate(180deg);
+        &::-webkit-scrollbar {
+            width: 0;
         }
     }
 
@@ -59,20 +43,14 @@
     border-top: 1px solid #DFDFDF;
     border-bottom: 1px solid #DFDFDF;
 
-    &__shadow--right {
-        background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
-        width: 54px;
-        right: -15px;
-    }
-
-    &__shadow--left {
-        width: 54px;
-        left: -15px;
-    }
-
     &__list {
         gap: 30px;
         display: flex;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
 
 
 
@@ -113,7 +91,7 @@
         border: 3px solid transparent;
         overflow: hidden;
 
-        img{
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
