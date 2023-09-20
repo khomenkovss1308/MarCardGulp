@@ -511,6 +511,51 @@
         & .car-list {
             grid-template-columns: repeat(3, 1fr);
         }
+    }
+}
+
+@media (max-width: 800px) {
+    .catalogs {
+        & .other-model {
+            & .brand-list {
+                gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        & .car-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        & .appearance {
+            &__container {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 20px;
+            }
+            &__slider, &__description {
+                width: 100%;
+            }
+            &__slider {
+                max-height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .catalogs {
+        & .other-model {
+            & .brand-list {
+                gap: 20px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        & .car-list {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         & .warning {
             border-radius: 0;
@@ -541,37 +586,6 @@
                 margin: 0 auto;
                 padding: 14px 0;
             }
-        }
-    }
-}
-
-@media (max-width: 800px) {
-    .catalogs {
-
-        & .other-model {
-            & .brand-list {
-                gap: 20px;
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        & .car-list {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-@media (max-width: 600px) {
-    .catalogs {
-        & .other-model {
-            & .brand-list {
-                gap: 20px;
-                grid-template-columns: repeat(1, 1fr);
-            }
-        }
-
-        & .car-list {
-            grid-template-columns: repeat(1, 1fr);
         }
     }
 }

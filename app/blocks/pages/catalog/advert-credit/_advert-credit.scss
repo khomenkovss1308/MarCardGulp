@@ -71,7 +71,45 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1350px) {
+    .advert-credit {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .advert-credit {
+        gap: 15px;
+        padding: 24px 40px;
+
+        &__time {
+            &-img {
+                max-width: 90px;
+                max-height: 90px;
+            }
+    
+            &-title {
+                font-size: 20px;
+                line-height: 20px;
+            }
+    
+            &-sub-title {
+                font-size: 25px;
+                line-height: 25px;
+            }
+        }
+
+        &__info {
+            display: flex;
+    
+            &-title {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
     .advert-credit {
         gap: 30px;
         flex-direction: column;
