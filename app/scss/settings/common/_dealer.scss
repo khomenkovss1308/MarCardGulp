@@ -254,9 +254,10 @@
                 display: flex;
                 align-items: center;
 
-                a{
+                a {
                     color: #000;
                     transition: all .3s;
+
                     &:hover {
                         color: $main-blue;
                         cursor: pointer;
@@ -298,6 +299,14 @@
         padding: 70px 0;
         background: #FBFBFB;
 
+        .toggle-content {
+            max-height: initial;
+        }
+
+        button {
+            display: none;
+        }
+
         &__title {
             color: $main-blue;
             font-size: 35px;
@@ -314,15 +323,15 @@
             display: flex;
         }
 
-        &__left{
-            &-block{
+        &__left {
+            &-block {
                 width: 58%;
                 margin-right: 36px;
             }
         }
 
-        &__right{
-            &-block{
+        &__right {
+            &-block {
                 flex: 1;
             }
         }
@@ -525,15 +534,19 @@
                 width: 60%;
             }
         }
-        &__subservice{
-            &__list{
+
+        &__subservice {
+            &__list {
                 flex-wrap: wrap;
-                &__item{
+
+                &__item {
                     width: 50%;
-                    &:first-child{
+
+                    &:first-child {
                         padding: 30px 53px;
                     }
-                    &:nth-child(2){
+
+                    &:nth-child(2) {
                         border-right: 0;
                     }
                 }
@@ -543,16 +556,18 @@
 }
 
 @media (max-width: 1350px) {
-    .dealer{
-        &__service{
-            &__container{
+    .dealer {
+        &__service {
+            &__container {
                 flex-direction: column;
             }
-            &__list{
+
+            &__list {
                 grid-template-columns: repeat(3, 1fr);
             }
-            &__left{
-                &-block{
+
+            &__left {
+                &-block {
                     width: 100%;
                     margin-bottom: 40px;
                 }
@@ -575,9 +590,9 @@
 }
 
 @media (max-width: 1000px) {
-    .dealer{
-        &__service{
-            &__list{
+    .dealer {
+        &__service {
+            &__list {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -652,14 +667,16 @@
             }
         }
 
-        &__subservice{
-            &__list{
-                &__item{
+        &__subservice {
+            &__list {
+                &__item {
                     padding: 20px;
-                    &:first-child{
+
+                    &:first-child {
                         padding: 20px;
                     }
-                    &-title{
+
+                    &-title {
                         line-height: 25px;
                     }
                 }
@@ -670,25 +687,35 @@
 }
 
 @media (max-width: 650px) {
-   .dealer{
-        &__service{
+    .dealer {
+        &__service {
             padding-bottom: 40px;
-            &__list{
+
+            .toggle-content {
+                max-height: 334px;
+            }
+
+            button.btn-read-more {
+                display: flex;
+            }
+
+            &__list {
                 grid-template-columns: repeat(1, 1fr);
             }
         }
 
-        &__subservice{
+        &__subservice {
             width: 100%;
-            &__list{
-                &__item{
+
+            &__list {
+                &__item {
                     width: 100%;
                     border-right: 0;
                     border-bottom: 1px solid #DFDFDF;
                 }
             }
         }
-    } 
+    }
 }
 
 @media (max-width: 500px) {
@@ -711,8 +738,8 @@
                             font-weight: 700;
                             line-height: 24px;
                         }
-                        
-                        &--fs18{
+
+                        &--fs18 {
                             font-size: 18px;
                         }
                     }
@@ -742,31 +769,35 @@
             }
         }
 
-        &__service{
+        &__service {
             padding: 40px 0;
-            &__title{
+
+            &__title {
                 font-size: 26px;
                 font-weight: 700;
                 line-height: 36px;
                 margin-bottom: 15px;
             }
-            &__list{
+
+            &__list {
                 grid-gap: 12px;
-                &__item{
-                    &-text{
+
+                &__item {
+                    &-text {
                         font-size: 14px;
                     }
                 }
             }
         }
 
-        &__subservice{
-            &__list{
-                &__item{
-                    &-title{
+        &__subservice {
+            &__list {
+                &__item {
+                    &-title {
                         font-size: 16px;
                     }
-                    &-icon{
+
+                    &-icon {
                         width: 34px;
                         height: 34px;
                     }
@@ -774,7 +805,7 @@
             }
         }
 
-        &__directions{
+        &__directions {
             padding: 40px 0;
             border-bottom: 0;
         }
