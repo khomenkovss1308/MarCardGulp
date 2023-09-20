@@ -1328,6 +1328,15 @@ body {
   gap: 4px;
   display: flex;
   margin-bottom: 30px;
+  overflow-x: scroll;
+}
+.breadcrumbs::-webkit-scrollbar {
+  width: 0;
+}
+.breadcrumbs__item {
+  width: fit-content !important;
+  line-height: normal;
+  white-space: nowrap;
 }
 .breadcrumbs__item::after {
   content: "/";
@@ -1356,7 +1365,7 @@ body {
 
 @media (max-width: 768px) {
   .breadcrumbs {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 .video {

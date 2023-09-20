@@ -2,7 +2,14 @@
     gap: 4px;
     display: flex;
     margin-bottom: 30px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
     &__item {
+        width: fit-content !important;
+        line-height: normal;
+        white-space: nowrap;
         &::after {
             content: '/';
             color: $sub-black;
@@ -32,6 +39,6 @@
 
 @media (max-width: 768px) {
     .breadcrumbs {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
