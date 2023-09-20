@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 slidesPerView: 1,
                 spaceBetween: 10,
             },
-            640: {
-                slidesPerView: 1,
+            500: {
+                slidesPerView: 1.5,
                 spaceBetween: 20,
             },
             768: {
