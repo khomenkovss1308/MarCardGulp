@@ -7981,6 +7981,12 @@ body {
 .catalogs .warning__btn {
   padding: 12px 34px;
 }
+.catalogs .about .text-block {
+  margin-top: 30px;
+}
+.catalogs .about .text-block .fourth-title {
+  margin-bottom: 10px;
+}
 
 @media (max-width: 1500px) {
   .catalogs__content {
