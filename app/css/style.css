@@ -2165,6 +2165,12 @@ body {
   padding: 70px 0;
   background: #FBFBFB;
 }
+.dealer__service .toggle-content {
+  max-height: initial;
+}
+.dealer__service button {
+  display: none;
+}
 .dealer__service__title {
   color: #248FEC;
   font-size: 35px;
@@ -2445,6 +2451,12 @@ body {
 @media (max-width: 650px) {
   .dealer__service {
     padding-bottom: 40px;
+  }
+  .dealer__service .toggle-content {
+    max-height: 334px;
+  }
+  .dealer__service button.btn-read-more {
+    display: flex;
   }
   .dealer__service__list {
     grid-template-columns: repeat(1, 1fr);
