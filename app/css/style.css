@@ -2991,6 +2991,11 @@ body {
   fill: white;
 }
 
+@media (max-width: 1094px) {
+  .additional-nav__list {
+    max-width: 100%;
+  }
+}
 .compare-content {
   display: flex;
   margin-bottom: 90px;
@@ -5351,19 +5356,31 @@ body {
   margin-bottom: 30px;
 }
 
-#dropdown-6, #dropdown-7 {
+#dropdown-6,
+#dropdown-7 {
   width: 445px;
 }
-#dropdown-6 .dropdown-content__header_title, #dropdown-7 .dropdown-content__header_title {
+#dropdown-6 .dropdown-content__header_title,
+#dropdown-7 .dropdown-content__header_title {
   color: #248FEC;
   font-size: 15px;
   font-weight: 700;
   line-height: 20px;
 }
-#dropdown-6 .dropdown-content__header, #dropdown-7 .dropdown-content__header {
+#dropdown-6 .dropdown-content__header,
+#dropdown-7 .dropdown-content__header {
   margin-bottom: 15px;
 }
 
+@media (max-height: 700px) and (min-width: 680px) {
+  #dropdown-2 {
+    max-height: 85vh;
+    overflow: scroll;
+  }
+  #dropdown-2 .dropdown-content__list-auto {
+    height: auto;
+  }
+}
 @media (max-width: 900px) {
   .dropdown-content {
     width: 90%;
@@ -6058,8 +6075,12 @@ body {
   padding: 30px;
   background: #FBFBFB;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .centers__title {
+  width: 100%;
   color: black;
   font-size: 28px;
   font-weight: 700;
@@ -6067,22 +6088,42 @@ body {
   margin-bottom: 25px;
 }
 .centers__list {
+  width: 100%;
   gap: 20px 14px;
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(3, 1fr);
 }
+.centers__btn {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 13px 53px;
+  border-radius: 4px;
+  background: #248FEC;
+  width: fit-content;
+  margin-top: 40px;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 1094px) {
   .centers {
-    padding: 40px;
-    margin-top: 40px;
+    padding: 0;
+    margin-top: 0;
   }
+}
+@media (max-width: 768px) {
   .centers__list {
     gap: 9px;
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .centers__btn {
+    width: 100%;
   }
 }
 .callback {
@@ -6677,6 +6718,12 @@ body {
   }
   .services-register__centers__btn {
     width: 100%;
+  }
+  .services-registration__fifth-block {
+    margin: 25px 0 0;
+  }
+  .services-registration-page .wrapper__container {
+    gap: 80px;
   }
 }
 .news .pagintions .first-title {
