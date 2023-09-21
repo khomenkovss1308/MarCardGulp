@@ -1,6 +1,6 @@
 .btn-group-mobile {
     bottom: 0;
-    z-index: 12;
+    z-index: 20;
     position: sticky;
     display: none;
 
@@ -91,17 +91,48 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .btn-group-mobile {
-        display: block;
-        width: 500px;
-        margin: 0 auto;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background: $gray;
+        padding: 10px 0;
+        
+
+        & .btn-discount-season {
+            width: calc(70% - 10px);
+            margin: 0 10px;
+        }
+
+        &__contact {
+            width: 60%;
+            gap: 10px;
+        }
+
+        & .button {
+            width: calc(50% - 10px);
+        }
     }
 }
 
 
 @media (max-width: 600px) {
     .btn-group-mobile {
+        display: block;
         width: 100%;
+
+        & .btn-discount-season {
+            margin: 5px 0;
+        }
+
+        & .btn-discount-season, & .button {
+            width: 100%;
+        }
+
+        &__contact {
+            gap: 0;
+            width: 100%;
+        }
     }
 }

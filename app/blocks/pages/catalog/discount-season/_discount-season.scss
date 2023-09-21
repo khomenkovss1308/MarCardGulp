@@ -116,7 +116,80 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
+    .discount-season {
+        & .time-counter {
+            display: flex;
+            justify-content: space-between;
+    
+            &__item {
+                display: inline-block;
+    
+                & .number {
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+    
+                & .text {
+                    color: $sub-black;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 12px;
+                    margin-top: 8px;
+                }
+            }
+        }
+    
+        & .price-block {
+            gap: 5px;
+            display: flex;
+            align-items: center;
+            margin: 23px 0;
+    
+            & .text {
+                color: $sub-black;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 18px;
+            }
+    
+            & .price {
+                color: #000;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 20px;
+            }
+    
+            & .currency {
+                color: $main-black;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 14px;
+            }
+        }
+    
+        &__elements {
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__btn {
+            width: 100%;
+            padding: 15px 0;
+            margin-top: 20px;
+    
+            &:hover {
+                color: $white;
+                background-color: $main-blue;
+                transform: scale(1.05);
+            } 
+        }
+    }
+}
+
+@media (max-width: 1100px) {
     .discount-season {
         display: none;
     }
