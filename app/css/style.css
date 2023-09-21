@@ -7987,7 +7987,7 @@ body {
   object-fit: cover;
 }
 .catalogs .appearance__description .sub-title {
-  max-height: 376px;
+  max-height: 370px;
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
@@ -8083,6 +8083,10 @@ body {
   }
 }
 @media (max-width: 1100px) {
+  .catalogs .first-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
   .catalogs__content {
     width: 100%;
   }
@@ -8092,6 +8096,15 @@ body {
   }
   .catalogs .car-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .catalogs .equipment-model {
+    margin: 40px 0;
+  }
+  .catalogs .equipment, .catalogs .equipment-model {
+    margin-bottom: 40px;
+  }
+  .catalogs .equipment .first-title, .catalogs .equipment-model .first-title {
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 800px) {
@@ -8103,7 +8116,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .catalogs .appearance__container {
-    display: flex;
     justify-content: space-between;
     flex-direction: column;
     gap: 20px;
@@ -9534,7 +9546,7 @@ body {
   transform: scale(1.1);
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1500px) {
   .advert-credit {
     gap: 25px;
   }
@@ -9897,7 +9909,7 @@ body {
     font-size: 15px;
     line-height: 26px;
   }
-  .equipment-sub-list__item-header .btn-group {
+  .equipment-sub-list__item-header .btns-group {
     gap: 5px;
     display: flex;
     align-items: center;
@@ -10466,6 +10478,21 @@ body {
 .card-auto--mobile .swiper .swiper-button-disabled {
   opacity: 0;
 }
+.card-auto--mobile .swiper-img .btn-group {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  gap: 5px;
+  display: flex;
+}
+.card-auto--mobile .swiper-img .btn-group .button {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  padding: 8px;
+}
 .card-auto--mobile .tabs {
   gap: 5px;
   display: flex;
@@ -10729,8 +10756,63 @@ body {
   color: #232323;
   margin-left: 5px;
 }
+.card-auto--mobile .services-slider__card {
+  gap: 8px;
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.08);
+}
+.card-auto--mobile .services-slider__card-img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+}
+.card-auto--mobile .services-slider__card-text {
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+.card-auto--mobile .services-slider .swiper {
+  width: 100%;
+  height: 82px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: none;
+}
+.card-auto--mobile .services-slider .swiper-slide {
+  width: 35.7142857143%;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  margin-right: 0;
+}
+.card-auto--mobile .services-slider .swiper-slide-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.card-auto--mobile .services-slider .swiper-button-next, .card-auto--mobile .services-slider .swiper-button-prev {
+  position: absolute;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 38px;
+  transition: all 0.3s ease;
+  background-color: #248FEC;
+  border-radius: 50%;
+}
+.card-auto--mobile .services-slider .swiper-button-next::after, .card-auto--mobile .services-slider .swiper-button-prev::after {
+  color: #fff;
+  font-size: 13px;
+}
+.card-auto--mobile .services-slider .swiper-button-disabled {
+  opacity: 0;
+}
 
-@media (max-width: 1260px) {
+@media (max-width: 1350px) {
   .card-auto {
     display: flex;
     justify-content: space-between;

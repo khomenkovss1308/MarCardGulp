@@ -374,7 +374,7 @@
 
         &__description {
             & .sub-title {
-                max-height: 376px;
+                max-height: 370px;
                 overflow: hidden;
                 transition: max-height 0.5s ease;
 
@@ -503,6 +503,10 @@
 
 @media (max-width: 1100px) {
     .catalogs {
+        & .first-title {
+            font-size: 24px;
+            line-height: 34px;
+        }
         &__content {
             width: 100%;
         }
@@ -516,6 +520,18 @@
 
         & .car-list {
             grid-template-columns: repeat(3, 1fr);
+        }
+
+        & .equipment-model {
+            margin: 40px 0;
+        }
+
+        & .equipment, .equipment-model {
+            margin-bottom: 40px;
+    
+            & .first-title {
+                margin-bottom: 20px;
+            }
         }
     }
 }
@@ -535,7 +551,6 @@
 
         & .appearance {
             &__container {
-                display: flex;
                 justify-content: space-between;
                 flex-direction: column;
                 gap: 20px;
