@@ -208,7 +208,6 @@ button {
   outline: none;
 }
 
-html,
 body {
   font-family: "Inter";
   font-style: normal;
@@ -282,6 +281,7 @@ body {
   cursor: pointer;
   width: 44px;
   height: 44px;
+  z-index: 9999;
 }
 
 .btn-up::before {
@@ -498,6 +498,11 @@ body {
   }
   .wrapper-compare {
     width: 97.5% !important;
+  }
+}
+@media (max-width: 768px) {
+  .btn-up {
+    display: none;
   }
 }
 @media (max-width: 450px) {
@@ -918,7 +923,7 @@ body {
 }
 .cars-card__top-slider .itc-slider-indicators {
   color: transparent;
-  bottom: 15px;
+  bottom: 5px;
   left: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -1059,7 +1064,7 @@ body {
   }
   .cars-card__top-slider .itc-slider-indicators {
     color: transparent;
-    bottom: 15px;
+    bottom: 5px;
     left: 0;
     left: 50%;
     transform: translateX(-50%);
