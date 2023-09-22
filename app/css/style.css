@@ -921,6 +921,24 @@ body {
 .cars-card__top-slider .itc-slider-item {
   width: 100% !important;
 }
+.cars-card__top-slider .itc-slider .image-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgb(137, 137, 137) 100%);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s;
+}
+.cars-card__top-slider .itc-slider .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 .cars-card__top-slider .itc-slider-indicators {
   color: transparent;
   bottom: 5px;
@@ -1210,13 +1228,15 @@ body {
   width: 100%;
   outline: none;
   cursor: pointer;
-  appearance: none;
   padding: 17px 20px;
   background-color: white;
   border: 1px solid #DFDFDF;
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-image: url(../images/icons/default/arrowSelectBlue.svg);
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
@@ -1224,6 +1244,31 @@ body {
 }
 .select-default select::-ms-expand {
   display: none;
+}
+.select-default select option {
+  color: #232323;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  transition: all 0.5s;
+  outline: none;
+}
+.select-default select option:hover {
+  color: #248FEC;
+  background: transparent;
+  outline: none;
+}
+.select-default select option:checked {
+  color: #248FEC;
+  background-color: transparent;
+}
+.select-default select option:focus {
+  outline: none;
+}
+
+select:focus + .select-default {
+  border-color: #007bff; /* Цвет граничной линии при фокусе */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
 }
 
 @media (max-width: 768px) {
@@ -6032,7 +6077,7 @@ body {
 .main-filter__btn .all-params:hover {
   color: #248FEC;
 }
-.main-filter__btn .resest:hover {
+.main-filter__btn .reset:hover {
   color: #D60000;
 }
 .main-filter__btn-primary {
