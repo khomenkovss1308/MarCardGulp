@@ -248,6 +248,7 @@ body {
 
 .wrapper {
   width: 87%;
+  max-width: 1660px;
   margin: 0 auto;
 }
 .wrapper__container {
@@ -261,16 +262,17 @@ body {
   width: 30%;
 }
 .wrapper-compare {
-  width: 93.5% !important;
   margin-right: 0;
 }
 
-@media (min-width: 1660px) {
+@media (max-width: 1450px) {
   .wrapper {
-    width: 75%;
+    width: 92%;
   }
+}
+@media (min-width: 1660px) {
   .wrapper-compare {
-    width: 87.5% !important;
+    margin-right: auto;
   }
 }
 .btn-up {
@@ -492,14 +494,6 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 1450px) {
-  .wrapper {
-    width: 95%;
-  }
-  .wrapper-compare {
-    width: 97.5% !important;
-  }
-}
 @media (max-width: 450px) {
   .cars-card__top {
     position: relative;
@@ -2724,6 +2718,9 @@ body {
 .advertisement .itc-slider-items {
   height: 100%;
 }
+.advertisement .itc-slider-item__img--mobile {
+  display: none;
+}
 
 .itc-slider {
   position: relative;
@@ -2937,8 +2934,14 @@ body {
   }
 }
 @media (max-width: 480px) {
-  .itc-slider-item__img {
+  .advertisement .itc-slider-item__img {
     height: 200px;
+  }
+  .advertisement .itc-slider-item__img--mobile {
+    display: block;
+  }
+  .advertisement .itc-slider-item__img--desctop {
+    display: none;
   }
 }
 .number-list {
@@ -4350,6 +4353,8 @@ body {
   display: none;
   width: 825px;
   min-height: 381px;
+  max-height: 75vh;
+  overflow-y: scroll;
   position: absolute;
   top: 0;
   left: 290px;
@@ -4365,6 +4370,7 @@ body {
 }
 .navigation-sublist__item-content_btn {
   display: flex;
+  align-items: center;
   border-radius: 4px;
   padding: 10px 20px 10px 14px;
 }
@@ -4510,6 +4516,14 @@ body {
   }
   .header__top-left-block-contact {
     gap: 10px;
+  }
+}
+@media (max-width: 1300px) {
+  .navigation-sublist__item-content {
+    width: 500px;
+  }
+  .navigation-sublist__item-content_cars {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 1080px) {
@@ -5014,6 +5028,21 @@ body {
 }
 .sidebar__close-btn {
   background-color: white;
+}
+
+.dropdown__wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.35);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .dropdown-content {
@@ -5752,6 +5781,10 @@ body {
   font-weight: 300;
   line-height: 26px;
   transition: max-height 0.5s ease;
+}
+.seo-block__subtitle img {
+  float: left;
+  margin-right: 20px;
 }
 
 @media (max-width: 1100px) {
