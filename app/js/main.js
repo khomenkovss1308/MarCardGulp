@@ -15,10 +15,13 @@ const sidebarFunctioning = () => {
 const toggleDropdown = (dropdownId) => {
     let dropdown = document.getElementById("dropdown-" + dropdownId);
     let header = document.querySelector(".header");
+    let dropdownWrapper = dropdown.previousSibling.previousSibling;
 
     if (dropdown.classList.contains("active")) {
         dropdown.classList.remove("active");
         header.classList.remove("dropdown-active");
+        dropdownWrapper.style.visibility = 'hidden';
+        dropdownWrapper.style.opacity = '0';
     } else {
         let activeDropdown = document.querySelector(".dropdown-content.active");
         if (activeDropdown) {
@@ -26,16 +29,39 @@ const toggleDropdown = (dropdownId) => {
         }
         dropdown.classList.add("active");
         header.classList.add("dropdown-active");
+        dropdownWrapper.style.visibility = 'visible';
+        dropdownWrapper.style.opacity = '1';
     }
 };
 
 const closeDropdown = (dropdownId) => {
     let dropdown = document.getElementById("dropdown-" + dropdownId);
     let header = document.querySelector(".header");
+    let dropdownWrapper = dropdown.previousSibling.previousSibling;
 
     dropdown.classList.remove("active");
     header.classList.remove("dropdown-active");
+    dropdownWrapper.style.visibility = 'hidden';
+    dropdownWrapper.style.opacity = '0';
+
+    dropdownWrapper.addEventListener('click', () => {
+        dropdown.classList.remove("active");
+        header.classList.remove("dropdown-active");
+        dropdownWrapper.style.visibility = 'hidden';
+        dropdownWrapper.style.opacity = '0';
+    })
 };
+
+const closeDropdownByWrapper = (dropdownId) => {
+    let dropdown = document.getElementById("dropdown-" + dropdownId);
+    let header = document.querySelector(".header");
+    let dropdownWrapper = dropdown.previousSibling.previousSibling;
+
+    dropdown.classList.remove("active");
+    header.classList.remove("dropdown-active");
+    dropdownWrapper.style.visibility = 'hidden';
+    dropdownWrapper.style.opacity = '0';
+}
 
 const videPlayer = (videoContainers, video) => {
     const VIDEOCONTAINERS = document.querySelectorAll(videoContainers);
@@ -64,28 +90,28 @@ const videPlayer = (videoContainers, video) => {
 
 const toggleText = () => {
     const containers = document.querySelectorAll('.toggle-container');
-  
+
     containers.forEach(container => {
         const btnReadMore = container.querySelector('.btn-read-more');
         const btnCollapse = container.querySelector('.btn-collapse');
         const target = container.querySelector('.toggle-content');
         const maxHeight = parseInt(target.getAttribute('data-max-height'));
-  
+
         if (!btnReadMore || !btnCollapse || !target) return;
-  
+
         btnReadMore.addEventListener('click', () => {
             target.style.maxHeight = '1000px';
             btnReadMore.style.display = 'none';
             btnCollapse.style.display = 'flex';
         });
-  
+
         btnCollapse.addEventListener('click', () => {
             target.style.maxHeight = `${maxHeight}px`;
             btnCollapse.style.display = 'none';
             btnReadMore.style.display = 'flex';
             target.scrollTop = 0;
         });
-  
+
         const targetHeight = target.scrollHeight;
         if (targetHeight <= maxHeight) {
             btnReadMore.style.display = 'none';
@@ -253,7 +279,7 @@ const appearanceBtnup = () => {
                 // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
                 scrollY > 400 ? this.show() : this.hide();
             });
-    
+
             // при нажатии на кнопку .btn-up
             this.el.onclick = () => {
                 // переместим в начало страницы
@@ -268,6 +294,16 @@ const appearanceBtnup = () => {
     btnUp.addEventListener();
 }
 
+const setWrapperCompareWidth = () => {
+    if ( window.innerWidth < 1660 ) {
+        const wrapper = document.querySelector('.wrapper');
+        const screenWidth = window.innerWidth;
+    
+        const wrapperCompare = document.querySelector('.wrapper-compare');
+        wrapperCompare.style.width = `${wrapper.offsetWidth + (screenWidth-wrapper.offsetWidth) / 2}px`;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     videPlayer(".video__container", ".video");
 
@@ -276,10 +312,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toggleSubMenu();
     sidebarFunctioning();
-    
+
     compareContentWidth();
     compareTableAutoHeight();
 
+    setWrapperCompareWidth();
+
     window.addEventListener('resize', compareContentWidth);
     window.addEventListener('resize', compareTableAutoHeight);
+    window.addEventListener('resize', setWrapperCompareWidth);
 });

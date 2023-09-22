@@ -9,6 +9,14 @@
         &-items {
             height: 100%;
         }
+
+        &-item{
+            &__img{
+                &--mobile{
+                    display: none;
+                }
+            }
+        }
     }
 }
 
@@ -247,7 +255,15 @@
 }
 
 @media (max-width: 480px) {
-    .itc-slider-item__img{
-        height: 200px;
+    .advertisement{
+        .itc-slider-item__img{
+            height: 200px;
+            &--mobile{
+                display: block;
+            }
+            &--desctop{
+                display: none;
+            }
+        }
     }
 }

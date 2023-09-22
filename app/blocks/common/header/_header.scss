@@ -377,6 +377,8 @@
                 display: none;
                 width: 825px;
                 min-height: 381px;
+                max-height: 75vh;
+                overflow-y: scroll;
                 position: absolute;
                 top: 0;
                 left: 290px;
@@ -393,6 +395,7 @@
 
                 &_btn {
                     display: flex;
+                    align-items: center;
                     border-radius: 4px;
                     padding: 10px 20px 10px 14px;
 
@@ -581,6 +584,16 @@
     }
 }
 
+
+@media (max-width: 1300px) {
+    .navigation-sublist__item-content{
+        width: 500px;
+    }
+
+    .navigation-sublist__item-content_cars{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 
 @media (max-width: 1080px) {

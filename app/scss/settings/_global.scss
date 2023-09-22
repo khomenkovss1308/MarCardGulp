@@ -40,6 +40,7 @@ body {
 
 .wrapper {
     width: 87%;
+    max-width: 1660px;
     margin: 0 auto;
     &__container {
         display: flex;
@@ -52,16 +53,20 @@ body {
         width: 30%;
     }
     &-compare{
-        width: 93.5% !important;
         margin-right: 0;
     }
 }
 
+@media (max-width: 1450px) {
+    .wrapper{
+        width: 92%;
+    }
+}
+
 @media (min-width: 1660px) {
-    .wrapper {
-        width: 75%;
+    .wrapper{
         &-compare{
-            width: 87.5% !important;
+            margin-right: auto;
         }
     }
 }
@@ -301,21 +306,6 @@ body {
 
 .swiper-pagination-bullet{
     opacity: 1;
-}
-
-@media (max-width: 1450px) {
-    .wrapper{
-        width: 95%;
-        &-compare{
-            width: 97.5% !important;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .btn-up {
-        display: none;
-    }
 }
 
 @media (max-width: 450px) {
