@@ -4083,7 +4083,7 @@ select:focus + .select-default {
 }
 .header {
   top: 0;
-  z-index: 1000;
+  z-index: 1100;
   position: sticky;
   background: white;
   margin-bottom: 25px;
@@ -4959,7 +4959,7 @@ select:focus + .select-default {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 2000;
   background-color: white;
   padding-top: 9px;
   padding-bottom: 26px;

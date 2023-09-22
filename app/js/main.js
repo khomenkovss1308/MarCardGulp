@@ -18,15 +18,14 @@ const toggleDropdown = (dropdownId) => {
     let dropdownWrapper = dropdown.previousSibling.previousSibling;
 
     if (dropdown.classList.contains("active")) {
-        dropdown.classList.remove("active");
-        header.classList.remove("dropdown-active");
-        dropdownWrapper.style.visibility = 'hidden';
-        dropdownWrapper.style.opacity = '0';
+        closeDropdown(dropdownId);
     } else {
         let activeDropdown = document.querySelector(".dropdown-content.active");
+        
         if (activeDropdown) {
-            activeDropdown.classList.remove("active");
+            closeDropdown(activeDropdown.id.split("-")[1]);
         }
+    
         dropdown.classList.add("active");
         header.classList.add("dropdown-active");
         dropdownWrapper.style.visibility = 'visible';
@@ -43,14 +42,13 @@ const closeDropdown = (dropdownId) => {
     header.classList.remove("dropdown-active");
     dropdownWrapper.style.visibility = 'hidden';
     dropdownWrapper.style.opacity = '0';
-
-    dropdownWrapper.addEventListener('click', () => {
-        dropdown.classList.remove("active");
-        header.classList.remove("dropdown-active");
-        dropdownWrapper.style.visibility = 'hidden';
-        dropdownWrapper.style.opacity = '0';
-    })
 };
+
+document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
+    dropdown.addEventListener('click', () => {
+        closeDropdown(dropdown.id.split("-")[1]);
+    });
+});
 
 const closeDropdownByWrapper = (dropdownId) => {
     let dropdown = document.getElementById("dropdown-" + dropdownId);
