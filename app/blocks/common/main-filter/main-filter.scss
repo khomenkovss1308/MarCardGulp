@@ -1,5 +1,5 @@
 .main-filter {
-    &__select {
+    & .select {
         width: 25%;
     }
     &__input {
@@ -50,7 +50,7 @@
 
 @media (max-width: 1300px) {
     .main-filter {
-        &__select {
+        & .select {
             width: 33.3%;
         }
         &__input {
@@ -65,9 +65,43 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .main-filter {
-        &__select {
+        & .select {
+            width: 50%;
+        }
+        &__input {
+            width: 25%;
+        }
+        &__btn-primary {
+            width: 345px;
+            margin: 0 auto;
+            padding: 23px 0;
+        }
+        &__btn-group {
+            gap: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        &__bottom {
+            gap: 25%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .main-filter {
+        &.select {
             width: 100%;
         }
         &__input {

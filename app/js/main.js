@@ -186,9 +186,7 @@ const compareTableAutoHeight = () => {
     const leftThead = document.querySelector('.compare-content__left thead');
     const rightTheads = document.querySelectorAll('.compare-content__right thead');
 
-    // Проверяем существование leftThead
     if (leftThead) {
-        // Находим максимальную высоту среди всех thead в правом блоке
         let maxTheadHeight = 0;
 
         rightTheads.forEach(rightThead => {
@@ -196,14 +194,12 @@ const compareTableAutoHeight = () => {
             maxTheadHeight = Math.max(maxTheadHeight, rightTheadHeight);
         });
 
-        // Применяем максимальную высоту к thead в левом блоке
         leftThead.style.height = maxTheadHeight + 'px';
     }
 
     const leftRows = document.querySelectorAll('.compare-content__left tbody tr');
     const swiperSlides = document.querySelectorAll('.swiper-slide');
 
-    // Создаем массив для хранения максимальных высот для каждого tr
     const maxHeights = Array.from({
         length: leftRows.length
     }, () => 0);
@@ -219,7 +215,6 @@ const compareTableAutoHeight = () => {
         });
     });
 
-    // Применяем максимальные высоты к tr в обоих блоках
     leftRows.forEach((leftRow, i) => {
         leftRow.style.height = maxHeights[i] + 'px';
     });
@@ -262,25 +257,18 @@ const appearanceBtnup = () => {
     const btnUp = {
         el: document.querySelector('.btn-up'),
         show() {
-            // удалим у кнопки класс btn-up_hide
             this.el.classList.remove('btn-up_hide');
         },
         hide() {
-            // добавим к кнопке класс btn-up_hide
             this.el.classList.add('btn-up_hide');
         },
         addEventListener() {
-            // при прокрутке содержимого страницы
             window.addEventListener('scroll', () => {
-                // определяем величину прокрутки
                 const scrollY = window.scrollY || document.documentElement.scrollTop;
-                // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
                 scrollY > 400 ? this.show() : this.hide();
             });
 
-            // при нажатии на кнопку .btn-up
             this.el.onclick = () => {
-                // переместим в начало страницы
                 window.scrollTo({
                     top: 0,
                     left: 0,
