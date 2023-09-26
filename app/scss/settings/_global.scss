@@ -104,6 +104,12 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .btn-up {
+        display: none;
+    }
+}
+
 .comparePage{
     .tabs{
         margin: 20px auto 30px;

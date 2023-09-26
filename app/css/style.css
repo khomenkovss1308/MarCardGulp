@@ -306,6 +306,11 @@ body {
     background-color: #44A8FF;
   }
 }
+@media (max-width: 600px) {
+  .btn-up {
+    display: none;
+  }
+}
 .comparePage .tabs {
   margin: 20px auto 30px;
 }
@@ -9256,11 +9261,11 @@ body {
     margin-bottom: 40px;
   }
   .catalog-used-mark__text-block .first-title {
-    width: 517px;
+    width: 100%;
     margin-bottom: 10px;
   }
   .catalog-used-mark__text-block .sub-title {
-    width: 963px;
+    width: 100%;
   }
   .catalog-used-mark__container {
     display: flex;
