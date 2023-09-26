@@ -6200,11 +6200,13 @@ body {
     height: 187px;
   }
 }
-.main-filter .select {
-  width: 25%;
+.main-filter {
+  background-color: #fbfbfb;
+  padding: 40px;
+  border-radius: 8px;
 }
-.main-filter__input {
-  width: 12.5%;
+.main-filter .input-default {
+  width: 50%;
 }
 .main-filter__btn {
   gap: 5px;
@@ -6235,9 +6237,15 @@ body {
   gap: 30px;
   display: flex;
 }
-.main-filter__content {
+.main-filter .input-group {
+  gap: 8px;
   display: flex;
-  flex-wrap: wrap;
+}
+.main-filter__content {
+  gap: 8px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
   margin-bottom: 25px;
 }
 .main-filter__bottom {
@@ -6247,11 +6255,8 @@ body {
 }
 
 @media (max-width: 1300px) {
-  .main-filter .select {
-    width: 33.3%;
-  }
-  .main-filter__input {
-    width: 16.65%;
+  .main-filter__content {
+    grid-template-columns: repeat(3, 1fr);
   }
   .main-filter__bottom {
     gap: 0;
@@ -6261,12 +6266,6 @@ body {
   }
 }
 @media (max-width: 900px) {
-  .main-filter .select {
-    width: 50%;
-  }
-  .main-filter__input {
-    width: 25%;
-  }
   .main-filter__btn-primary {
     width: 345px;
     margin: 0 auto;
@@ -6280,8 +6279,7 @@ body {
     margin-bottom: 20px;
   }
   .main-filter__content {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 20px;
   }
   .main-filter__bottom {
@@ -6291,12 +6289,10 @@ body {
     flex-direction: column;
   }
 }
-@media (max-width: 500px) {
-  .main-filter.select {
-    width: 100%;
-  }
-  .main-filter__input {
-    width: 50%;
+@media (max-width: 600px) {
+  .main-filter {
+    background-color: transparent;
+    padding: 0;
   }
   .main-filter__btn-primary {
     width: 100%;
@@ -6309,10 +6305,12 @@ body {
     justify-content: space-between;
     margin-bottom: 20px;
   }
+  .main-filter .hidden {
+    display: none;
+  }
   .main-filter__content {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    gap: 0;
+    grid-template-columns: repeat(1, 1fr);
   }
   .main-filter__bottom {
     gap: 25%;
@@ -7530,7 +7528,12 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .brand-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
   .brand-list {
     gap: 20px;
     grid-template-columns: repeat(1, 1fr);
@@ -9356,7 +9359,8 @@ body {
   }
 }
 .new-auto-brand__img {
-  width: 87%;
+  width: 100%;
+  max-width: 1600px;
   height: 300px;
   object-fit: cover;
   border-radius: 8px;
@@ -9386,11 +9390,6 @@ body {
   margin-bottom: 70px;
 }
 
-@media (min-width: 1500px) {
-  .new-auto-brand__img {
-    width: 75%;
-  }
-}
 @media (max-width: 1450px) {
   .new-auto-brand__img {
     width: 95%;

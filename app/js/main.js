@@ -119,23 +119,23 @@ const toggleText = () => {
 }
 
 const toggleSubMenu = () => {
-
     const listItems = document.querySelectorAll(".navigation-list__item");
     const subListItems = document.querySelectorAll(".navigation-sublist__item");
     const titleName = document.querySelector(".sidebar__navigation-title");
     const sidebarBottom = document.querySelector(".sidebar__bottom");
-    const sidebarTop = document.querySelector(".sidebar__top");
     const sidebarTopTel = document.querySelector(".sidebar__group-tel");
     const sidebarTopAddress = document.querySelector(".sidebar__group-address");
+    const sidebarTop = document.querySelector(".sidebar__top");
     const sidebarBack = document.querySelector(".sidebar__back");
-    const sidebarBackBtn = sidebarBack.querySelector("button");
+    const sidebarBackBtn = sidebarBack.querySelector(".sidebar__back-btn");
+
+    let menuStack = [];
 
     if (window.innerWidth <= 1080) {
         const handleMenuItemClick = (event, clickedItem, subListToShow, menu) => {
             if (clickedItem.querySelector(subListToShow)) {
                 event.preventDefault();
                 event.stopPropagation();
-
 
                 sidebarBottom.style.display = "none";
                 sidebarTopTel.style.display = "none";
@@ -151,20 +151,26 @@ const toggleSubMenu = () => {
                         clickedItem.style.paddingBottom = "0";
                         clickedItem.style.borderBottom = "none";
                         clickedItem.querySelector(subListToShow).style.display = "block";
+                        menuStack.push(item);
                     }
                 });
 
                 titleName.textContent = clickedItem.querySelector("a").textContent;
+            }
+        };
 
-                const sidebarComeBack = () => {
-
-                }
-
-                if (sidebarBackBtn) {
-                    sidebarBackBtn.addEventListener('click', sidebarComeBack);
+        sidebarBackBtn.addEventListener('click', () => {
+            if (menuStack.length > 0) {
+                const previousItem = menuStack.pop();
+                previousItem.style.display = "block";
+                if (menuStack.length > 0) {
+                    const currentItem = menuStack[menuStack.length - 1];
+                    titleName.textContent = currentItem.querySelector("a").textContent;
+                } else {
+                    titleName.textContent = "Меню навигации";
                 }
             }
-        }
+        });
 
         listItems.forEach(function (item) {
             item.addEventListener("click", function (event) {
@@ -178,9 +184,9 @@ const toggleSubMenu = () => {
             });
         });
     }
+};
 
-
-}
+window.addEventListener('load', toggleSubMenu);
 
 const compareTableAutoHeight = () => {
     const leftThead = document.querySelector('.compare-content__left thead');

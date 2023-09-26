@@ -1,9 +1,9 @@
 .main-filter {
-    & .select {
-        width: 25%;
-    }
-    &__input {
-        width: 12.5%;
+    background-color: #fbfbfb;
+    padding: 40px;
+    border-radius: 8px;
+    & .input-default {
+        width: 50%;
     }
     &__btn {
         gap: 5px;
@@ -36,9 +36,18 @@
         gap: 30px;
         display: flex;
     }
-    &__content {
+    & .input-group {
+        gap: 8px;
         display: flex;
-        flex-wrap: wrap;
+    //     display: grid;
+    //     grid-auto-flow: row;
+    //     grid-template-columns: repeat(2, 1fr); 
+    }
+    &__content {
+        gap: 8px;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(4, 1fr); 
         margin-bottom: 25px;
     }
     &__bottom {
@@ -50,11 +59,8 @@
 
 @media (max-width: 1300px) {
     .main-filter {
-        & .select {
-            width: 33.3%;
-        }
-        &__input {
-            width: 16.65%;
+        &__content {
+            grid-template-columns: repeat(3, 1fr);
         }
         &__bottom {
             gap: 0;
@@ -67,12 +73,6 @@
 
 @media (max-width: 900px) {
     .main-filter {
-        & .select {
-            width: 50%;
-        }
-        &__input {
-            width: 25%;
-        }
         &__btn-primary {
             width: 345px;
             margin: 0 auto;
@@ -86,8 +86,7 @@
             margin-bottom: 20px;
         }
         &__content {
-            display: flex;
-            flex-wrap: wrap;
+            grid-template-columns: repeat(2, 1fr);
             margin-bottom: 20px;
         }
         &__bottom {
@@ -99,14 +98,10 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .main-filter {
-        &.select {
-            width: 100%;
-        }
-        &__input {
-            width: 50%;
-        }
+        background-color: transparent;
+        padding: 0;
         &__btn-primary {
             width: 100%;
             padding: 23px 0;
@@ -118,10 +113,12 @@
             justify-content: space-between;
             margin-bottom: 20px;
         }
+        & .hidden {
+            display: none;
+        }
         &__content {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
+            gap: 0;
+            grid-template-columns: repeat(1, 1fr);
         }
         &__bottom {
             gap: 25%;

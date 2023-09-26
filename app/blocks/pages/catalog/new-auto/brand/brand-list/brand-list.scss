@@ -16,7 +16,13 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .brand-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
     .brand-list {
         gap: 20px;
         grid-template-columns: repeat(1, 1fr);
