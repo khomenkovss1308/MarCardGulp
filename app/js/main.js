@@ -288,11 +288,14 @@ const appearanceBtnup = () => {
 
 const setWrapperCompareWidth = () => {
     if ( window.innerWidth < 1660 ) {
-        const wrapper = document.querySelector('.wrapper');
-        const screenWidth = window.innerWidth;
-    
+        const breadcrumbsWrapper = document.querySelector('.breadcrumbs.wrapper');
         const wrapperCompare = document.querySelector('.wrapper-compare');
-        wrapperCompare.style.width = `${wrapper.offsetWidth + (screenWidth-wrapper.offsetWidth) / 2}px`;
+        const screenWidth = window.innerWidth;
+
+        if (wrapperCompare){
+            wrapperCompare.style.width = `${breadcrumbsWrapper.offsetWidth + (screenWidth-breadcrumbsWrapper.offsetWidth) / 2}px`;
+        }
+
     }
 }
 
