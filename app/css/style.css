@@ -370,183 +370,10 @@ body {
   line-height: 40px;
 }
 
-.cars-card__top {
-  position: relative;
-}
-.cars-card__top-info {
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  z-index: 1;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-.cars-card__top-slider {
-  border-radius: 4px;
-}
-.cars-card__top-slider .itc-slider {
-  width: 100%;
-}
-.cars-card__top-slider .itc-slider-item {
-  width: 100%;
-}
-.cars-card__top-slider .itc-slider-indicators {
-  color: transparent;
-  bottom: 15px;
-  left: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.cars-card__top-slider .itc-slider-indicator {
-  border-top: 0;
-  border-bottom: 0;
-}
-.cars-card__top .itc-slider-item img {
-  width: 100%;
-}
-.cars-card__labels {
-  gap: 6px;
-  display: flex;
-}
-.cars-card__labels__item {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 12px;
-  padding: 3px 8px;
-  border-radius: 2px;
-}
-.cars-card__labels .blue {
-  color: white;
-  background: #248FEC;
-  box-shadow: 0px 4px 24px 0px rgba(36, 143, 236, 0.35);
-}
-.cars-card__labels .yellow {
-  color: #232323;
-  background: #FBE200;
-  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.35);
-}
-.cars-card__btns {
-  gap: 5px;
-  display: flex;
-}
-.cars-card__btn {
-  box-sizing: border-box;
-  padding: 8px;
-  border-radius: 50%;
-  background-color: white;
-  width: 32px;
-  height: 32px;
-  transition: all 0.3s;
-}
-.cars-card__btn:not(:last-child) {
-  margin-right: 5px;
-}
-.cars-card__btn:hover {
-  transform: scale(1.2);
-}
-.cars-card__title {
-  color: #232323;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 30px;
-}
-.cars-card__subtitle {
-  color: #797979;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-}
-.cars-card__prices {
-  gap: 10px;
-  display: flex;
-  align-items: center;
-}
-.cars-card__old-price, .cars-card__new-price {
-  gap: 5px;
-  display: flex;
-  align-items: center;
-}
-.cars-card__old-price .currency, .cars-card__new-price .currency {
-  color: #232323;
-}
-.cars-card__old-price .digit {
-  color: #DC0000;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 14px;
-  text-decoration-line: line-through;
-}
-.cars-card__old-price .currency {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 13px;
-}
-.cars-card__new-price .digit {
-  color: #232323;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 28px;
-}
-.cars-card__new-price .currency {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 15px;
-}
-
 .swiper-pagination-bullet {
   opacity: 1;
 }
 
-@media (max-width: 450px) {
-  .cars-card__top {
-    position: relative;
-  }
-  .cars-card__top-info {
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    z-index: 1;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  .cars-card__top-slider {
-    border-radius: 4px;
-  }
-  .cars-card__top-slider .itc-slider {
-    width: 100%;
-  }
-  .cars-card__top-slider .itc-slider-indicators {
-    color: transparent;
-    bottom: 15px;
-    left: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .cars-card__top-slider .itc-slider-indicator {
-    border-top: 0;
-    border-bottom: 0;
-  }
-  .cars-card__title {
-    font-size: 15px;
-    line-height: 24px;
-  }
-  .cars-card__subtitle {
-    font-size: 12px;
-    line-height: 18px;
-  }
-  .cars-card__old-price .digit {
-    font-size: 13px;
-    line-height: 13px;
-  }
-  .cars-card__new-price .digit {
-    font-size: 16px;
-    line-height: 16px;
-  }
-}
 .block-contact {
   gap: 8px;
   color: white;
@@ -11373,9 +11200,9 @@ body {
   line-height: 20px;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1300px) {
   .recomendated-card__img {
-    padding: 15px 35px;
+    padding: 15px 25px;
   }
 }
 @media (max-width: 767px) {
