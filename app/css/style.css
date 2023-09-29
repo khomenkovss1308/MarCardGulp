@@ -3187,6 +3187,10 @@ body {
   height: 22px;
   margin: auto;
 }
+.compare-content .cars-card__btn {
+  width: auto;
+  height: auto;
+}
 .compare-content .new-cars-card__bottom {
   display: flex;
   flex-direction: column;
@@ -3270,7 +3274,11 @@ body {
 }
 @media (max-width: 500px) {
   .compare-content__left {
-    width: 170px;
+    width: 50% !important;
+  }
+  .compare-content__right {
+    width: 49% !important;
+    flex: none;
   }
   .compare-content__shadow {
     width: 32px;

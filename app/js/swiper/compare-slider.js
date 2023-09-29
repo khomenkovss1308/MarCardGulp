@@ -16,7 +16,7 @@ const swiperSliderInit = () => {
                 0: {
                     slidesPerView: 1,
                 },
-                320: {
+                400: {
                     slidesPerView: 1.8,
                 },
                 1100: {

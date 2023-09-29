@@ -167,6 +167,11 @@
         }
     }
 
+    .cars-card__btn{
+        width: auto;
+        height: auto;
+    }
+
     .new-cars-card__bottom {
         display: flex;
         flex-direction: column;
@@ -298,7 +303,12 @@
 @media (max-width: 500px) {
     .compare-content {
         &__left {
-            width: 170px;
+            width: 50% !important;
+        }
+
+        &__right{
+            width: 49% !important;
+            flex: none;
         }
 
         &__shadow {

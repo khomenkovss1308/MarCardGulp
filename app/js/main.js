@@ -259,6 +259,19 @@ const compareContentWidth = () => {
     }
 }
 
+const setWrapperCompareWidth = () => {
+    if ( window.innerWidth < 1660 ) {
+        const breadcrumbsWrapper = document.querySelector('.breadcrumbs.wrapper');
+        const wrapperCompare = document.querySelector('.wrapper-compare');
+        const screenWidth = window.innerWidth;
+
+        if (wrapperCompare){
+            wrapperCompare.style.width = `${breadcrumbsWrapper.offsetWidth + (screenWidth-breadcrumbsWrapper.offsetWidth) / 2}px`;
+        }
+
+    }
+}
+
 const appearanceBtnup = () => {
     const btnUp = {
         el: document.querySelector('.btn-up'),
@@ -286,19 +299,6 @@ const appearanceBtnup = () => {
     btnUp.addEventListener();
 }
 
-const setWrapperCompareWidth = () => {
-    if ( window.innerWidth < 1660 ) {
-        const breadcrumbsWrapper = document.querySelector('.breadcrumbs.wrapper');
-        const wrapperCompare = document.querySelector('.wrapper-compare');
-        const screenWidth = window.innerWidth;
-
-        if (wrapperCompare){
-            wrapperCompare.style.width = `${breadcrumbsWrapper.offsetWidth + (screenWidth-breadcrumbsWrapper.offsetWidth) / 2}px`;
-        }
-
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     videPlayer(".video__container", ".video");
 
@@ -310,7 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     compareContentWidth();
     compareTableAutoHeight();
-
     setWrapperCompareWidth();
 
     window.addEventListener('resize', compareContentWidth);
