@@ -159,18 +159,57 @@ const toggleSubMenu = () => {
             }
         };
 
-        sidebarBackBtn.addEventListener('click', () => {
+        const handleBackButtonClick = () => {
             if (menuStack.length > 0) {
-                const previousItem = menuStack.pop();
-                previousItem.style.display = "block";
+                const currentItem = menuStack.pop();
+                const anchor = currentItem.querySelector("a");
+                const iconArrow = currentItem.querySelector(".icon-arrow");
+        
+                if (anchor && iconArrow) {
+                    anchor.style.display = "block";
+                    iconArrow.style.display = "block";
+                }
+        
+                const navigationSublistGroup = currentItem.querySelector(".navigation-sublist-group");
+                if (navigationSublistGroup) {
+                    navigationSublistGroup.style.display = "none";
+                }
+        
+                const navigationSublistContent = currentItem.querySelector(".navigation-sublist__item-content");
+                if (navigationSublistContent) {
+                    navigationSublistContent.style.display = "none";
+                }
+        
                 if (menuStack.length > 0) {
-                    const currentItem = menuStack[menuStack.length - 1];
-                    titleName.textContent = currentItem.querySelector("a").textContent;
+                    const previousItem = menuStack[menuStack.length - 1];
+                    const prevAnchor = previousItem.querySelector("a");
+                    if (prevAnchor) {
+                        titleName.textContent = prevAnchor.textContent;
+                    }
                 } else {
                     titleName.textContent = "Меню навигации";
+                    sidebarBottom.style.display = "block";
+                    sidebarTopTel.style.display = "flex";
+                    sidebarTop.style.marginBottom = "30px";
+                    sidebarTopAddress.style.display = "block";
+                    listItems.forEach(item => {
+                        const itemAnchor = item.querySelector("a");
+                        const itemIconArrow = item.querySelector(".icon-arrow");
+                        if (itemAnchor && itemIconArrow) {
+                            itemAnchor.style.display = "block";
+                            itemIconArrow.style.display = "block";
+                        }
+                        const sublistGroup = item.querySelector(".navigation-sublist-group");
+                        if (sublistGroup) {
+                            sublistGroup.style.display = "none";
+                        }
+                    });
                 }
             }
-        });
+        };
+        
+        sidebarBackBtn.addEventListener('click', handleBackButtonClick);
+        
 
         listItems.forEach(function (item) {
             item.addEventListener("click", function (event) {
@@ -185,8 +224,6 @@ const toggleSubMenu = () => {
         });
     }
 };
-
-window.addEventListener('load', toggleSubMenu);
 
 const compareTableAutoHeight = () => {
     const leftThead = document.querySelector('.compare-content__left thead');

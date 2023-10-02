@@ -1,7 +1,5 @@
 .new-auto-brand {
     &__img {
-        width: 100%;
-        max-width: 1600px;
         height: 300px;
         object-fit: cover;
         border-radius: 8px;
@@ -39,17 +37,8 @@
     }
 }
 
-@media (max-width: 1450px) {
-    .new-auto-brand {
-        &__img {
-            width: 95%;
-        }
-    }
-}
-
 @media (max-width: 768px) {
-    .new-auto-brand__img{
+    .new-auto-brand__img {
         width: 100%;
-        border-radius: 0;
     }
 }

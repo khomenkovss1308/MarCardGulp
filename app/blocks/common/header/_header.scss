@@ -1,6 +1,6 @@
 .header {
     top: 0;
-    z-index: 1100;
+    z-index: 3;
     position: sticky;
     background: $white;
     margin-bottom: 25px;
@@ -373,7 +373,7 @@
             }
 
             &-content {
-                z-index: 10;
+                z-index: 4;
                 display: none;
                 width: 825px;
                 min-height: 381px;
