@@ -156,7 +156,7 @@ const toggleSubMenu = () => {
                 });
 
                 titleName.textContent = clickedItem.querySelector("a").textContent;
-            }
+            };
         };
 
         const handleBackButtonClick = () => {
@@ -164,6 +164,13 @@ const toggleSubMenu = () => {
                 const currentItem = menuStack.pop();
                 const anchor = currentItem.querySelector("a");
                 const iconArrow = currentItem.querySelector(".icon-arrow");
+                subListItems.forEach(item => {
+                    item.style.display = "flex";
+                    item.querySelector("a").style.display = "block";
+                    item.querySelector("img").style.display = "block";
+                    item.style.borderBottom = "1px solid #F1F1F1";
+                    item.style.paddingBottom = "14px";
+                });
         
                 if (anchor && iconArrow) {
                     anchor.style.display = "block";
@@ -177,13 +184,6 @@ const toggleSubMenu = () => {
         
                 const navigationSublistContent = currentItem.querySelector(".navigation-sublist__item-content");
                 if (navigationSublistContent) {
-                    subListItems.forEach(item => {
-                        item.style.display = "flex";
-                        item.querySelector("a").style.display = "block";
-                        item.querySelector("img").style.display = "block";
-                        item.style.borderBottom = "1px solid #F1F1F1";
-                        item.style.paddingBottom = "14px";
-                    });
                     navigationSublistContent.style.display = "none";
                 }
         
@@ -223,12 +223,14 @@ const toggleSubMenu = () => {
 
         listItems.forEach(function (item) {
             item.addEventListener("click", function (event) {
+                // event.stopPropagation();
                 handleMenuItemClick(event, item, '.navigation-sublist-group', listItems);
             });
         });
 
         subListItems.forEach(function (submenuItem) {
             submenuItem.addEventListener("click", function (event) {
+                event.stopPropagation();
                 handleMenuItemClick(event, submenuItem, '.navigation-sublist__item-content', subListItems);
             });
         });

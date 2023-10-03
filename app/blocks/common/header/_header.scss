@@ -388,6 +388,24 @@
                 background: $white;
                 box-shadow: 0px 34px 90px 0px rgba(0, 0, 0, 0.10);
 
+                &::-webkit-scrollbar {
+                    width: 5px;
+                }
+            
+                &::-webkit-scrollbar-track {
+                    background-color: #FBFBFB;
+                }
+            
+                &::-webkit-scrollbar-thumb {
+                    background-color: $main-blue;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            
+                &::-webkit-scrollbar-button {
+                    display: none;
+                }
+
                 &_top {
                     display: flex;
                     margin-bottom: 25px;
