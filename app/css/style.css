@@ -4609,6 +4609,10 @@ body {
     padding: 0;
     box-shadow: none;
   }
+  .navigation-sublist__item-content_list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
   .navigation-sublist__item-content_top {
     flex-direction: column;
   }

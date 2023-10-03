@@ -646,6 +646,11 @@
                     padding: 0;
                     box-shadow: none;
 
+                    &_list {
+                        grid-template-columns: repeat(1, 1fr);
+                        grid-gap: 20px;
+                    }
+
                     &_top {
                         flex-direction: column;
                     }
