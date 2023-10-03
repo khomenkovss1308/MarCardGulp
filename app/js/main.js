@@ -172,11 +172,18 @@ const toggleSubMenu = () => {
         
                 const navigationSublistGroup = currentItem.querySelector(".navigation-sublist-group");
                 if (navigationSublistGroup) {
-                    navigationSublistGroup.style.display = "none";
+                    navigationSublistGroup.style.display = "block";
                 }
         
                 const navigationSublistContent = currentItem.querySelector(".navigation-sublist__item-content");
                 if (navigationSublistContent) {
+                    subListItems.forEach(item => {
+                        item.style.display = "flex";
+                        item.querySelector("a").style.display = "block";
+                        item.querySelector("img").style.display = "block";
+                        item.style.borderBottom = "1px solid #F1F1F1";
+                        item.style.paddingBottom = "14px";
+                    });
                     navigationSublistContent.style.display = "none";
                 }
         
@@ -193,6 +200,9 @@ const toggleSubMenu = () => {
                     sidebarTop.style.marginBottom = "30px";
                     sidebarTopAddress.style.display = "block";
                     listItems.forEach(item => {
+                        item.style.display = "flex";
+                        item.style.borderBottom = "1px solid #F1F1F1";
+                        item.style.paddingBottom = "14px";
                         const itemAnchor = item.querySelector("a");
                         const itemIconArrow = item.querySelector(".icon-arrow");
                         if (itemAnchor && itemIconArrow) {
@@ -206,7 +216,7 @@ const toggleSubMenu = () => {
                     });
                 }
             }
-        };
+        };        
         
         sidebarBackBtn.addEventListener('click', handleBackButtonClick);
         

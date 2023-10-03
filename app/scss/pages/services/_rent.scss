@@ -81,3 +81,17 @@
         margin-bottom: 90px;
     }
  }
+
+ @media (max-width: 600px) {
+    .services-rent {
+        &__dealer {
+            margin-bottom: 0;
+            &-wrapper {
+                width: 100%;
+            }
+        }
+        &__promotions {
+            margin-bottom: 40px;
+        }
+    }
+ }

@@ -3549,6 +3549,17 @@ body {
   margin-bottom: 90px;
 }
 
+@media (max-width: 600px) {
+  .services-rent__dealer {
+    margin-bottom: 0;
+  }
+  .services-rent__dealer-wrapper {
+    width: 100%;
+  }
+  .services-rent__promotions {
+    margin-bottom: 40px;
+  }
+}
 .news .pagintions .first-title {
   margin-bottom: 30px;
 }
@@ -4070,7 +4081,7 @@ body {
 }
 .header {
   top: 0;
-  z-index: 3;
+  z-index: 4;
   position: sticky;
   background: white;
   margin-bottom: 25px;
@@ -4520,7 +4531,7 @@ body {
   }
   .block-contact__text-dark,
   .block-contact__text-light {
-    font-size: 11px;
+    font-size: 14px;
   }
   .header__top-right-block {
     width: 450px;

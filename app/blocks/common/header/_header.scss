@@ -1,6 +1,6 @@
 .header {
     top: 0;
-    z-index: 3;
+    z-index: 4;
     position: sticky;
     background: $white;
     margin-bottom: 25px;
@@ -544,7 +544,7 @@
 
     .block-contact__text-dark,
     .block-contact__text-light {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .header__top-right-block {
