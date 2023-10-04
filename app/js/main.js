@@ -132,7 +132,8 @@ const toggleSubMenu = () => {
     const sidebarBackBtn = sidebarBack.querySelector(".sidebar__back-btn");
   
     let menuStack = [];
-  
+    sidebarBack.style.display = "none"
+
     if (window.innerWidth <= 1080) {
         const handleMenuItemClick = (event, clickedItem, subListToShow, menu) => {
             if (clickedItem.querySelector(subListToShow)) {
@@ -154,6 +155,7 @@ const toggleSubMenu = () => {
                         clickedItem.style.borderBottom = "none";
                         clickedItem.querySelector(subListToShow).style.display = "block";
                         menuStack.push(item);
+                        sidebarBack.style.display = "block"
                     }
                 }); 
     
@@ -201,6 +203,7 @@ const toggleSubMenu = () => {
                     sidebarTopTel.style.display = "flex";
                     sidebarTop.style.marginBottom = "30px";
                     sidebarTopAddress.style.display = "block";
+                    sidebarBack.style.display = "none"
                     listItems.forEach(item => {
                         item.style.display = "flex";
                         item.style.borderBottom = "1px solid #F1F1F1";
