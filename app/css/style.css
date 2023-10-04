@@ -4666,6 +4666,14 @@ body {
     display: none;
   }
 }
+@media (max-width: 1080px) {
+  .navigation-list__item:hover .navigation-sublist-group {
+    display: none;
+  }
+  .navigation-sublist__item:hover .navigation-sublist__item-content {
+    display: none;
+  }
+}
 .footer {
   background: #152A53;
   padding: 52px 0 30px;
