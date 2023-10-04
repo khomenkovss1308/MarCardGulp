@@ -121,6 +121,8 @@ const toggleText = () => {
 const toggleSubMenu = () => {
     const listItems = document.querySelectorAll(".navigation-list__item");
     const subListItems = document.querySelectorAll(".navigation-sublist__item");
+    const contentLinks = document.querySelectorAll(".navigation-sublist__item-content_link");
+    const carsItems = document.querySelectorAll(".navigation-sublist__item-content_cars-item");
     const titleName = document.querySelector(".sidebar__navigation-title");
     const sidebarBottom = document.querySelector(".sidebar__bottom");
     const sidebarTopTel = document.querySelector(".sidebar__group-tel");
@@ -128,20 +130,20 @@ const toggleSubMenu = () => {
     const sidebarTop = document.querySelector(".sidebar__top");
     const sidebarBack = document.querySelector(".sidebar__back");
     const sidebarBackBtn = sidebarBack.querySelector(".sidebar__back-btn");
-
+  
     let menuStack = [];
-
+  
     if (window.innerWidth <= 1080) {
         const handleMenuItemClick = (event, clickedItem, subListToShow, menu) => {
             if (clickedItem.querySelector(subListToShow)) {
                 event.preventDefault();
                 event.stopPropagation();
-
+        
                 sidebarBottom.style.display = "none";
                 sidebarTopTel.style.display = "none";
                 sidebarTopAddress.style.display = "none";
                 sidebarTop.style.marginBottom = "0";
-
+    
                 menu.forEach(function (item) {
                     if (item !== clickedItem) {
                         item.style.display = "none";
@@ -153,12 +155,12 @@ const toggleSubMenu = () => {
                         clickedItem.querySelector(subListToShow).style.display = "block";
                         menuStack.push(item);
                     }
-                });
-
+                }); 
+    
                 titleName.textContent = clickedItem.querySelector("a").textContent;
-            };
+            }
         };
-
+  
         const handleBackButtonClick = () => {
             if (menuStack.length > 0) {
                 const currentItem = menuStack.pop();
@@ -171,22 +173,22 @@ const toggleSubMenu = () => {
                     item.style.borderBottom = "1px solid #F1F1F1";
                     item.style.paddingBottom = "14px";
                 });
-        
+  
                 if (anchor && iconArrow) {
                     anchor.style.display = "block";
                     iconArrow.style.display = "block";
                 }
-        
+  
                 const navigationSublistGroup = currentItem.querySelector(".navigation-sublist-group");
                 if (navigationSublistGroup) {
                     navigationSublistGroup.style.display = "block";
                 }
-        
+  
                 const navigationSublistContent = currentItem.querySelector(".navigation-sublist__item-content");
                 if (navigationSublistContent) {
                     navigationSublistContent.style.display = "none";
                 }
-        
+  
                 if (menuStack.length > 0) {
                     const previousItem = menuStack[menuStack.length - 1];
                     const prevAnchor = previousItem.querySelector("a");
@@ -217,21 +219,35 @@ const toggleSubMenu = () => {
                 }
             }
         };        
-        
+  
+        const handleCarsItemClick = (event, carsItem) => {
+            event.stopPropagation();
+        };
+  
         sidebarBackBtn.addEventListener('click', handleBackButtonClick);
-        
-
+    
         listItems.forEach(function (item) {
             item.addEventListener("click", function (event) {
-                // event.stopPropagation();
                 handleMenuItemClick(event, item, '.navigation-sublist-group', listItems);
             });
         });
-
+  
         subListItems.forEach(function (submenuItem) {
             submenuItem.addEventListener("click", function (event) {
                 event.stopPropagation();
                 handleMenuItemClick(event, submenuItem, '.navigation-sublist__item-content', subListItems);
+            });
+        });
+
+        carsItems.forEach(function (carsItem) {
+            carsItem.addEventListener("click", function (event) {
+                handleCarsItemClick(event, carsItem);
+            });
+        });
+
+        contentLinks.forEach(function (link) {
+            link.addEventListener("click", function (event) {
+                event.stopPropagation();
             });
         });
     }
