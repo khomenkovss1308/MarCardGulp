@@ -1,4 +1,4 @@
-.dropdown__wrapper{
+.dropdown__wrapper {
     position: fixed;
     top: 0;
     right: 0;
@@ -7,7 +7,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 4;
-    background-color: rgb(0,0,0,0.35);
+    background-color: rgb(0, 0, 0, 0.35);
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease;
@@ -410,18 +410,25 @@
     }
 }
 
-#dropdown-1 {
-    width: 451px;
+.dropdown-chooseCity {
+    .dropdown-content {
+        width: 451px;
 
-    .dropdown-content__header {
-        margin-bottom: 5px;
+        &__header {
+            margin-bottom: 5px;
+        }
     }
 }
 
-#dropdown-3,
-#dropdown-4,
-#dropdown-5 {
-    width: 445px;
+
+
+.dropdown-order,
+.dropdown-carRental,
+.dropdown-carRegistration {
+
+    .dropdown-content{
+        width: 445px;
+    }
 
     .dropdown-content__header_title {
         width: 345px;
@@ -438,7 +445,7 @@
 }
 
 
-#dropdown-5 {
+.dropdown-carRegistration {
     .dropdown-content__header_title {
         margin-bottom: 10px;
     }
@@ -448,9 +455,12 @@
     }
 }
 
-#dropdown-6,
-#dropdown-7 {
-    width: 445px;
+.dropdown-ratesDetails,
+.dropdown-feedback {
+
+    .dropdown-content{
+        width: 445px;
+    }
 
     .dropdown-content__header_title {
         color: #248FEC;
@@ -464,11 +474,14 @@
     }
 }
 
-@media (max-height: 700px) and (min-width: 680px){
-    #dropdown-2 {
-        max-height: 85vh;
-        overflow: scroll;
-        .dropdown-content__list-auto{
+@media (max-height: 700px) and (min-width: 680px) {
+    .dropdown-search {
+        .dropdown-content{
+            max-height: 85vh;
+            overflow: scroll;
+        }
+
+        .dropdown-content__list-auto {
             height: auto;
         }
     }
@@ -480,7 +493,7 @@
     }
 }
 
-@media (max-width: 680px){
+@media (max-width: 680px) {
     .dropdown-content {
         padding: 15px;
         width: 100% !important;

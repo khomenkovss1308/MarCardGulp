@@ -5450,62 +5450,62 @@ body {
   display: flex;
 }
 
-#dropdown-1 {
+.dropdown-chooseCity .dropdown-content {
   width: 451px;
 }
-#dropdown-1 .dropdown-content__header {
+.dropdown-chooseCity .dropdown-content__header {
   margin-bottom: 5px;
 }
 
-#dropdown-3,
-#dropdown-4,
-#dropdown-5 {
+.dropdown-order .dropdown-content,
+.dropdown-carRental .dropdown-content,
+.dropdown-carRegistration .dropdown-content {
   width: 445px;
 }
-#dropdown-3 .dropdown-content__header_title,
-#dropdown-4 .dropdown-content__header_title,
-#dropdown-5 .dropdown-content__header_title {
+.dropdown-order .dropdown-content__header_title,
+.dropdown-carRental .dropdown-content__header_title,
+.dropdown-carRegistration .dropdown-content__header_title {
   width: 345px;
   font-size: 30px;
 }
-#dropdown-3 .dropdown-content__input,
-#dropdown-4 .dropdown-content__input,
-#dropdown-5 .dropdown-content__input {
+.dropdown-order .dropdown-content__input,
+.dropdown-carRental .dropdown-content__input,
+.dropdown-carRegistration .dropdown-content__input {
   margin-bottom: 10px;
   padding: 13px 18px;
   border: 1px solid #EDEDED;
   background-color: #FAFAFA;
 }
 
-#dropdown-5 .dropdown-content__header_title {
+.dropdown-carRegistration .dropdown-content__header_title {
   margin-bottom: 10px;
 }
-#dropdown-5 .dropdown-content__header {
+.dropdown-carRegistration .dropdown-content__header {
   margin-bottom: 30px;
 }
 
-#dropdown-6,
-#dropdown-7 {
+.dropdown-ratesDetails .dropdown-content,
+.dropdown-feedback .dropdown-content {
   width: 445px;
 }
-#dropdown-6 .dropdown-content__header_title,
-#dropdown-7 .dropdown-content__header_title {
+.dropdown-ratesDetails .dropdown-content__header_title,
+.dropdown-feedback .dropdown-content__header_title {
   color: #248FEC;
   font-size: 15px;
   font-weight: 700;
   line-height: 20px;
 }
-#dropdown-6 .dropdown-content__header,
-#dropdown-7 .dropdown-content__header {
+.dropdown-ratesDetails .dropdown-content__header,
+.dropdown-feedback .dropdown-content__header {
   margin-bottom: 15px;
 }
 
 @media (max-height: 700px) and (min-width: 680px) {
-  #dropdown-2 {
+  .dropdown-search .dropdown-content {
     max-height: 85vh;
     overflow: scroll;
   }
-  #dropdown-2 .dropdown-content__list-auto {
+  .dropdown-search .dropdown-content__list-auto {
     height: auto;
   }
 }
