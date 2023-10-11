@@ -2,7 +2,7 @@
     <div class="header__top">
         <div class="header__wrapper wrapper">
             <div class="header__top-left-block">
-                <div class="header__top-left-block-city" onclick="toggleDropdown(1)">
+                <div class="header__top-left-block-city" onclick="findModal('chooseCity')">
                     <p class="header__top-left-block-city__text">Укажите Ваш город</p>
                     <p class="header__top-left-block-city__select">Санкт-Петербург</p>
                 </div>
@@ -16,7 +16,7 @@
                         <p class="block-contact__text-default">09:00-21:00</p>
                     </div>
                 </div>
-                <button class="header__top-left-block-btn-search" onclick="toggleDropdown(2)">
+                <button class="header__top-left-block-btn-search" onclick="findModal('search')">
                     <svg xmlns="http://www.w3.org/2000/svg" class="header__top-left-block-btn-search__icon" viewBox="0 0 20 20" fill="none">
                         <g clip-path="url(#clip0_875_6094)">
                             <path d="M18.9227 17.7441L14.1933 13.0148C15.2574 11.6867 15.836 10.0351 15.8333 8.33331C15.8333 4.19123 12.4756 0.833313 8.33331 0.833313C4.19123 0.833313 0.833313 4.19123 0.833313 8.33331C0.833313 12.4754 4.19123 15.8333 8.33331 15.8333C10.1041 15.8333 11.7316 15.2196 13.0148 14.1931L17.7441 18.9225C17.8214 19 17.9133 19.0614 18.0144 19.1033C18.1155 19.1452 18.2239 19.1668 18.3333 19.1666C18.4981 19.1667 18.6592 19.1178 18.7963 19.0262C18.9333 18.9347 19.0401 18.8045 19.1032 18.6523C19.1663 18.5 19.1828 18.3325 19.1507 18.1708C19.1186 18.0092 19.0392 17.8607 18.9227 17.7441ZM8.33331 14.1666C5.11165 14.1666 2.49998 11.555 2.49998 8.33331C2.49998 5.11165 5.11165 2.49998 8.33331 2.49998C11.5552 2.49998 14.1666 5.11165 14.1666 8.33331C14.1666 11.555 11.5552 14.1666 8.33331 14.1666Z" fill="#248FEC"/>
@@ -1985,7 +1985,7 @@
         <div class="header__mobile-container">
             <ul class="header__mobile-list">
                 <li class="header__mobile-list__item">
-                    <button class="header__mobile-list__item-btn" onclick="toggleDropdown(2)">
+                    <button class="header__mobile-list__item-btn" onclick="findModal('search')">
                         <img src="images/icons/default/searchBlack.svg" alt="">
                     </button>
                     <button class="header__mobile-list__item-btn">

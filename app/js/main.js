@@ -12,54 +12,27 @@ const sidebarFunctioning = () => {
     });
 }
 
-const toggleDropdown = (dropdownId) => {
-    let dropdown = document.getElementById("dropdown-" + dropdownId);
-    let header = document.querySelector(".header");
-    let dropdownWrapper = dropdown.previousSibling.previousSibling;
 
-    if (dropdown.classList.contains("active")) {
-        closeDropdown(dropdownId);
-    } else {
-        let activeDropdown = document.querySelector(".dropdown-content.active");
-        
-        if (activeDropdown) {
-            closeDropdown(activeDropdown.id.split("-")[1]);
-        }
-    
-        dropdown.classList.add("active");
-        header.classList.add("dropdown-active");
-        dropdownWrapper.style.visibility = 'visible';
-        dropdownWrapper.style.opacity = '1';
+const findModal = (modalName) => {
+    const dropdown = document.querySelector(`.dropdown-${modalName}`);
+    const dropdownContent = dropdown.querySelector('.dropdown-content')
+    if (dropdownContent) {
+        toggleDropdown(dropdownContent);
     }
-};
-
-const closeDropdown = (dropdownId) => {
-    let dropdown = document.getElementById("dropdown-" + dropdownId);
-    let header = document.querySelector(".header");
-    let dropdownWrapper = dropdown.previousSibling.previousSibling;
-
-    dropdown.classList.remove("active");
-    header.classList.remove("dropdown-active");
-    dropdownWrapper.style.visibility = 'hidden';
-    dropdownWrapper.style.opacity = '0';
-};
-
-document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
-    dropdown.addEventListener('click', () => {
-        closeDropdown(dropdown.id.split("-")[1]);
-    });
-});
-
-const closeDropdownByWrapper = (dropdownId) => {
-    let dropdown = document.getElementById("dropdown-" + dropdownId);
-    let header = document.querySelector(".header");
-    let dropdownWrapper = dropdown.previousSibling.previousSibling;
-
-    dropdown.classList.remove("active");
-    header.classList.remove("dropdown-active");
-    dropdownWrapper.style.visibility = 'hidden';
-    dropdownWrapper.style.opacity = '0';
 }
+
+const toggleDropdown = (dropdown) => {
+    const dropdownWrapper = dropdown.previousSibling.previousSibling;
+
+    if (!dropdown.classList.contains("active")){
+        dropdown.classList.add("active");
+        dropdownWrapper.style.cssText = 'visibility: visible; opacity: 1';
+    } else {
+        dropdown.classList.remove("active");
+        dropdownWrapper.style.cssText = 'visibility: hidden; opacity: 0';
+    }
+}
+
 
 const videPlayer = (videoContainers, video) => {
     const VIDEOCONTAINERS = document.querySelectorAll(videoContainers);
@@ -130,7 +103,7 @@ const toggleSubMenu = () => {
     const sidebarTop = document.querySelector(".sidebar__top");
     const sidebarBack = document.querySelector(".sidebar__back");
     const sidebarBackBtn = sidebarBack.querySelector(".sidebar__back-btn");
-  
+
     let menuStack = [];
     sidebarBack.style.display = "none"
 
@@ -139,12 +112,12 @@ const toggleSubMenu = () => {
             if (clickedItem.querySelector(subListToShow)) {
                 event.preventDefault();
                 event.stopPropagation();
-        
+
                 sidebarBottom.style.display = "none";
                 sidebarTopTel.style.display = "none";
                 sidebarTopAddress.style.display = "none";
                 sidebarTop.style.marginBottom = "0";
-    
+
                 menu.forEach(function (item) {
                     if (item !== clickedItem) {
                         item.style.display = "none";
@@ -157,12 +130,12 @@ const toggleSubMenu = () => {
                         menuStack.push(item);
                         sidebarBack.style.display = "block"
                     }
-                }); 
-    
+                });
+
                 titleName.textContent = clickedItem.querySelector("a").textContent;
             }
         };
-  
+
         const handleBackButtonClick = () => {
             if (menuStack.length > 0) {
                 const currentItem = menuStack.pop();
@@ -175,22 +148,22 @@ const toggleSubMenu = () => {
                     item.style.borderBottom = "1px solid #F1F1F1";
                     item.style.paddingBottom = "14px";
                 });
-  
+
                 if (anchor && iconArrow) {
                     anchor.style.display = "block";
                     iconArrow.style.display = "block";
                 }
-  
+
                 const navigationSublistGroup = currentItem.querySelector(".navigation-sublist-group");
                 if (navigationSublistGroup) {
                     navigationSublistGroup.style.display = "block";
                 }
-  
+
                 const navigationSublistContent = currentItem.querySelector(".navigation-sublist__item-content");
                 if (navigationSublistContent) {
                     navigationSublistContent.style.display = "none";
                 }
-  
+
                 if (menuStack.length > 0) {
                     const previousItem = menuStack[menuStack.length - 1];
                     const prevAnchor = previousItem.querySelector("a");
@@ -221,20 +194,20 @@ const toggleSubMenu = () => {
                     });
                 }
             }
-        };        
-  
+        };
+
         const handleCarsItemClick = (event, carsItem) => {
             event.stopPropagation();
         };
-  
+
         sidebarBackBtn.addEventListener('click', handleBackButtonClick);
-    
+
         listItems.forEach(function (item) {
             item.addEventListener("click", function (event) {
                 handleMenuItemClick(event, item, '.navigation-sublist-group', listItems);
             });
         });
-  
+
         subListItems.forEach(function (submenuItem) {
             submenuItem.addEventListener("click", function (event) {
                 event.stopPropagation();
@@ -328,12 +301,12 @@ const compareContentWidth = () => {
 }
 
 const setWrapperCompareWidth = () => {
-    if ( window.innerWidth < 1660 ) {
+    if (window.innerWidth < 1660) {
         const breadcrumbsWrapper = document.querySelector('.breadcrumbs.wrapper');
         const wrapperCompare = document.querySelector('.wrapper-compare');
         const screenWidth = window.innerWidth;
 
-        if (wrapperCompare){
+        if (wrapperCompare) {
             wrapperCompare.style.width = `${breadcrumbsWrapper.offsetWidth + (screenWidth-breadcrumbsWrapper.offsetWidth) / 2}px`;
         }
 
