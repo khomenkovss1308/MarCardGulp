@@ -1,201 +1,129 @@
 <form action="" class="main-filter wrapper">
     <div class="main-filter__content">
+
         <div class="select">
             <div class="select-btn">
                 <span class="btn-text">Марка автомобиля</span>
                 <img src="images/icons/default/arrowSelectBlue.svg" alt="" class="arrow-dwn">
             </div>
-            <ul class="list-items">
-                <li class="item">
-                    <span class="item-text">Alfa Romeo</span>
-                </li>
-                <li class="item">
-                    <span class="item-text">Cadillac</span>
-                </li>
-                <li class="item">
-                    <span class="item-text">Changan</span>
-                </li>
-                <li class="item">
-                    <span class="item-text">Datsun</span>
-                </li>
-                <li class="item">
-                    <span class="item-text">Hyundai</span>
-                </li>
-                <li class="item">
-                    <span class="item-text">Kia</span>
-                </li>
-                <li class="item">
-                    <span class="item-text">Lexus</span>
-                </li>
-                <li class="item">
-                    <span class="item-text">Mercedes-Benz</span>
-                </li>
-                <li class="item">
-                    <span class="item-text">Toyota</span>
-                </li>
-            </ul>
+            <select class="list-items">
+                <option value="" disabled selected>Марка автомобиля</option>
+                <option class="item" value="Alfa Romeo">Alfa Romeo</option>
+                <option class="item" value="Cadillac">Cadillac</option>
+                <option class="item" value="Changan">Changan</option>
+                <option class="item" value="Datsun">Datsun</option>
+                <option class="item" value="Hyundai">Hyundai</option>
+                <option class="item" value="Kia">Kia</option>
+                <option class="item" value="Lexus">Lexus</option>
+                <option class="item" value="Mercedes-Benz">Mercedes-Benz</option>
+                <option class="item" value="Toyota">Toyota</option>
+            </select>
         </div>
 
-        <div class="select">
+        <div class="select select--checkbox">
             <div class="select-btn">
                 <span class="btn-text">Модель автомобиля</span>
                 <img src="images/icons/default/arrowSelectBlue.svg" alt="" class="arrow-dwn">
             </div>
-            <ul class="list-items">
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Купе</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Кабриолет</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Внедорожник 3 дв.</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Внедорожник 5 дв.</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Лифтбек</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Иное наименование</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Иное наименование</span>
-                </li>
-            </ul>
+            <select class="list-items">
+                <option value="" disabled selected>Модель автомобиля</option>
+                <option class="item" value="Compartment">
+                    Купе
+                </option>
+                <option class="item" value="Convertible">
+                    Кабриолет
+                </option>
+                <option class="item" value="OffRoadVehicle3">
+                    Внедорожник 3 дв.
+                </option>
+                <option class="item" value="OffRoadVehicle5">
+                    Внедорожник 5 дв.
+                </option>
+                <option class="item" value="Liftback">
+                    Лифтбек
+                </option>
+                <option class="item" value="Other">
+                    Иное наименование
+                </option>
+            </select>
         </div>
-        
-        <div class="select hidden">
+
+        <div class="select select--checkbox hidden">
             <div class="select-btn">
                 <span class="btn-text">Тип кузова</span>
                 <img src="images/icons/default/arrowSelectBlue.svg" alt="" class="arrow-dwn">
             </div>
-            <ul class="list-items">
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Купе</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Кабриолет</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Внедорожник 3 дв.</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Внедорожник 5 дв.</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Лифтбек</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Иное наименование</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Иное наименование</span>
-                </li>
-            </ul>
+            <select class="list-items">
+                <option value="" disabled selected>Тип кузова</option>
+                <option class="item" value="Compartment">
+                    Купе
+                </option>
+                <option class="item" value="Convertible">
+                    Кабриолет
+                </option>
+                <option class="item" value="OffRoadVehicle3">
+                    Внедорожник 3 дв.
+                </option>
+                <option class="item" value="OffRoadVehicle5">
+                    Внедорожник 5 дв.
+                </option>
+                <option class="item" value="Liftback">
+                    Лифтбек
+                </option>
+                <option class="item" value="Other">
+                    Иное наименование
+                </option>
+            </select>
         </div>
-        
-        <div class="select hidden">
+
+        <div class="select select--checkbox hidden">
             <div class="select-btn">
                 <span class="btn-text">Коробка передач</span>
                 <img src="images/icons/default/arrowSelectBlue.svg" alt="" class="arrow-dwn">
             </div>
-            <ul class="list-items">
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Автоматическая</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Механическая</span>
-                </li>
-            </ul>
+            <select class="list-items">
+                <option value="" disabled selected>Коробка передач</option>
+                <option class="item" value="Automatic">
+                    Автоматическая
+                </option>
+                <option class="item" value="Mechanical">
+                    Механическая
+                </option>
+            </select>
         </div>
-        
-        <div class="select hidden">
+
+        <div class="select select--checkbox hidden">
             <div class="select-btn">
                 <span class="btn-text">Тип привода</span>
                 <img src="images/icons/default/arrowSelectBlue.svg" alt="" class="arrow-dwn">
             </div>
-            <ul class="list-items">
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Передний</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Задний</span>
-                </li>
-                <li class="item">
-                    <span class="checkbox">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="item-text">Полный</span>
-                </li>
-            </ul>
+            <select class="list-items">
+                <option value="" disabled selected>Тип привода</option>
+                <option class="item" value="Front">
+                    Передний
+                </option>
+                <option class="item" value="Back">
+                    Задний
+                </option>
+                <option class="item" value="Full">
+                    Полный
+                </option>
+            </select>
         </div>
+
         
         <div class="input-group hidden">
             <input type="text" placeholder="Цена от" class="input-default main-filter__input">
             <input type="text" placeholder="Цена до" class="input-default main-filter__input">
         </div>
-        
+
         <div class="input-group hidden">
             <input type="text" placeholder="Объем от" class="input-default main-filter__input">
             <input type="text" placeholder="Объем до" class="input-default main-filter__input">
         </div>
+
     </div>
+
     <div class="main-filter__bottom">
         <div class="main-filter__btn-group">
             <button class="main-filter__btn">

@@ -24,6 +24,7 @@
         &::-ms-expand {
             display: none;
         }
+
         & option {
             color: $main-black;
             font-size: 15px;
@@ -31,6 +32,7 @@
             line-height: 16px;
             transition: all .5s;
             outline: none;
+
             &:hover {
                 color: $main-blue;
                 background: transparent;
@@ -41,6 +43,7 @@
                 color: $main-blue;
                 background-color: transparent;
             }
+
             &:focus {
                 outline: none;
             }
@@ -48,12 +51,13 @@
     }
 }
 
-.select{
+.select {
     position: relative;
     max-width: 100%;
     width: 100%;
 }
-.select-btn{
+
+.select-btn {
     display: flex;
     cursor: pointer;
     padding: 17px 20px;
@@ -63,23 +67,33 @@
     border: 1px solid #DFDFDF;
     transition: all .5s;
 }
-.select-btn .btn-text{
+
+.select-btn .btn-text {
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
     color: $deep-gray;
 }
-.select-btn .arrow-dwn{
+
+.select-btn .arrow-dwn {
     width: 14px;
     height: 14px;
     object-fit: cover;
     transition: all .5s;
 }
-.select-btn.open .arrow-dwn{
+
+.select-btn.open .arrow-dwn {
     transform: rotate(-180deg);
 }
 
-.list-items{
+.select.select--checked .btn-text{
+    color: #248FEC;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.list-items {
     width: 100%;
     z-index: 2;
     position: absolute;
@@ -91,7 +105,7 @@
     display: none;
     scrollbar-width: thin;
     scrollbar-color: $main-blue transparent;
-    
+
     &::-webkit-scrollbar {
         width: 5px;
     }
@@ -111,12 +125,12 @@
     }
 }
 
-.select-btn.open ~ .list-items{
+.select-btn.open~.list-items {
     padding: 15px 20px;
     display: block;
 }
 
-.list-items .item{
+.list-items .item {
     display: flex;
     align-items: center;
     list-style: none;
@@ -126,7 +140,7 @@
     border-radius: 8px;
 }
 
-.item .item-text{
+.item .item-text {
     color: #000;
     font-size: 14px;
     font-weight: 400;
@@ -139,14 +153,14 @@
         color: $sub-blue;
     }
 
-    & .checkbox{
+    & .checkbox {
         border-radius: 2px;
         border: 1px solid $sub-blue;
         background: rgba(217, 217, 217, 0.00);
     }
 }
 
-.item .checkbox{
+.item .checkbox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,20 +173,21 @@
     transition: all .3s;
 }
 
-.item.checked .checkbox{
+.item.checked .checkbox {
     border-radius: 2px;
     border: 1px solid $sub-blue;
     background-color: rgba(217, 217, 217, 0.00);
 }
 
-.checkbox .check-icon{
+.checkbox .check-icon {
     width: 8px;
     height: 9px;
     background-color: $main-blue;
     transform: scale(0);
     transition: all 0.2s ease-in-out;
 }
-.item.checked .check-icon{
+
+.item.checked .check-icon {
     transform: scale(1);
 }
 

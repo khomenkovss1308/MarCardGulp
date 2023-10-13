@@ -1122,6 +1122,13 @@ body {
   transform: rotate(-180deg);
 }
 
+.select.select--checked .btn-text {
+  color: #248FEC;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 .list-items {
   width: 100%;
   z-index: 2;
