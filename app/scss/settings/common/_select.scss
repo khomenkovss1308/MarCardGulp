@@ -73,6 +73,7 @@
     font-weight: 400;
     line-height: 16px;
     color: $deep-gray;
+    transition: all .3s;
 }
 
 .select-btn .arrow-dwn {
@@ -91,6 +92,10 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
+}
+
+.select.select--checked .select-btn{
+    border: 1px solid #248FEC;
 }
 
 .list-items {

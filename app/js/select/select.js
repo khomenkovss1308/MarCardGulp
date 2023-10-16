@@ -33,6 +33,28 @@ function createSelect(selectElement) {
     });
 }
 
+// Переключение класса .select--checked
+function toggleSelectChecked(selectElement, selectedValues) {
+    const parentElement = selectElement.parentElement; // Получаем родительский элемент
+
+    // Находим все элементы с классом .select внутри родителя
+    const selectElements = parentElement.querySelectorAll('.select');
+
+    // Находим индекс текущего элемента
+    const currentIndex = Array.from(selectElements).indexOf(selectElement);
+
+    // Выбираем элемент, который находится выше текущего
+    const siblingSelect = selectElements[currentIndex - 1];
+
+    if (siblingSelect) {
+        if (selectedValues.length > 0) {
+            siblingSelect.classList.add('select--checked');
+        } else {
+            siblingSelect.classList.remove('select--checked');
+        }
+    }
+}
+
 // Создание элемента "выбрать" в выпадающем списке
 function createNewSelect(selectElement, iconSrc) {
     const newSelect = document.createElement('div');
@@ -83,31 +105,30 @@ function createSelectItem(selectElement, option, selectedValues, selectItems, se
     newSelectItem.appendChild(span);
     newSelectItem.setAttribute('data-value', option.value);
 
-
     newSelectItem.addEventListener('click', function (event) {
         const value = option.value;
 
         if (!newSelectItem.classList.contains('checked')) {
             newSelectItem.classList.add('checked');
+            selectedValues.push(value); // Добавляем значение в массив
         } else {
             newSelectItem.classList.remove('checked');
+            const index = selectedValues.indexOf(value);
+            if (index !== -1) {
+                selectedValues.splice(index, 1); // Удаляем значение из массива
+            }
         }
 
         if (!selectElement.classList.contains('select--checkbox')) {
-            selectedValues = [value];
             selectItems.forEach(item => {
                 if (item !== newSelectItem) {
                     item.classList.remove('checked');
                 }
             });
             updateSelectHeadText(selectHead, selectedValues, selectElement, selectOptions);
-        } else {
-            if (selectedValues.includes(value)) {
-                selectedValues = selectedValues.filter(val => val !== value);
-            } else {
-                selectedValues.push(value);
-            }
         }
+
+        toggleSelectChecked(selectElement, selectedValues);
     });
 
     return newSelectItem;
@@ -120,9 +141,6 @@ function createCheckbox() {
     checkbox.className = 'checkbox';
     checkboxI.className = 'fa-solid fa-check check-icon';
     checkbox.appendChild(checkboxI);
-    checkbox.addEventListener('click', function (event) {
-        event.stopPropagation();
-    });
     return checkbox;
 }
 
