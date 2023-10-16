@@ -1109,6 +1109,7 @@ body {
   font-weight: 400;
   line-height: 16px;
   color: #969696;
+  transition: all 0.3s;
 }
 
 .select-btn .arrow-dwn {
@@ -1120,6 +1121,17 @@ body {
 
 .select-btn.open .arrow-dwn {
   transform: rotate(-180deg);
+}
+
+.select.select--checked .btn-text {
+  color: #248FEC;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.select.select--checked .select-btn {
+  border: 1px solid #248FEC;
 }
 
 .list-items {
