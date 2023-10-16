@@ -164,16 +164,26 @@ function toggleSelect(selectHead, selectList) {
 
 // Обновление текста в заголовке выпадающего списка
 function updateSelectHeadText(selectHead, selectedValues, selectElement, selectOptions) {
-    if (selectedValues.length > 0) {
-        const selectedTexts = selectedValues.map(value => {
-            const option = Array.from(selectOptions).find(opt => opt.value === value);
-            return option ? option.textContent : value;
-        });
-        selectHead.querySelector('.btn-text').textContent = selectedTexts.join(', ');
+    if (!selectElement.classList.contains('select--checkbox')) {
+        const checkedItem = selectHead.nextElementSibling.querySelector('.item.checked');
+        if (checkedItem) {
+            selectHead.querySelector('.btn-text').textContent = checkedItem.textContent;
+        } else {
+            selectHead.querySelector('.btn-text').textContent = selectElement.querySelector('option:disabled').textContent;
+        }
     } else {
-        selectHead.querySelector('.btn-text').textContent = selectElement.querySelector('option:disabled').textContent;
+        if (selectedValues.length > 0) {
+            const selectedTexts = selectedValues.map(value => {
+                const option = Array.from(selectOptions).find(opt => opt.value === value);
+                return option ? option.textContent : value;
+            });
+            selectHead.querySelector('.btn-text').textContent = selectedTexts.join(', ');
+        } else {
+            selectHead.querySelector('.btn-text').textContent = selectElement.querySelector('option:disabled').textContent;
+        }
     }
 }
+
 
 let currentOpenSelect = null;
 
