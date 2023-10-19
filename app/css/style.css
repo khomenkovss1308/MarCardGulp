@@ -1092,6 +1092,9 @@ body {
   max-width: 100%;
   width: 100%;
 }
+.select--disabled {
+  opacity: 0.5;
+}
 
 .select-btn {
   display: flex;

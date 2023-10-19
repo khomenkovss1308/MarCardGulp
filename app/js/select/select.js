@@ -2,7 +2,7 @@
 function createSelect(selectElement) {
     const selectOptions = selectElement.querySelectorAll('option');
     const selectOptionLength = selectOptions.length;
-    const iconSrc = 'images/icons/default/arrowSelectBlue.svg';
+    const iconSrc = selectElement.querySelector('img').src;
 
     selectElement.style.display = 'none';
     const selectWrapper = document.createElement('div');
@@ -20,30 +20,35 @@ function createSelect(selectElement) {
     let selectedValues = [];
     const selectItems = [];
 
-    for (let i = 1; i < selectOptionLength; i++) {
-        const newSelectItem = createSelectItem(selectElement, selectOptions[i], selectedValues, selectItems, selectHead, selectElement, selectOptions);
-        selectList.appendChild(newSelectItem);
-        selectItems.push(newSelectItem); // Добавляем элемент в массив selectItems
+    if (selectOptionLength < 2 || selectWrapper.classList.contains('select--models')) {
+        selectWrapper.classList.add('select--disabled');
+    } else {
+        for (let i = 1; i < selectOptionLength; i++) {
+            const newSelectItem = createSelectItem(selectElement, selectOptions[i], selectedValues, selectItems, selectHead);
+            selectList.appendChild(newSelectItem);
+            selectItems.push(newSelectItem);
+        }
     }
+
 
     selectList.style.display = 'none';
 
-    selectHead.addEventListener('click', function () {
-        toggleSelect(selectHead, selectList);
+    if (!selectWrapper.classList.contains('select--disabled')) {
+        selectHead.addEventListener('click', function () {
+            toggleSelect(selectHead, selectList);
+        });
+    }
+
+    document.querySelector('.main-filter__btn--reset').addEventListener('click', function () {
+        resetSelectedItems(selectElement, selectHead);
     });
 }
 
 // Переключение класса .select--checked
 function toggleSelectChecked(selectElement, selectedValues) {
-    const parentElement = selectElement.parentElement; // Получаем родительский элемент
-
-    // Находим все элементы с классом .select внутри родителя
+    const parentElement = selectElement.parentElement;
     const selectElements = parentElement.querySelectorAll('.select');
-
-    // Находим индекс текущего элемента
     const currentIndex = Array.from(selectElements).indexOf(selectElement);
-
-    // Выбираем элемент, который находится выше текущего
     const siblingSelect = selectElements[currentIndex - 1];
 
     if (siblingSelect) {
@@ -54,6 +59,7 @@ function toggleSelectChecked(selectElement, selectedValues) {
         }
     }
 }
+
 
 // Создание элемента "выбрать" в выпадающем списке
 function createNewSelect(selectElement, iconSrc) {
@@ -90,7 +96,7 @@ function createSelectList() {
 }
 
 // Создание элемента в выпадающем списке на основе option
-function createSelectItem(selectElement, option, selectedValues, selectItems, selectHead, selectElement, selectOptions) {
+function createSelectItem(selectElement, option, selectedValues, selectItems, selectHead) {
     const newSelectItem = document.createElement('div');
     newSelectItem.className = 'item';
 
@@ -106,26 +112,38 @@ function createSelectItem(selectElement, option, selectedValues, selectItems, se
     newSelectItem.setAttribute('data-value', option.value);
 
     newSelectItem.addEventListener('click', function (event) {
-        const value = option.value;
-
-        if (!newSelectItem.classList.contains('checked')) {
-            newSelectItem.classList.add('checked');
-            selectedValues.push(value); // Добавляем значение в массив
-        } else {
-            newSelectItem.classList.remove('checked');
-            const index = selectedValues.indexOf(value);
-            if (index !== -1) {
-                selectedValues.splice(index, 1); // Удаляем значение из массива
-            }
-        }
 
         if (!selectElement.classList.contains('select--checkbox')) {
-            selectItems.forEach(item => {
-                if (item !== newSelectItem) {
+
+            if (newSelectItem.classList.contains('checked')) {
+                newSelectItem.classList.remove('checked');
+                selectedValues.length = 0;
+            } else {
+                selectItems.forEach(item => {
                     item.classList.remove('checked');
+                });
+
+                newSelectItem.classList.add('checked');
+                selectedValues.length = 0;
+
+                const value = option.value;
+                selectedValues.push(value);
+            }
+
+            updateSelectHeadText(selectHead, selectElement);
+        } else {
+            const value = option.value;
+
+            if (!newSelectItem.classList.contains('checked')) {
+                newSelectItem.classList.add('checked');
+                selectedValues.push(value);
+            } else {
+                newSelectItem.classList.remove('checked');
+                const index = selectedValues.indexOf(value);
+                if (index !== -1) {
+                    selectedValues.splice(index, 1);
                 }
-            });
-            updateSelectHeadText(selectHead, selectedValues, selectElement, selectOptions);
+            }
         }
 
         toggleSelectChecked(selectElement, selectedValues);
@@ -163,7 +181,7 @@ function toggleSelect(selectHead, selectList) {
 }
 
 // Обновление текста в заголовке выпадающего списка
-function updateSelectHeadText(selectHead, selectedValues, selectElement, selectOptions) {
+function updateSelectHeadText(selectHead, selectElement) {
     if (!selectElement.classList.contains('select--checkbox')) {
         const checkedItem = selectHead.nextElementSibling.querySelector('.item.checked');
         if (checkedItem) {
@@ -171,16 +189,24 @@ function updateSelectHeadText(selectHead, selectedValues, selectElement, selectO
         } else {
             selectHead.querySelector('.btn-text').textContent = selectElement.querySelector('option:disabled').textContent;
         }
-    } else {
-        if (selectedValues.length > 0) {
-            const selectedTexts = selectedValues.map(value => {
-                const option = Array.from(selectOptions).find(opt => opt.value === value);
-                return option ? option.textContent : value;
-            });
-            selectHead.querySelector('.btn-text').textContent = selectedTexts.join(', ');
-        } else {
-            selectHead.querySelector('.btn-text').textContent = selectElement.querySelector('option:disabled').textContent;
-        }
+    }
+}
+
+
+function resetSelectedItems(selectElement, selectHead) {
+
+    const selectList = selectElement.previousElementSibling.querySelector('.list-items');
+
+    const selectItems = Array.from(selectList.querySelectorAll('.item.checked'));
+
+    if (selectItems.length > 0) {
+        selectItems.forEach(item => {
+            item.classList.remove('checked');
+        });
+
+        updateSelectHeadText(selectHead, selectElement);
+
+        selectElement.previousElementSibling.classList.remove('select--checked');
     }
 }
 
