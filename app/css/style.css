@@ -6123,6 +6123,14 @@ body {
 .main-filter .input-default {
   width: 50%;
 }
+.main-filter__input {
+  transition: all 0.3s;
+}
+.main-filter__input.inputActive {
+  border: 1px solid #248FEC;
+  color: #248FEC;
+  font-weight: bold;
+}
 .main-filter__btn {
   gap: 5px;
   display: flex;

@@ -208,9 +208,34 @@ function resetSelectedItems(selectElement, selectHead) {
 
         selectElement.previousElementSibling.classList.remove('select--checked');
     }
+
+
+    document.querySelector('.main-filter').querySelectorAll('input').forEach(input => {
+        const classToAdd = 'inputActive';
+        input.classList.remove(classToAdd);
+    });
 }
 
 
 let currentOpenSelect = null;
 
 document.querySelectorAll('.select').forEach(createSelect);
+
+
+
+const handleInput = () => {
+    document.querySelector('.main-filter').querySelectorAll('input').forEach(input => {
+        input.addEventListener('input', () => {
+            const inputValue = input.value;
+            const classToAdd = 'inputActive';
+
+            if (inputValue.length > 0) {
+                input.classList.add(classToAdd);
+            } else {
+                input.classList.remove(classToAdd);
+            }
+        });
+    });
+}
+
+handleInput();

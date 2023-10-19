@@ -5,6 +5,16 @@
     & .input-default {
         width: 50%;
     }
+
+    &__input{
+        transition: all .3s;
+    }
+
+    &__input.inputActive{
+        border: 1px solid #248FEC;
+        color: #248FEC;
+        font-weight: bold;
+    }
     &__btn {
         gap: 5px;
         display: flex;
