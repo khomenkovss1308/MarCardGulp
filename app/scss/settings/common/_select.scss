@@ -153,12 +153,25 @@
 }
 
 .select.single.select--checked {
-    .select-btn.open{
+    .select-btn.open {
         &::after {
             opacity: 1;
         }
     }
 }
+
+.description-plaseholder {
+    color: #248FEC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    transition: all .3s;
+}
+
 
 .select-btn .btn-text {
     font-size: 14px;

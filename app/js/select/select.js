@@ -234,12 +234,15 @@ function resetSelectedItems(selectElement, selectHead) {
     selectElement.previousElementSibling.classList.remove('select--checked');
 
 
-    document.querySelector('.main-filter').querySelectorAll('input').forEach(input => {
+    document.querySelector('.main-filter').querySelectorAll('.input-default').forEach(input => {
         const classToAdd = 'inputActive';
         input.classList.remove(classToAdd);
+        input.style.paddingLeft = '17px';
+        if (input.nextElementSibling){
+            input.nextElementSibling.remove();
+        }
     });
 }
-
 
 let currentOpenSelect = null;
 
@@ -247,17 +250,29 @@ document.querySelectorAll('.select').forEach(createSelect);
 
 
 
-const handleInput = () => {
-    document.querySelector('.main-filter').querySelectorAll('input').forEach(input => {
-        input.addEventListener('input', () => {
-            const inputValue = input.value;
-            const classToAdd = 'inputActive';
+const createRemovePseudoElement = (input) => {
+    const existingPseudoElement = input.nextElementSibling;
 
-            if (inputValue.length > 0) {
-                input.classList.add(classToAdd);
-            } else {
-                input.classList.remove(classToAdd);
-            }
+    if (input.value.length > 0) {
+        if (!existingPseudoElement) {
+            const pseudoElement = document.createElement('span');
+            pseudoElement.className = 'description-plaseholder';
+            pseudoElement.innerText = input.placeholder;
+            input.parentNode.appendChild(pseudoElement);
+        }
+    } else {
+        if (existingPseudoElement) {
+            existingPseudoElement.remove();
+        }
+    }
+};
+
+const handleInput = () => {
+    document.querySelector('.main-filter').querySelectorAll('.input-default').forEach(input => {
+        input.addEventListener('input', () => {
+            input.classList.toggle('inputActive', input.value.length > 0);
+            input.style.paddingLeft = input.value.length > 0 ? '90px' : '17px';
+            createRemovePseudoElement(input);
         });
     });
 }
