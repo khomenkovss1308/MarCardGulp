@@ -20,7 +20,7 @@
             </select>
         </div>
 
-        <div class="select select--checkbox">
+        <div class="select select--checkbox select--models">
             <div class="select-btn">
                 <span class="btn-text">Модель автомобиля</span>
                 <img src="images/icons/default/arrowSelectBlue.svg" alt="" class="arrow-dwn">
@@ -113,13 +113,21 @@
 
         
         <div class="input-group hidden">
-            <input type="text" placeholder="Цена от" class="input-default main-filter__input">
-            <input type="text" placeholder="Цена до" class="input-default main-filter__input">
+            <div class="input-group__block">
+                <input type="text" placeholder="Цена от" class="input-default main-filter__input">
+            </div>
+            <div class="input-group__block">
+                <input type="text" placeholder="Цена до" class="input-default main-filter__input">
+            </div>
         </div>
 
         <div class="input-group hidden">
-            <input type="text" placeholder="Объем от" class="input-default main-filter__input">
-            <input type="text" placeholder="Объем до" class="input-default main-filter__input">
+            <div class="input-group__block">
+                <input type="text" placeholder="Объем от" class="input-default main-filter__input">
+            </div>
+            <div class="input-group__block">
+                <input type="text" placeholder="Объем до" class="input-default main-filter__input">
+            </div>
         </div>
 
     </div>
@@ -130,7 +138,7 @@
                 <img src="images/icons/default/all-params.svg" alt="" class="main-filter__btn-icon">
                 <span class="main-filter__btn-text all-params">Все параметры</span>
             </button>
-            <button class="main-filter__btn" type="reset">
+            <button class="main-filter__btn main-filter__btn--reset" type="reset">
                 <img src="images/icons/default/reset.svg" alt="" class="main-filter__btn-icon">
                 <span class="main-filter__btn-text reset">Сбросить</span>
             </button>
