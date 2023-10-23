@@ -41,12 +41,6 @@ function createSelect(selectElement) {
     document.querySelector('.main-filter__btn--reset').addEventListener('click', function () {
         resetSelectedItems(selectElement, selectHead, selectedValues);
     });
-
-    document.querySelector('.single').querySelector('.select-btn').addEventListener('click', function (e) {
-        if (e.target === document.querySelector('.single').querySelector('.select-btn')) {
-            resetSingleSelect(document.querySelector('.single'), selectHead);
-        }
-    });
 }
 
 // Переключение класса .select--checked
@@ -64,7 +58,6 @@ function toggleSelectChecked(selectElement, selectedValues) {
         }
     }
 }
-
 
 // Создание элемента "выбрать" в выпадающем списке
 function createSelectHead(selectElement, iconSrc) {
@@ -117,6 +110,7 @@ function createSelectList() {
 // Функция для обновления значения в дефолтном селекте
 function updateDefaultSelect(selectElement, selectedValues) {
     selectElement.nextElementSibling.value = selectedValues;
+    console.log(selectElement.nextElementSibling.value);
 }
 
 // Создание элемента в выпадающем списке на основе option
@@ -163,8 +157,6 @@ function createSelectItem(selectElement, option, selectedValues, selectItems, se
             }
         }
 
-        
-        
         updateDefaultSelect(selectElement, selectedValues);
         toggleSelectChecked(selectElement, selectedValues);
     });
@@ -213,21 +205,22 @@ function updateSelectHeadText(selectHead, selectElement) {
     }
 }
 
-
-function resetSingleSelect(selectElement) {
+// Очистка одиночного селекта
+function resetSingleSelect(selectElement, selectedValues) {
     selectElement.classList.remove('select--checked');
 
     const selectList = selectElement.querySelector('.list-items');
-    const selectItems = Array.from(selectList.querySelectorAll('.item.checked'));
 
-    selectItems.forEach(item => {
+    selectList.querySelectorAll('.item.checked').forEach(item => {
         item.classList.remove('checked');
     });
 
+    selectedValues.length = 0;
+    updateDefaultSelect(selectElement, selectedValues);
     selectElement.querySelector('input').value = '';
 }
 
-
+// Очистка всей формы
 function resetSelectedItems(selectElement, selectHead, selectedValues) {
     const selectList = selectElement.previousElementSibling.querySelector('.list-items');
     selectedValues.length = 0;
@@ -237,27 +230,34 @@ function resetSelectedItems(selectElement, selectHead, selectedValues) {
         item.classList.remove('checked');
     });
 
+
     updateSelectHeadText(selectHead, selectElement);
-
     selectElement.previousElementSibling.classList.remove('select--checked');
-
 
     document.querySelector('.main-filter').querySelectorAll('.input-default').forEach(input => {
         const classToAdd = 'inputActive';
         input.classList.remove(classToAdd);
         input.style.paddingLeft = '17px';
-        if (input.nextElementSibling){
+        if (input.nextElementSibling) {
             input.nextElementSibling.remove();
         }
     });
+
+    updateDefaultSelect(selectElement, selectedValues);
 }
 
 let currentOpenSelect = null;
 
 document.querySelectorAll('.select').forEach(createSelect);
 
+document.querySelector('.single').querySelector('.select-btn').addEventListener('click', function (e) {
+    if (e.target === document.querySelector('.single').querySelector('.select-btn')) {
+        resetSingleSelect(document.querySelector('.single'), []);
+    }
+});
 
 
+// Работа псевдоэлемента в инпутах
 const createRemovePseudoElement = (input) => {
     const existingPseudoElement = input.nextElementSibling;
 
@@ -275,6 +275,7 @@ const createRemovePseudoElement = (input) => {
     }
 };
 
+// Обработка клика на инпут
 const handleInput = () => {
     document.querySelector('.main-filter').querySelectorAll('.input-default').forEach(input => {
         input.addEventListener('input', () => {
