@@ -77,7 +77,6 @@ function createSelectHead(selectElement, iconSrc) {
         selectHead.appendChild(selectHeadInput);
         selectHeadInput.placeholder = selectElement.querySelector('option:disabled').textContent;
         selectHeadInput.type = 'text';
-        selectHeadInput.name = 'select-search';
 
         return selectHead;
     }
