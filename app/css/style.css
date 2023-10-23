@@ -1132,7 +1132,7 @@ body {
 }
 .select.single .select-btn::after {
   position: absolute;
-  content: url(/images/icons/default/arrowSelectBlue.svg);
+  content: url(../images/icons/default/arrowSelectBlue.svg);
   top: 16px;
   right: 20px;
   width: 14px;
@@ -1142,7 +1142,7 @@ body {
 }
 .select.single .select-btn::before {
   position: absolute;
-  content: url(/images/icons/default/searchGray.svg);
+  content: url(../images/icons/default/searchGray.svg);
   top: 14px;
   left: 20px;
   z-index: 1000;
@@ -1168,7 +1168,7 @@ body {
 .select.single.select--checked .select-btn::after {
   right: 23px;
   top: 13px;
-  content: url(/images/icons/default/reset.svg);
+  content: url(../images/icons/default/reset.svg);
 }
 
 .select.single.select--checked .select-btn.open::after {

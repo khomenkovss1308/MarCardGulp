@@ -10,7 +10,7 @@ function createSelect(selectElement) {
     selectWrapper.classList.add(selectElement.classList.contains('select--checkbox') ? 'multiple' : 'single');
     selectElement.parentNode.insertBefore(selectWrapper, selectElement);
 
-    const selectHead = createselectHead(selectElement, iconSrc);
+    const selectHead = createSelectHead(selectElement, iconSrc);
     selectWrapper.appendChild(selectHead);
 
     const selectList = createSelectList();
@@ -39,7 +39,7 @@ function createSelect(selectElement) {
     }
 
     document.querySelector('.main-filter__btn--reset').addEventListener('click', function () {
-        resetSelectedItems(selectElement, selectHead);
+        resetSelectedItems(selectElement, selectHead, selectedValues);
     });
 
     document.querySelector('.single').querySelector('.select-btn').addEventListener('click', function (e) {
@@ -67,12 +67,12 @@ function toggleSelectChecked(selectElement, selectedValues) {
 
 
 // Создание элемента "выбрать" в выпадающем списке
-function createselectHead(selectElement, iconSrc) {
+function createSelectHead(selectElement, iconSrc) {
     if (selectElement.classList.contains('select--checkbox')) {
         const selectHead = document.createElement('div');
         selectHead.className = 'select-btn';
-        const selectHeadSpan = createselectHeadSpan(selectElement);
-        const selectHeadIcon = createselectHeadIcon(iconSrc);
+        const selectHeadSpan = createSelectHeadSpan(selectElement);
+        const selectHeadIcon = createSelectHeadIcon(iconSrc);
         selectHead.appendChild(selectHeadSpan);
         selectHead.appendChild(selectHeadIcon);
         return selectHead;
@@ -84,6 +84,7 @@ function createselectHead(selectElement, iconSrc) {
         selectHead.appendChild(selectHeadInput);
         selectHeadInput.placeholder = selectElement.querySelector('option:disabled').textContent;
         selectHeadInput.type = 'text';
+        selectHeadInput.name = 'select-search';
 
         return selectHead;
     }
@@ -91,7 +92,7 @@ function createselectHead(selectElement, iconSrc) {
 }
 
 // Создание текстового элемента в выпадающем списке
-function createselectHeadSpan(selectElement) {
+function createSelectHeadSpan(selectElement) {
     const selectHeadSpan = document.createElement('span');
     selectHeadSpan.className = 'btn-text';
     selectHeadSpan.textContent = selectElement.querySelector('option:disabled').textContent;
@@ -99,7 +100,7 @@ function createselectHeadSpan(selectElement) {
 }
 
 // Создание иконки в выпадающем списке
-function createselectHeadIcon(iconSrc) {
+function createSelectHeadIcon(iconSrc) {
     const selectHeadIcon = document.createElement('img');
     selectHeadIcon.className = 'arrow-dwn';
     selectHeadIcon.src = iconSrc;
@@ -111,6 +112,12 @@ function createSelectList() {
     const selectList = document.createElement('div');
     selectList.className = 'list-items';
     return selectList;
+}
+
+// Функция для обновления значения в дефолтном селекте
+function updateDefaultSelect(selectElement, selectedValues) {
+    selectElement.nextElementSibling.value = selectedValues;
+    console.log(selectElement.nextElementSibling.value);
 }
 
 // Создание элемента в выпадающем списке на основе option
@@ -130,6 +137,7 @@ function createSelectItem(selectElement, option, selectedValues, selectItems, se
     selectHeadItem.setAttribute('data-value', option.value);
 
     selectHeadItem.addEventListener('click', function (event) {
+        const value = option.value;
 
         if (!selectElement.classList.contains('select--checkbox')) {
             selectItems.forEach(item => {
@@ -144,8 +152,6 @@ function createSelectItem(selectElement, option, selectedValues, selectItems, se
             toggleSelect(selectHead, selectList);
             updateSelectHeadText(selectHead, selectElement);
         } else {
-            const value = option.value;
-
             if (!selectHeadItem.classList.contains('checked')) {
                 selectHeadItem.classList.add('checked');
                 selectedValues.push(value);
@@ -158,6 +164,9 @@ function createSelectItem(selectElement, option, selectedValues, selectItems, se
             }
         }
 
+        
+        
+        updateDefaultSelect(selectElement, selectedValues);
         toggleSelectChecked(selectElement, selectedValues);
     });
 
@@ -220,9 +229,9 @@ function resetSingleSelect(selectElement) {
 }
 
 
-function resetSelectedItems(selectElement, selectHead) {
+function resetSelectedItems(selectElement, selectHead, selectedValues) {
     const selectList = selectElement.previousElementSibling.querySelector('.list-items');
-
+    selectedValues.length = 0;
     const selectItems = Array.from(selectList.querySelectorAll('.item.checked'));
 
     selectItems.forEach(item => {

@@ -100,7 +100,7 @@
 
         &::after {
             position: absolute;
-            content: url(/images/icons/default/arrowSelectBlue.svg);
+            content: url(../images/icons/default/arrowSelectBlue.svg);
             top: 16px;
             right: 20px;
             width: 14px;
@@ -111,7 +111,7 @@
 
         &::before {
             position: absolute;
-            content: url(/images/icons/default/searchGray.svg);
+            content: url(../images/icons/default/searchGray.svg);
             top: 14px;
             left: 20px;
             z-index: 1000;
@@ -147,7 +147,7 @@
         &::after {
             right: 23px;
             top: 13px;
-            content: url(/images/icons/default/reset.svg);
+            content: url(../images/icons/default/reset.svg);
         }
     }
 }
