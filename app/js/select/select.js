@@ -117,7 +117,6 @@ function createSelectList() {
 // Функция для обновления значения в дефолтном селекте
 function updateDefaultSelect(selectElement, selectedValues) {
     selectElement.nextElementSibling.value = selectedValues;
-    console.log(selectElement.nextElementSibling.value);
 }
 
 // Создание элемента в выпадающем списке на основе option
