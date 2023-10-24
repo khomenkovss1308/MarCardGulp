@@ -50,6 +50,11 @@ function createSelect(selectElement) {
     document.querySelector('.main-filter__btn--reset').addEventListener('click', function () {
         resetSelectedItems(selectElement, selectHead, selectedValues);
     });
+
+    // Этот код не работает
+    selectElement.querySelector('select').addEventListener('change', () => {
+        console.log(selectElement);
+    });
 }
 
 // Переключение класса .select--checked
@@ -159,7 +164,7 @@ function createSelectItem(selectElement, option, selectedValues, selectItems, se
             }
         }
 
-        updateDefaultSelect(option);
+        updateDefaultSelect(option, selectedValues, selectElement);
 
         toggleSelectChecked(selectElement, selectedValues);
     });
@@ -167,10 +172,9 @@ function createSelectItem(selectElement, option, selectedValues, selectItems, se
     return selectHeadItem;
 }
 
-function updateDefaultSelect(option) {
+function updateDefaultSelect(option, selectedValues, selectElement) {
     option.selected = !option.selected;
-
-    console.log(option.selected);
+    selectElement.querySelector('select').value = selectedValues;
 }
 
 // Создание элемента "чекбокс" в выпадающем списке
