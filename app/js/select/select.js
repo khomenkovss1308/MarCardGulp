@@ -1,4 +1,14 @@
-// Создание выпадающего списка на основе селекта
+let currentOpenSelect = null;
+document.querySelectorAll('.select').forEach(createSelect);
+
+document.querySelector('.single').querySelector('.select-btn').addEventListener('click', function (e) {
+    if (e.target === document.querySelector('.single').querySelector('.select-btn')) {
+        resetSingleSelect(document.querySelector('.single'), []);
+    }
+});
+
+
+// Создание выпадающего списка на основе дефолтного селекта
 function createSelect(selectElement) {
     const selectOptions = selectElement.querySelectorAll('option');
     const selectOptionLength = selectOptions.length;
@@ -28,7 +38,6 @@ function createSelect(selectElement) {
             selectItems.push(selectHeadItem);
         }
     }
-
 
     selectList.style.display = 'none';
 
@@ -106,11 +115,6 @@ function createSelectList() {
     return selectList;
 }
 
-// Функция для обновления значения в дефолтном селекте
-function updateDefaultSelect(selectElement, selectedValues) {
-    selectElement.nextElementSibling.value = selectedValues;
-}
-
 // Создание элемента в выпадающем списке на основе option
 function createSelectItem(selectElement, option, selectedValues, selectItems, selectHead, selectList) {
     const selectHeadItem = document.createElement('div');
@@ -155,11 +159,18 @@ function createSelectItem(selectElement, option, selectedValues, selectItems, se
             }
         }
 
-        updateDefaultSelect(selectElement, selectedValues);
+        updateDefaultSelect(option);
+
         toggleSelectChecked(selectElement, selectedValues);
     });
 
     return selectHeadItem;
+}
+
+function updateDefaultSelect(option) {
+    option.selected = !option.selected;
+
+    console.log(option.selected);
 }
 
 // Создание элемента "чекбокс" в выпадающем списке
@@ -214,12 +225,11 @@ function resetSingleSelect(selectElement, selectedValues) {
     });
 
     selectedValues.length = 0;
-    updateDefaultSelect(selectElement, selectedValues);
     selectElement.querySelector('input').value = '';
 }
 
 // Очистка всей формы
-function resetSelectedItems(selectElement, selectHead, selectedValues) {
+function resetSelectedItems(selectElement, selectHead, selectedValues, option) {
     const selectList = selectElement.previousElementSibling.querySelector('.list-items');
     selectedValues.length = 0;
     const selectItems = Array.from(selectList.querySelectorAll('.item.checked'));
@@ -241,22 +251,10 @@ function resetSelectedItems(selectElement, selectHead, selectedValues) {
         }
     });
 
-    updateDefaultSelect(selectElement, selectedValues);
 }
 
-let currentOpenSelect = null;
-
-document.querySelectorAll('.select').forEach(createSelect);
-
-document.querySelector('.single').querySelector('.select-btn').addEventListener('click', function (e) {
-    if (e.target === document.querySelector('.single').querySelector('.select-btn')) {
-        resetSingleSelect(document.querySelector('.single'), []);
-    }
-});
-
-
 // Работа псевдоэлемента в инпутах
-const createRemovePseudoElement = (input) => {
+function createRemovePseudoElement(input) {
     const existingPseudoElement = input.nextElementSibling;
 
     if (input.value.length > 0) {
@@ -274,7 +272,7 @@ const createRemovePseudoElement = (input) => {
 };
 
 // Обработка клика на инпут
-const handleInput = () => {
+function handleInput() {
     document.querySelector('.main-filter').querySelectorAll('.input-default').forEach(input => {
         input.addEventListener('input', () => {
             input.classList.toggle('inputActive', input.value.length > 0);
@@ -283,5 +281,4 @@ const handleInput = () => {
         });
     });
 }
-
 handleInput();
