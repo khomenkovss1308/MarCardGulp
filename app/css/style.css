@@ -585,8 +585,9 @@ body {
 }
 
 .sub-tabs {
-  position: relative;
+  height: 71px;
   margin-top: 15px;
+  position: relative;
   border-top: 1px solid #DFDFDF;
   border-bottom: 1px solid #DFDFDF;
 }
@@ -611,6 +612,7 @@ body {
 }
 .sub-tabs__list__item:hover {
   color: #248FEC;
+  padding: 25px 0 22px;
   border-bottom: 3px solid #248FEC;
 }
 .sub-tabs__list .active {
