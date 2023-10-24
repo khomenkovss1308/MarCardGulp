@@ -6,27 +6,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const hiddenItems = list.querySelectorAll('.mileage-cars-card__list__item.hidden');
         const toggleButton = list.querySelector('.toggle-btn');
 
-        let isExpanded = false;
+        if (toggleButton) {
+            let isExpanded = false;
 
-        toggleButton.addEventListener('click', () => {
-            hiddenItems.forEach((item) => {
+            toggleButton.addEventListener('click', () => {
+                hiddenItems.forEach((item) => {
+                    if (isExpanded) {
+                        item.style.display = 'none';
+                    } else {
+                        item.style.display = 'list-item';
+                    }
+                });
+
                 if (isExpanded) {
-                    item.style.display = 'none';
+                    toggleButton.innerHTML = `
+                        <img src="images/icons/default/plus.svg" alt="">
+                        <span>Еще <span class="blue">+${hiddenItems.length}</span></span>
+                    `;
                 } else {
-                    item.style.display = 'list-item';
+                    toggleButton.innerHTML = `<span class="blue">Свернуть<span>`;
                 }
+
+                isExpanded = !isExpanded;
             });
-
-            if (isExpanded) {
-                toggleButton.innerHTML = `
-                    <img src="images/icons/default/plus.svg" alt="">
-                    <span>Еще <span class="blue">+${hiddenItems.length}</span></span>
-                `;
-            } else {
-                toggleButton.innerHTML = `<span class="blue">Свернуть<span>`;
-            }
-
-            isExpanded = !isExpanded;
-        });
+        }
     });
 });
