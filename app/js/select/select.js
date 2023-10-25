@@ -1,9 +1,11 @@
 let currentOpenSelect = null;
 document.querySelectorAll('.select').forEach(createSelect);
 
-document.querySelector('.single').querySelector('.select-btn').addEventListener('click', function (e) {
-    if (e.target === document.querySelector('.single').querySelector('.select-btn')) {
-        resetSingleSelect(document.querySelector('.single'), []);
+const singleSelect = document.querySelector('.single');
+
+singleSelect.querySelector('.select-btn').addEventListener('click', function (e) {
+    if (e.target === singleSelect.querySelector('.select-btn')) {
+        resetSingleSelect(singleSelect, []);
     }
 });
 
@@ -231,12 +233,19 @@ function resetSingleSelect(selectElement, selectedValues) {
         item.classList.remove('checked');
     });
 
+    selectElement.nextElementSibling.querySelectorAll('option').forEach(opt => {
+        if (opt.selected){
+            updateDefaultSelect(opt);
+        }
+    });
+
+
     selectedValues.length = 0;
     selectElement.querySelector('input').value = '';
 }
 
 // Очистка всей формы
-function resetSelectedItems(selectElement, selectHead, selectedValues, option) {
+function resetSelectedItems(selectElement, selectHead, selectedValues) {
     const selectList = selectElement.previousElementSibling.querySelector('.list-items');
     selectedValues.length = 0;
     const selectItems = Array.from(selectList.querySelectorAll('.item.checked'));
@@ -244,7 +253,6 @@ function resetSelectedItems(selectElement, selectHead, selectedValues, option) {
     selectItems.forEach(item => {
         item.classList.remove('checked');
     });
-
 
     updateSelectHeadText(selectHead, selectElement);
     selectElement.previousElementSibling.classList.remove('select--checked');
