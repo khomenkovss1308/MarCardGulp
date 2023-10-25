@@ -53,10 +53,9 @@ function createSelect(selectElement) {
         resetSelectedItems(selectElement, selectHead, selectedValues);
     });
 
-    selectElement.querySelector('select').addEventListener('change', () => {
-        updateDefaultSelectValues(selectElement);
-    });
-
+    // selectElement.querySelector('select').addEventListener('change', () => {
+    //     console.log('Сработало');
+    // });
 }
 
 // Переключение класса .select--checked
@@ -178,28 +177,8 @@ function updateDefaultSelect(option) {
     option.selected = !option.selected;
 
     const selectElement = option.closest('select');
-    const value = option.value;
-
-    if (selectedDefaultValues.includes(value)) {
-        selectedDefaultValues = selectedDefaultValues.filter(item => item !== value);
-    } else {
-        selectedDefaultValues.push(value);
-    }
-
-    // Обновить дефолтный селект на основе selectedDefaultValues
-    updateDefaultSelectValues(selectElement);
-}
-
-function updateDefaultSelectValues(selectElement) {
-    const defaultSelect = selectElement.querySelector('select');
-    defaultSelect.innerHTML = ''; // Очистите существующие элементы
-
-    selectedDefaultValues.forEach(value => {
-        const option = document.createElement('option');
-        option.value = value;
-        option.text = value; // Используйте значение в качестве текста
-        defaultSelect.appendChild(option);
-    });
+    const changeEvent = new Event('change', { bubbles: true });
+    selectElement.dispatchEvent(changeEvent);
 }
 
 
@@ -317,5 +296,4 @@ function handleInput() {
         });
     });
 }
-
 handleInput();
