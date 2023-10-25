@@ -295,6 +295,7 @@
                 .header__bottom__link-dropdown {
                     color: $main-blue;
                 }
+                
             }
 
             &:nth-child(2) {
@@ -312,7 +313,7 @@
 
         &-group {
             display: none;
-            margin-top: 23px;
+            padding-top: 23px;
             width: 292px;
             position: absolute;
         }
@@ -563,7 +564,7 @@
 
     .block-contact__text-dark,
     .block-contact__text-light {
-        font-size: 14px;
+        font-size: 11px;
     }
 
     .header__top-right-block {
@@ -615,7 +616,7 @@
 }
 
 
-@media (max-width: 1080px) {
+@media (max-width: 1150px) {
     .header {
         margin-bottom: 0;
 
@@ -729,7 +730,7 @@
     }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1150px) {
     .navigation-list__item:hover {
         .navigation-sublist-group {
             display: none;

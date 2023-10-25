@@ -107,7 +107,7 @@ const toggleSubMenu = () => {
     let menuStack = [];
     sidebarBack.style.display = "none"
 
-    if (window.innerWidth <= 1080) {
+    if (window.innerWidth <= 1150) {
         const handleMenuItemClick = (event, clickedItem, subListToShow, menu) => {
             if (clickedItem.querySelector(subListToShow)) {
                 event.preventDefault();
