@@ -2,23 +2,37 @@ const changeContent = (section) => {
     const tabButtons = section.querySelectorAll('.tabs__item');
     const contentBlocks = section.querySelectorAll('.appearance__container');
 
-    const changeTab = (selectedButton) => {
+    const toggleText = (target, btnReadMore, btnCollapse, maxHeight) => {
+        const targetHeight = target.scrollHeight;
+        if (targetHeight <= maxHeight) {
+            btnReadMore.style.display = 'none';
+            btnCollapse.style.display = 'none';
+        } else {
+            btnReadMore.style.display = 'flex';
+            btnCollapse.style.display = 'none';
+        }
+    };
+
+    const changeTab = (selectedButton, selectedContentBlock) => {
         tabButtons.forEach(button => button.classList.remove('active'));
         selectedButton.classList.add('active');
 
-        const selectedIndex = Array.from(tabButtons).indexOf(selectedButton);
-        contentBlocks.forEach((block, index) => {
-            if (index === selectedIndex) {
-                block.classList.add('selected');
-            } else {
-                block.classList.remove('selected');
-            }
+        contentBlocks.forEach(block => {
+            block.classList.remove('selected');
         });
+
+        selectedContentBlock.classList.add('selected');
+        const target = selectedContentBlock.querySelector('.toggle-content');
+        const btnReadMore = selectedContentBlock.querySelector('.btn-read-more');
+        const btnCollapse = selectedContentBlock.querySelector('.btn-collapse');
+        const maxHeight = parseInt(target.getAttribute('data-max-height'));
+        
+        toggleText(target, btnReadMore, btnCollapse, maxHeight);
     }
 
-    tabButtons.forEach(button => {
+    tabButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
-            changeTab(button);
+            changeTab(button, contentBlocks[index]);
         });
     });
 
