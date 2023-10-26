@@ -54,7 +54,8 @@ function createSelect(selectElement) {
     });
 
     // selectElement.querySelector('select').addEventListener('change', () => {
-    //     console.log('Сработало');
+    //     if (!selectElement.previousElementSibling.classList.contains('single')) return;
+    //     updateGeneratedSelect('.select--models');
     // });
 }
 
@@ -181,7 +182,6 @@ function updateDefaultSelect(option) {
     selectElement.dispatchEvent(changeEvent);
 }
 
-
 // Создание элемента "чекбокс" в выпадающем списке
 function createCheckbox() {
     const checkbox = document.createElement('span');
@@ -297,3 +297,29 @@ function handleInput() {
     });
 }
 handleInput();
+
+function updateGeneratedSelect(selectClass) {
+    const defaultSelect = document.querySelector(`.${selectClass}`);
+    
+    if (defaultSelect) {
+        const generatedSelect = defaultSelect.previousElementSibling;
+        
+        const updatedData = Array.from(defaultSelect.querySelectorAll('option')).map(option => {
+            return {
+                text: option.textContent,
+                value: option.value,
+                selected: option.selected
+            };
+        });
+        
+        updatedData.forEach(data => {
+            generatedSelect.querySelectorAll('.item').forEach(item => {
+                item.textContent = data.text;
+                item.value = data.value;
+                item.selected = data.selected;
+            });
+        });
+    } else {
+        alert('Элемента с классом, по которому вы обращаетесь, не существует');
+    }
+}
