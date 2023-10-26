@@ -12,11 +12,39 @@ singleSelect.querySelector('.select-btn').addEventListener('click', function (e)
 
 // Создание выпадающего списка на основе дефолтного селекта
 function createSelect(selectElement) {
+    if (selectElement.classList.contains('select-init')) {
+
+        const selectHead = selectElement.previousElementSibling.querySelector('.select-btn');
+        const selectList = selectHead.nextElementSibling;
+        const selectedValues = [];
+        const selectItems = selectList.querySelectorAll('.item');
+
+        const selectOptions = selectElement.querySelectorAll('option');
+
+        for (let i = 0; i < selectOptions.length; i++) {
+            if (i !== 0){
+                const selectHeadItem = createSelectItem(selectElement, selectOptions[i], selectedValues, selectItems, selectHead, selectList);
+                selectList.appendChild(selectHeadItem);
+            }
+        }
+
+        selectElement.previousElementSibling.classList.remove('select--disabled');
+
+        if (!selectElement.previousElementSibling.classList.contains('select--disabled')) {
+            selectHead.addEventListener('click', function () {
+                toggleSelect(selectHead, selectList);
+            });
+        }
+
+        return;
+    }
+
     const selectOptions = selectElement.querySelectorAll('option');
     const selectOptionLength = selectOptions.length;
     const iconSrc = selectElement.querySelector('img').src;
 
     selectElement.style.display = 'none';
+    selectElement.classList.add('select-init');
     const selectWrapper = document.createElement('div');
     selectWrapper.className = 'select';
     selectWrapper.classList.add(selectElement.classList.contains('select--checkbox') ? 'multiple' : 'single');
@@ -54,8 +82,12 @@ function createSelect(selectElement) {
     });
 
     // selectElement.querySelector('select').addEventListener('change', () => {
-    //     if (!selectElement.previousElementSibling.classList.contains('single')) return;
-    //     updateGeneratedSelect('.select--models');
+    //     const newOpt = document.createElement('option');
+    //     newOpt.className = 'item';
+    //     newOpt.value = 'Compartment';
+    //     newOpt.textContent = 'Купе';
+    //     selectElement.nextElementSibling.nextElementSibling.querySelector('select').append(newOpt);
+    //     createSelect(document.querySelector('.select--models'));
     // });
 }
 
@@ -178,7 +210,9 @@ function updateDefaultSelect(option) {
     option.selected = !option.selected;
 
     const selectElement = option.closest('select');
-    const changeEvent = new Event('change', { bubbles: true });
+    const changeEvent = new Event('change', {
+        bubbles: true
+    });
     selectElement.dispatchEvent(changeEvent);
 }
 
@@ -234,7 +268,7 @@ function resetSingleSelect(selectElement, selectedValues) {
     });
 
     selectElement.nextElementSibling.querySelectorAll('option').forEach(opt => {
-        if (opt.selected){
+        if (opt.selected) {
             updateDefaultSelect(opt);
         }
     });
@@ -297,29 +331,3 @@ function handleInput() {
     });
 }
 handleInput();
-
-function updateGeneratedSelect(selectClass) {
-    const defaultSelect = document.querySelector(`.${selectClass}`);
-    
-    if (defaultSelect) {
-        const generatedSelect = defaultSelect.previousElementSibling;
-        
-        const updatedData = Array.from(defaultSelect.querySelectorAll('option')).map(option => {
-            return {
-                text: option.textContent,
-                value: option.value,
-                selected: option.selected
-            };
-        });
-        
-        updatedData.forEach(data => {
-            generatedSelect.querySelectorAll('.item').forEach(item => {
-                item.textContent = data.text;
-                item.value = data.value;
-                item.selected = data.selected;
-            });
-        });
-    } else {
-        alert('Элемента с классом, по которому вы обращаетесь, не существует');
-    }
-}
