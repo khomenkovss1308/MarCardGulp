@@ -7571,6 +7571,7 @@ body {
   }
 }
 .brand-list {
+  min-height: 335px;
   gap: 25px;
   display: grid;
   grid-auto-flow: row;
@@ -7598,6 +7599,7 @@ body {
   }
 }
 .brand-card {
+  min-height: 300px;
   padding: 20px;
   border-radius: 8px;
   background: white;
