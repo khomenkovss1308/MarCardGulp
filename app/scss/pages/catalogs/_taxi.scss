@@ -24,6 +24,32 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .taxi {
+        & .taxi-list {
+            & .pagination-list {
+                gap: 33px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .taxi {
+        & .taxi-list {
+            & .pagination-list {
+                gap: 33px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        & .service__benifit-content {
+            width: 100%;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .taxi {
         &__block-title {
@@ -49,5 +75,16 @@
     .service-lists {
         gap: 40px;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .taxi {
+        & .taxi-list {
+            & .pagination-list {
+                gap: 15px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
     }
 }

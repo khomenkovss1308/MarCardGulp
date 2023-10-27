@@ -1,6 +1,25 @@
 .dealers {
-    gap: 50px;
+    gap: 15px;
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    & .dealer__list__item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .dealers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .dealers {
+        gap: 15px;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

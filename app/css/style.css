@@ -3453,6 +3453,7 @@ body {
   text-align: center;
 }
 .pagination__item {
+  width: 47px;
   display: inline-block;
 }
 .pagination__item .active {
@@ -3462,23 +3463,25 @@ body {
   background-color: #248FEC;
 }
 .pagination__item .ellipsis {
-  font-size: 19px;
+  font-size: 16px;
   color: #248FEC;
+  background-color: transparent;
 }
 .pagination__link {
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
   color: #575757;
-  padding: 16px 19px;
+  padding: 14px 17px;
   border-radius: 50%;
   background-color: #FBFBFB;
   transition: all 0.5s;
+  margin-right: 5px;
 }
 .pagination__link:hover {
   color: white;
   font-weight: 700;
-  padding: 16px 20px;
+  width: 47px;
   background-color: #248FEC;
 }
 
@@ -3495,6 +3498,9 @@ body {
   }
 }
 @media (max-width: 500px) {
+  .pagination {
+    margin: 40px auto;
+  }
   .pagination-list {
     gap: 10px;
     grid-template-columns: repeat(1, 1fr);
@@ -6000,12 +6006,28 @@ body {
   }
 }
 .dealers {
-  gap: 50px;
+  gap: 15px;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+.dealers .dealer__list__item {
+  width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .dealers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .dealers {
+    gap: 15px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .dealer-card {
   width: 100%;
   border-radius: 8px;
@@ -9985,6 +10007,21 @@ body {
   margin-top: 70px;
 }
 
+@media (max-width: 1200px) {
+  .taxi .taxi-list .pagination-list {
+    gap: 33px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1024px) {
+  .taxi .taxi-list .pagination-list {
+    gap: 33px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .taxi .service__benifit-content {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .taxi__block-title {
     margin-bottom: 40px;
@@ -10006,6 +10043,12 @@ body {
   .service-lists {
     gap: 40px;
     flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .taxi .taxi-list .pagination-list {
+    gap: 15px;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .favorites .tabs {
