@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../images/icons/default/logoAccount.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 
     <title>MARCAR</title>
@@ -311,27 +312,7 @@
         </section>
 
         <section class="dealer__list-container wrapper">
-            <p class="dealer__list-container-title">Автосалоны</p>
-            <ul class="dealers">
-                <li class="dealer__list__item">
-                    <a href="dealerCitySinglePage.html">
-                        @@include('../blocks/common/dealers/dealer-card/dealer-card.html')
-                        <!-- /.dealer-card -->
-                    </a>
-                </li>
-                <li class="dealer__list__item">
-                    <a href="dealerCitySinglePage.html">
-                        @@include('../blocks/common/dealers/dealer-card/dealer-card.html')
-                        <!-- /.dealer-card -->
-                    </a>
-                </li>
-                <li class="dealer__list__item">
-                    <a href="dealerCitySinglePage.html">
-                        @@include('../blocks/common/dealers/dealer-card/dealer-card.html')
-                        <!-- /.dealer-card -->
-                    </a>
-                </li>
-            </ul>
+            @@include('../blocks/common/dealers/dealers-slider/dealers-slider.html')
         </section>
 
 
@@ -351,7 +332,9 @@
     <!-- /.footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/swiper/cars-img-slider.js"></script>
+    <script src="js/swiper/gallery-slider.js"></script>
     <script src="js/select/select.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/main.js"></script>
