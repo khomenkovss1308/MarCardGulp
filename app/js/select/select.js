@@ -12,6 +12,7 @@ singleSelect.querySelector('.select-btn').addEventListener('click', function (e)
 function updateSelect(selectElement){
     const selectHead = selectElement.previousElementSibling.querySelector('.select-btn');
     const selectList = selectHead.nextElementSibling;
+    selectList.innerHTML = '';
     const selectedValues = [];
     const selectItems = selectList.querySelectorAll('.item');
 
@@ -80,15 +81,6 @@ function createSelect(selectElement) {
     document.querySelector('.main-filter__btn--reset').addEventListener('click', function () {
         resetSelectedItems(selectElement, selectHead, selectedValues);
     });
-
-    // selectElement.querySelector('select').addEventListener('change', () => {
-    //     const newOpt = document.createElement('option');
-    //     newOpt.className = 'item';
-    //     newOpt.value = 'Compartment';
-    //     newOpt.textContent = 'Купе';
-    //     selectElement.nextElementSibling.nextElementSibling.querySelector('select').append(newOpt);
-    //     createSelect(document.querySelector('.select--models'));
-    // });
 }
 
 // Переключение класса .select--checked
@@ -267,7 +259,10 @@ function resetSingleSelect(selectElement, selectedValues) {
         item.classList.remove('checked');
     });
     selectElement.nextElementSibling.querySelectorAll('option')[0].selected = true;
-
+    const changeEvent = new Event('change', {
+        bubbles: true
+    });
+    selectElement.dispatchEvent(changeEvent);
     selectedValues.length = 0;
     selectElement.querySelector('input').value = '';
 }
