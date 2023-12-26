@@ -1,22 +1,71 @@
-let currentOpenSelect = null;
 document.querySelectorAll('.select').forEach(createSelect);
 
 const singleSelect = document.querySelector('.single');
 
+const multipleSelect = document.querySelector('.multiple');
+const multipleSelectList = multipleSelect.querySelector('.list-items')
+multipleSelect.querySelector('.select-btn').addEventListener('click', function () {
+         if (!multipleSelect.classList.contains('select--disabled')) {
+                         toggleSelect(multipleSelect.querySelector('.select-btn'), multipleSelectList);
+        }
+    });
+
+singleSelect.querySelectorAll('.item').forEach((item) => {
+    item.addEventListener('click', function () {
+        resetSelectedItems(multipleSelect.nextSibling, multipleSelect.querySelector('.select-btn'), [])
+    });
+});
+
+
+function updateSelect(selectElement){
+    const selectHead = selectElement.previousElementSibling.querySelector('.select-btn');
+    const selectList = selectHead.nextElementSibling;
+    selectList.innerHTML = '';
+    const selectedValues = [];
+    const selectItems = selectList.querySelectorAll('.item');
+
+    const selectOptions = selectElement.querySelectorAll('option');
+
+    for (let i = 0; i < selectOptions.length; i++) {
+        if (i !== 0){
+            const selectHeadItem = createSelectItem(selectElement, selectOptions[i], selectedValues, selectItems, selectHead, selectList);
+            selectList.appendChild(selectHeadItem);
+        }
+    }
+
+    if (selectOptions.length < 2){
+        selectElement.previousElementSibling.classList.add('select--disabled');
+    } else {
+       selectElement.previousElementSibling.classList.remove('select--disabled');
+    }
+
+}
+
 singleSelect.querySelector('.select-btn').addEventListener('click', function (e) {
     if (e.target === singleSelect.querySelector('.select-btn')) {
         resetSingleSelect(singleSelect, []);
+        let select = document.querySelector('.car_model_id').querySelector('select');
+        select.querySelectorAll('option').forEach((opt) => {
+            if (opt.value) {
+                select.removeChild(opt);
+            }
+
+        })
+        updateSelect(select.parentElement)
+        resetSelectedItems(multipleSelect.nextSibling, multipleSelect.querySelector('.select-btn'), [])
     }
 });
 
 
 // Создание выпадающего списка на основе дефолтного селекта
 function createSelect(selectElement) {
+
     const selectOptions = selectElement.querySelectorAll('option');
     const selectOptionLength = selectOptions.length;
     const iconSrc = selectElement.querySelector('img').src;
 
     selectElement.style.display = 'none';
+    selectElement.classList.add('select-init');
     const selectWrapper = document.createElement('div');
     selectWrapper.className = 'select';
     selectWrapper.classList.add(selectElement.classList.contains('select--checkbox') ? 'multiple' : 'single');
@@ -40,7 +89,6 @@ function createSelect(selectElement) {
             selectItems.push(selectHeadItem);
         }
     }
-
     selectList.style.display = 'none';
 
     if (!selectWrapper.classList.contains('select--disabled')) {
@@ -48,14 +96,16 @@ function createSelect(selectElement) {
             toggleSelect(selectHead, selectList);
         });
     }
+    window.addEventListener('click', function(e){
+      if (!selectHead.contains(e.target) && !selectList.contains(e.target)){
+            selectHead.classList.remove('open');
+            selectHead.nextElementSibling.style.display = 'none';
+      }
+    });
 
     document.querySelector('.main-filter__btn--reset').addEventListener('click', function () {
         resetSelectedItems(selectElement, selectHead, selectedValues);
     });
-
-    // selectElement.querySelector('select').addEventListener('change', () => {
-    //     console.log('Сработало');
-    // });
 }
 
 // Переключение класса .select--checked
@@ -150,7 +200,6 @@ function createSelectItem(selectElement, option, selectedValues, selectItems, se
             const value = option.value;
             selectedValues.push(value);
 
-            toggleSelect(selectHead, selectList);
             updateSelectHeadText(selectHead, selectElement);
         } else {
             if (!selectHeadItem.classList.contains('checked')) {
@@ -177,10 +226,11 @@ function updateDefaultSelect(option) {
     option.selected = !option.selected;
 
     const selectElement = option.closest('select');
-    const changeEvent = new Event('change', { bubbles: true });
+    const changeEvent = new Event('change', {
+        bubbles: true
+    });
     selectElement.dispatchEvent(changeEvent);
 }
-
 
 // Создание элемента "чекбокс" в выпадающем списке
 function createCheckbox() {
@@ -194,21 +244,16 @@ function createCheckbox() {
 
 // Переключение открытия/закрытия выпадающего списка
 function toggleSelect(selectHead, selectList) {
-
-    if (currentOpenSelect && currentOpenSelect !== selectHead) {
-        currentOpenSelect.classList.remove('open');
-        currentOpenSelect.nextElementSibling.style.display = 'none';
-    }
-
-    if (!selectHead.classList.contains('open')) {
-        selectHead.classList.add('open');
-        selectList.style.display = 'block';
-    } else {
+    if (selectHead.classList.contains('open')) {
         selectHead.classList.remove('open');
         selectList.style.display = 'none';
+
+
+    } else {
+        selectHead.classList.add('open');
+        selectList.style.display = 'block';
     }
 
-    currentOpenSelect = selectHead;
 }
 
 // Обновление текста в заголовке выпадающего списка
@@ -232,20 +277,31 @@ function resetSingleSelect(selectElement, selectedValues) {
     selectList.querySelectorAll('.item.checked').forEach(item => {
         item.classList.remove('checked');
     });
-
-    selectElement.nextElementSibling.querySelectorAll('option').forEach(opt => {
-        if (opt.selected){
-            updateDefaultSelect(opt);
-        }
+    selectElement.nextElementSibling.querySelectorAll('option')[0].selected = true;
+    const changeEvent = new Event('change', {
+        bubbles: true
     });
-
-
+    selectElement.dispatchEvent(changeEvent);
     selectedValues.length = 0;
     selectElement.querySelector('input').value = '';
 }
 
+function resetDefaultSelect(selectElement) {
+    defaultSlectElement = selectElement.querySelector('select');
+    let options = defaultSlectElement && defaultSlectElement.options;
+
+    if (selectElement.previousElementSibling.classList.contains('single')){
+        options[0].selected = true;
+    } else {
+        for (let i=0; i<options.length; i++) {
+        options[i].selected = false;
+        }
+    }
+}
+
 // Очистка всей формы
 function resetSelectedItems(selectElement, selectHead, selectedValues) {
+    resetDefaultSelect(selectElement, 'resetSelectedItems');
     const selectList = selectElement.previousElementSibling.querySelector('.list-items');
     selectedValues.length = 0;
     const selectItems = Array.from(selectList.querySelectorAll('.item.checked'));
@@ -284,7 +340,7 @@ function createRemovePseudoElement(input) {
             existingPseudoElement.remove();
         }
     }
-};
+}
 
 // Обработка клика на инпут
 function handleInput() {
