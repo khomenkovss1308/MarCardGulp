@@ -12,7 +12,7 @@
     gap: 33px;
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 24%);
 }
 
 .benifit-list {

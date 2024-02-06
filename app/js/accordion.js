@@ -110,7 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     equipmentListItems.forEach((item) => {
         let isExpanded = false;
-        item.addEventListener('click', () => {
+        const accordionHeader = item.querySelector('.accordion__header');
+        accordionHeader.addEventListener('click', () => {
             isExpanded = !isExpanded;
             item.style.transition = 'flex-basis 0.35s ease-in-out';
 
@@ -119,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.style.flexBasis =  isExpanded ? '100%' : '100%'
             }
 
-            const accordionHeader = item.querySelector('.accordion__header');
+
             if (accordionHeader) {
                 accordionHeader.style.transition = 'background-color 0.35s ease-in-out, color 0.35s ease-in-out';
                 accordionHeader.style.color = isExpanded ? 'white' : '';

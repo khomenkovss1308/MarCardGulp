@@ -175,6 +175,7 @@ li {
 }
 
 img {
+  object-fit: contain;
   max-width: 100%;
   display: block;
 }
@@ -212,7 +213,6 @@ body {
   font-family: "Inter";
   font-style: normal;
   overflow-x: hidden;
-  min-height: 2000px;
   color: #051B1F;
 }
 
@@ -945,7 +945,7 @@ body {
   gap: 33px;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 24%);
 }
 
 .benifit-list {
@@ -3171,9 +3171,10 @@ body {
 .compare-content__shadow {
   background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
+  top: 0;
   bottom: 0;
   width: 194px;
-  height: 85%;
+  height: 100%;
   z-index: 10;
   transition: all 0.3s;
 }
